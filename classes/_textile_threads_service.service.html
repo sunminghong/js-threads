@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>Client | Threads</title>
+	<title>Service | Threads</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -54,13 +54,13 @@
 					<a href="../globals.html">Globals</a>
 				</li>
 				<li>
-					<a href="../modules/_textile_threads_service_client.html">@textile/threads-service-client</a>
+					<a href="../modules/_textile_threads_service.html">@textile/threads-service</a>
 				</li>
 				<li>
-					<a href="_textile_threads_service_client.client.html">Client</a>
+					<a href="_textile_threads_service.service.html">Service</a>
 				</li>
 			</ul>
-			<h1>Class Client</h1>
+			<h1>Class Service</h1>
 		</div>
 	</div>
 </header>
@@ -70,16 +70,21 @@
 			<section class="tsd-panel tsd-comment">
 				<div class="tsd-comment tsd-typography">
 					<div class="lead">
-						<p>Client is a web-gRPC wrapper client for communicating with a webgRPC-enabled Textile server.
-						This client library can be used to interact with a local or remote Textile gRPC-service.</p>
+						<p>Service is the network interface for thread orchestration.</p>
 					</div>
+					<dl class="tsd-comment-tags">
+						<dt>note</dt>
+						<dd><p>Currently, the Service assumes that all logs are published using the PeerId provided as &#39;host&#39;. This is not
+							the longer-term intended behavior, and should not be relied upon.</p>
+						</dd>
+					</dl>
 				</div>
 			</section>
 			<section class="tsd-panel tsd-hierarchy">
 				<h3>Hierarchy</h3>
 				<ul class="tsd-hierarchy">
 					<li>
-						<span class="target">Client</span>
+						<span class="target">Service</span>
 					</li>
 				</ul>
 			</section>
@@ -96,23 +101,31 @@
 						<section class="tsd-index-section ">
 							<h3>Constructors</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-constructor tsd-parent-kind-class"><a href="_textile_threads_service_client.client.html#constructor" class="tsd-kind-icon">constructor</a></li>
+								<li class="tsd-kind-constructor tsd-parent-kind-class"><a href="_textile_threads_service.service.html#constructor" class="tsd-kind-icon">constructor</a></li>
+							</ul>
+						</section>
+						<section class="tsd-index-section ">
+							<h3>Properties</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_textile_threads_service.service.html#store" class="tsd-kind-icon">store</a></li>
 							</ul>
 						</section>
 						<section class="tsd-index-section ">
 							<h3>Methods</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_textile_threads_service_client.client.html#addrecord" class="tsd-kind-icon">add<wbr>Record</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_textile_threads_service_client.client.html#addreplicator" class="tsd-kind-icon">add<wbr>Replicator</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_textile_threads_service_client.client.html#addthread" class="tsd-kind-icon">add<wbr>Thread</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_textile_threads_service_client.client.html#createrecord" class="tsd-kind-icon">create<wbr>Record</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_textile_threads_service_client.client.html#createthread" class="tsd-kind-icon">create<wbr>Thread</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_textile_threads_service_client.client.html#deletethread" class="tsd-kind-icon">delete<wbr>Thread</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_textile_threads_service_client.client.html#gethostid" class="tsd-kind-icon">get<wbr>HostID</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_textile_threads_service_client.client.html#getrecord" class="tsd-kind-icon">get<wbr>Record</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_textile_threads_service_client.client.html#getthread" class="tsd-kind-icon">get<wbr>Thread</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_textile_threads_service_client.client.html#pullthread" class="tsd-kind-icon">pull<wbr>Thread</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_textile_threads_service_client.client.html#subscribe" class="tsd-kind-icon">subscribe</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_textile_threads_service.service.html#addrecord" class="tsd-kind-icon">add<wbr>Record</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_textile_threads_service.service.html#addreplicator" class="tsd-kind-icon">add<wbr>Replicator</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_textile_threads_service.service.html#addthread" class="tsd-kind-icon">add<wbr>Thread</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_textile_threads_service.service.html#createrecord" class="tsd-kind-icon">create<wbr>Record</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_textile_threads_service.service.html#createthread" class="tsd-kind-icon">create<wbr>Thread</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_textile_threads_service.service.html#deletethread" class="tsd-kind-icon">delete<wbr>Thread</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_textile_threads_service.service.html#derivelogkeys" class="tsd-kind-icon">derive<wbr>Log<wbr>Keys</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_textile_threads_service.service.html#gethostid" class="tsd-kind-icon">get<wbr>HostID</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_textile_threads_service.service.html#getownlog" class="tsd-kind-icon">get<wbr>Own<wbr>Log</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_textile_threads_service.service.html#getrecord" class="tsd-kind-icon">get<wbr>Record</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_textile_threads_service.service.html#getthread" class="tsd-kind-icon">get<wbr>Thread</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_textile_threads_service.service.html#pullthread" class="tsd-kind-icon">pull<wbr>Thread</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_textile_threads_service.service.html#subscribe" class="tsd-kind-icon">subscribe</a></li>
 							</ul>
 						</section>
 					</div>
@@ -124,42 +137,55 @@
 					<a name="constructor" class="tsd-anchor"></a>
 					<h3>constructor</h3>
 					<ul class="tsd-signatures tsd-kind-constructor tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">new <wbr>Client<span class="tsd-signature-symbol">(</span>host<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span>, defaultTransport<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">grpc.TransportFactory</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="_textile_threads_service_client.client.html" class="tsd-signature-type">Client</a></li>
+						<li class="tsd-signature tsd-kind-icon">new <wbr>Service<span class="tsd-signature-symbol">(</span>store<span class="tsd-signature-symbol">: </span><a href="_textile_threads_service.logstore.html" class="tsd-signature-type">LogStore</a><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">Datastore</span>, client<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Client</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="_textile_threads_service.service.html" class="tsd-signature-type">Service</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/service-client/src/index.ts#L79">service-client/src/index.ts:79</a></li>
+									<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/service/src/service.ts#L30">service/src/service.ts:30</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
 								<div class="lead">
-									<p>Client creates a new gRPC client instance.</p>
+									<p>Create a new network Service.</p>
 								</div>
 							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5><span class="tsd-flag ts-flagDefault value">Default value</span> host: <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> =&nbsp;&quot;http://localhost:5007&quot;</span></h5>
+									<h5>store: <a href="_textile_threads_service.logstore.html" class="tsd-signature-type">LogStore</a><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">Datastore</span></h5>
 									<div class="tsd-comment tsd-typography">
 										<div class="lead">
-											<p>The local/remote host url. Defaults to &#39;localhost:5007&#39;.</p>
+											<p>The store to use for caching keys and log information.</p>
 										</div>
 									</div>
 								</li>
 								<li>
-									<h5><span class="tsd-flag ts-flagOptional">Optional</span> defaultTransport: <span class="tsd-signature-type">grpc.TransportFactory</span></h5>
+									<h5>client: <span class="tsd-signature-type">Client</span></h5>
 									<div class="tsd-comment tsd-typography">
 										<div class="lead">
-											<p>The default transport to use when making webgRPC calls. Defaults to WebSockets.</p>
+											<p>A client connected to a remote service peer.</p>
 										</div>
 									</div>
 								</li>
 							</ul>
-							<h4 class="tsd-returns-title">Returns <a href="_textile_threads_service_client.client.html" class="tsd-signature-type">Client</a></h4>
+							<h4 class="tsd-returns-title">Returns <a href="_textile_threads_service.service.html" class="tsd-signature-type">Service</a></h4>
 						</li>
 					</ul>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group ">
+				<h2>Properties</h2>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
+					<a name="store" class="tsd-anchor"></a>
+					<h3>store</h3>
+					<div class="tsd-signature tsd-kind-icon">store<span class="tsd-signature-symbol">:</span> <a href="_textile_threads_service.logstore.html" class="tsd-signature-type">LogStore</a></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/service/src/service.ts#L30">service/src/service.ts:30</a></li>
+						</ul>
+					</aside>
 				</section>
 			</section>
 			<section class="tsd-panel-group tsd-member-group ">
@@ -174,7 +200,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/service-client/src/index.ts#L209">service-client/src/index.ts:209</a></li>
+									<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/service/src/service.ts#L154">service/src/service.ts:154</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -217,7 +243,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/service-client/src/index.ts#L177">service-client/src/index.ts:177</a></li>
+									<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/service/src/service.ts#L116">service/src/service.ts:116</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -254,7 +280,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/service-client/src/index.ts#L124">service-client/src/index.ts:124</a></li>
+									<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/service/src/service.ts#L76">service/src/service.ts:76</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -267,7 +293,7 @@
 								<li>
 									<h5>addr: <span class="tsd-signature-type">Multiaddr</span></h5>
 									<div class="tsd-comment tsd-typography">
-										<p>The Thread multiaddr.</p>
+										<p>The Thread multiaddress.</p>
 									</div>
 								</li>
 								<li>
@@ -285,13 +311,13 @@
 					<a name="createrecord" class="tsd-anchor"></a>
 					<h3>create<wbr>Record</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">create<wbr>Record<span class="tsd-signature-symbol">(</span>id<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">ThreadID</span>, body<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">ThreadRecord</span><span class="tsd-signature-symbol">&gt;</span></li>
+						<li class="tsd-signature tsd-kind-icon">create<wbr>Record<span class="tsd-signature-symbol">(</span>id<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">ThreadID</span>, body<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">ThreadRecord</span><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/service-client/src/index.ts#L192">service-client/src/index.ts:192</a></li>
+									<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/service/src/service.ts#L125">service/src/service.ts:125</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -314,7 +340,7 @@
 									</div>
 								</li>
 							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">ThreadRecord</span><span class="tsd-signature-symbol">&gt;</span></h4>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">ThreadRecord</span><span class="tsd-signature-symbol">&gt;</span></h4>
 						</li>
 					</ul>
 				</section>
@@ -328,12 +354,13 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/service-client/src/index.ts#L108">service-client/src/index.ts:108</a></li>
+									<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/service/src/service.ts#L56">service/src/service.ts:56</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
 								<div class="lead">
-									<p>createThread with id.</p>
+									<p>createThread with id.
+									This will overwrite any existing thread information.</p>
 								</div>
 							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -348,9 +375,8 @@
 									<h5>opts: <span class="tsd-signature-type">KeyOptions</span></h5>
 									<div class="tsd-comment tsd-typography">
 										<p>The set of keys to use when creating the Thread. All keys are &quot;optional&quot;, though if no replicator key
-											is provided, one will be created (and returned) on the remote service. Similarly, if no LogKey is provided, then
-											a private key will be generated (and returned) on the remote service. If no ReadKey is provided, the remote
-										service will be unable to write records (but it can return records).</p>
+											is provided, one will be created. Similarly, if no log key is provided, then the &quot;host&quot; Peer ID will be used.
+										If no ReadKey is provided, the service will be unable to write records (but it may be able to return records).</p>
 									</div>
 								</li>
 							</ul>
@@ -368,7 +394,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/service-client/src/index.ts#L164">service-client/src/index.ts:164</a></li>
+									<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/service/src/service.ts#L105">service/src/service.ts:105</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -390,6 +416,29 @@
 					</ul>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="derivelogkeys" class="tsd-anchor"></a>
+					<h3>derive<wbr>Log<wbr>Keys</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">derive<wbr>Log<wbr>Keys<span class="tsd-signature-symbol">(</span>key<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">PublicKey</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">PrivateKey</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">LogInfo</span><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/service/src/service.ts#L176">service/src/service.ts:176</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> key: <span class="tsd-signature-type">PublicKey</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">PrivateKey</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">LogInfo</span><span class="tsd-signature-symbol">&gt;</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
 					<a name="gethostid" class="tsd-anchor"></a>
 					<h3>get<wbr>HostID</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
@@ -399,7 +448,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/service-client/src/index.ts#L93">service-client/src/index.ts:93</a></li>
+									<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/service/src/service.ts#L44">service/src/service.ts:44</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -408,6 +457,32 @@
 								</div>
 							</div>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">PeerId</span><span class="tsd-signature-symbol">&gt;</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="getownlog" class="tsd-anchor"></a>
+					<h3>get<wbr>Own<wbr>Log</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Own<wbr>Log<span class="tsd-signature-symbol">(</span>id<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">ThreadID</span>, create<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">true</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">LogInfo</span><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/service/src/service.ts#L196">service/src/service.ts:196</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>id: <span class="tsd-signature-type">ThreadID</span></h5>
+								</li>
+								<li>
+									<h5>create: <span class="tsd-signature-type">true</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">LogInfo</span><span class="tsd-signature-symbol">&gt;</span></h4>
 						</li>
 					</ul>
 				</section>
@@ -421,7 +496,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/service-client/src/index.ts#L230">service-client/src/index.ts:230</a></li>
+									<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/service/src/service.ts#L163">service/src/service.ts:163</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -458,7 +533,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/service-client/src/index.ts#L139">service-client/src/index.ts:139</a></li>
+									<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/service/src/service.ts#L85">service/src/service.ts:85</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -489,12 +564,14 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/service-client/src/index.ts#L152">service-client/src/index.ts:152</a></li>
+									<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/service/src/service.ts#L95">service/src/service.ts:95</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
 								<div class="lead">
-									<p>pullThread for new records.</p>
+									<p>pullThread for new records.
+										Logs owned by this host are traversed on the (possibly remote) network client. Remotely addressed logs are pulled
+									from the network on the (possible remote) client and forwarded to this peer.</p>
 								</div>
 							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -514,13 +591,13 @@
 					<a name="subscribe" class="tsd-anchor"></a>
 					<h3>subscribe</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">subscribe<span class="tsd-signature-symbol">(</span>cb<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">function</span>, <span class="tsd-signature-symbol">...</span>threads<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">ThreadID</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Request</span></li>
+						<li class="tsd-signature tsd-kind-icon">subscribe<span class="tsd-signature-symbol">(</span>cb<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">function</span>, <span class="tsd-signature-symbol">...</span>threads<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">ThreadID</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Closer</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/service-client/src/index.ts#L248">service-client/src/index.ts:248</a></li>
+									<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/service/src/service.ts#L172">service/src/service.ts:172</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -564,7 +641,7 @@
 									</div>
 								</li>
 							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Request</span></h4>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Closer</span></h4>
 						</li>
 					</ul>
 				</section>
@@ -582,56 +659,71 @@
 					<li class=" tsd-kind-module">
 						<a href="../modules/_textile_threads_encoding.html">@textile/threads-<wbr>encoding</a>
 					</li>
-					<li class=" tsd-kind-module">
+					<li class="current tsd-kind-module">
 						<a href="../modules/_textile_threads_service.html">@textile/threads-<wbr>service</a>
 					</li>
-					<li class="current tsd-kind-module">
+					<li class=" tsd-kind-module">
 						<a href="../modules/_textile_threads_service_client.html">@textile/threads-<wbr>service-<wbr>client</a>
 					</li>
 				</ul>
 			</nav>
 			<nav class="tsd-navigation secondary menu-sticky">
 				<ul class="before-current">
+					<li class=" tsd-kind-class tsd-parent-kind-module">
+						<a href="_textile_threads_service.keybook.html" class="tsd-kind-icon">Key<wbr>Book</a>
+					</li>
+					<li class=" tsd-kind-class tsd-parent-kind-module">
+						<a href="_textile_threads_service.logstore.html" class="tsd-kind-icon">Log<wbr>Store</a>
+					</li>
 				</ul>
 				<ul class="current">
 					<li class="current tsd-kind-class tsd-parent-kind-module">
-						<a href="_textile_threads_service_client.client.html" class="tsd-kind-icon">Client</a>
+						<a href="_textile_threads_service.service.html" class="tsd-kind-icon">Service</a>
 						<ul>
 							<li class=" tsd-kind-constructor tsd-parent-kind-class">
-								<a href="_textile_threads_service_client.client.html#constructor" class="tsd-kind-icon">constructor</a>
+								<a href="_textile_threads_service.service.html#constructor" class="tsd-kind-icon">constructor</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class">
+								<a href="_textile_threads_service.service.html#store" class="tsd-kind-icon">store</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
-								<a href="_textile_threads_service_client.client.html#addrecord" class="tsd-kind-icon">add<wbr>Record</a>
+								<a href="_textile_threads_service.service.html#addrecord" class="tsd-kind-icon">add<wbr>Record</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
-								<a href="_textile_threads_service_client.client.html#addreplicator" class="tsd-kind-icon">add<wbr>Replicator</a>
+								<a href="_textile_threads_service.service.html#addreplicator" class="tsd-kind-icon">add<wbr>Replicator</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
-								<a href="_textile_threads_service_client.client.html#addthread" class="tsd-kind-icon">add<wbr>Thread</a>
+								<a href="_textile_threads_service.service.html#addthread" class="tsd-kind-icon">add<wbr>Thread</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
-								<a href="_textile_threads_service_client.client.html#createrecord" class="tsd-kind-icon">create<wbr>Record</a>
+								<a href="_textile_threads_service.service.html#createrecord" class="tsd-kind-icon">create<wbr>Record</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
-								<a href="_textile_threads_service_client.client.html#createthread" class="tsd-kind-icon">create<wbr>Thread</a>
+								<a href="_textile_threads_service.service.html#createthread" class="tsd-kind-icon">create<wbr>Thread</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
-								<a href="_textile_threads_service_client.client.html#deletethread" class="tsd-kind-icon">delete<wbr>Thread</a>
+								<a href="_textile_threads_service.service.html#deletethread" class="tsd-kind-icon">delete<wbr>Thread</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
-								<a href="_textile_threads_service_client.client.html#gethostid" class="tsd-kind-icon">get<wbr>HostID</a>
+								<a href="_textile_threads_service.service.html#derivelogkeys" class="tsd-kind-icon">derive<wbr>Log<wbr>Keys</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
-								<a href="_textile_threads_service_client.client.html#getrecord" class="tsd-kind-icon">get<wbr>Record</a>
+								<a href="_textile_threads_service.service.html#gethostid" class="tsd-kind-icon">get<wbr>HostID</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
-								<a href="_textile_threads_service_client.client.html#getthread" class="tsd-kind-icon">get<wbr>Thread</a>
+								<a href="_textile_threads_service.service.html#getownlog" class="tsd-kind-icon">get<wbr>Own<wbr>Log</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
-								<a href="_textile_threads_service_client.client.html#pullthread" class="tsd-kind-icon">pull<wbr>Thread</a>
+								<a href="_textile_threads_service.service.html#getrecord" class="tsd-kind-icon">get<wbr>Record</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
-								<a href="_textile_threads_service_client.client.html#subscribe" class="tsd-kind-icon">subscribe</a>
+								<a href="_textile_threads_service.service.html#getthread" class="tsd-kind-icon">get<wbr>Thread</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="_textile_threads_service.service.html#pullthread" class="tsd-kind-icon">pull<wbr>Thread</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="_textile_threads_service.service.html#subscribe" class="tsd-kind-icon">subscribe</a>
 							</li>
 						</ul>
 					</li>
