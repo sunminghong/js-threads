@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>LogInfo | Threads</title>
+	<title>Protocol | Threads</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -57,28 +57,21 @@
 					<a href="../modules/_textile_threads_core.html">@textile/threads-core</a>
 				</li>
 				<li>
-					<a href="_textile_threads_core.loginfo.html">LogInfo</a>
+					<a href="_textile_threads_core.protocol.html">Protocol</a>
 				</li>
 			</ul>
-			<h1>Interface LogInfo</h1>
+			<h1>Interface Protocol</h1>
 		</div>
 	</div>
 </header>
 <div class="container container-main">
 	<div class="row">
 		<div class="col-8 col-content">
-			<section class="tsd-panel tsd-comment">
-				<div class="tsd-comment tsd-typography">
-					<div class="lead">
-						<p>LogInfo holds known info about a log.</p>
-					</div>
-				</div>
-			</section>
 			<section class="tsd-panel tsd-hierarchy">
 				<h3>Hierarchy</h3>
 				<ul class="tsd-hierarchy">
 					<li>
-						<span class="target">LogInfo</span>
+						<span class="target">Protocol</span>
 					</li>
 				</ul>
 			</section>
@@ -89,11 +82,11 @@
 						<section class="tsd-index-section ">
 							<h3>Properties</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_textile_threads_core.loginfo.html#addrs" class="tsd-kind-icon">addrs</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_textile_threads_core.loginfo.html#heads" class="tsd-kind-icon">heads</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_textile_threads_core.loginfo.html#id" class="tsd-kind-icon">id</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_textile_threads_core.loginfo.html#privkey" class="tsd-kind-icon">priv<wbr>Key</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_textile_threads_core.loginfo.html#pubkey" class="tsd-kind-icon">pub<wbr>Key</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_textile_threads_core.protocol.html#code" class="tsd-kind-icon">code</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_textile_threads_core.protocol.html#name" class="tsd-kind-icon">name</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_textile_threads_core.protocol.html#path" class="tsd-kind-icon">path</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_textile_threads_core.protocol.html#resolvable" class="tsd-kind-icon">resolvable</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_textile_threads_core.protocol.html#size" class="tsd-kind-icon">size</a></li>
 							</ul>
 						</section>
 					</div>
@@ -102,79 +95,54 @@
 			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Properties</h2>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-					<a name="addrs" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagOptional">Optional</span> addrs</h3>
-					<div class="tsd-signature tsd-kind-icon">addrs<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Set</span><span class="tsd-signature-symbol">&lt;</span><a href="../classes/_textile_threads_core.multiaddr.html" class="tsd-signature-type">Multiaddr</a><span class="tsd-signature-symbol">&gt;</span></div>
+					<a name="code" class="tsd-anchor"></a>
+					<h3>code</h3>
+					<div class="tsd-signature tsd-kind-icon">code<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/core/src/thread/log.ts#L25">core/src/thread/log.ts:25</a></li>
+							<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/core/src/multiaddr/protocols.ts#L43">core/src/multiaddr/protocols.ts:43</a></li>
 						</ul>
 					</aside>
-					<div class="tsd-comment tsd-typography">
-						<div class="lead">
-							<p>The set of Multiaddrs associated with this log.</p>
-						</div>
-					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-					<a name="heads" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagOptional">Optional</span> heads</h3>
-					<div class="tsd-signature tsd-kind-icon">heads<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Set</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">CID</span><span class="tsd-signature-symbol">&gt;</span></div>
+					<a name="name" class="tsd-anchor"></a>
+					<h3>name</h3>
+					<div class="tsd-signature tsd-kind-icon">name<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/core/src/thread/log.ts#L29">core/src/thread/log.ts:29</a></li>
+							<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/core/src/multiaddr/protocols.ts#L45">core/src/multiaddr/protocols.ts:45</a></li>
 						</ul>
 					</aside>
-					<div class="tsd-comment tsd-typography">
-						<div class="lead">
-							<p>The set of heads for this log.</p>
-						</div>
-					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-					<a name="id" class="tsd-anchor"></a>
-					<h3>id</h3>
-					<div class="tsd-signature tsd-kind-icon">id<span class="tsd-signature-symbol">:</span> <a href="../modules/_textile_threads_core.html#logid" class="tsd-signature-type">LogID</a></div>
+					<a name="path" class="tsd-anchor"></a>
+					<h3>path</h3>
+					<div class="tsd-signature tsd-kind-icon">path<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/core/src/thread/log.ts#L13">core/src/thread/log.ts:13</a></li>
+							<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/core/src/multiaddr/protocols.ts#L47">core/src/multiaddr/protocols.ts:47</a></li>
 						</ul>
 					</aside>
-					<div class="tsd-comment tsd-typography">
-						<div class="lead">
-							<p>The logs ID.</p>
-						</div>
-					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-					<a name="privkey" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagOptional">Optional</span> priv<wbr>Key</h3>
-					<div class="tsd-signature tsd-kind-icon">priv<wbr>Key<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">PrivateKey</span></div>
+					<a name="resolvable" class="tsd-anchor"></a>
+					<h3>resolvable</h3>
+					<div class="tsd-signature tsd-kind-icon">resolvable<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/core/src/thread/log.ts#L21">core/src/thread/log.ts:21</a></li>
+							<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/core/src/multiaddr/protocols.ts#L46">core/src/multiaddr/protocols.ts:46</a></li>
 						</ul>
 					</aside>
-					<div class="tsd-comment tsd-typography">
-						<div class="lead">
-							<p>The logs private key, used to sign content when available.</p>
-						</div>
-					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-					<a name="pubkey" class="tsd-anchor"></a>
-					<h3>pub<wbr>Key</h3>
-					<div class="tsd-signature tsd-kind-icon">pub<wbr>Key<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">PublicKey</span></div>
+					<a name="size" class="tsd-anchor"></a>
+					<h3>size</h3>
+					<div class="tsd-signature tsd-kind-icon">size<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/core/src/thread/log.ts#L17">core/src/thread/log.ts:17</a></li>
+							<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/core/src/multiaddr/protocols.ts#L44">core/src/multiaddr/protocols.ts:44</a></li>
 						</ul>
 					</aside>
-					<div class="tsd-comment tsd-typography">
-						<div class="lead">
-							<p>The logs public key used to check signatures.</p>
-						</div>
-					</div>
 				</section>
 			</section>
 		</div>
@@ -203,22 +171,22 @@
 				</ul>
 				<ul class="current">
 					<li class="current tsd-kind-interface tsd-parent-kind-module">
-						<a href="_textile_threads_core.loginfo.html" class="tsd-kind-icon">Log<wbr>Info</a>
+						<a href="_textile_threads_core.protocol.html" class="tsd-kind-icon">Protocol</a>
 						<ul>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="_textile_threads_core.loginfo.html#addrs" class="tsd-kind-icon">addrs</a>
+								<a href="_textile_threads_core.protocol.html#code" class="tsd-kind-icon">code</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="_textile_threads_core.loginfo.html#heads" class="tsd-kind-icon">heads</a>
+								<a href="_textile_threads_core.protocol.html#name" class="tsd-kind-icon">name</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="_textile_threads_core.loginfo.html#id" class="tsd-kind-icon">id</a>
+								<a href="_textile_threads_core.protocol.html#path" class="tsd-kind-icon">path</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="_textile_threads_core.loginfo.html#privkey" class="tsd-kind-icon">priv<wbr>Key</a>
+								<a href="_textile_threads_core.protocol.html#resolvable" class="tsd-kind-icon">resolvable</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="_textile_threads_core.loginfo.html#pubkey" class="tsd-kind-icon">pub<wbr>Key</a>
+								<a href="_textile_threads_core.protocol.html#size" class="tsd-kind-icon">size</a>
 							</li>
 						</ul>
 					</li>
