@@ -71,7 +71,7 @@
 				<div class="tsd-comment tsd-typography">
 					<div class="lead">
 						<p>Client is a web-gRPC wrapper client for communicating with a webgRPC-enabled Textile server.
-						This client library can be used to interact with a local or remote Textile gRPC-service.</p>
+						This client library can be used to interact with a local or remote Threads gRPC Service.</p>
 					</div>
 				</div>
 			</section>
@@ -100,6 +100,12 @@
 							</ul>
 						</section>
 						<section class="tsd-index-section ">
+							<h3>Properties</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_textile_threads_service_client.client.html#config" class="tsd-kind-icon">config</a></li>
+							</ul>
+						</section>
+						<section class="tsd-index-section ">
 							<h3>Methods</h3>
 							<ul class="tsd-index-list">
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_textile_threads_service_client.client.html#addrecord" class="tsd-kind-icon">add<wbr>Record</a></li>
@@ -124,13 +130,13 @@
 					<a name="constructor" class="tsd-anchor"></a>
 					<h3>constructor</h3>
 					<ul class="tsd-signatures tsd-kind-constructor tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">new <wbr>Client<span class="tsd-signature-symbol">(</span>host<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span>, defaultTransport<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">grpc.TransportFactory</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="_textile_threads_service_client.client.html" class="tsd-signature-type">Client</a></li>
+						<li class="tsd-signature tsd-kind-icon">new <wbr>Client<span class="tsd-signature-symbol">(</span>config<span class="tsd-signature-symbol">?: </span><a href="_textile_threads_service_client.config.html" class="tsd-signature-type">Config</a><span class="tsd-signature-symbol"> | </span><a href="../interfaces/_textile_threads_service_client.baseconfig.html" class="tsd-signature-type">BaseConfig</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="_textile_threads_service_client.client.html" class="tsd-signature-type">Client</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/service-client/src/index.ts#L79">service-client/src/index.ts:79</a></li>
+									<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/service-client/src/index.ts#L86">service-client/src/index.ts:86</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -141,18 +147,10 @@
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5><span class="tsd-flag ts-flagDefault value">Default value</span> host: <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> =&nbsp;&quot;http://localhost:5007&quot;</span></h5>
+									<h5><span class="tsd-flag ts-flagDefault value">Default value</span> config: <a href="_textile_threads_service_client.config.html" class="tsd-signature-type">Config</a><span class="tsd-signature-symbol"> | </span><a href="../interfaces/_textile_threads_service_client.baseconfig.html" class="tsd-signature-type">BaseConfig</a><span class="tsd-signature-symbol"> =&nbsp;{}</span></h5>
 									<div class="tsd-comment tsd-typography">
 										<div class="lead">
-											<p>The local/remote host url. Defaults to &#39;localhost:5007&#39;.</p>
-										</div>
-									</div>
-								</li>
-								<li>
-									<h5><span class="tsd-flag ts-flagOptional">Optional</span> defaultTransport: <span class="tsd-signature-type">grpc.TransportFactory</span></h5>
-									<div class="tsd-comment tsd-typography">
-										<div class="lead">
-											<p>The default transport to use when making webgRPC calls. Defaults to WebSockets.</p>
+											<p>The remote API configuration object or a set of parameters.</p>
 										</div>
 									</div>
 								</li>
@@ -160,6 +158,24 @@
 							<h4 class="tsd-returns-title">Returns <a href="_textile_threads_service_client.client.html" class="tsd-signature-type">Client</a></h4>
 						</li>
 					</ul>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group ">
+				<h2>Properties</h2>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
+					<a name="config" class="tsd-anchor"></a>
+					<h3>config</h3>
+					<div class="tsd-signature tsd-kind-icon">config<span class="tsd-signature-symbol">:</span> <a href="_textile_threads_service_client.config.html" class="tsd-signature-type">Config</a></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/service-client/src/index.ts#L86">service-client/src/index.ts:86</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Controls the remote API settings.</p>
+						</div>
+					</div>
 				</section>
 			</section>
 			<section class="tsd-panel-group tsd-member-group ">
@@ -174,7 +190,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/service-client/src/index.ts#L209">service-client/src/index.ts:209</a></li>
+									<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/service-client/src/index.ts#L220">service-client/src/index.ts:220</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -217,7 +233,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/service-client/src/index.ts#L177">service-client/src/index.ts:177</a></li>
+									<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/service-client/src/index.ts#L188">service-client/src/index.ts:188</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -254,7 +270,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/service-client/src/index.ts#L124">service-client/src/index.ts:124</a></li>
+									<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/service-client/src/index.ts#L135">service-client/src/index.ts:135</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -291,7 +307,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/service-client/src/index.ts#L192">service-client/src/index.ts:192</a></li>
+									<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/service-client/src/index.ts#L203">service-client/src/index.ts:203</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -328,7 +344,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/service-client/src/index.ts#L108">service-client/src/index.ts:108</a></li>
+									<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/service-client/src/index.ts#L119">service-client/src/index.ts:119</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -368,7 +384,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/service-client/src/index.ts#L164">service-client/src/index.ts:164</a></li>
+									<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/service-client/src/index.ts#L175">service-client/src/index.ts:175</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -399,7 +415,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/service-client/src/index.ts#L93">service-client/src/index.ts:93</a></li>
+									<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/service-client/src/index.ts#L104">service-client/src/index.ts:104</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -421,7 +437,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/service-client/src/index.ts#L230">service-client/src/index.ts:230</a></li>
+									<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/service-client/src/index.ts#L241">service-client/src/index.ts:241</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -458,7 +474,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/service-client/src/index.ts#L139">service-client/src/index.ts:139</a></li>
+									<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/service-client/src/index.ts#L150">service-client/src/index.ts:150</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -489,7 +505,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/service-client/src/index.ts#L152">service-client/src/index.ts:152</a></li>
+									<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/service-client/src/index.ts#L163">service-client/src/index.ts:163</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -520,7 +536,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/service-client/src/index.ts#L248">service-client/src/index.ts:248</a></li>
+									<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/service-client/src/index.ts#L259">service-client/src/index.ts:259</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -600,6 +616,9 @@
 							<li class=" tsd-kind-constructor tsd-parent-kind-class">
 								<a href="_textile_threads_service_client.client.html#constructor" class="tsd-kind-icon">constructor</a>
 							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class">
+								<a href="_textile_threads_service_client.client.html#config" class="tsd-kind-icon">config</a>
+							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="_textile_threads_service_client.client.html#addrecord" class="tsd-kind-icon">add<wbr>Record</a>
 							</li>
@@ -637,6 +656,12 @@
 					</li>
 				</ul>
 				<ul class="after-current">
+					<li class=" tsd-kind-class tsd-parent-kind-module">
+						<a href="_textile_threads_service_client.config.html" class="tsd-kind-icon">Config</a>
+					</li>
+					<li class=" tsd-kind-interface tsd-parent-kind-module">
+						<a href="../interfaces/_textile_threads_service_client.baseconfig.html" class="tsd-kind-icon">Base<wbr>Config</a>
+					</li>
 				</ul>
 			</nav>
 		</div>
