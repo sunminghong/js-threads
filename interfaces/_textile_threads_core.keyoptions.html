@@ -90,8 +90,7 @@
 							<h3>Properties</h3>
 							<ul class="tsd-index-list">
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_textile_threads_core.keyoptions.html#logkey" class="tsd-kind-icon">log<wbr>Key</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_textile_threads_core.keyoptions.html#readkey" class="tsd-kind-icon">read<wbr>Key</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_textile_threads_core.keyoptions.html#replicatorkey" class="tsd-kind-icon">replicator<wbr>Key</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_textile_threads_core.keyoptions.html#threadkey" class="tsd-kind-icon">thread<wbr>Key</a></li>
 							</ul>
 						</section>
 					</div>
@@ -105,7 +104,7 @@
 					<div class="tsd-signature tsd-kind-icon">log<wbr>Key<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">PublicKey</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">PrivateKey</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/core/src/thread/thread.ts#L21">packages/core/src/thread/thread.ts:21</a></li>
+							<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/core/src/thread/key.ts#L18">packages/core/src/thread/key.ts:18</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -116,32 +115,17 @@
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-					<a name="readkey" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagOptional">Optional</span> read<wbr>Key</h3>
-					<div class="tsd-signature tsd-kind-icon">read<wbr>Key<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Uint8Array</span></div>
+					<a name="threadkey" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> thread<wbr>Key</h3>
+					<div class="tsd-signature tsd-kind-icon">thread<wbr>Key<span class="tsd-signature-symbol">:</span> <a href="../classes/_textile_threads_core.key.html" class="tsd-signature-type">Key</a></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/core/src/thread/thread.ts#L16">packages/core/src/thread/thread.ts:16</a></li>
+							<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/core/src/thread/key.ts#L13">packages/core/src/thread/key.ts:13</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
-							<p>Symmetric encryption key. Should be 44 bytes in length. Can be generated with crypto.randomBytes().</p>
-						</div>
-					</div>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-					<a name="replicatorkey" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagOptional">Optional</span> replicator<wbr>Key</h3>
-					<div class="tsd-signature tsd-kind-icon">replicator<wbr>Key<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Uint8Array</span></div>
-					<aside class="tsd-sources">
-						<ul>
-							<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/core/src/thread/thread.ts#L12">packages/core/src/thread/thread.ts:12</a></li>
-						</ul>
-					</aside>
-					<div class="tsd-comment tsd-typography">
-						<div class="lead">
-							<p>Symmetric encryption key. Should be 44 bytes in length. Can be generated with crypto.randomBytes().</p>
+							<p>Set of symmetric encryption keys.Can be generated with Key.fromRandom().</p>
 						</div>
 					</div>
 				</section>
@@ -181,10 +165,7 @@
 								<a href="_textile_threads_core.keyoptions.html#logkey" class="tsd-kind-icon">log<wbr>Key</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="_textile_threads_core.keyoptions.html#readkey" class="tsd-kind-icon">read<wbr>Key</a>
-							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="_textile_threads_core.keyoptions.html#replicatorkey" class="tsd-kind-icon">replicator<wbr>Key</a>
+								<a href="_textile_threads_core.keyoptions.html#threadkey" class="tsd-kind-icon">thread<wbr>Key</a>
 							</li>
 						</ul>
 					</li>

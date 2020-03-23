@@ -135,6 +135,7 @@
 						<section class="tsd-index-section ">
 							<h3>Classes</h3>
 							<ul class="tsd-index-list">
+								<li class="tsd-kind-class tsd-parent-kind-module"><a href="../classes/_textile_threads_core.key.html" class="tsd-kind-icon">Key</a></li>
 								<li class="tsd-kind-class tsd-parent-kind-module"><a href="../classes/_textile_threads_core.multiaddr.html" class="tsd-kind-icon">Multiaddr</a></li>
 								<li class="tsd-kind-class tsd-parent-kind-module"><a href="../classes/_textile_threads_core.threadid.html" class="tsd-kind-icon">ThreadID</a></li>
 							</ul>
@@ -175,6 +176,7 @@
 								<li class="tsd-kind-variable tsd-parent-kind-module"><a href="_textile_threads_core.html#block-1" class="tsd-kind-icon">Block</a></li>
 								<li class="tsd-kind-variable tsd-parent-kind-module"><a href="_textile_threads_core.html#undef" class="tsd-kind-icon">Undef</a></li>
 								<li class="tsd-kind-variable tsd-parent-kind-module"><a href="_textile_threads_core.html#v1" class="tsd-kind-icon">V1</a></li>
+								<li class="tsd-kind-variable tsd-parent-kind-module"><a href="_textile_threads_core.html#invalidkeyerror" class="tsd-kind-icon">invalid<wbr>Key<wbr>Error</a></li>
 							</ul>
 						</section>
 						<section class="tsd-index-section ">
@@ -187,6 +189,8 @@
 								<li class="tsd-kind-function tsd-parent-kind-module"><a href="_textile_threads_core.html#frombuffer" class="tsd-kind-icon">from<wbr>Buffer</a></li>
 								<li class="tsd-kind-function tsd-parent-kind-module"><a href="_textile_threads_core.html#fromstring" class="tsd-kind-icon">from<wbr>String</a></li>
 								<li class="tsd-kind-function tsd-parent-kind-module"><a href="_textile_threads_core.html#isvalidbuffer" class="tsd-kind-icon">is<wbr>Valid<wbr>Buffer</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-module"><a href="_textile_threads_core.html#keyfromstring" class="tsd-kind-icon">key<wbr>From<wbr>String</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-module"><a href="_textile_threads_core.html#keytostring" class="tsd-kind-icon">key<wbr>ToString</a></li>
 								<li class="tsd-kind-function tsd-parent-kind-module"><a href="_textile_threads_core.html#marshalkey" class="tsd-kind-icon">marshal<wbr>Key</a></li>
 								<li class="tsd-kind-function tsd-parent-kind-module"><a href="_textile_threads_core.html#protofromtuple" class="tsd-kind-icon">proto<wbr>From<wbr>Tuple</a></li>
 								<li class="tsd-kind-function tsd-parent-kind-module"><a href="_textile_threads_core.html#sizeforaddr" class="tsd-kind-icon">size<wbr>For<wbr>Addr</a></li>
@@ -316,6 +320,16 @@
 							<p>Versions. Currently only V1 is supported.</p>
 						</div>
 					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-module">
+					<a name="invalidkeyerror" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagConst">Const</span> invalid<wbr>Key<wbr>Error</h3>
+					<div class="tsd-signature tsd-kind-icon">invalid<wbr>Key<wbr>Error<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Error</span><span class="tsd-signature-symbol"> =&nbsp;new Error(&#x27;Invalid key&#x27;)</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/core/src/thread/key.ts#L4">packages/core/src/thread/key.ts:4</a></li>
+						</ul>
+					</aside>
 				</section>
 			</section>
 			<section class="tsd-panel-group tsd-member-group ">
@@ -478,6 +492,72 @@
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module">
+					<a name="keyfromstring" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagConst">Const</span> key<wbr>From<wbr>String</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module">
+						<li class="tsd-signature tsd-kind-icon">key<wbr>From<wbr>String<span class="tsd-signature-symbol">(</span>k<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Buffer</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/core/src/thread/key.ts#L31">packages/core/src/thread/key.ts:31</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>keyFromString returns a key by decoding a base32-encoded string.</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>k: <span class="tsd-signature-type">string</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<div class="lead">
+											<p>Input base32-encoded string.</p>
+										</div>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Buffer</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module">
+					<a name="keytostring" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagConst">Const</span> key<wbr>ToString</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module">
+						<li class="tsd-signature tsd-kind-icon">key<wbr>ToString<span class="tsd-signature-symbol">(</span>k<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Buffer</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/core/src/thread/key.ts#L39">packages/core/src/thread/key.ts:39</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>String returns the base32-encoded string representation of raw key bytes.</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>k: <span class="tsd-signature-type">Buffer</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<div class="lead">
+											<p>Input key buffer.</p>
+										</div>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span></h4>
 						</li>
 					</ul>
 				</section>
@@ -752,7 +832,7 @@
 					<div class="tsd-signature tsd-kind-icon">Thread<wbr>Protocol<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">object</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/core/src/thread/thread.ts#L32">packages/core/src/thread/thread.ts:32</a></li>
+							<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/core/src/thread/thread.ts#L13">packages/core/src/thread/thread.ts:13</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -766,7 +846,7 @@
 						<div class="tsd-signature tsd-kind-icon">code<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> =&nbsp;406</span></div>
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/core/src/thread/thread.ts#L40">packages/core/src/thread/thread.ts:40</a></li>
+								<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/core/src/thread/thread.ts#L21">packages/core/src/thread/thread.ts:21</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -781,7 +861,7 @@
 						<div class="tsd-signature tsd-kind-icon">name<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/core/src/thread/thread.ts#L36">packages/core/src/thread/thread.ts:36</a></li>
+								<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/core/src/thread/thread.ts#L17">packages/core/src/thread/thread.ts:17</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -796,7 +876,7 @@
 						<div class="tsd-signature tsd-kind-icon">protocol<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> =&nbsp;&#x60;/${name}/${version}&#x60;</span></div>
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/core/src/thread/thread.ts#L48">packages/core/src/thread/thread.ts:48</a></li>
+								<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/core/src/thread/thread.ts#L29">packages/core/src/thread/thread.ts:29</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -811,7 +891,7 @@
 						<div class="tsd-signature tsd-kind-icon">version<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/core/src/thread/thread.ts#L44">packages/core/src/thread/thread.ts:44</a></li>
+								<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/core/src/thread/thread.ts#L25">packages/core/src/thread/thread.ts:25</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -850,6 +930,9 @@
 				<ul class="before-current">
 					<li class=" tsd-kind-enum tsd-parent-kind-module">
 						<a href="../enums/_textile_threads_core.variant.html" class="tsd-kind-icon">Variant</a>
+					</li>
+					<li class=" tsd-kind-class tsd-parent-kind-module">
+						<a href="../classes/_textile_threads_core.key.html" class="tsd-kind-icon">Key</a>
 					</li>
 					<li class=" tsd-kind-class tsd-parent-kind-module">
 						<a href="../classes/_textile_threads_core.multiaddr.html" class="tsd-kind-icon">Multiaddr</a>
@@ -926,6 +1009,9 @@
 					<li class=" tsd-kind-variable tsd-parent-kind-module">
 						<a href="_textile_threads_core.html#v1" class="tsd-kind-icon">V1</a>
 					</li>
+					<li class=" tsd-kind-variable tsd-parent-kind-module">
+						<a href="_textile_threads_core.html#invalidkeyerror" class="tsd-kind-icon">invalid<wbr>Key<wbr>Error</a>
+					</li>
 					<li class=" tsd-kind-function tsd-parent-kind-module">
 						<a href="_textile_threads_core.html#parseerror" class="tsd-kind-icon">Parse<wbr>Error</a>
 					</li>
@@ -946,6 +1032,12 @@
 					</li>
 					<li class=" tsd-kind-function tsd-parent-kind-module">
 						<a href="_textile_threads_core.html#isvalidbuffer" class="tsd-kind-icon">is<wbr>Valid<wbr>Buffer</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-module">
+						<a href="_textile_threads_core.html#keyfromstring" class="tsd-kind-icon">key<wbr>From<wbr>String</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-module">
+						<a href="_textile_threads_core.html#keytostring" class="tsd-kind-icon">key<wbr>ToString</a>
 					</li>
 					<li class=" tsd-kind-function tsd-parent-kind-module">
 						<a href="_textile_threads_core.html#marshalkey" class="tsd-kind-icon">marshal<wbr>Key</a>
