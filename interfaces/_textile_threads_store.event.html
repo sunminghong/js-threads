@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>threads-example-chat | Threads</title>
+	<title>Event | Threads</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -54,10 +54,13 @@
 					<a href="../globals.html">Globals</a>
 				</li>
 				<li>
-					<a href="threads_example_chat.html">threads-example-chat</a>
+					<a href="../modules/_textile_threads_store.html">@textile/threads-store</a>
+				</li>
+				<li>
+					<a href="_textile_threads_store.event.html">Event</a>
 				</li>
 			</ul>
-			<h1>Module threads-example-chat</h1>
+			<h1>Interface Event&lt;T&gt;</h1>
 		</div>
 	</div>
 </header>
@@ -66,100 +69,84 @@
 		<div class="col-8 col-content">
 			<section class="tsd-panel tsd-comment">
 				<div class="tsd-comment tsd-typography">
-					<a href="#threads-examples-emthreads-examplesem" id="threads-examples-emthreads-examplesem" style="color: inherit; text-decoration: none;">
-						<h1>Threads Examples <em>(threads-examples)</em></h1>
-					</a>
-					<p><a href="https://textile.io"><img src="https://img.shields.io/badge/made%20by-Textile-informational.svg?style=popout-square" alt="Made by Textile"></a>
-						<a href="https://slack.textile.io"><img src="https://img.shields.io/badge/slack-slack.textile.io-informational.svg?style=popout-square" alt="Chat on Slack"></a>
-					<a href="https://github.com/RichardLitt/standard-readme"><img src="https://img.shields.io/badge/standard--readme-OK-green.svg?style=flat-square" alt="standard-readme compliant"></a></p>
-					<blockquote>
-						<p>A set of example apps using Textile&#39;s Threads Protocol</p>
-					</blockquote>
-					<p>Join us on our <a href="https://slack.textile.io/">public Slack channel</a> for news, discussions, and status updates. <a href="https://blog.textile.io">Check out our blog</a> for the latest posts and announcements.</p>
-					<a href="#table-of-contents" id="table-of-contents" style="color: inherit; text-decoration: none;">
-						<h2>Table of Contents</h2>
-					</a>
-					<ul>
-						<li><a href="#background">Background</a></li>
-						<li><a href="#install">Install</a></li>
-						<li><a href="#usage">Usage</a></li>
-						<li><a href="#api">API</a></li>
-						<li><a href="#maintainers">Maintainers</a></li>
-						<li><a href="#contributing">Contributing</a></li>
-						<li><a href="#license">License</a></li>
-					</ul>
-					<a href="#background" id="background" style="color: inherit; text-decoration: none;">
-						<h2>Background</h2>
-					</a>
-					<p>TODO</p>
-					<a href="#install" id="install" style="color: inherit; text-decoration: none;">
-						<h2>Install</h2>
-					</a>
-					<pre><code class="language-bash">// TODO</code></pre>
-					<a href="#usage" id="usage" style="color: inherit; text-decoration: none;">
-						<h2>Usage</h2>
-					</a>
-					<pre><code class="language-typescript"><span class="hljs-comment">// TODO</span></code></pre>
-					<a href="#api" id="api" style="color: inherit; text-decoration: none;">
-						<h2>API</h2>
-					</a>
-					<p>See <a href="https://textileio.github.io/js-threads">https://textileio.github.io/js-threads</a></p>
-					<a href="#maintainers" id="maintainers" style="color: inherit; text-decoration: none;">
-						<h2>Maintainers</h2>
-					</a>
-					<p><a href="https://github.com/carsonfarmer">Carson Farmer</a></p>
-					<a href="#contributing" id="contributing" style="color: inherit; text-decoration: none;">
-						<h2>Contributing</h2>
-					</a>
-					<p>See <a href="../../CONTRIBUTING.md">the contributing file</a>!</p>
-					<p>PRs accepted.</p>
-					<p>Small note: If editing the README, please conform to the <a href="https://github.com/RichardLitt/standard-readme">standard-readme</a> specification.</p>
-					<a href="#license" id="license" style="color: inherit; text-decoration: none;">
-						<h2>License</h2>
-					</a>
-					<p><a href="../../LICENSE">MIT</a> (c) 2019-2020 Textile</p>
+					<div class="lead">
+						<p>Event is a local or remote event.</p>
+					</div>
 				</div>
+			</section>
+			<section class="tsd-panel tsd-type-parameters">
+				<h3>Type parameters</h3>
+				<ul class="tsd-type-parameters">
+					<li>
+						<h4>T</h4>
+					</li>
+				</ul>
+			</section>
+			<section class="tsd-panel tsd-hierarchy">
+				<h3>Hierarchy</h3>
+				<ul class="tsd-hierarchy">
+					<li>
+						<span class="target">Event</span>
+					</li>
+				</ul>
 			</section>
 			<section class="tsd-panel-group tsd-index-group">
 				<h2>Index</h2>
 				<section class="tsd-panel tsd-index-panel">
 					<div class="tsd-index-content">
 						<section class="tsd-index-section ">
-							<h3>Functions</h3>
+							<h3>Properties</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-function tsd-parent-kind-module"><a href="threads_example_chat.html#threadaddresscmd" class="tsd-kind-icon">thread<wbr>Address<wbr>Cmd</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_textile_threads_store.event.html#collection" class="tsd-kind-icon">collection</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_textile_threads_store.event.html#id" class="tsd-kind-icon">id</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_textile_threads_store.event.html#patch" class="tsd-kind-icon">patch</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_textile_threads_store.event.html#timestamp" class="tsd-kind-icon">timestamp</a></li>
 							</ul>
 						</section>
 					</div>
 				</section>
 			</section>
 			<section class="tsd-panel-group tsd-member-group ">
-				<h2>Functions</h2>
-				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module">
-					<a name="threadaddresscmd" class="tsd-anchor"></a>
-					<h3>thread<wbr>Address<wbr>Cmd</h3>
-					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module">
-						<li class="tsd-signature tsd-kind-icon">thread<wbr>Address<wbr>Cmd<span class="tsd-signature-symbol">(</span>service<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Service</span>, id<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">ThreadID</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">Multiaddr</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></li>
-					</ul>
-					<ul class="tsd-descriptions">
-						<li class="tsd-description">
-							<aside class="tsd-sources">
-								<ul>
-									<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/examples/chat/src/index.ts#L25">examples/chat/src/index.ts:25</a></li>
-								</ul>
-							</aside>
-							<h4 class="tsd-parameters-title">Parameters</h4>
-							<ul class="tsd-parameters">
-								<li>
-									<h5>service: <span class="tsd-signature-type">Service</span></h5>
-								</li>
-								<li>
-									<h5>id: <span class="tsd-signature-type">ThreadID</span></h5>
-								</li>
-							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">Multiaddr</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></h4>
-						</li>
-					</ul>
+				<h2>Properties</h2>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="collection" class="tsd-anchor"></a>
+					<h3>collection</h3>
+					<div class="tsd-signature tsd-kind-icon">collection<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/store/src/dispatcher.ts#L21">packages/store/src/dispatcher.ts:21</a></li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="id" class="tsd-anchor"></a>
+					<h3>id</h3>
+					<div class="tsd-signature tsd-kind-icon">id<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/store/src/dispatcher.ts#L20">packages/store/src/dispatcher.ts:20</a></li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="patch" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> patch</h3>
+					<div class="tsd-signature tsd-kind-icon">patch<span class="tsd-signature-symbol">:</span> <a href="" class="tsd-signature-type">T</a></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/store/src/dispatcher.ts#L22">packages/store/src/dispatcher.ts:22</a></li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="timestamp" class="tsd-anchor"></a>
+					<h3>timestamp</h3>
+					<div class="tsd-signature tsd-kind-icon">timestamp<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Buffer</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/store/src/dispatcher.ts#L19">packages/store/src/dispatcher.ts:19</a></li>
+						</ul>
+					</aside>
 				</section>
 			</section>
 		</div>
@@ -170,27 +157,48 @@
 						<a href="../globals.html"><em>Globals</em></a>
 					</li>
 					<li class=" tsd-kind-module">
-						<a href="_textile_threads_core.html">@textile/threads-<wbr>core</a>
+						<a href="../modules/_textile_threads_core.html">@textile/threads-<wbr>core</a>
 					</li>
 					<li class=" tsd-kind-module">
-						<a href="_textile_threads_encoding.html">@textile/threads-<wbr>encoding</a>
+						<a href="../modules/_textile_threads_encoding.html">@textile/threads-<wbr>encoding</a>
 					</li>
 					<li class=" tsd-kind-module">
-						<a href="_textile_threads_service.html">@textile/threads-<wbr>service</a>
+						<a href="../modules/_textile_threads_service.html">@textile/threads-<wbr>service</a>
 					</li>
 					<li class=" tsd-kind-module">
-						<a href="_textile_threads_service_client.html">@textile/threads-<wbr>service-<wbr>client</a>
+						<a href="../modules/_textile_threads_service_client.html">@textile/threads-<wbr>service-<wbr>client</a>
 					</li>
 					<li class="current tsd-kind-module">
-						<a href="threads_example_chat.html">threads-<wbr>example-<wbr>chat</a>
+						<a href="../modules/_textile_threads_store.html">@textile/threads-<wbr>store</a>
+					</li>
+					<li class=" tsd-kind-module tsd-parent-kind-module tsd-has-type-parameter">
+						<a href="../modules/_textile_threads_store.op.html">@textile/threads-<wbr>store.<wbr>Op</a>
 					</li>
 				</ul>
 			</nav>
 			<nav class="tsd-navigation secondary menu-sticky">
 				<ul class="before-current">
-					<li class=" tsd-kind-function tsd-parent-kind-module">
-						<a href="threads_example_chat.html#threadaddresscmd" class="tsd-kind-icon">thread<wbr>Address<wbr>Cmd</a>
+				</ul>
+				<ul class="current">
+					<li class="current tsd-kind-interface tsd-parent-kind-module tsd-has-type-parameter">
+						<a href="_textile_threads_store.event.html" class="tsd-kind-icon">Event</a>
+						<ul>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="_textile_threads_store.event.html#collection" class="tsd-kind-icon">collection</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="_textile_threads_store.event.html#id" class="tsd-kind-icon">id</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="_textile_threads_store.event.html#patch" class="tsd-kind-icon">patch</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="_textile_threads_store.event.html#timestamp" class="tsd-kind-icon">timestamp</a>
+							</li>
+						</ul>
 					</li>
+				</ul>
+				<ul class="after-current">
 				</ul>
 			</nav>
 		</div>

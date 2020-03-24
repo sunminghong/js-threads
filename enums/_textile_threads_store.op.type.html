@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>Variant | Threads</title>
+	<title>Type | Threads</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -54,26 +54,22 @@
 					<a href="../globals.html">Globals</a>
 				</li>
 				<li>
-					<a href="../modules/_textile_threads_core.html">@textile/threads-core</a>
+					<a href="../modules/_textile_threads_store.html">@textile/threads-store</a>
 				</li>
 				<li>
-					<a href="_textile_threads_core.variant.html">Variant</a>
+					<a href="../modules/_textile_threads_store.op.html">Op</a>
+				</li>
+				<li>
+					<a href="_textile_threads_store.op.type.html">Type</a>
 				</li>
 			</ul>
-			<h1>Enumeration Variant</h1>
+			<h1>Enumeration Type</h1>
 		</div>
 	</div>
 </header>
 <div class="container container-main">
 	<div class="row">
 		<div class="col-8 col-content">
-			<section class="tsd-panel tsd-comment">
-				<div class="tsd-comment tsd-typography">
-					<div class="lead">
-						<p>Variant denotes Thread variant. Currently only two variants are supported.</p>
-					</div>
-				</div>
-			</section>
 			<section class="tsd-panel-group tsd-index-group">
 				<h2>Index</h2>
 				<section class="tsd-panel tsd-index-panel">
@@ -81,8 +77,9 @@
 						<section class="tsd-index-section ">
 							<h3>Enumeration members</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-enum-member tsd-parent-kind-enum"><a href="_textile_threads_core.variant.html#accesscontrolled" class="tsd-kind-icon">Access<wbr>Controlled</a></li>
-								<li class="tsd-kind-enum-member tsd-parent-kind-enum"><a href="_textile_threads_core.variant.html#raw" class="tsd-kind-icon">Raw</a></li>
+								<li class="tsd-kind-enum-member tsd-parent-kind-enum"><a href="_textile_threads_store.op.type.html#create" class="tsd-kind-icon">Create</a></li>
+								<li class="tsd-kind-enum-member tsd-parent-kind-enum"><a href="_textile_threads_store.op.type.html#delete" class="tsd-kind-icon">Delete</a></li>
+								<li class="tsd-kind-enum-member tsd-parent-kind-enum"><a href="_textile_threads_store.op.type.html#save" class="tsd-kind-icon">Save</a></li>
 							</ul>
 						</section>
 					</div>
@@ -91,22 +88,32 @@
 			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Enumeration members</h2>
 				<section class="tsd-panel tsd-member tsd-kind-enum-member tsd-parent-kind-enum">
-					<a name="accesscontrolled" class="tsd-anchor"></a>
-					<h3>Access<wbr>Controlled</h3>
-					<div class="tsd-signature tsd-kind-icon">Access<wbr>Controlled<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol"> =&nbsp;112</span></div>
+					<a name="create" class="tsd-anchor"></a>
+					<h3>Create</h3>
+					<div class="tsd-signature tsd-kind-icon">Create<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol"> =&nbsp;0</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/core/src/thread/id.ts#L21">packages/core/src/thread/id.ts:21</a></li>
+							<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/store/src/stores/jsonpatch.ts#L21">packages/store/src/stores/jsonpatch.ts:21</a></li>
 						</ul>
 					</aside>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-enum-member tsd-parent-kind-enum">
-					<a name="raw" class="tsd-anchor"></a>
-					<h3>Raw</h3>
-					<div class="tsd-signature tsd-kind-icon">Raw<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol"> =&nbsp;85</span></div>
+					<a name="delete" class="tsd-anchor"></a>
+					<h3>Delete</h3>
+					<div class="tsd-signature tsd-kind-icon">Delete<span class="tsd-signature-symbol">:</span> </div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/core/src/thread/id.ts#L20">packages/core/src/thread/id.ts:20</a></li>
+							<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/store/src/stores/jsonpatch.ts#L23">packages/store/src/stores/jsonpatch.ts:23</a></li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-enum-member tsd-parent-kind-enum">
+					<a name="save" class="tsd-anchor"></a>
+					<h3>Save</h3>
+					<div class="tsd-signature tsd-kind-icon">Save<span class="tsd-signature-symbol">:</span> </div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/store/src/stores/jsonpatch.ts#L22">packages/store/src/stores/jsonpatch.ts:22</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -118,7 +125,7 @@
 					<li class="globals  ">
 						<a href="../globals.html"><em>Globals</em></a>
 					</li>
-					<li class="current tsd-kind-module">
+					<li class=" tsd-kind-module">
 						<a href="../modules/_textile_threads_core.html">@textile/threads-<wbr>core</a>
 					</li>
 					<li class=" tsd-kind-module">
@@ -133,7 +140,7 @@
 					<li class=" tsd-kind-module">
 						<a href="../modules/_textile_threads_store.html">@textile/threads-<wbr>store</a>
 					</li>
-					<li class=" tsd-kind-module tsd-parent-kind-module tsd-has-type-parameter">
+					<li class="current tsd-kind-module tsd-parent-kind-module tsd-has-type-parameter">
 						<a href="../modules/_textile_threads_store.op.html">@textile/threads-<wbr>store.<wbr>Op</a>
 					</li>
 				</ul>
@@ -143,18 +150,30 @@
 				</ul>
 				<ul class="current">
 					<li class="current tsd-kind-enum tsd-parent-kind-module">
-						<a href="_textile_threads_core.variant.html" class="tsd-kind-icon">Variant</a>
+						<a href="_textile_threads_store.op.type.html" class="tsd-kind-icon">Type</a>
 						<ul>
 							<li class=" tsd-kind-enum-member tsd-parent-kind-enum">
-								<a href="_textile_threads_core.variant.html#accesscontrolled" class="tsd-kind-icon">Access<wbr>Controlled</a>
+								<a href="_textile_threads_store.op.type.html#create" class="tsd-kind-icon">Create</a>
 							</li>
 							<li class=" tsd-kind-enum-member tsd-parent-kind-enum">
-								<a href="_textile_threads_core.variant.html#raw" class="tsd-kind-icon">Raw</a>
+								<a href="_textile_threads_store.op.type.html#delete" class="tsd-kind-icon">Delete</a>
+							</li>
+							<li class=" tsd-kind-enum-member tsd-parent-kind-enum">
+								<a href="_textile_threads_store.op.type.html#save" class="tsd-kind-icon">Save</a>
 							</li>
 						</ul>
 					</li>
 				</ul>
 				<ul class="after-current">
+					<li class=" tsd-kind-property tsd-parent-kind-module">
+						<a href="../modules/_textile_threads_store.op.html#entityid" class="tsd-kind-icon">entityID</a>
+					</li>
+					<li class=" tsd-kind-property tsd-parent-kind-module">
+						<a href="../modules/_textile_threads_store.op.html#patch" class="tsd-kind-icon">patch</a>
+					</li>
+					<li class=" tsd-kind-property tsd-parent-kind-module">
+						<a href="../modules/_textile_threads_store.op.html#type-1" class="tsd-kind-icon">type</a>
+					</li>
 				</ul>
 			</nav>
 		</div>
