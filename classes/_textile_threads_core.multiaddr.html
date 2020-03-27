@@ -111,8 +111,8 @@
 							<h3>Properties</h3>
 							<ul class="tsd-index-list">
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_textile_threads_core.multiaddr.html#buffer" class="tsd-kind-icon">buffer</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_textile_threads_core.multiaddr.html#protocols" class="tsd-kind-icon">protocols</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_textile_threads_core.multiaddr.html#tojson" class="tsd-kind-icon">toJSON</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-static"><a href="_textile_threads_core.multiaddr.html#protocols" class="tsd-kind-icon">protocols</a></li>
 							</ul>
 						</section>
 						<section class="tsd-index-section ">
@@ -122,22 +122,22 @@
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_textile_threads_core.multiaddr.html#decapsulatecode" class="tsd-kind-icon">decapsulate<wbr>Code</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_textile_threads_core.multiaddr.html#encapsulate" class="tsd-kind-icon">encapsulate</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_textile_threads_core.multiaddr.html#equals" class="tsd-kind-icon">equals</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_textile_threads_core.multiaddr.html#fromnodeaddress" class="tsd-kind-icon">from<wbr>Node<wbr>Address</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_textile_threads_core.multiaddr.html#getpath" class="tsd-kind-icon">get<wbr>Path</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_textile_threads_core.multiaddr.html#getpeerid" class="tsd-kind-icon">get<wbr>Peer<wbr>Id</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_textile_threads_core.multiaddr.html#inspect" class="tsd-kind-icon">inspect</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_textile_threads_core.multiaddr.html#isthinwaistaddress" class="tsd-kind-icon">is<wbr>Thin<wbr>Waist<wbr>Address</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_textile_threads_core.multiaddr.html#nodeaddress" class="tsd-kind-icon">node<wbr>Address</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_textile_threads_core.multiaddr.html#protocodes" class="tsd-kind-icon">proto<wbr>Codes</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_textile_threads_core.multiaddr.html#protonames" class="tsd-kind-icon">proto<wbr>Names</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_textile_threads_core.multiaddr.html#protos" class="tsd-kind-icon">protos</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_textile_threads_core.multiaddr.html#resolve" class="tsd-kind-icon">resolve</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_textile_threads_core.multiaddr.html#stringtuples" class="tsd-kind-icon">string<wbr>Tuples</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_textile_threads_core.multiaddr.html#tooptions" class="tsd-kind-icon">to<wbr>Options</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_textile_threads_core.multiaddr.html#tostring" class="tsd-kind-icon">to<wbr>String</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_textile_threads_core.multiaddr.html#tuples" class="tsd-kind-icon">tuples</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-static"><a href="_textile_threads_core.multiaddr.html#fromnodeaddress" class="tsd-kind-icon">from<wbr>Node<wbr>Address</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-static"><a href="_textile_threads_core.multiaddr.html#ismultiaddr" class="tsd-kind-icon">is<wbr>Multiaddr</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-static"><a href="_textile_threads_core.multiaddr.html#isname" class="tsd-kind-icon">is<wbr>Name</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-static"><a href="_textile_threads_core.multiaddr.html#isthinwaistaddress" class="tsd-kind-icon">is<wbr>Thin<wbr>Waist<wbr>Address</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-static"><a href="_textile_threads_core.multiaddr.html#resolve" class="tsd-kind-icon">resolve</a></li>
 							</ul>
 						</section>
 					</div>
@@ -182,25 +182,6 @@
 					</aside>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
-					<a name="protocols" class="tsd-anchor"></a>
-					<h3>protocols</h3>
-					<div class="tsd-signature tsd-kind-icon">protocols<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Protocols</span><span class="tsd-signature-symbol"> =&nbsp;protocols</span></div>
-					<aside class="tsd-sources">
-						<ul>
-							<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/core/src/multiaddr/index.ts#L421">core/src/multiaddr/index.ts:421</a></li>
-						</ul>
-					</aside>
-					<div class="tsd-comment tsd-typography">
-						<div class="lead">
-							<p>Object containing table, names and codes of all supported protocols.
-								To get the protocol values from a Multiaddr, you can use
-								<a href="#multiaddrprotos"><code>.protos()</code></a>,
-								<a href="#multiaddrprotocodes"><code>.protoCodes()</code></a> or
-							<a href="#multiaddrprotonames"><code>.protoNames()</code></a></p>
-						</div>
-					</div>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="tojson" class="tsd-anchor"></a>
 					<h3>toJSON</h3>
 					<div class="tsd-signature tsd-kind-icon">toJSON<span class="tsd-signature-symbol">:</span> <a href="_textile_threads_core.multiaddr.html#tostring" class="tsd-signature-type">toString</a><span class="tsd-signature-symbol"> =&nbsp;this.toString</span></div>
@@ -219,6 +200,25 @@
 								// &#39;/ip4/127.0.0.1/tcp/4001&#39;</p>
 							</dd>
 						</dl>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-static">
+					<a name="protocols" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagStatic">Static</span> protocols</h3>
+					<div class="tsd-signature tsd-kind-icon">protocols<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Protocols</span><span class="tsd-signature-symbol"> =&nbsp;protocols</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/core/src/multiaddr/index.ts#L417">core/src/multiaddr/index.ts:417</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Object containing table, names and codes of all supported protocols.
+								To get the protocol values from a Multiaddr, you can use
+								<a href="#multiaddrprotos"><code>.protos()</code></a>,
+								<a href="#multiaddrprotocodes"><code>.protoCodes()</code></a> or
+							<a href="#multiaddrprotonames"><code>.protoNames()</code></a></p>
+						</div>
 					</div>
 				</section>
 			</section>
@@ -386,43 +386,6 @@
 					</ul>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
-					<a name="fromnodeaddress" class="tsd-anchor"></a>
-					<h3>from<wbr>Node<wbr>Address</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">from<wbr>Node<wbr>Address<span class="tsd-signature-symbol">(</span>addr<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span>, transport<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="_textile_threads_core.multiaddr.html" class="tsd-signature-type">Multiaddr</a></li>
-					</ul>
-					<ul class="tsd-descriptions">
-						<li class="tsd-description">
-							<aside class="tsd-sources">
-								<ul>
-									<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/core/src/multiaddr/index.ts#L369">core/src/multiaddr/index.ts:369</a></li>
-								</ul>
-							</aside>
-							<div class="tsd-comment tsd-typography">
-								<div class="lead">
-									<p>Creates a Multiaddr from a node-friendly address object</p>
-								</div>
-								<dl class="tsd-comment-tags">
-									<dt>example</dt>
-									<dd><p>Multiaddr.fromNodeAddress({address: &#39;127.0.0.1&#39;, port: &#39;4001&#39;}, &#39;tcp&#39;)
-										// &lt;Multiaddr 047f000001060fa1 - /ip4/127.0.0.1/tcp/4001&gt;</p>
-									</dd>
-								</dl>
-							</div>
-							<h4 class="tsd-parameters-title">Parameters</h4>
-							<ul class="tsd-parameters">
-								<li>
-									<h5>addr: <span class="tsd-signature-type">any</span></h5>
-								</li>
-								<li>
-									<h5>transport: <span class="tsd-signature-type">string</span></h5>
-								</li>
-							</ul>
-							<h4 class="tsd-returns-title">Returns <a href="_textile_threads_core.multiaddr.html" class="tsd-signature-type">Multiaddr</a></h4>
-						</li>
-					</ul>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
 					<a name="getpath" class="tsd-anchor"></a>
 					<h3>get<wbr>Path</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
@@ -510,52 +473,6 @@
 								</dl>
 							</div>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span></h4>
-						</li>
-					</ul>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
-					<a name="isthinwaistaddress" class="tsd-anchor"></a>
-					<h3>is<wbr>Thin<wbr>Waist<wbr>Address</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">is<wbr>Thin<wbr>Waist<wbr>Address<span class="tsd-signature-symbol">(</span>addr<span class="tsd-signature-symbol">: </span><a href="_textile_threads_core.multiaddr.html" class="tsd-signature-type">Multiaddr</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
-					</ul>
-					<ul class="tsd-descriptions">
-						<li class="tsd-description">
-							<aside class="tsd-sources">
-								<ul>
-									<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/core/src/multiaddr/index.ts#L398">core/src/multiaddr/index.ts:398</a></li>
-								</ul>
-							</aside>
-							<div class="tsd-comment tsd-typography">
-								<div class="lead">
-									<p>Returns if a Multiaddr is a Thin Waist address or not.</p>
-								</div>
-								<p>Thin Waist is if a Multiaddr adheres to the standard combination of:</p>
-								<p><code>{IPv4, IPv6}/{TCP, UDP}</code></p>
-								<dl class="tsd-comment-tags">
-									<dt>example</dt>
-									<dd><p>const mh1 = Multiaddr(&#39;/ip4/127.0.0.1/tcp/4001&#39;)
-											// &lt;Multiaddr 047f000001060fa1 - /ip4/127.0.0.1/tcp/4001&gt;
-											const mh2 = Multiaddr(&#39;/ip4/192.168.2.1/tcp/5001&#39;)
-											// &lt;Multiaddr 04c0a80201061389 - /ip4/192.168.2.1/tcp/5001&gt;
-											const mh3 = mh1.encapsulate(mh2)
-											// &lt;Multiaddr 047f000001060fa104c0a80201061389 - /ip4/127.0.0.1/tcp/4001/ip4/192.168.2.1/tcp/5001&gt;
-											mh1.isThinWaistAddress()
-											// true
-											mh2.isThinWaistAddress()
-											// true
-											mh3.isThinWaistAddress()
-										// false</p>
-									</dd>
-								</dl>
-							</div>
-							<h4 class="tsd-parameters-title">Parameters</h4>
-							<ul class="tsd-parameters">
-								<li>
-									<h5>addr: <a href="_textile_threads_core.multiaddr.html" class="tsd-signature-type">Multiaddr</a></h5>
-								</li>
-							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
 						</li>
 					</ul>
 				</section>
@@ -683,34 +600,6 @@
 					</ul>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
-					<a name="resolve" class="tsd-anchor"></a>
-					<h3>resolve</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">resolve<span class="tsd-signature-symbol">(</span>addr<span class="tsd-signature-symbol">: </span><a href="_textile_threads_core.multiaddr.html" class="tsd-signature-type">Multiaddr</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">never</span><span class="tsd-signature-symbol">&gt;</span></li>
-					</ul>
-					<ul class="tsd-descriptions">
-						<li class="tsd-description">
-							<aside class="tsd-sources">
-								<ul>
-									<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/core/src/multiaddr/index.ts#L438">core/src/multiaddr/index.ts:438</a></li>
-								</ul>
-							</aside>
-							<div class="tsd-comment tsd-typography">
-								<div class="lead">
-									<p>Returns an array of multiaddrs, by resolving the multiaddr that is a name</p>
-								</div>
-							</div>
-							<h4 class="tsd-parameters-title">Parameters</h4>
-							<ul class="tsd-parameters">
-								<li>
-									<h5>addr: <a href="_textile_threads_core.multiaddr.html" class="tsd-signature-type">Multiaddr</a></h5>
-								</li>
-							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">never</span><span class="tsd-signature-symbol">&gt;</span></h4>
-						</li>
-					</ul>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
 					<a name="stringtuples" class="tsd-anchor"></a>
 					<h3>string<wbr>Tuples</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
@@ -823,6 +712,43 @@
 					</ul>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-static">
+					<a name="fromnodeaddress" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagStatic">Static</span> from<wbr>Node<wbr>Address</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-static">
+						<li class="tsd-signature tsd-kind-icon">from<wbr>Node<wbr>Address<span class="tsd-signature-symbol">(</span>addr<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span>, transport<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="_textile_threads_core.multiaddr.html" class="tsd-signature-type">Multiaddr</a></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/core/src/multiaddr/index.ts#L369">core/src/multiaddr/index.ts:369</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Creates a Multiaddr from a node-friendly address object</p>
+								</div>
+								<dl class="tsd-comment-tags">
+									<dt>example</dt>
+									<dd><p>Multiaddr.fromNodeAddress({address: &#39;127.0.0.1&#39;, port: &#39;4001&#39;}, &#39;tcp&#39;)
+										// &lt;Multiaddr 047f000001060fa1 - /ip4/127.0.0.1/tcp/4001&gt;</p>
+									</dd>
+								</dl>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>addr: <span class="tsd-signature-type">any</span></h5>
+								</li>
+								<li>
+									<h5>transport: <span class="tsd-signature-type">string</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="_textile_threads_core.multiaddr.html" class="tsd-signature-type">Multiaddr</a></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-static">
 					<a name="ismultiaddr" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagStatic">Static</span> is<wbr>Multiaddr</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-static">
@@ -832,7 +758,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/core/src/multiaddr/index.ts#L451">core/src/multiaddr/index.ts:451</a></li>
+									<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/core/src/multiaddr/index.ts#L447">core/src/multiaddr/index.ts:447</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -855,7 +781,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/core/src/multiaddr/index.ts#L426">core/src/multiaddr/index.ts:426</a></li>
+									<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/core/src/multiaddr/index.ts#L422">core/src/multiaddr/index.ts:422</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -873,6 +799,80 @@
 						</li>
 					</ul>
 				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-static">
+					<a name="isthinwaistaddress" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagStatic">Static</span> is<wbr>Thin<wbr>Waist<wbr>Address</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-static">
+						<li class="tsd-signature tsd-kind-icon">is<wbr>Thin<wbr>Waist<wbr>Address<span class="tsd-signature-symbol">(</span>addr<span class="tsd-signature-symbol">: </span><a href="_textile_threads_core.multiaddr.html" class="tsd-signature-type">Multiaddr</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/core/src/multiaddr/index.ts#L397">core/src/multiaddr/index.ts:397</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Returns if a Multiaddr is a Thin Waist address or not.</p>
+								</div>
+								<p>Thin Waist is if a Multiaddr adheres to the standard combination of:</p>
+								<p><code>{IPv4, IPv6}/{TCP, UDP}</code></p>
+								<dl class="tsd-comment-tags">
+									<dt>example</dt>
+									<dd><p>const mh1 = Multiaddr(&#39;/ip4/127.0.0.1/tcp/4001&#39;)
+											// &lt;Multiaddr 047f000001060fa1 - /ip4/127.0.0.1/tcp/4001&gt;
+											const mh2 = Multiaddr(&#39;/ip4/192.168.2.1/tcp/5001&#39;)
+											// &lt;Multiaddr 04c0a80201061389 - /ip4/192.168.2.1/tcp/5001&gt;
+											const mh3 = mh1.encapsulate(mh2)
+											// &lt;Multiaddr 047f000001060fa104c0a80201061389 - /ip4/127.0.0.1/tcp/4001/ip4/192.168.2.1/tcp/5001&gt;
+											mh1.isThinWaistAddress()
+											// true
+											mh2.isThinWaistAddress()
+											// true
+											mh3.isThinWaistAddress()
+										// false</p>
+									</dd>
+								</dl>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>addr: <a href="_textile_threads_core.multiaddr.html" class="tsd-signature-type">Multiaddr</a></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-static">
+					<a name="resolve" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagStatic">Static</span> resolve</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-static">
+						<li class="tsd-signature tsd-kind-icon">resolve<span class="tsd-signature-symbol">(</span>addr<span class="tsd-signature-symbol">: </span><a href="_textile_threads_core.multiaddr.html" class="tsd-signature-type">Multiaddr</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">never</span><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/core/src/multiaddr/index.ts#L434">core/src/multiaddr/index.ts:434</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Returns an array of multiaddrs, by resolving the multiaddr that is a name</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>addr: <a href="_textile_threads_core.multiaddr.html" class="tsd-signature-type">Multiaddr</a></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">never</span><span class="tsd-signature-symbol">&gt;</span></h4>
+						</li>
+					</ul>
+				</section>
 			</section>
 		</div>
 		<div class="col-4 col-menu menu-sticky-wrap menu-highlight">
@@ -883,6 +883,9 @@
 					</li>
 					<li class="current tsd-kind-module">
 						<a href="../modules/_textile_threads_core.html">@textile/threads-<wbr>core</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/_textile_threads_database.html">@textile/threads-<wbr>database</a>
 					</li>
 					<li class=" tsd-kind-module">
 						<a href="../modules/_textile_threads_encoding.html">@textile/threads-<wbr>encoding</a>
@@ -915,10 +918,10 @@
 								<a href="_textile_threads_core.multiaddr.html#buffer" class="tsd-kind-icon">buffer</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class">
-								<a href="_textile_threads_core.multiaddr.html#protocols" class="tsd-kind-icon">protocols</a>
-							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-class">
 								<a href="_textile_threads_core.multiaddr.html#tojson" class="tsd-kind-icon">toJSON</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-static">
+								<a href="_textile_threads_core.multiaddr.html#protocols" class="tsd-kind-icon">protocols</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="_textile_threads_core.multiaddr.html#decapsulate" class="tsd-kind-icon">decapsulate</a>
@@ -933,9 +936,6 @@
 								<a href="_textile_threads_core.multiaddr.html#equals" class="tsd-kind-icon">equals</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
-								<a href="_textile_threads_core.multiaddr.html#fromnodeaddress" class="tsd-kind-icon">from<wbr>Node<wbr>Address</a>
-							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="_textile_threads_core.multiaddr.html#getpath" class="tsd-kind-icon">get<wbr>Path</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
@@ -943,9 +943,6 @@
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="_textile_threads_core.multiaddr.html#inspect" class="tsd-kind-icon">inspect</a>
-							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class">
-								<a href="_textile_threads_core.multiaddr.html#isthinwaistaddress" class="tsd-kind-icon">is<wbr>Thin<wbr>Waist<wbr>Address</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="_textile_threads_core.multiaddr.html#nodeaddress" class="tsd-kind-icon">node<wbr>Address</a>
@@ -960,9 +957,6 @@
 								<a href="_textile_threads_core.multiaddr.html#protos" class="tsd-kind-icon">protos</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
-								<a href="_textile_threads_core.multiaddr.html#resolve" class="tsd-kind-icon">resolve</a>
-							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="_textile_threads_core.multiaddr.html#stringtuples" class="tsd-kind-icon">string<wbr>Tuples</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
@@ -975,10 +969,19 @@
 								<a href="_textile_threads_core.multiaddr.html#tuples" class="tsd-kind-icon">tuples</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-static">
+								<a href="_textile_threads_core.multiaddr.html#fromnodeaddress" class="tsd-kind-icon">from<wbr>Node<wbr>Address</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-static">
 								<a href="_textile_threads_core.multiaddr.html#ismultiaddr" class="tsd-kind-icon">is<wbr>Multiaddr</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-static">
 								<a href="_textile_threads_core.multiaddr.html#isname" class="tsd-kind-icon">is<wbr>Name</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-static">
+								<a href="_textile_threads_core.multiaddr.html#isthinwaistaddress" class="tsd-kind-icon">is<wbr>Thin<wbr>Waist<wbr>Address</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-static">
+								<a href="_textile_threads_core.multiaddr.html#resolve" class="tsd-kind-icon">resolve</a>
 							</li>
 						</ul>
 					</li>

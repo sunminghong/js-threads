@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>Store | Threads</title>
+	<title>EventBus | Threads</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -54,13 +54,13 @@
 					<a href="../globals.html">Globals</a>
 				</li>
 				<li>
-					<a href="../modules/_textile_threads_store.html">@textile/threads-store</a>
+					<a href="../modules/_textile_threads_database.html">@textile/threads-database</a>
 				</li>
 				<li>
-					<a href="_textile_threads_store.store.html">Store</a>
+					<a href="_textile_threads_database.eventbus.html">EventBus</a>
 				</li>
 			</ul>
-			<h1>Class Store&lt;D, A&gt;</h1>
+			<h1>Class EventBus&lt;T&gt;</h1>
 		</div>
 	</div>
 </header>
@@ -71,10 +71,7 @@
 				<h3>Type parameters</h3>
 				<ul class="tsd-type-parameters">
 					<li>
-						<h4>D</h4>
-					</li>
-					<li>
-						<h4>A</h4>
+						<h4>T</h4>
 					</li>
 				</ul>
 			</section>
@@ -82,18 +79,10 @@
 				<h3>Hierarchy</h3>
 				<ul class="tsd-hierarchy">
 					<li>
-						<span class="tsd-signature-type">EventEmitter</span><span class="tsd-signature-symbol">&lt;</span><a href="../modules/_textile_threads_database.html#events" class="tsd-signature-type">Events</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">A</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span>
+						<span class="tsd-signature-type">EventEmitter</span><span class="tsd-signature-symbol">&lt;</span><a href="../modules/_textile_threads_database.html#events" class="tsd-signature-type">Events</a><span class="tsd-signature-symbol">&gt;</span>
 						<ul class="tsd-hierarchy">
 							<li>
-								<span class="target">Store</span>
-								<ul class="tsd-hierarchy">
-									<li>
-										<a href="_textile_threads_store.basicstore.html" class="tsd-signature-type">BasicStore</a>
-									</li>
-									<li>
-										<a href="_textile_threads_store.jsonpatchstore.html" class="tsd-signature-type">JsonPatchStore</a>
-									</li>
-								</ul>
+								<span class="target">EventBus</span>
 							</li>
 						</ul>
 					</li>
@@ -102,10 +91,7 @@
 			<section class="tsd-panel">
 				<h3>Implements</h3>
 				<ul class="tsd-hierarchy">
-					<li><span class="tsd-signature-type">IEventEmitter</span><span class="tsd-signature-symbol">&lt;</span><a href="../modules/_textile_threads_database.html#events" class="tsd-signature-type">Events</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">A</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span></li>
-					<li><a href="_textile_threads_store.lockable.html" class="tsd-signature-type">Lockable</a></li>
-					<li><span class="tsd-signature-type">Datastore</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">D</span><span class="tsd-signature-symbol">&gt;</span></li>
-					<li><a href="../interfaces/_textile_threads_store.reducer.html" class="tsd-signature-type">Reducer</a><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/_textile_threads_store.event.html" class="tsd-signature-type">Event</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">A</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span></li>
+					<li><span class="tsd-signature-type">IEventEmitter</span><span class="tsd-signature-symbol">&lt;</span><a href="../modules/_textile_threads_database.html#events" class="tsd-signature-type">Events</a><span class="tsd-signature-symbol">&gt;</span></li>
 				</ul>
 			</section>
 			<section class="tsd-panel-group tsd-index-group">
@@ -115,54 +101,41 @@
 						<section class="tsd-index-section ">
 							<h3>Constructors</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-constructor tsd-parent-kind-class"><a href="_textile_threads_store.store.html#constructor" class="tsd-kind-icon">constructor</a></li>
+								<li class="tsd-kind-constructor tsd-parent-kind-class"><a href="_textile_threads_database.eventbus.html#constructor" class="tsd-kind-icon">constructor</a></li>
 							</ul>
 						</section>
 						<section class="tsd-index-section ">
 							<h3>Properties</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="_textile_threads_store.store.html#addlistener" class="tsd-kind-icon">add<wbr>Listener</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_textile_threads_store.store.html#child" class="tsd-kind-icon">child</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_textile_threads_store.store.html#codec" class="tsd-kind-icon">codec</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_textile_threads_store.store.html#dispatcher" class="tsd-kind-icon">dispatcher</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="_textile_threads_store.store.html#emit" class="tsd-kind-icon">emit</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_textile_threads_store.store.html#encoder" class="tsd-kind-icon">encoder</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="_textile_threads_store.store.html#eventnames" class="tsd-kind-icon">event<wbr>Names</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="_textile_threads_store.store.html#events" class="tsd-kind-icon">events</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="_textile_threads_store.store.html#getmaxlisteners" class="tsd-kind-icon">get<wbr>Max<wbr>Listeners</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="_textile_threads_store.store.html#haslisteners" class="tsd-kind-icon">has<wbr>Listeners</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="_textile_threads_store.store.html#listenercount" class="tsd-kind-icon">listener<wbr>Count</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="_textile_threads_store.store.html#listeners" class="tsd-kind-icon">listeners</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="_textile_threads_store.store.html#maxlisteners" class="tsd-kind-icon">max<wbr>Listeners</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="_textile_threads_store.store.html#off" class="tsd-kind-icon">off</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="_textile_threads_store.store.html#on" class="tsd-kind-icon">on</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="_textile_threads_store.store.html#once" class="tsd-kind-icon">once</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_textile_threads_store.store.html#prefix" class="tsd-kind-icon">prefix</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="_textile_threads_store.store.html#prependlistener" class="tsd-kind-icon">prepend<wbr>Listener</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="_textile_threads_store.store.html#prependoncelistener" class="tsd-kind-icon">prepend<wbr>Once<wbr>Listener</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="_textile_threads_store.store.html#rawlisteners" class="tsd-kind-icon">raw<wbr>Listeners</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="_textile_threads_store.store.html#removealllisteners" class="tsd-kind-icon">remove<wbr>All<wbr>Listeners</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="_textile_threads_store.store.html#removelistener" class="tsd-kind-icon">remove<wbr>Listener</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_textile_threads_store.store.html#semaphore" class="tsd-kind-icon">semaphore</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="_textile_threads_store.store.html#setmaxlisteners" class="tsd-kind-icon">set<wbr>Max<wbr>Listeners</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="_textile_threads_database.eventbus.html#addlistener" class="tsd-kind-icon">add<wbr>Listener</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="_textile_threads_database.eventbus.html#emit" class="tsd-kind-icon">emit</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="_textile_threads_database.eventbus.html#eventnames" class="tsd-kind-icon">event<wbr>Names</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="_textile_threads_database.eventbus.html#events" class="tsd-kind-icon">events</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="_textile_threads_database.eventbus.html#getmaxlisteners" class="tsd-kind-icon">get<wbr>Max<wbr>Listeners</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="_textile_threads_database.eventbus.html#haslisteners" class="tsd-kind-icon">has<wbr>Listeners</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_textile_threads_database.eventbus.html#isstarted" class="tsd-kind-icon">is<wbr>Started</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="_textile_threads_database.eventbus.html#listenercount" class="tsd-kind-icon">listener<wbr>Count</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="_textile_threads_database.eventbus.html#listeners" class="tsd-kind-icon">listeners</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="_textile_threads_database.eventbus.html#maxlisteners" class="tsd-kind-icon">max<wbr>Listeners</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="_textile_threads_database.eventbus.html#off" class="tsd-kind-icon">off</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="_textile_threads_database.eventbus.html#on" class="tsd-kind-icon">on</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="_textile_threads_database.eventbus.html#once" class="tsd-kind-icon">once</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="_textile_threads_database.eventbus.html#prependlistener" class="tsd-kind-icon">prepend<wbr>Listener</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="_textile_threads_database.eventbus.html#prependoncelistener" class="tsd-kind-icon">prepend<wbr>Once<wbr>Listener</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_textile_threads_database.eventbus.html#queue" class="tsd-kind-icon">queue</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="_textile_threads_database.eventbus.html#rawlisteners" class="tsd-kind-icon">raw<wbr>Listeners</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="_textile_threads_database.eventbus.html#removealllisteners" class="tsd-kind-icon">remove<wbr>All<wbr>Listeners</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="_textile_threads_database.eventbus.html#removelistener" class="tsd-kind-icon">remove<wbr>Listener</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_textile_threads_database.eventbus.html#service" class="tsd-kind-icon">service</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="_textile_threads_database.eventbus.html#setmaxlisteners" class="tsd-kind-icon">set<wbr>Max<wbr>Listeners</a></li>
 							</ul>
 						</section>
 						<section class="tsd-index-section ">
 							<h3>Methods</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_textile_threads_store.store.html#batch" class="tsd-kind-icon">batch</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_textile_threads_store.store.html#close" class="tsd-kind-icon">close</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_textile_threads_store.store.html#delete" class="tsd-kind-icon">delete</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_textile_threads_store.store.html#dispatch" class="tsd-kind-icon">dispatch</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_textile_threads_store.store.html#get" class="tsd-kind-icon">get</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_textile_threads_store.store.html#has" class="tsd-kind-icon">has</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_textile_threads_store.store.html#open" class="tsd-kind-icon">open</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_textile_threads_store.store.html#put" class="tsd-kind-icon">put</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_textile_threads_store.store.html#query" class="tsd-kind-icon">query</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_textile_threads_store.store.html#readlock" class="tsd-kind-icon">read<wbr>Lock</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_textile_threads_store.store.html#reduce" class="tsd-kind-icon">reduce</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_textile_threads_store.store.html#unlock" class="tsd-kind-icon">unlock</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_textile_threads_store.store.html#writelock" class="tsd-kind-icon">write<wbr>Lock</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_textile_threads_database.eventbus.html#push" class="tsd-kind-icon">push</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_textile_threads_database.eventbus.html#start" class="tsd-kind-icon">start</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_textile_threads_database.eventbus.html#stop" class="tsd-kind-icon">stop</a></li>
 							</ul>
 						</section>
 					</div>
@@ -174,34 +147,28 @@
 					<a name="constructor" class="tsd-anchor"></a>
 					<h3>constructor</h3>
 					<ul class="tsd-signatures tsd-kind-constructor tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">new <wbr>Store<span class="tsd-signature-symbol">(</span>child<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Datastore</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">&gt;</span>, codec<span class="tsd-signature-symbol">: </span><a href="../interfaces/_textile_threads_store.codec.html" class="tsd-signature-type">Codec</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">D</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">A</span><span class="tsd-signature-symbol">&gt;</span>, prefix<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">Key</span>, dispatcher<span class="tsd-signature-symbol">?: </span><a href="_textile_threads_store.dispatcher.html" class="tsd-signature-type">Dispatcher</a>, encoder<span class="tsd-signature-symbol">?: </span><a href="../interfaces/_textile_threads_store.encoder.html" class="tsd-signature-type">Encoder</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">D</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="_textile_threads_store.store.html" class="tsd-signature-type">Store</a></li>
+						<li class="tsd-signature tsd-kind-icon">new <wbr>Event<wbr>Bus<span class="tsd-signature-symbol">(</span>queue<span class="tsd-signature-symbol">: </span><a href="_textile_threads_database.queue.html" class="tsd-signature-type">Queue</a><span class="tsd-signature-symbol">&lt;</span><a href="../modules/_textile_threads_database.html#eventjob" class="tsd-signature-type">EventJob</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">Datastore</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">&gt;</span>, service<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Service</span>, opts<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">Options</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="_textile_threads_database.eventbus.html" class="tsd-signature-type">EventBus</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/store/src/stores/store.ts#L99">store/src/stores/store.ts:99</a></li>
+									<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/database/src/eventbus.ts#L26">database/src/eventbus.ts:26</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>child: <span class="tsd-signature-type">Datastore</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">&gt;</span></h5>
+									<h5>queue: <a href="_textile_threads_database.queue.html" class="tsd-signature-type">Queue</a><span class="tsd-signature-symbol">&lt;</span><a href="../modules/_textile_threads_database.html#eventjob" class="tsd-signature-type">EventJob</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">Datastore</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">&gt;</span></h5>
 								</li>
 								<li>
-									<h5>codec: <a href="../interfaces/_textile_threads_store.codec.html" class="tsd-signature-type">Codec</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">D</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">A</span><span class="tsd-signature-symbol">&gt;</span></h5>
+									<h5>service: <span class="tsd-signature-type">Service</span></h5>
 								</li>
 								<li>
-									<h5><span class="tsd-flag ts-flagDefault value">Default value</span> prefix: <span class="tsd-signature-type">Key</span><span class="tsd-signature-symbol"> =&nbsp;new Key(&#x27;&#x27;)</span></h5>
-								</li>
-								<li>
-									<h5><span class="tsd-flag ts-flagDefault value">Default value</span> dispatcher: <a href="_textile_threads_store.dispatcher.html" class="tsd-signature-type">Dispatcher</a><span class="tsd-signature-symbol"> =&nbsp;new Dispatcher(child)</span></h5>
-								</li>
-								<li>
-									<h5><span class="tsd-flag ts-flagDefault value">Default value</span> encoder: <a href="../interfaces/_textile_threads_store.encoder.html" class="tsd-signature-type">Encoder</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">D</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> =&nbsp;CborEncoder</span></h5>
+									<h5><span class="tsd-flag ts-flagDefault value">Default value</span> opts: <span class="tsd-signature-type">Options</span><span class="tsd-signature-symbol"> =&nbsp;{}</span></h5>
 								</li>
 							</ul>
-							<h4 class="tsd-returns-title">Returns <a href="_textile_threads_store.store.html" class="tsd-signature-type">Store</a></h4>
+							<h4 class="tsd-returns-title">Returns <a href="_textile_threads_database.eventbus.html" class="tsd-signature-type">EventBus</a></h4>
 						</li>
 					</ul>
 				</section>
@@ -230,7 +197,7 @@
 										<h4 class="tsd-type-parameters-title">Type parameters</h4>
 										<ul class="tsd-type-parameters">
 											<li>
-												<h4>EventKey<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">keyof Events&lt;A&gt;</span></h4>
+												<h4>EventKey<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">keyof Events</span></h4>
 											</li>
 										</ul>
 										<h4 class="tsd-parameters-title">Parameters</h4>
@@ -248,36 +215,6 @@
 							</li>
 						</ul>
 					</div>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
-					<a name="child" class="tsd-anchor"></a>
-					<h3>child</h3>
-					<div class="tsd-signature tsd-kind-icon">child<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Datastore</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">D</span><span class="tsd-signature-symbol">&gt;</span></div>
-					<aside class="tsd-sources">
-						<ul>
-							<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/store/src/stores/store.ts#L98">store/src/stores/store.ts:98</a></li>
-						</ul>
-					</aside>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
-					<a name="codec" class="tsd-anchor"></a>
-					<h3>codec</h3>
-					<div class="tsd-signature tsd-kind-icon">codec<span class="tsd-signature-symbol">:</span> <a href="../interfaces/_textile_threads_store.codec.html" class="tsd-signature-type">Codec</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">D</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">A</span><span class="tsd-signature-symbol">&gt;</span></div>
-					<aside class="tsd-sources">
-						<ul>
-							<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/store/src/stores/store.ts#L102">store/src/stores/store.ts:102</a></li>
-						</ul>
-					</aside>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
-					<a name="dispatcher" class="tsd-anchor"></a>
-					<h3>dispatcher</h3>
-					<div class="tsd-signature tsd-kind-icon">dispatcher<span class="tsd-signature-symbol">:</span> <a href="_textile_threads_store.dispatcher.html" class="tsd-signature-type">Dispatcher</a></div>
-					<aside class="tsd-sources">
-						<ul>
-							<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/store/src/stores/store.ts#L104">store/src/stores/store.ts:104</a></li>
-						</ul>
-					</aside>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
 					<a name="emit" class="tsd-anchor"></a>
@@ -301,7 +238,7 @@
 										<h4 class="tsd-type-parameters-title">Type parameters</h4>
 										<ul class="tsd-type-parameters">
 											<li>
-												<h4>EventKey<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">keyof Events&lt;A&gt;</span></h4>
+												<h4>EventKey<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">keyof Events</span></h4>
 											</li>
 										</ul>
 										<h4 class="tsd-parameters-title">Parameters</h4>
@@ -319,16 +256,6 @@
 							</li>
 						</ul>
 					</div>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
-					<a name="encoder" class="tsd-anchor"></a>
-					<h3>encoder</h3>
-					<div class="tsd-signature tsd-kind-icon">encoder<span class="tsd-signature-symbol">:</span> <a href="../interfaces/_textile_threads_store.encoder.html" class="tsd-signature-type">Encoder</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">D</span><span class="tsd-signature-symbol">&gt;</span></div>
-					<aside class="tsd-sources">
-						<ul>
-							<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/store/src/stores/store.ts#L105">store/src/stores/store.ts:105</a></li>
-						</ul>
-					</aside>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
 					<a name="eventnames" class="tsd-anchor"></a>
@@ -420,7 +347,7 @@
 										<h4 class="tsd-type-parameters-title">Type parameters</h4>
 										<ul class="tsd-type-parameters">
 											<li>
-												<h4>EventKey<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">keyof Events&lt;A&gt;</span></h4>
+												<h4>EventKey<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">keyof Events</span></h4>
 											</li>
 										</ul>
 										<h4 class="tsd-parameters-title">Parameters</h4>
@@ -435,6 +362,16 @@
 							</li>
 						</ul>
 					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
+					<a name="isstarted" class="tsd-anchor"></a>
+					<h3>is<wbr>Started</h3>
+					<div class="tsd-signature tsd-kind-icon">is<wbr>Started<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> =&nbsp;false</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/database/src/eventbus.ts#L24">database/src/eventbus.ts:24</a></li>
+						</ul>
+					</aside>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
 					<a name="listenercount" class="tsd-anchor"></a>
@@ -458,7 +395,7 @@
 										<h4 class="tsd-type-parameters-title">Type parameters</h4>
 										<ul class="tsd-type-parameters">
 											<li>
-												<h4>EventKey<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">keyof Events&lt;A&gt;</span></h4>
+												<h4>EventKey<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">keyof Events</span></h4>
 											</li>
 										</ul>
 										<h4 class="tsd-parameters-title">Parameters</h4>
@@ -496,7 +433,7 @@
 										<h4 class="tsd-type-parameters-title">Type parameters</h4>
 										<ul class="tsd-type-parameters">
 											<li>
-												<h4>EventKey<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">keyof Events&lt;A&gt;</span></h4>
+												<h4>EventKey<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">keyof Events</span></h4>
 											</li>
 										</ul>
 										<h4 class="tsd-parameters-title">Parameters</h4>
@@ -545,7 +482,7 @@
 										<h4 class="tsd-type-parameters-title">Type parameters</h4>
 										<ul class="tsd-type-parameters">
 											<li>
-												<h4>EventKey<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">keyof Events&lt;A&gt;</span></h4>
+												<h4>EventKey<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">keyof Events</span></h4>
 											</li>
 										</ul>
 										<h4 class="tsd-parameters-title">Parameters</h4>
@@ -586,7 +523,7 @@
 										<h4 class="tsd-type-parameters-title">Type parameters</h4>
 										<ul class="tsd-type-parameters">
 											<li>
-												<h4>EventKey<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">keyof Events&lt;A&gt;</span></h4>
+												<h4>EventKey<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">keyof Events</span></h4>
 											</li>
 										</ul>
 										<h4 class="tsd-parameters-title">Parameters</h4>
@@ -627,7 +564,7 @@
 										<h4 class="tsd-type-parameters-title">Type parameters</h4>
 										<ul class="tsd-type-parameters">
 											<li>
-												<h4>EventKey<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">keyof Events&lt;A&gt;</span></h4>
+												<h4>EventKey<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">keyof Events</span></h4>
 											</li>
 										</ul>
 										<h4 class="tsd-parameters-title">Parameters</h4>
@@ -645,16 +582,6 @@
 							</li>
 						</ul>
 					</div>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
-					<a name="prefix" class="tsd-anchor"></a>
-					<h3>prefix</h3>
-					<div class="tsd-signature tsd-kind-icon">prefix<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Key</span></div>
-					<aside class="tsd-sources">
-						<ul>
-							<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/store/src/stores/store.ts#L103">store/src/stores/store.ts:103</a></li>
-						</ul>
-					</aside>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
 					<a name="prependlistener" class="tsd-anchor"></a>
@@ -678,7 +605,7 @@
 										<h4 class="tsd-type-parameters-title">Type parameters</h4>
 										<ul class="tsd-type-parameters">
 											<li>
-												<h4>EventKey<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">keyof Events&lt;A&gt;</span></h4>
+												<h4>EventKey<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">keyof Events</span></h4>
 											</li>
 										</ul>
 										<h4 class="tsd-parameters-title">Parameters</h4>
@@ -719,7 +646,7 @@
 										<h4 class="tsd-type-parameters-title">Type parameters</h4>
 										<ul class="tsd-type-parameters">
 											<li>
-												<h4>EventKey<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">keyof Events&lt;A&gt;</span></h4>
+												<h4>EventKey<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">keyof Events</span></h4>
 											</li>
 										</ul>
 										<h4 class="tsd-parameters-title">Parameters</h4>
@@ -737,6 +664,16 @@
 							</li>
 						</ul>
 					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
+					<a name="queue" class="tsd-anchor"></a>
+					<h3>queue</h3>
+					<div class="tsd-signature tsd-kind-icon">queue<span class="tsd-signature-symbol">:</span> <a href="_textile_threads_database.queue.html" class="tsd-signature-type">Queue</a><span class="tsd-signature-symbol">&lt;</span><a href="../modules/_textile_threads_database.html#eventjob" class="tsd-signature-type">EventJob</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/database/src/eventbus.ts#L26">database/src/eventbus.ts:26</a></li>
+						</ul>
+					</aside>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
 					<a name="rawlisteners" class="tsd-anchor"></a>
@@ -760,7 +697,7 @@
 										<h4 class="tsd-type-parameters-title">Type parameters</h4>
 										<ul class="tsd-type-parameters">
 											<li>
-												<h4>EventKey<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">keyof Events&lt;A&gt;</span></h4>
+												<h4>EventKey<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">keyof Events</span></h4>
 											</li>
 										</ul>
 										<h4 class="tsd-parameters-title">Parameters</h4>
@@ -798,7 +735,7 @@
 										<h4 class="tsd-type-parameters-title">Type parameters</h4>
 										<ul class="tsd-type-parameters">
 											<li>
-												<h4>EventKey<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">keyof Events&lt;A&gt;</span></h4>
+												<h4>EventKey<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">keyof Events</span></h4>
 											</li>
 										</ul>
 										<h4 class="tsd-parameters-title">Parameters</h4>
@@ -836,7 +773,7 @@
 										<h4 class="tsd-type-parameters-title">Type parameters</h4>
 										<ul class="tsd-type-parameters">
 											<li>
-												<h4>EventKey<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">keyof Events&lt;A&gt;</span></h4>
+												<h4>EventKey<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">keyof Events</span></h4>
 											</li>
 										</ul>
 										<h4 class="tsd-parameters-title">Parameters</h4>
@@ -856,12 +793,12 @@
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
-					<a name="semaphore" class="tsd-anchor"></a>
-					<h3>semaphore</h3>
-					<div class="tsd-signature tsd-kind-icon">semaphore<span class="tsd-signature-symbol">:</span> <a href="_textile_threads_store.semaphore.html" class="tsd-signature-type">Semaphore</a></div>
+					<a name="service" class="tsd-anchor"></a>
+					<h3>service</h3>
+					<div class="tsd-signature tsd-kind-icon">service<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Service</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/store/src/stores/store.ts#L99">store/src/stores/store.ts:99</a></li>
+							<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/database/src/eventbus.ts#L29">database/src/eventbus.ts:29</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -901,230 +838,53 @@
 			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Methods</h2>
 				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
-					<a name="batch" class="tsd-anchor"></a>
-					<h3>batch</h3>
+					<a name="push" class="tsd-anchor"></a>
+					<h3>push</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">batch<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="_textile_threads_store.actionbatch.html" class="tsd-signature-type">ActionBatch</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">D</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">A</span><span class="tsd-signature-symbol">&gt;</span></li>
+						<li class="tsd-signature tsd-kind-icon">push<span class="tsd-signature-symbol">(</span>event<span class="tsd-signature-symbol">: </span><a href="../modules/_textile_threads_database.html#eventjob" class="tsd-signature-type">EventJob</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/store/src/stores/store.ts#L189">store/src/stores/store.ts:189</a></li>
-								</ul>
-							</aside>
-							<h4 class="tsd-returns-title">Returns <a href="_textile_threads_store.actionbatch.html" class="tsd-signature-type">ActionBatch</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">D</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">A</span><span class="tsd-signature-symbol">&gt;</span></h4>
-						</li>
-					</ul>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
-					<a name="close" class="tsd-anchor"></a>
-					<h3>close</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">close<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></li>
-					</ul>
-					<ul class="tsd-descriptions">
-						<li class="tsd-description">
-							<aside class="tsd-sources">
-								<ul>
-									<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/store/src/stores/store.ts#L161">store/src/stores/store.ts:161</a></li>
-								</ul>
-							</aside>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></h4>
-						</li>
-					</ul>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
-					<a name="delete" class="tsd-anchor"></a>
-					<h3>delete</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">delete<span class="tsd-signature-symbol">(</span>key<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Key</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></li>
-					</ul>
-					<ul class="tsd-descriptions">
-						<li class="tsd-description">
-							<aside class="tsd-sources">
-								<ul>
-									<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/store/src/stores/store.ts#L179">store/src/stores/store.ts:179</a></li>
-								</ul>
-							</aside>
-							<h4 class="tsd-parameters-title">Parameters</h4>
-							<ul class="tsd-parameters">
-								<li>
-									<h5>key: <span class="tsd-signature-type">Key</span></h5>
-								</li>
-							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></h4>
-						</li>
-					</ul>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
-					<a name="dispatch" class="tsd-anchor"></a>
-					<h3>dispatch</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">dispatch<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">...</span>actions<span class="tsd-signature-symbol">: </span><a href="../modules/_textile_threads_store.html#action" class="tsd-signature-type">Action</a><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/_textile_threads_store.event.html" class="tsd-signature-type">Event</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">A</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></li>
-					</ul>
-					<ul class="tsd-descriptions">
-						<li class="tsd-description">
-							<aside class="tsd-sources">
-								<ul>
-									<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/store/src/stores/store.ts#L144">store/src/stores/store.ts:144</a></li>
-								</ul>
-							</aside>
-							<h4 class="tsd-parameters-title">Parameters</h4>
-							<ul class="tsd-parameters">
-								<li>
-									<h5><span class="tsd-flag ts-flagRest">Rest</span> <span class="tsd-signature-symbol">...</span>actions: <a href="../modules/_textile_threads_store.html#action" class="tsd-signature-type">Action</a><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/_textile_threads_store.event.html" class="tsd-signature-type">Event</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">A</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">[]</span></h5>
-								</li>
-							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></h4>
-						</li>
-					</ul>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
-					<a name="get" class="tsd-anchor"></a>
-					<h3>get</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">get<span class="tsd-signature-symbol">(</span>key<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Key</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">D</span><span class="tsd-signature-symbol">&gt;</span></li>
-					</ul>
-					<ul class="tsd-descriptions">
-						<li class="tsd-description">
-							<aside class="tsd-sources">
-								<ul>
-									<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/store/src/stores/store.ts#L169">store/src/stores/store.ts:169</a></li>
-								</ul>
-							</aside>
-							<h4 class="tsd-parameters-title">Parameters</h4>
-							<ul class="tsd-parameters">
-								<li>
-									<h5>key: <span class="tsd-signature-type">Key</span></h5>
-								</li>
-							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">D</span><span class="tsd-signature-symbol">&gt;</span></h4>
-						</li>
-					</ul>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
-					<a name="has" class="tsd-anchor"></a>
-					<h3>has</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">has<span class="tsd-signature-symbol">(</span>key<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Key</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">&gt;</span></li>
-					</ul>
-					<ul class="tsd-descriptions">
-						<li class="tsd-description">
-							<aside class="tsd-sources">
-								<ul>
-									<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/store/src/stores/store.ts#L165">store/src/stores/store.ts:165</a></li>
-								</ul>
-							</aside>
-							<h4 class="tsd-parameters-title">Parameters</h4>
-							<ul class="tsd-parameters">
-								<li>
-									<h5>key: <span class="tsd-signature-type">Key</span></h5>
-								</li>
-							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">&gt;</span></h4>
-						</li>
-					</ul>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
-					<a name="open" class="tsd-anchor"></a>
-					<h3>open</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">open<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></li>
-					</ul>
-					<ul class="tsd-descriptions">
-						<li class="tsd-description">
-							<aside class="tsd-sources">
-								<ul>
-									<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/store/src/stores/store.ts#L157">store/src/stores/store.ts:157</a></li>
-								</ul>
-							</aside>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></h4>
-						</li>
-					</ul>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
-					<a name="put" class="tsd-anchor"></a>
-					<h3>put</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">put<span class="tsd-signature-symbol">(</span>key<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Key</span>, value<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">D</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></li>
-					</ul>
-					<ul class="tsd-descriptions">
-						<li class="tsd-description">
-							<aside class="tsd-sources">
-								<ul>
-									<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/store/src/stores/store.ts#L173">store/src/stores/store.ts:173</a></li>
-								</ul>
-							</aside>
-							<h4 class="tsd-parameters-title">Parameters</h4>
-							<ul class="tsd-parameters">
-								<li>
-									<h5>key: <span class="tsd-signature-type">Key</span></h5>
-								</li>
-								<li>
-									<h5>value: <span class="tsd-signature-type">D</span></h5>
-								</li>
-							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></h4>
-						</li>
-					</ul>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
-					<a name="query" class="tsd-anchor"></a>
-					<h3>query</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">query<span class="tsd-signature-symbol">(</span>query<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Query</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">D</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">AsyncIterable</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">Result</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">D</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span></li>
-					</ul>
-					<ul class="tsd-descriptions">
-						<li class="tsd-description">
-							<aside class="tsd-sources">
-								<ul>
-									<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/store/src/stores/store.ts#L185">store/src/stores/store.ts:185</a></li>
-								</ul>
-							</aside>
-							<h4 class="tsd-parameters-title">Parameters</h4>
-							<ul class="tsd-parameters">
-								<li>
-									<h5>query: <span class="tsd-signature-type">Query</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">D</span><span class="tsd-signature-symbol">&gt;</span></h5>
-								</li>
-							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">AsyncIterable</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">Result</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">D</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span></h4>
-						</li>
-					</ul>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
-					<a name="readlock" class="tsd-anchor"></a>
-					<h3>read<wbr>Lock</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">read<wbr>Lock<span class="tsd-signature-symbol">(</span>key<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Key</span>, timeout<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></li>
-					</ul>
-					<ul class="tsd-descriptions">
-						<li class="tsd-description">
-							<aside class="tsd-sources">
-								<ul>
-									<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/store/src/stores/store.ts#L120">store/src/stores/store.ts:120</a></li>
+									<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/database/src/eventbus.ts#L83">database/src/eventbus.ts:83</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
 								<div class="lead">
-									<p>Acquire a read lock on a given key.
-									The datastore is only allowed to acquire a lock for keys it &#39;owns&#39; (any decedents of its prefix key).</p>
+									<p>Push an event onto to the queue</p>
 								</div>
 							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>key: <span class="tsd-signature-type">Key</span></h5>
+									<h5>event: <a href="../modules/_textile_threads_database.html#eventjob" class="tsd-signature-type">EventJob</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span></h5>
 									<div class="tsd-comment tsd-typography">
-										<p>The key to lock for reading.</p>
+										<p>Object to be serialized and pushed to queue via JSON.stringify().</p>
 									</div>
 								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="start" class="tsd-anchor"></a>
+					<h3>start</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">start<span class="tsd-signature-symbol">(</span>id<span class="tsd-signature-symbol">?: </span><a href="_textile_threads_core.threadid.html" class="tsd-signature-type">ThreadID</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/database/src/eventbus.ts#L65">database/src/eventbus.ts:65</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
 								<li>
-									<h5><span class="tsd-flag ts-flagOptional">Optional</span> timeout: <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span></h5>
-									<div class="tsd-comment tsd-typography">
-										<p>How long to wait to acquire the lock before rejecting the promise, in milliseconds.
-										If timeout is not in range 0 &lt;= timeout &lt; Infinity, it will wait indefinitely.</p>
-									</div>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> id: <a href="_textile_threads_core.threadid.html" class="tsd-signature-type">ThreadID</a></h5>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></h4>
@@ -1132,96 +892,18 @@
 					</ul>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
-					<a name="reduce" class="tsd-anchor"></a>
-					<h3>reduce</h3>
+					<a name="stop" class="tsd-anchor"></a>
+					<h3>stop</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">reduce<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">...</span>events<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Result</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/_textile_threads_store.event.html" class="tsd-signature-type">Event</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">A</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></li>
-					</ul>
-					<ul class="tsd-descriptions">
-						<li class="tsd-description">
-							<aside class="tsd-sources">
-								<p>Implementation of <a href="../interfaces/_textile_threads_store.reducer.html">Reducer</a>.<a href="../interfaces/_textile_threads_store.reducer.html#reduce">reduce</a></p>
-								<ul>
-									<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/store/src/stores/store.ts#L193">store/src/stores/store.ts:193</a></li>
-								</ul>
-							</aside>
-							<h4 class="tsd-parameters-title">Parameters</h4>
-							<ul class="tsd-parameters">
-								<li>
-									<h5><span class="tsd-flag ts-flagRest">Rest</span> <span class="tsd-signature-symbol">...</span>events: <span class="tsd-signature-type">Result</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/_textile_threads_store.event.html" class="tsd-signature-type">Event</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">A</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">[]</span></h5>
-								</li>
-							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></h4>
-						</li>
-					</ul>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
-					<a name="unlock" class="tsd-anchor"></a>
-					<h3>unlock</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">unlock<span class="tsd-signature-symbol">(</span>key<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Key</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+						<li class="tsd-signature tsd-kind-icon">stop<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/store/src/stores/store.ts#L140">store/src/stores/store.ts:140</a></li>
+									<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/database/src/eventbus.ts#L72">database/src/eventbus.ts:72</a></li>
 								</ul>
 							</aside>
-							<div class="tsd-comment tsd-typography">
-								<div class="lead">
-									<p>Release current lock.
-									Must be called after an operation using a read/write lock is finished.</p>
-								</div>
-							</div>
-							<h4 class="tsd-parameters-title">Parameters</h4>
-							<ul class="tsd-parameters">
-								<li>
-									<h5>key: <span class="tsd-signature-type">Key</span></h5>
-									<div class="tsd-comment tsd-typography">
-										<p>The key to unlock.</p>
-									</div>
-								</li>
-							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
-						</li>
-					</ul>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
-					<a name="writelock" class="tsd-anchor"></a>
-					<h3>write<wbr>Lock</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">write<wbr>Lock<span class="tsd-signature-symbol">(</span>key<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Key</span>, timeout<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></li>
-					</ul>
-					<ul class="tsd-descriptions">
-						<li class="tsd-description">
-							<aside class="tsd-sources">
-								<ul>
-									<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/store/src/stores/store.ts#L131">store/src/stores/store.ts:131</a></li>
-								</ul>
-							</aside>
-							<div class="tsd-comment tsd-typography">
-								<div class="lead">
-									<p>Acquire a write lock on a given key.
-									The datastore is only allowed to acquire a lock for keys it &#39;owns&#39; (any decedents of its prefix key).</p>
-								</div>
-							</div>
-							<h4 class="tsd-parameters-title">Parameters</h4>
-							<ul class="tsd-parameters">
-								<li>
-									<h5>key: <span class="tsd-signature-type">Key</span></h5>
-									<div class="tsd-comment tsd-typography">
-										<p>The key to lock for writing.</p>
-									</div>
-								</li>
-								<li>
-									<h5><span class="tsd-flag ts-flagOptional">Optional</span> timeout: <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span></h5>
-									<div class="tsd-comment tsd-typography">
-										<p>How long to wait to acquire the lock before rejecting the promise, in milliseconds.
-										If timeout is not in range 0 &lt;= timeout &lt; Infinity, it will wait indefinitely.</p>
-									</div>
-								</li>
-							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></h4>
 						</li>
 					</ul>
@@ -1237,7 +919,7 @@
 					<li class=" tsd-kind-module">
 						<a href="../modules/_textile_threads_core.html">@textile/threads-<wbr>core</a>
 					</li>
-					<li class=" tsd-kind-module">
+					<li class="current tsd-kind-module">
 						<a href="../modules/_textile_threads_database.html">@textile/threads-<wbr>database</a>
 					</li>
 					<li class=" tsd-kind-module">
@@ -1249,7 +931,7 @@
 					<li class=" tsd-kind-module">
 						<a href="../modules/_textile_threads_service_client.html">@textile/threads-<wbr>service-<wbr>client</a>
 					</li>
-					<li class="current tsd-kind-module">
+					<li class=" tsd-kind-module">
 						<a href="../modules/_textile_threads_store.html">@textile/threads-<wbr>store</a>
 					</li>
 					<li class=" tsd-kind-module tsd-parent-kind-module tsd-has-type-parameter">
@@ -1259,191 +941,167 @@
 			</nav>
 			<nav class="tsd-navigation secondary menu-sticky">
 				<ul class="before-current">
-					<li class=" tsd-kind-class tsd-parent-kind-module tsd-has-type-parameter">
-						<a href="_textile_threads_store.actionbatch.html" class="tsd-kind-icon">Action<wbr>Batch</a>
+					<li class=" tsd-kind-enum tsd-parent-kind-module">
+						<a href="../enums/_textile_threads_database.bsontype.html" class="tsd-kind-icon">BSONType</a>
 					</li>
 					<li class=" tsd-kind-class tsd-parent-kind-module tsd-has-type-parameter">
-						<a href="_textile_threads_store.basiccodec.html" class="tsd-kind-icon">Basic<wbr>Codec</a>
-					</li>
-					<li class=" tsd-kind-class tsd-parent-kind-module tsd-has-type-parameter">
-						<a href="_textile_threads_store.basicstore.html" class="tsd-kind-icon">Basic<wbr>Store</a>
+						<a href="_textile_threads_database.collection.html" class="tsd-kind-icon">Collection</a>
 					</li>
 					<li class=" tsd-kind-class tsd-parent-kind-module">
-						<a href="_textile_threads_store.dispatcher.html" class="tsd-kind-icon">Dispatcher</a>
+						<a href="_textile_threads_database.database.html" class="tsd-kind-icon">Database</a>
 					</li>
 					<li class=" tsd-kind-class tsd-parent-kind-module tsd-has-type-parameter">
-						<a href="_textile_threads_store.domaindatastore.html" class="tsd-kind-icon">Domain<wbr>Datastore</a>
-					</li>
-					<li class=" tsd-kind-class tsd-parent-kind-module tsd-has-type-parameter">
-						<a href="_textile_threads_store.encodingdatastore.html" class="tsd-kind-icon">Encoding<wbr>Datastore</a>
-					</li>
-					<li class=" tsd-kind-class tsd-parent-kind-module tsd-has-type-parameter">
-						<a href="_textile_threads_store.jsonpatchcodec.html" class="tsd-kind-icon">Json<wbr>Patch<wbr>Codec</a>
-					</li>
-					<li class=" tsd-kind-class tsd-parent-kind-module tsd-has-type-parameter">
-						<a href="_textile_threads_store.jsonpatchstore.html" class="tsd-kind-icon">Json<wbr>Patch<wbr>Store</a>
-					</li>
-					<li class=" tsd-kind-class tsd-parent-kind-module">
-						<a href="_textile_threads_store.lockable.html" class="tsd-kind-icon">Lockable</a>
-					</li>
-					<li class=" tsd-kind-class tsd-parent-kind-module">
-						<a href="_textile_threads_store.semaphore.html" class="tsd-kind-icon">Semaphore</a>
-					</li>
-					<li class=" tsd-kind-class tsd-parent-kind-module tsd-has-type-parameter">
-						<a href="_textile_threads_store.shimdatastore.html" class="tsd-kind-icon">Shim<wbr>Datastore</a>
+						<a href="_textile_threads_database.document.html" class="tsd-kind-icon">Document</a>
 					</li>
 				</ul>
 				<ul class="current">
 					<li class="current tsd-kind-class tsd-parent-kind-module tsd-has-type-parameter">
-						<a href="_textile_threads_store.store.html" class="tsd-kind-icon">Store</a>
+						<a href="_textile_threads_database.eventbus.html" class="tsd-kind-icon">Event<wbr>Bus</a>
 						<ul>
 							<li class=" tsd-kind-constructor tsd-parent-kind-class">
-								<a href="_textile_threads_store.store.html#constructor" class="tsd-kind-icon">constructor</a>
+								<a href="_textile_threads_database.eventbus.html#constructor" class="tsd-kind-icon">constructor</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
-								<a href="_textile_threads_store.store.html#addlistener" class="tsd-kind-icon">add<wbr>Listener</a>
+								<a href="_textile_threads_database.eventbus.html#addlistener" class="tsd-kind-icon">add<wbr>Listener</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
+								<a href="_textile_threads_database.eventbus.html#emit" class="tsd-kind-icon">emit</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
+								<a href="_textile_threads_database.eventbus.html#eventnames" class="tsd-kind-icon">event<wbr>Names</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
+								<a href="_textile_threads_database.eventbus.html#events" class="tsd-kind-icon">events</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
+								<a href="_textile_threads_database.eventbus.html#getmaxlisteners" class="tsd-kind-icon">get<wbr>Max<wbr>Listeners</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
+								<a href="_textile_threads_database.eventbus.html#haslisteners" class="tsd-kind-icon">has<wbr>Listeners</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class">
-								<a href="_textile_threads_store.store.html#child" class="tsd-kind-icon">child</a>
+								<a href="_textile_threads_database.eventbus.html#isstarted" class="tsd-kind-icon">is<wbr>Started</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
+								<a href="_textile_threads_database.eventbus.html#listenercount" class="tsd-kind-icon">listener<wbr>Count</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
+								<a href="_textile_threads_database.eventbus.html#listeners" class="tsd-kind-icon">listeners</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
+								<a href="_textile_threads_database.eventbus.html#maxlisteners" class="tsd-kind-icon">max<wbr>Listeners</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
+								<a href="_textile_threads_database.eventbus.html#off" class="tsd-kind-icon">off</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
+								<a href="_textile_threads_database.eventbus.html#on" class="tsd-kind-icon">on</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
+								<a href="_textile_threads_database.eventbus.html#once" class="tsd-kind-icon">once</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
+								<a href="_textile_threads_database.eventbus.html#prependlistener" class="tsd-kind-icon">prepend<wbr>Listener</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
+								<a href="_textile_threads_database.eventbus.html#prependoncelistener" class="tsd-kind-icon">prepend<wbr>Once<wbr>Listener</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class">
-								<a href="_textile_threads_store.store.html#codec" class="tsd-kind-icon">codec</a>
+								<a href="_textile_threads_database.eventbus.html#queue" class="tsd-kind-icon">queue</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
+								<a href="_textile_threads_database.eventbus.html#rawlisteners" class="tsd-kind-icon">raw<wbr>Listeners</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
+								<a href="_textile_threads_database.eventbus.html#removealllisteners" class="tsd-kind-icon">remove<wbr>All<wbr>Listeners</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
+								<a href="_textile_threads_database.eventbus.html#removelistener" class="tsd-kind-icon">remove<wbr>Listener</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class">
-								<a href="_textile_threads_store.store.html#dispatcher" class="tsd-kind-icon">dispatcher</a>
+								<a href="_textile_threads_database.eventbus.html#service" class="tsd-kind-icon">service</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
-								<a href="_textile_threads_store.store.html#emit" class="tsd-kind-icon">emit</a>
-							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-class">
-								<a href="_textile_threads_store.store.html#encoder" class="tsd-kind-icon">encoder</a>
-							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
-								<a href="_textile_threads_store.store.html#eventnames" class="tsd-kind-icon">event<wbr>Names</a>
-							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
-								<a href="_textile_threads_store.store.html#events" class="tsd-kind-icon">events</a>
-							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
-								<a href="_textile_threads_store.store.html#getmaxlisteners" class="tsd-kind-icon">get<wbr>Max<wbr>Listeners</a>
-							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
-								<a href="_textile_threads_store.store.html#haslisteners" class="tsd-kind-icon">has<wbr>Listeners</a>
-							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
-								<a href="_textile_threads_store.store.html#listenercount" class="tsd-kind-icon">listener<wbr>Count</a>
-							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
-								<a href="_textile_threads_store.store.html#listeners" class="tsd-kind-icon">listeners</a>
-							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
-								<a href="_textile_threads_store.store.html#maxlisteners" class="tsd-kind-icon">max<wbr>Listeners</a>
-							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
-								<a href="_textile_threads_store.store.html#off" class="tsd-kind-icon">off</a>
-							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
-								<a href="_textile_threads_store.store.html#on" class="tsd-kind-icon">on</a>
-							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
-								<a href="_textile_threads_store.store.html#once" class="tsd-kind-icon">once</a>
-							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-class">
-								<a href="_textile_threads_store.store.html#prefix" class="tsd-kind-icon">prefix</a>
-							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
-								<a href="_textile_threads_store.store.html#prependlistener" class="tsd-kind-icon">prepend<wbr>Listener</a>
-							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
-								<a href="_textile_threads_store.store.html#prependoncelistener" class="tsd-kind-icon">prepend<wbr>Once<wbr>Listener</a>
-							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
-								<a href="_textile_threads_store.store.html#rawlisteners" class="tsd-kind-icon">raw<wbr>Listeners</a>
-							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
-								<a href="_textile_threads_store.store.html#removealllisteners" class="tsd-kind-icon">remove<wbr>All<wbr>Listeners</a>
-							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
-								<a href="_textile_threads_store.store.html#removelistener" class="tsd-kind-icon">remove<wbr>Listener</a>
-							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-class">
-								<a href="_textile_threads_store.store.html#semaphore" class="tsd-kind-icon">semaphore</a>
-							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
-								<a href="_textile_threads_store.store.html#setmaxlisteners" class="tsd-kind-icon">set<wbr>Max<wbr>Listeners</a>
+								<a href="_textile_threads_database.eventbus.html#setmaxlisteners" class="tsd-kind-icon">set<wbr>Max<wbr>Listeners</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
-								<a href="_textile_threads_store.store.html#batch" class="tsd-kind-icon">batch</a>
+								<a href="_textile_threads_database.eventbus.html#push" class="tsd-kind-icon">push</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
-								<a href="_textile_threads_store.store.html#close" class="tsd-kind-icon">close</a>
+								<a href="_textile_threads_database.eventbus.html#start" class="tsd-kind-icon">start</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
-								<a href="_textile_threads_store.store.html#delete" class="tsd-kind-icon">delete</a>
-							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class">
-								<a href="_textile_threads_store.store.html#dispatch" class="tsd-kind-icon">dispatch</a>
-							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class">
-								<a href="_textile_threads_store.store.html#get" class="tsd-kind-icon">get</a>
-							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class">
-								<a href="_textile_threads_store.store.html#has" class="tsd-kind-icon">has</a>
-							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class">
-								<a href="_textile_threads_store.store.html#open" class="tsd-kind-icon">open</a>
-							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class">
-								<a href="_textile_threads_store.store.html#put" class="tsd-kind-icon">put</a>
-							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class">
-								<a href="_textile_threads_store.store.html#query" class="tsd-kind-icon">query</a>
-							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class">
-								<a href="_textile_threads_store.store.html#readlock" class="tsd-kind-icon">read<wbr>Lock</a>
-							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class">
-								<a href="_textile_threads_store.store.html#reduce" class="tsd-kind-icon">reduce</a>
-							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class">
-								<a href="_textile_threads_store.store.html#unlock" class="tsd-kind-icon">unlock</a>
-							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class">
-								<a href="_textile_threads_store.store.html#writelock" class="tsd-kind-icon">write<wbr>Lock</a>
+								<a href="_textile_threads_database.eventbus.html#stop" class="tsd-kind-icon">stop</a>
 							</li>
 						</ul>
 					</li>
 				</ul>
 				<ul class="after-current">
-					<li class=" tsd-kind-interface tsd-parent-kind-module tsd-has-type-parameter">
-						<a href="../interfaces/_textile_threads_store.codec.html" class="tsd-kind-icon">Codec</a>
+					<li class=" tsd-kind-class tsd-parent-kind-module tsd-has-type-parameter">
+						<a href="_textile_threads_database.queue.html" class="tsd-kind-icon">Queue</a>
 					</li>
-					<li class=" tsd-kind-interface tsd-parent-kind-module tsd-has-type-parameter">
-						<a href="../interfaces/_textile_threads_store.encoder.html" class="tsd-kind-icon">Encoder</a>
+					<li class=" tsd-kind-class tsd-parent-kind-module tsd-has-type-parameter">
+						<a href="_textile_threads_database.readonlycollection.html" class="tsd-kind-icon">Readonly<wbr>Collection</a>
 					</li>
 					<li class=" tsd-kind-interface tsd-parent-kind-module">
-						<a href="../interfaces/_textile_threads_store.entity.html" class="tsd-kind-icon">Entity</a>
+						<a href="../interfaces/_textile_threads_database.cacheoptions.html" class="tsd-kind-icon">Cache<wbr>Options</a>
 					</li>
 					<li class=" tsd-kind-interface tsd-parent-kind-module tsd-has-type-parameter">
-						<a href="../interfaces/_textile_threads_store.event.html" class="tsd-kind-icon">Event</a>
+						<a href="../interfaces/_textile_threads_database.job.html" class="tsd-kind-icon">Job</a>
 					</li>
 					<li class=" tsd-kind-interface tsd-parent-kind-module tsd-has-type-parameter">
-						<a href="../interfaces/_textile_threads_store.reducer.html" class="tsd-kind-icon">Reducer</a>
+						<a href="../interfaces/_textile_threads_database.options.html" class="tsd-kind-icon">Options</a>
 					</li>
-					<li class=" tsd-kind-interface tsd-parent-kind-module tsd-has-type-parameter">
-						<a href="../interfaces/_textile_threads_store.update.html" class="tsd-kind-icon">Update</a>
+					<li class=" tsd-kind-type-alias tsd-parent-kind-module">
+						<a href="../modules/_textile_threads_database.html#bsontypealias" class="tsd-kind-icon">BSONType<wbr>Alias</a>
 					</li>
 					<li class=" tsd-kind-type-alias tsd-parent-kind-module tsd-has-type-parameter">
-						<a href="../modules/_textile_threads_store.html#action" class="tsd-kind-icon">Action</a>
+						<a href="../modules/_textile_threads_database.html#condition" class="tsd-kind-icon">Condition</a>
+					</li>
+					<li class=" tsd-kind-type-alias tsd-parent-kind-module tsd-has-type-parameter">
+						<a href="../modules/_textile_threads_database.html#eventjob" class="tsd-kind-icon">Event<wbr>Job</a>
+					</li>
+					<li class=" tsd-kind-type-alias tsd-parent-kind-module">
+						<a href="../modules/_textile_threads_database.html#events" class="tsd-kind-icon">Events</a>
+					</li>
+					<li class=" tsd-kind-type-alias tsd-parent-kind-module tsd-has-type-parameter">
+						<a href="../modules/_textile_threads_database.html#filterquery" class="tsd-kind-icon">Filter<wbr>Query</a>
+					</li>
+					<li class=" tsd-kind-type-alias tsd-parent-kind-module">
+						<a href="../modules/_textile_threads_database.html#jsonschema" class="tsd-kind-icon">JSONSchema</a>
+					</li>
+					<li class=" tsd-kind-type-alias tsd-parent-kind-module tsd-has-type-parameter">
+						<a href="../modules/_textile_threads_database.html#mongoaltquery" class="tsd-kind-icon">Mongo<wbr>Alt<wbr>Query</a>
+					</li>
+					<li class=" tsd-kind-type-alias tsd-parent-kind-module tsd-has-type-parameter">
+						<a href="../modules/_textile_threads_database.html#objectqueryselector" class="tsd-kind-icon">Object<wbr>Query<wbr>Selector</a>
+					</li>
+					<li class=" tsd-kind-type-alias tsd-parent-kind-module">
+						<a href="../modules/_textile_threads_database.html#options-1" class="tsd-kind-icon">Options</a>
+					</li>
+					<li class=" tsd-kind-type-alias tsd-parent-kind-module tsd-has-type-parameter">
+						<a href="../modules/_textile_threads_database.html#queryselector" class="tsd-kind-icon">Query<wbr>Selector</a>
+					</li>
+					<li class=" tsd-kind-type-alias tsd-parent-kind-module tsd-has-type-parameter">
+						<a href="../modules/_textile_threads_database.html#regexpforstring" class="tsd-kind-icon">Reg<wbr>Exp<wbr>For<wbr>String</a>
+					</li>
+					<li class=" tsd-kind-type-alias tsd-parent-kind-module tsd-has-type-parameter">
+						<a href="../modules/_textile_threads_database.html#rootqueryselector" class="tsd-kind-icon">Root<wbr>Query<wbr>Selector</a>
+					</li>
+					<li class=" tsd-kind-variable tsd-parent-kind-module">
+						<a href="../modules/_textile_threads_database.html#existingkeyerror" class="tsd-kind-icon">existing<wbr>Key<wbr>Error</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-module">
+						<a href="../modules/_textile_threads_database.html#cache" class="tsd-kind-icon">Cache</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-module">
+						<a href="../modules/_textile_threads_database.html#createthread" class="tsd-kind-icon">create<wbr>Thread</a>
 					</li>
 					<li class=" tsd-kind-function tsd-parent-kind-module tsd-has-type-parameter">
-						<a href="../modules/_textile_threads_store.html#safeget" class="tsd-kind-icon">safe<wbr>Get</a>
+						<a href="../modules/_textile_threads_database.html#decoderecord" class="tsd-kind-icon">decode<wbr>Record</a>
 					</li>
-					<li class=" tsd-kind-object-literal tsd-parent-kind-module">
-						<a href="../modules/_textile_threads_store.html#cborencoder" class="tsd-kind-icon">Cbor<wbr>Encoder</a>
-					</li>
-					<li class=" tsd-kind-object-literal tsd-parent-kind-module">
-						<a href="../modules/_textile_threads_store.html#jsonencoder" class="tsd-kind-icon">Json<wbr>Encoder</a>
+					<li class=" tsd-kind-function tsd-parent-kind-module">
+						<a href="../modules/_textile_threads_database.html#threadaddr" class="tsd-kind-icon">thread<wbr>Addr</a>
 					</li>
 				</ul>
 			</nav>
