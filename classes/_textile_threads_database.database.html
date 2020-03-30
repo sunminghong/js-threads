@@ -93,7 +93,7 @@
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_textile_threads_database.database.html#dispatcher" class="tsd-kind-icon">dispatcher</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_textile_threads_database.database.html#emitter" class="tsd-kind-icon">emitter</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_textile_threads_database.database.html#eventbus" class="tsd-kind-icon">event<wbr>Bus</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_textile_threads_database.database.html#service" class="tsd-kind-icon">service</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_textile_threads_database.database.html#network" class="tsd-kind-icon">network</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_textile_threads_database.database.html#threadid" class="tsd-kind-icon">threadID</a></li>
 							</ul>
 						</section>
@@ -224,14 +224,14 @@
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
-							<p>EventBus is used to marshal events to and from a Threads service</p>
+							<p>EventBus is used to marshal events to and from a Threads network</p>
 						</div>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
-					<a name="service" class="tsd-anchor"></a>
-					<h3>service</h3>
-					<div class="tsd-signature tsd-kind-icon">service<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Service</span></div>
+					<a name="network" class="tsd-anchor"></a>
+					<h3>network</h3>
+					<div class="tsd-signature tsd-kind-icon">network<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Network</span></div>
 					<aside class="tsd-sources">
 						<ul>
 							<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/database/src/db.ts#L35">database/src/db.ts:35</a></li>
@@ -239,7 +239,7 @@
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
-							<p>Service is the networking layer</p>
+							<p>Network is the networking layer</p>
 						</div>
 					</div>
 				</section>
@@ -278,7 +278,7 @@
 								<div class="lead">
 									<p>Close and stop the database.
 										Stops the underlying datastore if not already stopped, and disables the dispatcher and
-									underlying services (event bus, network service, etc.)</p>
+									underlying services (event bus, network network, etc.)</p>
 								</div>
 							</div>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></h4>
@@ -328,7 +328,7 @@
 							<h4 class="tsd-type-parameters-title">Type parameters</h4>
 							<ul class="tsd-type-parameters">
 								<li>
-									<h4>T<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Entity</span></h4>
+									<h4>T<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Instance</span></h4>
 								</li>
 							</ul>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -372,7 +372,7 @@
 							<h4 class="tsd-type-parameters-title">Type parameters</h4>
 							<ul class="tsd-type-parameters">
 								<li>
-									<h4>T<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Entity</span></h4>
+									<h4>T<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Instance</span></h4>
 								</li>
 							</ul>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -411,7 +411,7 @@
 								<div class="lead">
 									<p>Open the database.
 										Opens the underlying datastore if not already open, and enables the dispatcher and
-										underlying services (event bus, network service, etc). If threadID is undefined, and the
+										underlying services (event bus, network network, etc). If threadID is undefined, and the
 										database was already bootstrapped on a thread, it will continue using that thread. In the
 										opposite case, it will create a new thread. If threadID is provided, and the database was
 										not bootstrapped on an existing thread, it will attempt to use the provided threadID,
@@ -513,10 +513,10 @@
 						<a href="../modules/_textile_threads_encoding.html">@textile/threads-<wbr>encoding</a>
 					</li>
 					<li class=" tsd-kind-module">
-						<a href="../modules/_textile_threads_service.html">@textile/threads-<wbr>service</a>
+						<a href="../modules/_textile_threads_network.html">@textile/threads-<wbr>network</a>
 					</li>
 					<li class=" tsd-kind-module">
-						<a href="../modules/_textile_threads_service_client.html">@textile/threads-<wbr>service-<wbr>client</a>
+						<a href="../modules/_textile_threads_network_client.html">@textile/threads-<wbr>network-<wbr>client</a>
 					</li>
 					<li class=" tsd-kind-module">
 						<a href="../modules/_textile_threads_store.html">@textile/threads-<wbr>store</a>
@@ -558,7 +558,7 @@
 								<a href="_textile_threads_database.database.html#eventbus" class="tsd-kind-icon">event<wbr>Bus</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class">
-								<a href="_textile_threads_database.database.html#service" class="tsd-kind-icon">service</a>
+								<a href="_textile_threads_database.database.html#network" class="tsd-kind-icon">network</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class">
 								<a href="_textile_threads_database.database.html#threadid" class="tsd-kind-icon">threadID</a>

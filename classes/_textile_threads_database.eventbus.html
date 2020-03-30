@@ -117,6 +117,7 @@
 								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="_textile_threads_database.eventbus.html#listenercount" class="tsd-kind-icon">listener<wbr>Count</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="_textile_threads_database.eventbus.html#listeners" class="tsd-kind-icon">listeners</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="_textile_threads_database.eventbus.html#maxlisteners" class="tsd-kind-icon">max<wbr>Listeners</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_textile_threads_database.eventbus.html#network" class="tsd-kind-icon">network</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="_textile_threads_database.eventbus.html#off" class="tsd-kind-icon">off</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="_textile_threads_database.eventbus.html#on" class="tsd-kind-icon">on</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="_textile_threads_database.eventbus.html#once" class="tsd-kind-icon">once</a></li>
@@ -126,7 +127,6 @@
 								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="_textile_threads_database.eventbus.html#rawlisteners" class="tsd-kind-icon">raw<wbr>Listeners</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="_textile_threads_database.eventbus.html#removealllisteners" class="tsd-kind-icon">remove<wbr>All<wbr>Listeners</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="_textile_threads_database.eventbus.html#removelistener" class="tsd-kind-icon">remove<wbr>Listener</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_textile_threads_database.eventbus.html#service" class="tsd-kind-icon">service</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="_textile_threads_database.eventbus.html#setmaxlisteners" class="tsd-kind-icon">set<wbr>Max<wbr>Listeners</a></li>
 							</ul>
 						</section>
@@ -147,7 +147,7 @@
 					<a name="constructor" class="tsd-anchor"></a>
 					<h3>constructor</h3>
 					<ul class="tsd-signatures tsd-kind-constructor tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">new <wbr>Event<wbr>Bus<span class="tsd-signature-symbol">(</span>queue<span class="tsd-signature-symbol">: </span><a href="_textile_threads_database.queue.html" class="tsd-signature-type">Queue</a><span class="tsd-signature-symbol">&lt;</span><a href="../modules/_textile_threads_database.html#eventjob" class="tsd-signature-type">EventJob</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">Datastore</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">&gt;</span>, service<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Service</span>, opts<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">Options</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="_textile_threads_database.eventbus.html" class="tsd-signature-type">EventBus</a></li>
+						<li class="tsd-signature tsd-kind-icon">new <wbr>Event<wbr>Bus<span class="tsd-signature-symbol">(</span>queue<span class="tsd-signature-symbol">: </span><a href="_textile_threads_database.queue.html" class="tsd-signature-type">Queue</a><span class="tsd-signature-symbol">&lt;</span><a href="../modules/_textile_threads_database.html#eventjob" class="tsd-signature-type">EventJob</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">Datastore</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">&gt;</span>, network<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Network</span>, opts<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">Options</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="_textile_threads_database.eventbus.html" class="tsd-signature-type">EventBus</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
@@ -162,7 +162,7 @@
 									<h5>queue: <a href="_textile_threads_database.queue.html" class="tsd-signature-type">Queue</a><span class="tsd-signature-symbol">&lt;</span><a href="../modules/_textile_threads_database.html#eventjob" class="tsd-signature-type">EventJob</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">Datastore</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">&gt;</span></h5>
 								</li>
 								<li>
-									<h5>service: <span class="tsd-signature-type">Service</span></h5>
+									<h5>network: <span class="tsd-signature-type">Network</span></h5>
 								</li>
 								<li>
 									<h5><span class="tsd-flag ts-flagDefault value">Default value</span> opts: <span class="tsd-signature-type">Options</span><span class="tsd-signature-symbol"> =&nbsp;{}</span></h5>
@@ -457,6 +457,16 @@
 						<p>Inherited from EventEmitter.maxListeners</p>
 						<ul>
 							<li>Defined in store/node_modules/tsee/lib/ee.d.ts:8</li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
+					<a name="network" class="tsd-anchor"></a>
+					<h3>network</h3>
+					<div class="tsd-signature tsd-kind-icon">network<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Network</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/database/src/eventbus.ts#L29">database/src/eventbus.ts:29</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -792,16 +802,6 @@
 						</ul>
 					</div>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
-					<a name="service" class="tsd-anchor"></a>
-					<h3>service</h3>
-					<div class="tsd-signature tsd-kind-icon">service<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Service</span></div>
-					<aside class="tsd-sources">
-						<ul>
-							<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/database/src/eventbus.ts#L29">database/src/eventbus.ts:29</a></li>
-						</ul>
-					</aside>
-				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
 					<a name="setmaxlisteners" class="tsd-anchor"></a>
 					<h3>set<wbr>Max<wbr>Listeners</h3>
@@ -926,10 +926,10 @@
 						<a href="../modules/_textile_threads_encoding.html">@textile/threads-<wbr>encoding</a>
 					</li>
 					<li class=" tsd-kind-module">
-						<a href="../modules/_textile_threads_service.html">@textile/threads-<wbr>service</a>
+						<a href="../modules/_textile_threads_network.html">@textile/threads-<wbr>network</a>
 					</li>
 					<li class=" tsd-kind-module">
-						<a href="../modules/_textile_threads_service_client.html">@textile/threads-<wbr>service-<wbr>client</a>
+						<a href="../modules/_textile_threads_network_client.html">@textile/threads-<wbr>network-<wbr>client</a>
 					</li>
 					<li class=" tsd-kind-module">
 						<a href="../modules/_textile_threads_store.html">@textile/threads-<wbr>store</a>
@@ -991,6 +991,9 @@
 							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
 								<a href="_textile_threads_database.eventbus.html#maxlisteners" class="tsd-kind-icon">max<wbr>Listeners</a>
 							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class">
+								<a href="_textile_threads_database.eventbus.html#network" class="tsd-kind-icon">network</a>
+							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
 								<a href="_textile_threads_database.eventbus.html#off" class="tsd-kind-icon">off</a>
 							</li>
@@ -1017,9 +1020,6 @@
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
 								<a href="_textile_threads_database.eventbus.html#removelistener" class="tsd-kind-icon">remove<wbr>Listener</a>
-							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-class">
-								<a href="_textile_threads_database.eventbus.html#service" class="tsd-kind-icon">service</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
 								<a href="_textile_threads_database.eventbus.html#setmaxlisteners" class="tsd-kind-icon">set<wbr>Max<wbr>Listeners</a>
