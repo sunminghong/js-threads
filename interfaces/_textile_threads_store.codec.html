@@ -128,9 +128,22 @@
 					<div class="tsd-signature tsd-kind-icon">on<wbr>Delete<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">function</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/store/src/codec.ts#L8">store/src/codec.ts:8</a></li>
+							<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/store/src/codec.ts#L13">store/src/codec.ts:13</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>onDelete runs once a given key has been deleted.</p>
+						</div>
+						<dl class="tsd-comment-tags">
+							<dt>param</dt>
+							<dd><p>A reference to the corresponding datastore used for storage. Can be used to create a batch instance.</p>
+							</dd>
+							<dt>param</dt>
+							<dd><p>The target datastore key to delete.</p>
+							</dd>
+						</dl>
+					</div>
 					<div class="tsd-type-declaration">
 						<h4>Type declaration</h4>
 						<ul class="tsd-parameters">
@@ -162,9 +175,25 @@
 					<div class="tsd-signature tsd-kind-icon">on<wbr>Put<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">function</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/store/src/codec.ts#L9">store/src/codec.ts:9</a></li>
+							<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/store/src/codec.ts#L20">store/src/codec.ts:20</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>onPut runs once a given key has been updated/inserted.</p>
+						</div>
+						<dl class="tsd-comment-tags">
+							<dt>param</dt>
+							<dd><p>A reference to the corresponding datastore used for storage. Can be used to create a batch instance.</p>
+							</dd>
+							<dt>param</dt>
+							<dd><p>The target datastore key to update.</p>
+							</dd>
+							<dt>param</dt>
+							<dd><p>The new input value/data.</p>
+							</dd>
+						</dl>
+					</div>
 					<div class="tsd-type-declaration">
 						<h4>Type declaration</h4>
 						<ul class="tsd-parameters">
@@ -206,16 +235,27 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/store/src/codec.ts#L10">store/src/codec.ts:10</a></li>
+									<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/store/src/codec.ts#L27">store/src/codec.ts:27</a></li>
 								</ul>
 							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>onReduce runs once a given set of Events have been dispatched via a Dispatcher.</p>
+								</div>
+							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
 									<h5>store: <span class="tsd-signature-type">Datastore</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">D</span><span class="tsd-signature-symbol">&gt;</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>A reference to the corresponding datastore used for storage. Can be used to create a batch instance.</p>
+									</div>
 								</li>
 								<li>
 									<h5><span class="tsd-flag ts-flagRest">Rest</span> <span class="tsd-signature-symbol">...</span>events: <span class="tsd-signature-type">Result</span><span class="tsd-signature-symbol">&lt;</span><a href="_textile_threads_store.event.html" class="tsd-signature-type">Event</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">A</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">[]</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The set of incoming store Events.</p>
+									</div>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></h4>

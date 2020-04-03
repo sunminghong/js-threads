@@ -67,6 +67,13 @@
 <div class="container container-main">
 	<div class="row">
 		<div class="col-8 col-content">
+			<section class="tsd-panel tsd-comment">
+				<div class="tsd-comment tsd-typography">
+					<div class="lead">
+						<p>BasicStore is the default Store implementation. It uses the BasicCodec to manage updates.</p>
+					</div>
+				</div>
+			</section>
 			<section class="tsd-panel tsd-type-parameters">
 				<h3>Type parameters</h3>
 				<ul class="tsd-type-parameters">
@@ -173,7 +180,7 @@
 							<aside class="tsd-sources">
 								<p>Overrides <a href="_textile_threads_store.store.html">Store</a>.<a href="_textile_threads_store.store.html#constructor">constructor</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/store/src/stores/basic.ts#L6">store/src/stores/basic.ts:6</a></li>
+									<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/store/src/stores/basic.ts#L9">store/src/stores/basic.ts:9</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -243,7 +250,7 @@
 					<aside class="tsd-sources">
 						<p>Inherited from <a href="_textile_threads_store.store.html">Store</a>.<a href="_textile_threads_store.store.html#child">child</a></p>
 						<ul>
-							<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/store/src/stores/store.ts#L98">store/src/stores/store.ts:98</a></li>
+							<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/store/src/stores/store.ts#L132">store/src/stores/store.ts:132</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -254,7 +261,7 @@
 					<aside class="tsd-sources">
 						<p>Inherited from <a href="_textile_threads_store.store.html">Store</a>.<a href="_textile_threads_store.store.html#codec">codec</a></p>
 						<ul>
-							<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/store/src/stores/store.ts#L102">store/src/stores/store.ts:102</a></li>
+							<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/store/src/stores/store.ts#L136">store/src/stores/store.ts:136</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -265,7 +272,7 @@
 					<aside class="tsd-sources">
 						<p>Inherited from <a href="_textile_threads_store.store.html">Store</a>.<a href="_textile_threads_store.store.html#dispatcher">dispatcher</a></p>
 						<ul>
-							<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/store/src/stores/store.ts#L104">store/src/stores/store.ts:104</a></li>
+							<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/store/src/stores/store.ts#L138">store/src/stores/store.ts:138</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -317,7 +324,7 @@
 					<aside class="tsd-sources">
 						<p>Inherited from <a href="_textile_threads_store.store.html">Store</a>.<a href="_textile_threads_store.store.html#encoder">encoder</a></p>
 						<ul>
-							<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/store/src/stores/store.ts#L105">store/src/stores/store.ts:105</a></li>
+							<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/store/src/stores/store.ts#L139">store/src/stores/store.ts:139</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -644,7 +651,7 @@
 					<aside class="tsd-sources">
 						<p>Inherited from <a href="_textile_threads_store.store.html">Store</a>.<a href="_textile_threads_store.store.html#prefix">prefix</a></p>
 						<ul>
-							<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/store/src/stores/store.ts#L103">store/src/stores/store.ts:103</a></li>
+							<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/store/src/stores/store.ts#L137">store/src/stores/store.ts:137</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -854,7 +861,7 @@
 					<aside class="tsd-sources">
 						<p>Inherited from <a href="_textile_threads_store.store.html">Store</a>.<a href="_textile_threads_store.store.html#semaphore">semaphore</a></p>
 						<ul>
-							<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/store/src/stores/store.ts#L99">store/src/stores/store.ts:99</a></li>
+							<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/store/src/stores/store.ts#L133">store/src/stores/store.ts:133</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -904,9 +911,15 @@
 							<aside class="tsd-sources">
 								<p>Inherited from <a href="_textile_threads_store.store.html">Store</a>.<a href="_textile_threads_store.store.html#batch">batch</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/store/src/stores/store.ts#L189">store/src/stores/store.ts:189</a></li>
+									<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/store/src/stores/store.ts#L259">store/src/stores/store.ts:259</a></li>
 								</ul>
 							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Returns nan ActionBatch object with which you can chain multiple operations.
+									The operations are only dispatched upon calling <code>commit</code>.</p>
+								</div>
+							</div>
 							<h4 class="tsd-returns-title">Returns <a href="_textile_threads_store.actionbatch.html" class="tsd-signature-type">ActionBatch</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">A</span><span class="tsd-signature-symbol">&gt;</span></h4>
 						</li>
 					</ul>
@@ -922,7 +935,7 @@
 							<aside class="tsd-sources">
 								<p>Inherited from <a href="_textile_threads_store.store.html">Store</a>.<a href="_textile_threads_store.store.html#close">close</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/store/src/stores/store.ts#L161">store/src/stores/store.ts:161</a></li>
+									<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/store/src/stores/store.ts#L203">store/src/stores/store.ts:203</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></h4>
@@ -940,13 +953,21 @@
 							<aside class="tsd-sources">
 								<p>Inherited from <a href="_textile_threads_store.store.html">Store</a>.<a href="_textile_threads_store.store.html#delete">delete</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/store/src/stores/store.ts#L179">store/src/stores/store.ts:179</a></li>
+									<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/store/src/stores/store.ts#L240">store/src/stores/store.ts:240</a></li>
 								</ul>
 							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Deletes the value under the given key.</p>
+								</div>
+							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
 									<h5>key: <span class="tsd-signature-type">Key</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The key.</p>
+									</div>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></h4>
@@ -964,13 +985,22 @@
 							<aside class="tsd-sources">
 								<p>Inherited from <a href="_textile_threads_store.store.html">Store</a>.<a href="_textile_threads_store.store.html#dispatch">dispatch</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/store/src/stores/store.ts#L144">store/src/stores/store.ts:144</a></li>
+									<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/store/src/stores/store.ts#L183">store/src/stores/store.ts:183</a></li>
 								</ul>
 							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Generic dispatcher method. This is called by an ActionBatch to dispatch actions to the Store&#39;s Dispatcher.
+									This method will emit the set of Events (after dispatch is complete) so that listeners may take action.</p>
+								</div>
+							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
 									<h5><span class="tsd-flag ts-flagRest">Rest</span> <span class="tsd-signature-symbol">...</span>actions: <a href="../modules/_textile_threads_store.html#action" class="tsd-signature-type">Action</a><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/_textile_threads_store.event.html" class="tsd-signature-type">Event</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">A</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">[]</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The set of deferred actions to dispatch.</p>
+									</div>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></h4>
@@ -988,13 +1018,26 @@
 							<aside class="tsd-sources">
 								<p>Inherited from <a href="_textile_threads_store.store.html">Store</a>.<a href="_textile_threads_store.store.html#get">get</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/store/src/stores/store.ts#L169">store/src/stores/store.ts:169</a></li>
+									<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/store/src/stores/store.ts#L220">store/src/stores/store.ts:220</a></li>
 								</ul>
 							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Gets the value under the given key.</p>
+								</div>
+								<dl class="tsd-comment-tags">
+									<dt>throws</dt>
+									<dd><p>if the given key is not found.</p>
+									</dd>
+								</dl>
+							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
 									<h5>key: <span class="tsd-signature-type">Key</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The key.</p>
+									</div>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">D</span><span class="tsd-signature-symbol">&gt;</span></h4>
@@ -1012,13 +1055,21 @@
 							<aside class="tsd-sources">
 								<p>Inherited from <a href="_textile_threads_store.store.html">Store</a>.<a href="_textile_threads_store.store.html#has">has</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/store/src/stores/store.ts#L165">store/src/stores/store.ts:165</a></li>
+									<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/store/src/stores/store.ts#L211">store/src/stores/store.ts:211</a></li>
 								</ul>
 							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Returns whether the given key is in the store.</p>
+								</div>
+							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
 									<h5>key: <span class="tsd-signature-type">Key</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The key.</p>
+									</div>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">&gt;</span></h4>
@@ -1036,9 +1087,14 @@
 							<aside class="tsd-sources">
 								<p>Inherited from <a href="_textile_threads_store.store.html">Store</a>.<a href="_textile_threads_store.store.html#open">open</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/store/src/stores/store.ts#L157">store/src/stores/store.ts:157</a></li>
+									<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/store/src/stores/store.ts#L199">store/src/stores/store.ts:199</a></li>
 								</ul>
 							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Open the underlying datastore.</p>
+								</div>
+							</div>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></h4>
 						</li>
 					</ul>
@@ -1054,16 +1110,28 @@
 							<aside class="tsd-sources">
 								<p>Inherited from <a href="_textile_threads_store.store.html">Store</a>.<a href="_textile_threads_store.store.html#put">put</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/store/src/stores/store.ts#L173">store/src/stores/store.ts:173</a></li>
+									<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/store/src/stores/store.ts#L230">store/src/stores/store.ts:230</a></li>
 								</ul>
 							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Stores a value under the given key.
+									This operation happens within an ActionBatch.</p>
+								</div>
+							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
 									<h5>key: <span class="tsd-signature-type">Key</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The key.</p>
+									</div>
 								</li>
 								<li>
 									<h5>value: <span class="tsd-signature-type">T</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The value.</p>
+									</div>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></h4>
@@ -1081,13 +1149,22 @@
 							<aside class="tsd-sources">
 								<p>Inherited from <a href="_textile_threads_store.store.html">Store</a>.<a href="_textile_threads_store.store.html#query">query</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/store/src/stores/store.ts#L185">store/src/stores/store.ts:185</a></li>
+									<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/store/src/stores/store.ts#L251">store/src/stores/store.ts:251</a></li>
 								</ul>
 							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Search the store.
+									Returns an Iterable with each item being a Value (i.e., { key, value } pair).</p>
+								</div>
+							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
 									<h5>query: <span class="tsd-signature-type">Query</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The query object.</p>
+									</div>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">AsyncIterable</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">Result</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">D</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span></h4>
@@ -1105,7 +1182,7 @@
 							<aside class="tsd-sources">
 								<p>Inherited from <a href="_textile_threads_store.store.html">Store</a>.<a href="_textile_threads_store.store.html#readlock">readLock</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/store/src/stores/store.ts#L120">store/src/stores/store.ts:120</a></li>
+									<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/store/src/stores/store.ts#L154">store/src/stores/store.ts:154</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -1146,13 +1223,22 @@
 								<p>Implementation of <a href="../interfaces/_textile_threads_store.reducer.html">Reducer</a>.<a href="../interfaces/_textile_threads_store.reducer.html#reduce">reduce</a></p>
 								<p>Inherited from <a href="_textile_threads_store.store.html">Store</a>.<a href="_textile_threads_store.store.html#reduce">reduce</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/store/src/stores/store.ts#L193">store/src/stores/store.ts:193</a></li>
+									<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/store/src/stores/store.ts#L268">store/src/stores/store.ts:268</a></li>
 								</ul>
 							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Generic reducer method. This is called by the Store&#39;s Dispatcher on each set of new Events.
+									This method will emit the set of updates (after reduction is complete) so that listeners may take action.</p>
+								</div>
+							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
 									<h5><span class="tsd-flag ts-flagRest">Rest</span> <span class="tsd-signature-symbol">...</span>events: <span class="tsd-signature-type">Result</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/_textile_threads_store.event.html" class="tsd-signature-type">Event</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">A</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">[]</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The set of incoming events to the &#39;folded&#39; into the Store.</p>
+									</div>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></h4>
@@ -1170,7 +1256,7 @@
 							<aside class="tsd-sources">
 								<p>Inherited from <a href="_textile_threads_store.store.html">Store</a>.<a href="_textile_threads_store.store.html#unlock">unlock</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/store/src/stores/store.ts#L140">store/src/stores/store.ts:140</a></li>
+									<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/store/src/stores/store.ts#L174">store/src/stores/store.ts:174</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -1203,7 +1289,7 @@
 							<aside class="tsd-sources">
 								<p>Inherited from <a href="_textile_threads_store.store.html">Store</a>.<a href="_textile_threads_store.store.html#writelock">writeLock</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/store/src/stores/store.ts#L131">store/src/stores/store.ts:131</a></li>
+									<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/store/src/stores/store.ts#L165">store/src/stores/store.ts:165</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
