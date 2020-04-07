@@ -91,6 +91,7 @@
 							<ul class="tsd-index-list">
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_textile_threads_core.recordnode.html#block" class="tsd-kind-icon">block</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_textile_threads_core.recordnode.html#prev" class="tsd-kind-icon">prev</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_textile_threads_core.recordnode.html#pubkey" class="tsd-kind-icon">pub<wbr>Key</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_textile_threads_core.recordnode.html#sig" class="tsd-kind-icon">sig</a></li>
 							</ul>
 						</section>
@@ -110,7 +111,7 @@
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
-							<p>CID of record block.</p>
+							<p>CID of inner block.</p>
 						</div>
 					</div>
 				</section>
@@ -130,6 +131,21 @@
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="pubkey" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> pub<wbr>Key</h3>
+					<div class="tsd-signature tsd-kind-icon">pub<wbr>Key<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Uint8Array</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/core/src/network/record.ts#L45">core/src/network/record.ts:45</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Public of the identity used to author this record.</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
 					<a name="sig" class="tsd-anchor"></a>
 					<h3>sig</h3>
 					<div class="tsd-signature tsd-kind-icon">sig<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Uint8Array</span></div>
@@ -140,7 +156,7 @@
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
-							<p>Signature of current and previous blocks.</p>
+							<p>Signature of current and previous blocks from the log key.</p>
 						</div>
 					</div>
 				</section>
@@ -187,6 +203,9 @@
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
 								<a href="_textile_threads_core.recordnode.html#prev" class="tsd-kind-icon">prev</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="_textile_threads_core.recordnode.html#pubkey" class="tsd-kind-icon">pub<wbr>Key</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
 								<a href="_textile_threads_core.recordnode.html#sig" class="tsd-kind-icon">sig</a>

@@ -69,12 +69,10 @@
 					<a href="#threads-encoding-emthreads-encodingem" id="threads-encoding-emthreads-encodingem" style="color: inherit; text-decoration: none;">
 						<h1>Threads Encoding <em>(threads-encoding)</em></h1>
 					</a>
+					<p>Encoding/decoding (encryption/decryption) tools for Textile&#39;s Threads protocol &amp; database</p>
 					<p><a href="https://textile.io"><img src="https://img.shields.io/badge/made%20by-Textile-informational.svg" alt="Textile"></a>
 						<a href="../../LICENSE"><img src="https://img.shields.io/github/license/textileio/js-threads.svg" alt="License"></a>
 					<a href="https://www.npmjs.com/package/@textile/threads-encoding"><img src="https://img.shields.io/npm/v/@textile/threads-encoding.svg" alt="npm (scoped)"></a></p>
-					<blockquote>
-						<p>Encoding/decoding (encryption/decryption) tools for Textile&#39;s Threads protocol &amp; database</p>
-					</blockquote>
 					<p>This sub-package is part of <a href="https://github.com/textileio/js-threads"><code>js-threads</code></a>. See the <a href="https://textileio.github.io/js-threads">top-level documentation</a> for details.</p>
 				</div>
 			</section>
@@ -85,6 +83,7 @@
 						<section class="tsd-index-section ">
 							<h3>Interfaces</h3>
 							<ul class="tsd-index-list">
+								<li class="tsd-kind-interface tsd-parent-kind-module"><a href="../interfaces/_textile_threads_encoding.createrecordconfig.html" class="tsd-kind-icon">Create<wbr>Record<wbr>Config</a></li>
 								<li class="tsd-kind-interface tsd-parent-kind-module"><a href="../interfaces/_textile_threads_encoding.encodedrecord.html" class="tsd-kind-icon">Encoded<wbr>Record</a></li>
 								<li class="tsd-kind-interface tsd-parent-kind-module"><a href="../interfaces/_textile_threads_encoding.options.html" class="tsd-kind-icon">Options</a></li>
 							</ul>
@@ -164,13 +163,13 @@
 					<a name="createrecord" class="tsd-anchor"></a>
 					<h3>create<wbr>Record</h3>
 					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module">
-						<li class="tsd-signature tsd-kind-icon">create<wbr>Record<span class="tsd-signature-symbol">(</span>data<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Event</span>, privKey<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">PrivateKey</span>, keyiv<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Uint8Array</span>, prev<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">CID</span>, opts<span class="tsd-signature-symbol">?: </span><a href="../interfaces/_textile_threads_encoding.options.html" class="tsd-signature-type">Options</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">LogRecord</span><span class="tsd-signature-symbol">&gt;</span></li>
+						<li class="tsd-signature tsd-kind-icon">create<wbr>Record<span class="tsd-signature-symbol">(</span>data<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Event</span>, config<span class="tsd-signature-symbol">: </span><a href="../interfaces/_textile_threads_encoding.createrecordconfig.html" class="tsd-signature-type">CreateRecordConfig</a>, opts<span class="tsd-signature-symbol">?: </span><a href="../interfaces/_textile_threads_encoding.options.html" class="tsd-signature-type">Options</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">LogRecord</span><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/encoding/src/record.ts#L27">encoding/src/record.ts:27</a></li>
+									<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/encoding/src/record.ts#L47">encoding/src/record.ts:47</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -187,21 +186,9 @@
 									</div>
 								</li>
 								<li>
-									<h5>privKey: <span class="tsd-signature-type">PrivateKey</span></h5>
+									<h5>config: <a href="../interfaces/_textile_threads_encoding.createrecordconfig.html" class="tsd-signature-type">CreateRecordConfig</a></h5>
 									<div class="tsd-comment tsd-typography">
-										<p>The private key to use for signing.</p>
-									</div>
-								</li>
-								<li>
-									<h5>keyiv: <span class="tsd-signature-type">Uint8Array</span></h5>
-									<div class="tsd-comment tsd-typography">
-										<p>The symmetric key to use for encrypting the record body.</p>
-									</div>
-								</li>
-								<li>
-									<h5><span class="tsd-flag ts-flagOptional">Optional</span> prev: <span class="tsd-signature-type">CID</span></h5>
-									<div class="tsd-comment tsd-typography">
-										<p>An optional previous Record CID.</p>
+										<p>A set of key/CID options for creating the new record.</p>
 									</div>
 								</li>
 								<li>
@@ -318,7 +305,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/encoding/src/record.ts#L84">encoding/src/record.ts:84</a></li>
+									<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/encoding/src/record.ts#L106">encoding/src/record.ts:106</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -361,7 +348,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/encoding/src/record.ts#L62">encoding/src/record.ts:62</a></li>
+									<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/encoding/src/record.ts#L84">encoding/src/record.ts:84</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -458,6 +445,9 @@
 			</nav>
 			<nav class="tsd-navigation secondary menu-sticky">
 				<ul class="before-current">
+					<li class=" tsd-kind-interface tsd-parent-kind-module">
+						<a href="../interfaces/_textile_threads_encoding.createrecordconfig.html" class="tsd-kind-icon">Create<wbr>Record<wbr>Config</a>
+					</li>
 					<li class=" tsd-kind-interface tsd-parent-kind-module">
 						<a href="../interfaces/_textile_threads_encoding.encodedrecord.html" class="tsd-kind-icon">Encoded<wbr>Record</a>
 					</li>

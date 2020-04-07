@@ -105,6 +105,8 @@
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_textile_threads_network.logstore.html#addlog" class="tsd-kind-icon">add<wbr>Log</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_textile_threads_network.logstore.html#addthread" class="tsd-kind-icon">add<wbr>Thread</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_textile_threads_network.logstore.html#close" class="tsd-kind-icon">close</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_textile_threads_network.logstore.html#deletelog" class="tsd-kind-icon">delete<wbr>Log</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_textile_threads_network.logstore.html#deletethread" class="tsd-kind-icon">delete<wbr>Thread</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_textile_threads_network.logstore.html#loginfo" class="tsd-kind-icon">log<wbr>Info</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_textile_threads_network.logstore.html#logs" class="tsd-kind-icon">logs</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_textile_threads_network.logstore.html#threadinfo" class="tsd-kind-icon">thread<wbr>Info</a></li>
@@ -166,7 +168,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/network/src/store/index.ts#L76">network/src/store/index.ts:76</a></li>
+									<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/network/src/store/index.ts#L84">network/src/store/index.ts:84</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -247,6 +249,74 @@
 					</ul>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="deletelog" class="tsd-anchor"></a>
+					<h3>delete<wbr>Log</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">delete<wbr>Log<span class="tsd-signature-symbol">(</span>id<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">ThreadID</span>, log<span class="tsd-signature-symbol">: </span><a href="../modules/_textile_threads_core.html#logid" class="tsd-signature-type">LogID</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/network/src/store/index.ts#L95">network/src/store/index.ts:95</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>deleteLog removes a log under the given thread.</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>id: <span class="tsd-signature-type">ThreadID</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>Thread ID.</p>
+									</div>
+								</li>
+								<li>
+									<h5>log: <a href="../modules/_textile_threads_core.html#logid" class="tsd-signature-type">LogID</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>Log ID.</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="deletethread" class="tsd-anchor"></a>
+					<h3>delete<wbr>Thread</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">delete<wbr>Thread<span class="tsd-signature-symbol">(</span>id<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">ThreadID</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/network/src/store/index.ts#L59">network/src/store/index.ts:59</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>deleteThread removes a thread from the store.</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>id: <span class="tsd-signature-type">ThreadID</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>Thread ID.</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
 					<a name="loginfo" class="tsd-anchor"></a>
 					<h3>log<wbr>Info</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
@@ -256,7 +326,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/network/src/store/index.ts#L87">network/src/store/index.ts:87</a></li>
+									<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/network/src/store/index.ts#L104">network/src/store/index.ts:104</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -324,7 +394,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/network/src/store/index.ts#L59">network/src/store/index.ts:59</a></li>
+									<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/network/src/store/index.ts#L67">network/src/store/index.ts:67</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -452,6 +522,12 @@
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="_textile_threads_network.logstore.html#close" class="tsd-kind-icon">close</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="_textile_threads_network.logstore.html#deletelog" class="tsd-kind-icon">delete<wbr>Log</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="_textile_threads_network.logstore.html#deletethread" class="tsd-kind-icon">delete<wbr>Thread</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="_textile_threads_network.logstore.html#loginfo" class="tsd-kind-icon">log<wbr>Info</a>

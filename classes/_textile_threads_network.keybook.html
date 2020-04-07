@@ -105,6 +105,8 @@
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_textile_threads_network.keybook.html#addpubkey" class="tsd-kind-icon">add<wbr>Pub<wbr>Key</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_textile_threads_network.keybook.html#addreadkey" class="tsd-kind-icon">add<wbr>Read<wbr>Key</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_textile_threads_network.keybook.html#addservicekey" class="tsd-kind-icon">add<wbr>Service<wbr>Key</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_textile_threads_network.keybook.html#clearlogkeys" class="tsd-kind-icon">clear<wbr>Log<wbr>Keys</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_textile_threads_network.keybook.html#clearthreadkeys" class="tsd-kind-icon">clear<wbr>Thread<wbr>Keys</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_textile_threads_network.keybook.html#close" class="tsd-kind-icon">close</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_textile_threads_network.keybook.html#logs" class="tsd-kind-icon">logs</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_textile_threads_network.keybook.html#privkey" class="tsd-kind-icon">priv<wbr>Key</a></li>
@@ -306,6 +308,71 @@
 					</ul>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="clearlogkeys" class="tsd-anchor"></a>
+					<h3>clear<wbr>Log<wbr>Keys</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">clear<wbr>Log<wbr>Keys<span class="tsd-signature-symbol">(</span>id<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">ThreadID</span>, log<span class="tsd-signature-symbol">: </span><a href="../modules/_textile_threads_core.html#logid" class="tsd-signature-type">LogID</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/network/src/store/keybook.ts#L171">network/src/store/keybook.ts:171</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>clearLogKeys deletes all keys under a given log.</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>id: <span class="tsd-signature-type">ThreadID</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>Thread ID.</p>
+									</div>
+								</li>
+								<li>
+									<h5>log: <a href="../modules/_textile_threads_core.html#logid" class="tsd-signature-type">LogID</a></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="clearthreadkeys" class="tsd-anchor"></a>
+					<h3>clear<wbr>Thread<wbr>Keys</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">clear<wbr>Thread<wbr>Keys<span class="tsd-signature-symbol">(</span>id<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">ThreadID</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/network/src/store/keybook.ts#L155">network/src/store/keybook.ts:155</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>clearThreadKeys deletes all keys under a given thread.</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>id: <span class="tsd-signature-type">ThreadID</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>Thread ID.</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
 					<a name="close" class="tsd-anchor"></a>
 					<h3>close</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
@@ -315,7 +382,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/network/src/store/keybook.ts#L151">network/src/store/keybook.ts:151</a></li>
+									<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/network/src/store/keybook.ts#L182">network/src/store/keybook.ts:182</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></h4>
@@ -547,6 +614,12 @@
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="_textile_threads_network.keybook.html#addservicekey" class="tsd-kind-icon">add<wbr>Service<wbr>Key</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="_textile_threads_network.keybook.html#clearlogkeys" class="tsd-kind-icon">clear<wbr>Log<wbr>Keys</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="_textile_threads_network.keybook.html#clearthreadkeys" class="tsd-kind-icon">clear<wbr>Thread<wbr>Keys</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="_textile_threads_network.keybook.html#close" class="tsd-kind-icon">close</a>

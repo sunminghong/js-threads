@@ -69,12 +69,10 @@
 					<a href="#threads-database-emthreads-databaseem" id="threads-database-emthreads-databaseem" style="color: inherit; text-decoration: none;">
 						<h1>Threads Database <em>(threads-database)</em></h1>
 					</a>
+					<p>Client-side database built on Textile&#39;s Threads protocol</p>
 					<p><a href="https://textile.io"><img src="https://img.shields.io/badge/made%20by-Textile-informational.svg" alt="Textile"></a>
 						<a href="../../LICENSE"><img src="https://img.shields.io/github/license/textileio/js-threads.svg" alt="License"></a>
 					<a href="https://www.npmjs.com/package/@textile/threads-database"><img src="https://img.shields.io/npm/v/@textile/threads-database.svg" alt="npm (scoped)"></a></p>
-					<blockquote>
-						<p>Client-side database built on Textile&#39;s Threads protocol</p>
-					</blockquote>
 					<p>This sub-package is part of <a href="https://github.com/textileio/js-threads"><code>js-threads</code></a>. See the <a href="https://textileio.github.io/js-threads">top-level documentation</a> for details.</p>
 				</div>
 			</section>
@@ -104,8 +102,10 @@
 							<ul class="tsd-index-list">
 								<li class="tsd-kind-interface tsd-parent-kind-module"><a href="../interfaces/_textile_threads_database.cacheoptions.html" class="tsd-kind-icon">Cache<wbr>Options</a></li>
 								<li class="tsd-kind-interface tsd-parent-kind-module"><a href="../interfaces/_textile_threads_database.config.html" class="tsd-kind-icon">Config</a></li>
+								<li class="tsd-kind-interface tsd-parent-kind-module"><a href="../interfaces/_textile_threads_database.initoptions.html" class="tsd-kind-icon">Init<wbr>Options</a></li>
 								<li class="tsd-kind-interface tsd-parent-kind-module tsd-has-type-parameter"><a href="../interfaces/_textile_threads_database.job.html" class="tsd-kind-icon">Job</a></li>
 								<li class="tsd-kind-interface tsd-parent-kind-module tsd-has-type-parameter"><a href="../interfaces/_textile_threads_database.options.html" class="tsd-kind-icon">Options</a></li>
+								<li class="tsd-kind-interface tsd-parent-kind-module"><a href="../interfaces/_textile_threads_database.startoptions.html" class="tsd-kind-icon">Start<wbr>Options</a></li>
 							</ul>
 						</section>
 						<section class="tsd-index-section ">
@@ -119,7 +119,6 @@
 								<li class="tsd-kind-type-alias tsd-parent-kind-module"><a href="_textile_threads_database.html#jsonschema" class="tsd-kind-icon">JSONSchema</a></li>
 								<li class="tsd-kind-type-alias tsd-parent-kind-module tsd-has-type-parameter"><a href="_textile_threads_database.html#mongoaltquery" class="tsd-kind-icon">Mongo<wbr>Alt<wbr>Query</a></li>
 								<li class="tsd-kind-type-alias tsd-parent-kind-module tsd-has-type-parameter"><a href="_textile_threads_database.html#objectqueryselector" class="tsd-kind-icon">Object<wbr>Query<wbr>Selector</a></li>
-								<li class="tsd-kind-type-alias tsd-parent-kind-module"><a href="_textile_threads_database.html#options-1" class="tsd-kind-icon">Options</a></li>
 								<li class="tsd-kind-type-alias tsd-parent-kind-module tsd-has-type-parameter"><a href="_textile_threads_database.html#queryselector" class="tsd-kind-icon">Query<wbr>Selector</a></li>
 								<li class="tsd-kind-type-alias tsd-parent-kind-module tsd-has-type-parameter"><a href="_textile_threads_database.html#regexpforstring" class="tsd-kind-icon">Reg<wbr>Exp<wbr>For<wbr>String</a></li>
 								<li class="tsd-kind-type-alias tsd-parent-kind-module tsd-has-type-parameter"><a href="_textile_threads_database.html#rootqueryselector" class="tsd-kind-icon">Root<wbr>Query<wbr>Selector</a></li>
@@ -264,21 +263,6 @@
 							<h4>T</h4>
 						</li>
 					</ul>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-type-alias tsd-parent-kind-module">
-					<a name="options-1" class="tsd-anchor"></a>
-					<h3>Options</h3>
-					<div class="tsd-signature tsd-kind-icon">Options<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">object</span></div>
-					<aside class="tsd-sources">
-						<ul>
-							<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/database/src/db.ts#L17">database/src/db.ts:17</a></li>
-						</ul>
-					</aside>
-					<div class="tsd-type-declaration">
-						<h4>Type declaration</h4>
-						<ul class="tsd-parameters">
-						</ul>
-					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-type-alias tsd-parent-kind-module tsd-has-type-parameter">
 					<a name="queryselector" class="tsd-anchor"></a>
@@ -535,11 +519,17 @@
 					<li class=" tsd-kind-interface tsd-parent-kind-module">
 						<a href="../interfaces/_textile_threads_database.config.html" class="tsd-kind-icon">Config</a>
 					</li>
+					<li class=" tsd-kind-interface tsd-parent-kind-module">
+						<a href="../interfaces/_textile_threads_database.initoptions.html" class="tsd-kind-icon">Init<wbr>Options</a>
+					</li>
 					<li class=" tsd-kind-interface tsd-parent-kind-module tsd-has-type-parameter">
 						<a href="../interfaces/_textile_threads_database.job.html" class="tsd-kind-icon">Job</a>
 					</li>
 					<li class=" tsd-kind-interface tsd-parent-kind-module tsd-has-type-parameter">
 						<a href="../interfaces/_textile_threads_database.options.html" class="tsd-kind-icon">Options</a>
+					</li>
+					<li class=" tsd-kind-interface tsd-parent-kind-module">
+						<a href="../interfaces/_textile_threads_database.startoptions.html" class="tsd-kind-icon">Start<wbr>Options</a>
 					</li>
 					<li class=" tsd-kind-type-alias tsd-parent-kind-module">
 						<a href="_textile_threads_database.html#bsontypealias" class="tsd-kind-icon">BSONType<wbr>Alias</a>
@@ -564,9 +554,6 @@
 					</li>
 					<li class=" tsd-kind-type-alias tsd-parent-kind-module tsd-has-type-parameter">
 						<a href="_textile_threads_database.html#objectqueryselector" class="tsd-kind-icon">Object<wbr>Query<wbr>Selector</a>
-					</li>
-					<li class=" tsd-kind-type-alias tsd-parent-kind-module">
-						<a href="_textile_threads_database.html#options-1" class="tsd-kind-icon">Options</a>
 					</li>
 					<li class=" tsd-kind-type-alias tsd-parent-kind-module tsd-has-type-parameter">
 						<a href="_textile_threads_database.html#queryselector" class="tsd-kind-icon">Query<wbr>Selector</a>
