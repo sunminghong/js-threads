@@ -83,6 +83,8 @@
 						<section class="tsd-index-section ">
 							<h3>Classes</h3>
 							<ul class="tsd-index-list">
+								<li class="tsd-kind-class tsd-parent-kind-module"><a href="../classes/_textile_threads_core.libp2pcryptoidentity.html" class="tsd-kind-icon">Libp2p<wbr>Crypto<wbr>Identity</a></li>
+								<li class="tsd-kind-class tsd-parent-kind-module"><a href="../classes/_textile_threads_core.libp2pcryptopublickey.html" class="tsd-kind-icon">Libp2p<wbr>Crypto<wbr>Public<wbr>Key</a></li>
 								<li class="tsd-kind-class tsd-parent-kind-module"><a href="../classes/_textile_threads_core.threadkey.html" class="tsd-kind-icon">Thread<wbr>Key</a></li>
 							</ul>
 						</section>
@@ -95,11 +97,13 @@
 								<li class="tsd-kind-interface tsd-parent-kind-module"><a href="../interfaces/_textile_threads_core.event.html" class="tsd-kind-icon">Event</a></li>
 								<li class="tsd-kind-interface tsd-parent-kind-module"><a href="../interfaces/_textile_threads_core.eventheader.html" class="tsd-kind-icon">Event<wbr>Header</a></li>
 								<li class="tsd-kind-interface tsd-parent-kind-module"><a href="../interfaces/_textile_threads_core.eventnode.html" class="tsd-kind-icon">Event<wbr>Node</a></li>
+								<li class="tsd-kind-interface tsd-parent-kind-module"><a href="../interfaces/_textile_threads_core.identity.html" class="tsd-kind-icon">Identity</a></li>
 								<li class="tsd-kind-interface tsd-parent-kind-module"><a href="../interfaces/_textile_threads_core.loginfo.html" class="tsd-kind-icon">Log<wbr>Info</a></li>
 								<li class="tsd-kind-interface tsd-parent-kind-module"><a href="../interfaces/_textile_threads_core.logrecord.html" class="tsd-kind-icon">Log<wbr>Record</a></li>
 								<li class="tsd-kind-interface tsd-parent-kind-module"><a href="../interfaces/_textile_threads_core.network.html" class="tsd-kind-icon">Network</a></li>
 								<li class="tsd-kind-interface tsd-parent-kind-module"><a href="../interfaces/_textile_threads_core.newthreadoptions.html" class="tsd-kind-icon">New<wbr>Thread<wbr>Options</a></li>
 								<li class="tsd-kind-interface tsd-parent-kind-module"><a href="../interfaces/_textile_threads_core.options.html" class="tsd-kind-icon">Options</a></li>
+								<li class="tsd-kind-interface tsd-parent-kind-module"><a href="../interfaces/_textile_threads_core.public.html" class="tsd-kind-icon">Public</a></li>
 								<li class="tsd-kind-interface tsd-parent-kind-module tsd-has-type-parameter"><a href="../interfaces/_textile_threads_core.reader.html" class="tsd-kind-icon">Reader</a></li>
 								<li class="tsd-kind-interface tsd-parent-kind-module"><a href="../interfaces/_textile_threads_core.recordnode.html" class="tsd-kind-icon">Record<wbr>Node</a></li>
 								<li class="tsd-kind-interface tsd-parent-kind-module"><a href="../interfaces/_textile_threads_core.threadinfo.html" class="tsd-kind-icon">Thread<wbr>Info</a></li>
@@ -111,7 +115,6 @@
 							<h3>Type aliases</h3>
 							<ul class="tsd-index-list">
 								<li class="tsd-kind-type-alias tsd-parent-kind-module"><a href="_textile_threads_core.html#codec" class="tsd-kind-icon">Codec</a></li>
-								<li class="tsd-kind-type-alias tsd-parent-kind-module"><a href="_textile_threads_core.html#identity" class="tsd-kind-icon">Identity</a></li>
 								<li class="tsd-kind-type-alias tsd-parent-kind-module"><a href="_textile_threads_core.html#logid" class="tsd-kind-icon">LogID</a></li>
 								<li class="tsd-kind-type-alias tsd-parent-kind-module"><a href="_textile_threads_core.html#threadtoken" class="tsd-kind-icon">Thread<wbr>Token</a></li>
 							</ul>
@@ -130,7 +133,6 @@
 								<li class="tsd-kind-function tsd-parent-kind-module"><a href="_textile_threads_core.html#keytostring" class="tsd-kind-icon">key<wbr>ToString</a></li>
 								<li class="tsd-kind-function tsd-parent-kind-module"><a href="_textile_threads_core.html#marshalkey" class="tsd-kind-icon">marshal<wbr>Key</a></li>
 								<li class="tsd-kind-function tsd-parent-kind-module"><a href="_textile_threads_core.html#publickeytostring" class="tsd-kind-icon">public<wbr>Key<wbr>ToString</a></li>
-								<li class="tsd-kind-function tsd-parent-kind-module"><a href="_textile_threads_core.html#randomidentity" class="tsd-kind-icon">random<wbr>Identity</a></li>
 							</ul>
 						</section>
 						<section class="tsd-index-section ">
@@ -155,24 +157,6 @@
 					</aside>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-type-alias tsd-parent-kind-module">
-					<a name="identity" class="tsd-anchor"></a>
-					<h3>Identity</h3>
-					<div class="tsd-signature tsd-kind-icon">Identity<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Pick</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">PrivateKey</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">"sign"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"public"</span><span class="tsd-signature-symbol">&gt;</span></div>
-					<aside class="tsd-sources">
-						<ul>
-							<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/core/src/thread/thread.ts#L58">core/src/thread/thread.ts:58</a></li>
-						</ul>
-					</aside>
-					<div class="tsd-comment tsd-typography">
-						<div class="lead">
-							<p>Identity represents an entity capable of signing a message.
-								This is a simple &#39;private key&#39; interface that must be capable of returning the associated public key for
-								verification. In many cases, this will just be a private key, but callers can use any setup that suits their needs.
-							The interface is currently modeled after libp2p-crypto PrivateKey.</p>
-						</div>
-					</div>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-type-alias tsd-parent-kind-module">
 					<a name="logid" class="tsd-anchor"></a>
 					<h3>LogID</h3>
 					<div class="tsd-signature tsd-kind-icon">LogID<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">PeerId</span></div>
@@ -193,7 +177,7 @@
 					<div class="tsd-signature tsd-kind-icon">Thread<wbr>Token<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/core/src/thread/thread.ts#L76">core/src/thread/thread.ts:76</a></li>
+							<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/core/src/thread/thread.ts#L57">core/src/thread/thread.ts:57</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -310,7 +294,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/core/src/index.ts#L9">core/src/index.ts:9</a></li>
+									<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/core/src/index.ts#L10">core/src/index.ts:10</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -333,7 +317,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/core/src/thread/thread.ts#L67">core/src/thread/thread.ts:67</a></li>
+									<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/core/src/identity.ts#L4">core/src/identity.ts:4</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -343,28 +327,6 @@
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span></h4>
-						</li>
-					</ul>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module">
-					<a name="randomidentity" class="tsd-anchor"></a>
-					<h3>random<wbr>Identity</h3>
-					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module">
-						<li class="tsd-signature tsd-kind-icon">random<wbr>Identity<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">Ed25519PrivateKey</span><span class="tsd-signature-symbol">&gt;</span></li>
-					</ul>
-					<ul class="tsd-descriptions">
-						<li class="tsd-description">
-							<aside class="tsd-sources">
-								<ul>
-									<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/core/src/thread/thread.ts#L63">core/src/thread/thread.ts:63</a></li>
-								</ul>
-							</aside>
-							<div class="tsd-comment tsd-typography">
-								<div class="lead">
-									<p>Create a random Ed25519 PrivateKey to be used as an Identity.</p>
-								</div>
-							</div>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">Ed25519PrivateKey</span><span class="tsd-signature-symbol">&gt;</span></h4>
 						</li>
 					</ul>
 				</section>
@@ -486,6 +448,12 @@
 			<nav class="tsd-navigation secondary menu-sticky">
 				<ul class="before-current">
 					<li class=" tsd-kind-class tsd-parent-kind-module">
+						<a href="../classes/_textile_threads_core.libp2pcryptoidentity.html" class="tsd-kind-icon">Libp2p<wbr>Crypto<wbr>Identity</a>
+					</li>
+					<li class=" tsd-kind-class tsd-parent-kind-module">
+						<a href="../classes/_textile_threads_core.libp2pcryptopublickey.html" class="tsd-kind-icon">Libp2p<wbr>Crypto<wbr>Public<wbr>Key</a>
+					</li>
+					<li class=" tsd-kind-class tsd-parent-kind-module">
 						<a href="../classes/_textile_threads_core.threadkey.html" class="tsd-kind-icon">Thread<wbr>Key</a>
 					</li>
 					<li class=" tsd-kind-interface tsd-parent-kind-module tsd-has-type-parameter">
@@ -507,6 +475,9 @@
 						<a href="../interfaces/_textile_threads_core.eventnode.html" class="tsd-kind-icon">Event<wbr>Node</a>
 					</li>
 					<li class=" tsd-kind-interface tsd-parent-kind-module">
+						<a href="../interfaces/_textile_threads_core.identity.html" class="tsd-kind-icon">Identity</a>
+					</li>
+					<li class=" tsd-kind-interface tsd-parent-kind-module">
 						<a href="../interfaces/_textile_threads_core.loginfo.html" class="tsd-kind-icon">Log<wbr>Info</a>
 					</li>
 					<li class=" tsd-kind-interface tsd-parent-kind-module">
@@ -520,6 +491,9 @@
 					</li>
 					<li class=" tsd-kind-interface tsd-parent-kind-module">
 						<a href="../interfaces/_textile_threads_core.options.html" class="tsd-kind-icon">Options</a>
+					</li>
+					<li class=" tsd-kind-interface tsd-parent-kind-module">
+						<a href="../interfaces/_textile_threads_core.public.html" class="tsd-kind-icon">Public</a>
 					</li>
 					<li class=" tsd-kind-interface tsd-parent-kind-module tsd-has-type-parameter">
 						<a href="../interfaces/_textile_threads_core.reader.html" class="tsd-kind-icon">Reader</a>
@@ -538,9 +512,6 @@
 					</li>
 					<li class=" tsd-kind-type-alias tsd-parent-kind-module">
 						<a href="_textile_threads_core.html#codec" class="tsd-kind-icon">Codec</a>
-					</li>
-					<li class=" tsd-kind-type-alias tsd-parent-kind-module">
-						<a href="_textile_threads_core.html#identity" class="tsd-kind-icon">Identity</a>
 					</li>
 					<li class=" tsd-kind-type-alias tsd-parent-kind-module">
 						<a href="_textile_threads_core.html#logid" class="tsd-kind-icon">LogID</a>
@@ -565,9 +536,6 @@
 					</li>
 					<li class=" tsd-kind-function tsd-parent-kind-module">
 						<a href="_textile_threads_core.html#publickeytostring" class="tsd-kind-icon">public<wbr>Key<wbr>ToString</a>
-					</li>
-					<li class=" tsd-kind-function tsd-parent-kind-module">
-						<a href="_textile_threads_core.html#randomidentity" class="tsd-kind-icon">random<wbr>Identity</a>
 					</li>
 					<li class=" tsd-kind-object-literal tsd-parent-kind-module">
 						<a href="_textile_threads_core.html#threadprotocol" class="tsd-kind-icon">Thread<wbr>Protocol</a>
