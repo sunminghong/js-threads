@@ -119,26 +119,26 @@
 					<a name="constructor" class="tsd-anchor"></a>
 					<h3>constructor</h3>
 					<ul class="tsd-signatures tsd-kind-constructor tsd-parent-kind-class tsd-is-overwrite">
-						<li class="tsd-signature tsd-kind-icon">new <wbr>Write<wbr>Transaction<span class="tsd-signature-symbol">(</span>config<span class="tsd-signature-symbol">: </span><a href="../interfaces/_textile_threads_client.config.html" class="tsd-signature-type">Config</a>, client<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Client</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">WriteTransactionRequest</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">WriteTransactionReply</span><span class="tsd-signature-symbol">&gt;</span>, dbID<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Buffer</span>, modelName<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="_textile_threads_client.writetransaction.html" class="tsd-signature-type">WriteTransaction</a></li>
+						<li class="tsd-signature tsd-kind-icon">new <wbr>Write<wbr>Transaction<span class="tsd-signature-symbol">(</span>context<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Context</span>, client<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Client</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">WriteTransactionRequest</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">WriteTransactionReply</span><span class="tsd-signature-symbol">&gt;</span>, dbID<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">ThreadID</span>, modelName<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="_textile_threads_client.writetransaction.html" class="tsd-signature-type">WriteTransaction</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<p>Overrides Transaction.__constructor</p>
 								<ul>
-									<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/client/src/models/WriteTransaction.ts#L24">client/src/models/WriteTransaction.ts:24</a></li>
+									<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/client/src/models/WriteTransaction.ts#L25">client/src/models/WriteTransaction.ts:25</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>config: <a href="../interfaces/_textile_threads_client.config.html" class="tsd-signature-type">Config</a></h5>
+									<h5>context: <span class="tsd-signature-type">Context</span></h5>
 								</li>
 								<li>
 									<h5>client: <span class="tsd-signature-type">Client</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">WriteTransactionRequest</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">WriteTransactionReply</span><span class="tsd-signature-symbol">&gt;</span></h5>
 								</li>
 								<li>
-									<h5>dbID: <span class="tsd-signature-type">Buffer</span></h5>
+									<h5>dbID: <span class="tsd-signature-type">ThreadID</span></h5>
 								</li>
 								<li>
 									<h5>modelName: <span class="tsd-signature-type">string</span></h5>
@@ -161,7 +161,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/client/src/models/WriteTransaction.ts#L50">client/src/models/WriteTransaction.ts:50</a></li>
+									<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/client/src/models/WriteTransaction.ts#L51">client/src/models/WriteTransaction.ts:51</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -198,7 +198,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/client/src/models/WriteTransaction.ts#L102">client/src/models/WriteTransaction.ts:102</a></li>
+									<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/client/src/models/WriteTransaction.ts#L103">client/src/models/WriteTransaction.ts:103</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -230,7 +230,7 @@
 							<aside class="tsd-sources">
 								<p>Inherited from Transaction.end</p>
 								<ul>
-									<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/client/src/models/Transaction.ts#L30">client/src/models/Transaction.ts:30</a></li>
+									<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/client/src/models/Transaction.ts#L31">client/src/models/Transaction.ts:31</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -252,7 +252,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/client/src/models/WriteTransaction.ts#L137">client/src/models/WriteTransaction.ts:137</a></li>
+									<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/client/src/models/WriteTransaction.ts#L138">client/src/models/WriteTransaction.ts:138</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -289,7 +289,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/client/src/models/WriteTransaction.ts#L167">client/src/models/WriteTransaction.ts:167</a></li>
+									<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/client/src/models/WriteTransaction.ts#L168">client/src/models/WriteTransaction.ts:168</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -326,7 +326,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/client/src/models/WriteTransaction.ts#L119">client/src/models/WriteTransaction.ts:119</a></li>
+									<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/client/src/models/WriteTransaction.ts#L120">client/src/models/WriteTransaction.ts:120</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -357,7 +357,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/client/src/models/WriteTransaction.ts#L77">client/src/models/WriteTransaction.ts:77</a></li>
+									<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/client/src/models/WriteTransaction.ts#L78">client/src/models/WriteTransaction.ts:78</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -388,7 +388,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/client/src/models/WriteTransaction.ts#L36">client/src/models/WriteTransaction.ts:36</a></li>
+									<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/client/src/models/WriteTransaction.ts#L37">client/src/models/WriteTransaction.ts:37</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -407,6 +407,9 @@
 				<ul>
 					<li class="globals  ">
 						<a href="../globals.html"><em>Globals</em></a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/_textile_context.html">@textile/context</a>
 					</li>
 					<li class=" tsd-kind-module">
 						<a href="../modules/_textile_multiaddr.html">@textile/multiaddr</a>
@@ -491,9 +494,6 @@
 				</ul>
 				<ul class="after-current">
 					<li class=" tsd-kind-interface tsd-parent-kind-module">
-						<a href="../interfaces/_textile_threads_client.config.html" class="tsd-kind-icon">Config</a>
-					</li>
-					<li class=" tsd-kind-interface tsd-parent-kind-module">
 						<a href="../interfaces/_textile_threads_client.criterionjson.html" class="tsd-kind-icon">CriterionJSON</a>
 					</li>
 					<li class=" tsd-kind-interface tsd-parent-kind-module">
@@ -516,9 +516,6 @@
 					</li>
 					<li class=" tsd-kind-type-alias tsd-parent-kind-module">
 						<a href="../modules/_textile_threads_client.html#value" class="tsd-kind-icon">Value</a>
-					</li>
-					<li class=" tsd-kind-object-literal tsd-parent-kind-module">
-						<a href="../modules/_textile_threads_client.html#defaultconfig" class="tsd-kind-icon">default<wbr>Config</a>
 					</li>
 				</ul>
 			</nav>

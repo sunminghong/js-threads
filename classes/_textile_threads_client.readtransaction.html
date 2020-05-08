@@ -116,26 +116,26 @@
 					<a name="constructor" class="tsd-anchor"></a>
 					<h3>constructor</h3>
 					<ul class="tsd-signatures tsd-kind-constructor tsd-parent-kind-class tsd-is-overwrite">
-						<li class="tsd-signature tsd-kind-icon">new <wbr>Read<wbr>Transaction<span class="tsd-signature-symbol">(</span>config<span class="tsd-signature-symbol">: </span><a href="../interfaces/_textile_threads_client.config.html" class="tsd-signature-type">Config</a>, client<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Client</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">ReadTransactionRequest</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">ReadTransactionReply</span><span class="tsd-signature-symbol">&gt;</span>, dbID<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Buffer</span>, modelName<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="_textile_threads_client.readtransaction.html" class="tsd-signature-type">ReadTransaction</a></li>
+						<li class="tsd-signature tsd-kind-icon">new <wbr>Read<wbr>Transaction<span class="tsd-signature-symbol">(</span>context<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Context</span>, client<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Client</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">ReadTransactionRequest</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">ReadTransactionReply</span><span class="tsd-signature-symbol">&gt;</span>, dbID<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">ThreadID</span>, modelName<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="_textile_threads_client.readtransaction.html" class="tsd-signature-type">ReadTransaction</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<p>Overrides Transaction.__constructor</p>
 								<ul>
-									<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/client/src/models/ReadTransaction.ts#L21">client/src/models/ReadTransaction.ts:21</a></li>
+									<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/client/src/models/ReadTransaction.ts#L22">client/src/models/ReadTransaction.ts:22</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>config: <a href="../interfaces/_textile_threads_client.config.html" class="tsd-signature-type">Config</a></h5>
+									<h5>context: <span class="tsd-signature-type">Context</span></h5>
 								</li>
 								<li>
 									<h5>client: <span class="tsd-signature-type">Client</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">ReadTransactionRequest</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">ReadTransactionReply</span><span class="tsd-signature-symbol">&gt;</span></h5>
 								</li>
 								<li>
-									<h5>dbID: <span class="tsd-signature-type">Buffer</span></h5>
+									<h5>dbID: <span class="tsd-signature-type">ThreadID</span></h5>
 								</li>
 								<li>
 									<h5>modelName: <span class="tsd-signature-type">string</span></h5>
@@ -159,7 +159,7 @@
 							<aside class="tsd-sources">
 								<p>Inherited from Transaction.end</p>
 								<ul>
-									<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/client/src/models/Transaction.ts#L30">client/src/models/Transaction.ts:30</a></li>
+									<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/client/src/models/Transaction.ts#L31">client/src/models/Transaction.ts:31</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -181,7 +181,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/client/src/models/ReadTransaction.ts#L67">client/src/models/ReadTransaction.ts:67</a></li>
+									<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/client/src/models/ReadTransaction.ts#L68">client/src/models/ReadTransaction.ts:68</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -218,7 +218,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/client/src/models/ReadTransaction.ts#L97">client/src/models/ReadTransaction.ts:97</a></li>
+									<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/client/src/models/ReadTransaction.ts#L98">client/src/models/ReadTransaction.ts:98</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -255,7 +255,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/client/src/models/ReadTransaction.ts#L48">client/src/models/ReadTransaction.ts:48</a></li>
+									<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/client/src/models/ReadTransaction.ts#L49">client/src/models/ReadTransaction.ts:49</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -286,7 +286,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/client/src/models/ReadTransaction.ts#L33">client/src/models/ReadTransaction.ts:33</a></li>
+									<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/client/src/models/ReadTransaction.ts#L34">client/src/models/ReadTransaction.ts:34</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -305,6 +305,9 @@
 				<ul>
 					<li class="globals  ">
 						<a href="../globals.html"><em>Globals</em></a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/_textile_context.html">@textile/context</a>
 					</li>
 					<li class=" tsd-kind-module">
 						<a href="../modules/_textile_multiaddr.html">@textile/multiaddr</a>
@@ -380,9 +383,6 @@
 						<a href="_textile_threads_client.writetransaction.html" class="tsd-kind-icon">Write<wbr>Transaction</a>
 					</li>
 					<li class=" tsd-kind-interface tsd-parent-kind-module">
-						<a href="../interfaces/_textile_threads_client.config.html" class="tsd-kind-icon">Config</a>
-					</li>
-					<li class=" tsd-kind-interface tsd-parent-kind-module">
 						<a href="../interfaces/_textile_threads_client.criterionjson.html" class="tsd-kind-icon">CriterionJSON</a>
 					</li>
 					<li class=" tsd-kind-interface tsd-parent-kind-module">
@@ -405,9 +405,6 @@
 					</li>
 					<li class=" tsd-kind-type-alias tsd-parent-kind-module">
 						<a href="../modules/_textile_threads_client.html#value" class="tsd-kind-icon">Value</a>
-					</li>
-					<li class=" tsd-kind-object-literal tsd-parent-kind-module">
-						<a href="../modules/_textile_threads_client.html#defaultconfig" class="tsd-kind-icon">default<wbr>Config</a>
 					</li>
 				</ul>
 			</nav>
