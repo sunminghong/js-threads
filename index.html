@@ -121,61 +121,7 @@
 				<a href="#overview" id="overview" style="color: inherit; text-decoration: none;">
 					<h3>Overview</h3>
 				</a>
-				<p>Underlying the Threads Database are a number of ideas and technologies, which are outlined in detail in the <a href="https://github.com/textileio/papers">Threads whitepaper</a>. These components are all housed within this <a href="https://en.wikipedia.org/wiki/Monorepo">mono-repo</a>, and include a set of <a href="./packages/core">core modules</a> for creating Thread identities and keys (<code>@textile/threads-core</code>), as well as tooling for data <a href="./packages/encoding">encryption and encoding</a> (<code>@textile/threads-encoding</code>), networking (with support for <a href="./packages/network">local</a> (<code>@textile/threads-network</code>) and <a href="./packages/network-client">remote</a> (<code>@textile/threads-network-client</code>) key management), and a local-first, event-sourced <a href="./packages/store">storage layer</a> (<code>@textile/threads-store</code>).</p>
-				<a href="#details" id="details" style="color: inherit; text-decoration: none;">
-					<h3>Details</h3>
-				</a>
-				<p>A Thread-based Database is tied to a single Thread (with associated Thread ID). A Database is an Event Emitter (in the Nodejs sense), and Listeners can subscribe to Events using &#39;wildcard&#39; syntax via the <a href="https://github.com/EventEmitter2/EventEmitter2">EventEmitter2</a> library. For example, you can do something like (note the mongoose-like syntax):</p>
-				<pre><code class="language-typescript"><span class="hljs-keyword">import</span> { Database } <span class="hljs-keyword">from</span> <span class="hljs-string">'@textile/threads-database'</span>
-<span class="hljs-keyword">const</span> db = <span class="hljs-keyword">new</span> Database(...)
-<span class="hljs-keyword">const</span> Collection1 = <span class="hljs-keyword">await</span> db.newCollectionFromObject(<span class="hljs-string">'Collection1'</span>, {
-  ID: <span class="hljs-string">''</span>,
-  name: <span class="hljs-string">''</span>,
-  counter: <span class="hljs-number">0</span>,
-})
-
-<span class="hljs-comment">// This will listen to any and all event types on Collection1</span>
-db.on(<span class="hljs-string">'Collection1.**'</span>, <span class="hljs-function"><span class="hljs-params">update</span> =&gt;</span> {
-  <span class="hljs-built_in">console</span>.log(update)
-})
-
-<span class="hljs-keyword">const</span> thing = <span class="hljs-keyword">new</span> Collection1({ ID: <span class="hljs-string">'id-i1'</span>, name: <span class="hljs-string">'Textile1'</span> })
-<span class="hljs-keyword">await</span> thing.save()  </code></pre>
-				<p>To handle different data structures, a Database contains Collections, each of which are defined by a <a href="https://json-schema.org">json-schema.org</a> schema. These schemas define the &#39;shape&#39; of Collection Instances. Collections implement a Store with <a href="https://github.com/Starcounter-Jack/JSON-Patch">JSON Patch</a> semantics by default, but will be made to support other types (CRDT-driven documents for instance) in the future (some of which are already under active development). Ultimately, a Collection is a Store with a set of APIs to make it feel like a <em>local database table</em>. For example, there are Collection- and Instance-level APIs to work with data:</p>
-				<pre><code class="language-typescript"><span class="hljs-keyword">const</span> i1 = <span class="hljs-keyword">new</span> Collection1({ ID: <span class="hljs-string">'id-i1'</span>, name: <span class="hljs-string">'Textile1'</span> }) <span class="hljs-comment">// This is not yet persisted</span>
-<span class="hljs-keyword">await</span> i1.save() <span class="hljs-comment">// Save changes</span>
-
-<span class="hljs-comment">// Modify the `i1` instance</span>
-i1.name = <span class="hljs-string">'Textile0'</span>
-<span class="hljs-keyword">await</span> i1.save() <span class="hljs-comment">// Save changes</span>
-
-<span class="hljs-comment">// Modify it again</span>
-i1.name = <span class="hljs-string">'Blah'</span>
-i1.counter = <span class="hljs-number">33</span>
-
-<span class="hljs-comment">// Save it from the Collection</span>
-<span class="hljs-keyword">await</span> Collection1.save(i1)
-
-<span class="hljs-comment">// Delete it from the Collection</span>
-<span class="hljs-keyword">await</span> Collection1.delete(i1.ID)</code></pre>
-				<p>Plus a bunch more APIs you&#39;d expect, like <code>insert</code>, <code>findOne</code>, <code>has</code>, etc.. It also supports Mongodb/Mongoose style search (<code>find</code>), which returns an <a href="">AsyncIterator</a> that consumers can use:</p>
-				<pre><code class="language-typescript"><span class="hljs-keyword">const</span> Thing = <span class="hljs-keyword">new</span> Collection&lt;Info&gt;(<span class="hljs-string">'things'</span>, {}) <span class="hljs-comment">// Anything goes schema</span>
-<span class="hljs-keyword">await</span> Thing.insert(
-  { ID: <span class="hljs-string">''</span>, other: <span class="hljs-number">-1</span>, thing: <span class="hljs-string">'five'</span> },
-  { ID: <span class="hljs-string">''</span>, other: <span class="hljs-number">2</span>, thing: <span class="hljs-string">'two'</span> },
-  { ID: <span class="hljs-string">''</span>, other: <span class="hljs-number">3</span>, thing: <span class="hljs-string">'three'</span> },
-  { ID: <span class="hljs-string">''</span>, other: <span class="hljs-number">4</span>, thing: <span class="hljs-string">'four'</span> },
-)
-
-<span class="hljs-keyword">const</span> all = Thing.find({ $or: [{ other: { $gt: <span class="hljs-number">1</span> } }, { thing: <span class="hljs-string">'one'</span> }] }, { sort: { other: <span class="hljs-number">-1</span> } })
-<span class="hljs-keyword">for</span> <span class="hljs-keyword">await</span> (<span class="hljs-keyword">const</span> { key, value } of all) {
-    <span class="hljs-built_in">console</span>.log(value)
-}</code></pre>
-				<p>Collections also support (basic) read and write Transactions. These are lockable, key-based &#39;states&#39; that you can put the Collection into, so that anything else that wants to write to the Collection must <em>await</em> for the Transaction to complete. Transactions do not yet provide isolation, though they do provide atomic update semantics.</p>
-				<p>Any mutations on a Collections (which are essentially [aggregate roots] in the CQRS-sense), are dispatched via the Database&#39;s Dispatcher. There is one Dispatcher per Database in practice, and all Collections receive all updates, so their Reducer is responsible for taking appropriate action. The Dispatcher is then responsible for 1) persisting the event, and 2) calling the Collections&#39; Reducer methods. At this point, the entire process can work entirely &#39;offline&#39;. This design supports &#39;offline first&#39; applications that may not have connections to a remote Peer for networking.</p>
-				<p>Networking is supported via the Event Bus. The Event Bus has two core components, a network Watcher (for observing updates from the Network layer) and a persistent Queue (for pushing updates to the Network layer). Essentially, the Event Bus subscribes to Events on the Database&#39;s Thread from the Network layer, and dispatches them via the Dispatcher to the Collections. From there, the behavior is identical to a &#39;local&#39; Event.</p>
-				<p>Conversely, for Events generated locally on the Collections, these are pushed onto the Event Bus&#39;s Queue by the corresponding Collection (after a successful dispatch process), and they will attempt to send the update out via the Network layer. The queue is persistent in the case of the app being offline. It will attempt to send the updates, with exponential back-off in the case of failures. At the moment, it will make 5 attempts before giving up and moving on to the next Event (in the background). After it has processed its Queue, it will try any skipped events again (and again). The Event Queue will continue to process events and flush them to the Network layer as long as there are new events coming in. Upon app restart, the Queue will restart from the top, so that (say) a page refresh would potentially lead to re-connecting to the remote Peer and processing local events again.</p>
-				<p>All of the above is backed by a single (or multiple, depending on how a developer wants to use them) Datastore. By using the Datastore interface, we can support any backend that supports the abstract-leveldown interface (which includes leveldb, mongo, sqlite, memory, and many more). Other backends could be implemented by implementing the Datastore interface for them.</p>
+				<p>Underlying the Threads Database are a number of ideas and technologies, which are outlined in detail in the <a href="https://github.com/textileio/papers">Threads whitepaper</a>. These components are all housed within this <a href="https://en.wikipedia.org/wiki/Monorepo">mono-repo</a>, and include a set of <a href="./packages/core">core modules</a> for creating Thread identities and keys (<code>@textile/threads-core</code>), as well as tooling for data <a href="./packages/encoding">encryption and encoding</a> (<code>@textile/threads-encoding</code>), networking (with support for <a href="./packages/network">local</a> (<code>@textile/threads-network</code>) and <a href="./packages/network-client">remote</a> (<code>@textile/threads-network-client</code>) key management), and a local-first, event-sourced <a href="./packages/store">storage layer</a> (<code>@textile/threads-store</code>). There are also two entry points for running Threads DB, including a <a href="./packages/database">local-first Javascript <em>module</em></a> (<code>@textile/threads-database</code>), and a <a href="./packages/client">remote-only, Javascript <em>client</em></a> (<code>@textile/threads-client</code>).</p>
 				<a href="#install" id="install" style="color: inherit; text-decoration: none;">
 					<h2>Install</h2>
 				</a>
@@ -185,72 +131,13 @@ i1.counter = <span class="hljs-number">33</span>
 				<pre><code class="language-shell">npm i --save @textile/threads-store @textile/threads-database</code></pre>
 				<p>There are also a number of other recommended packages that will make working with Threads in Typescript/Javascript easier:</p>
 				<pre><code class="language-shell">npm i --save interface-datastore datastore-level buffer </code></pre>
-				<p>If you are running <code>js-threads</code> in an environment that does not support WebSockets by default (such as nodejs), be sure to include it explicitly using something like the following at the top of your script or module:</p>
-				<pre><code class="language-javascript"><span class="hljs-comment">// 'Hack' to get WebSocket in the global namespace on nodejs</span>
+				<p>If you are running <code>js-threads</code> in an environment that does not support <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebSockets_API">WebSockets</a> by default (such as Node), be sure to include it explicitly using something like the following at the top of your script or module:</p>
+				<pre><code class="language-javascript"><span class="hljs-comment">// Add WebSocket to the global namespace on Node</span>
 global.WebSocket = <span class="hljs-built_in">require</span>(<span class="hljs-string">'isomorphic-ws'</span>)</code></pre>
 				<a href="#usage" id="usage" style="color: inherit; text-decoration: none;">
 					<h2>Usage</h2>
 				</a>
-				<p>The tests within the underlying <a href="https://github.com/textileio/js-threads/tree/master/packages">sub-packages</a> of this repo provide several excellent examples of using the various components of <code>js-threads</code>. Additionally, there are a growing list of <a href="https://github.com/textileio/js-threads/tree/master/examples">examples</a> available. Complete usage examples (with authentication etc) will be added soon. In the mean time, the following end-to-end example of exchanging data between two peers provides a good idea of the APIs that developers can expect to encounter when working with Threads:</p>
-				<pre><code class="language-typescript"><span class="hljs-keyword">import</span> { Multiaddr, ThreadID, Variant } <span class="hljs-keyword">from</span> <span class="hljs-string">'@textile/threads-core'</span>
-<span class="hljs-keyword">import</span> { Database } <span class="hljs-keyword">from</span> <span class="hljs-string">'@textile/threads-database'</span>
-<span class="hljs-keyword">import</span> { DomainDatastore } <span class="hljs-keyword">from</span> <span class="hljs-string">'@textile/threads-store'</span>
-<span class="hljs-keyword">import</span> { MemoryDatastore, Key } <span class="hljs-keyword">from</span> <span class="hljs-string">'interface-datastore'</span>
-<span class="hljs-keyword">import</span> LevelDatastore <span class="hljs-keyword">from</span> <span class="hljs-string">'datastore-level'</span>
-
-<span class="hljs-keyword">interface</span> DummyEntity {
-  ID: <span class="hljs-built_in">string</span>
-  name: <span class="hljs-built_in">string</span>
-  counter: <span class="hljs-built_in">number</span>
-}
-
-<span class="hljs-comment">// Peer 1: Create db1, register a collection, create and update an instance.</span>
-<span class="hljs-keyword">const</span> d1 = <span class="hljs-keyword">new</span> Database(...)
-<span class="hljs-keyword">await</span> d1.open()
-<span class="hljs-keyword">const</span> id1 = d1.threadID
-<span class="hljs-keyword">if</span> (id1 === <span class="hljs-literal">undefined</span>) {
-<span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> <span class="hljs-built_in">Error</span>(<span class="hljs-string">'should not be invalid thread id'</span>)
-}
-<span class="hljs-comment">// Create a new collection</span>
-<span class="hljs-keyword">const</span> Dummy1 = <span class="hljs-keyword">await</span> d1.newCollectionFromObject&lt;DummyEntity&gt;(<span class="hljs-string">'dummy'</span>, {
-  ID: <span class="hljs-string">''</span>,
-  name: <span class="hljs-string">''</span>,
-  counter: <span class="hljs-number">0</span>,
-})
-
-<span class="hljs-comment">// Get peer1 database information (addr, id, keys, etc)</span>
-<span class="hljs-keyword">const</span> dbInfo = <span class="hljs-keyword">await</span> d1.dbInfo()
-
-<span class="hljs-comment">// Peer 2: Create a completely parallel db2, which will sync with the previous one and should</span>
-<span class="hljs-comment">// have the same state of dummy. This one will be manually 'built' from sub-components,</span>
-<span class="hljs-comment">// just to show how it can be done!</span>
-<span class="hljs-keyword">const</span> info = <span class="hljs-keyword">await</span> d1.service.getThread(id1)
-<span class="hljs-keyword">const</span> datastore = <span class="hljs-keyword">new</span> MemoryDatastore()
-<span class="hljs-keyword">const</span> client = <span class="hljs-keyword">new</span> Client({ host: <span class="hljs-string">'http://127.0.0.1:6207'</span> })
-<span class="hljs-keyword">const</span> service = <span class="hljs-keyword">new</span> Network(<span class="hljs-keyword">new</span> DomainDatastore(datastore, <span class="hljs-keyword">new</span> Key(<span class="hljs-string">'service'</span>)), client)
-<span class="hljs-keyword">const</span> test = <span class="hljs-keyword">await</span> service.getHostID()
-<span class="hljs-keyword">const</span> d2 = <span class="hljs-keyword">await</span> Database.fromAddress(dbInfo.addr, info.key, datastore, {
-  service,
-})
-<span class="hljs-comment">// Create parallel collection</span>
-<span class="hljs-keyword">const</span> Dummy2 = <span class="hljs-keyword">await</span> d2.newCollectionFromObject&lt;DummyEntity&gt;(<span class="hljs-string">'dummy'</span>, {
-    ID: <span class="hljs-string">''</span>,
-    name: <span class="hljs-string">''</span>,
-    counter: <span class="hljs-number">0</span>,
-})
-
-<span class="hljs-keyword">const</span> dummy1 = <span class="hljs-keyword">new</span> Dummy1({ name: <span class="hljs-string">'Textile'</span>, counter: <span class="hljs-number">0</span> })
-dummy1.counter += <span class="hljs-number">42</span>
-<span class="hljs-keyword">await</span> dummy1.save()
-
-<span class="hljs-comment">// wait about 5 seconds?</span>
-
-<span class="hljs-keyword">const</span> dummy2 = <span class="hljs-keyword">await</span> Dummy2.findById(dummy1.ID)
-<span class="hljs-built_in">console</span>.log(dummy2.name === dummy1.name)
-<span class="hljs-built_in">console</span>.log(dummy2.counter === dummy1.counter)
-<span class="hljs-keyword">await</span> d1.close()
-<span class="hljs-keyword">await</span> d2.close()</code></pre>
-				<p>That&#39;s it! Two completely separate MongoDB style database instances, syncing encrypted and signed data across the network!</p>
+				<p>The tests within the underlying <a href="https://github.com/textileio/js-threads/tree/master/packages">sub-packages</a> of this repo provide tests that use the various components of <code>js-threads</code>, and provide useful examples to explore. Additionally, there are a growing list of <a href="https://github.com/textileio/js-examples">examples</a> available. Complete usage examples (with authentication etc) will be added soon.</p>
 				<a href="#authentication" id="authentication" style="color: inherit; text-decoration: none;">
 					<h2>Authentication</h2>
 				</a>
