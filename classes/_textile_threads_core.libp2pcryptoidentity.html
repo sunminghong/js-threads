@@ -107,7 +107,9 @@
 							<h3>Methods</h3>
 							<ul class="tsd-index-list">
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_textile_threads_core.libp2pcryptoidentity.html#sign" class="tsd-kind-icon">sign</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_textile_threads_core.libp2pcryptoidentity.html#tostring" class="tsd-kind-icon">to<wbr>String</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-static"><a href="_textile_threads_core.libp2pcryptoidentity.html#fromrandom" class="tsd-kind-icon">from<wbr>Random</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-static"><a href="_textile_threads_core.libp2pcryptoidentity.html#fromstring" class="tsd-kind-icon">from<wbr>String</a></li>
 							</ul>
 						</section>
 					</div>
@@ -125,7 +127,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/core/src/identity.ts#L52">core/src/identity.ts:52</a></li>
+									<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/core/src/identity.ts#L60">core/src/identity.ts:60</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -147,7 +149,7 @@
 					<div class="tsd-signature tsd-kind-icon">key<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">PrivateKey</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/core/src/identity.ts#L53">core/src/identity.ts:53</a></li>
+							<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/core/src/identity.ts#L61">core/src/identity.ts:61</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -164,7 +166,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/core/src/identity.ts#L66">core/src/identity.ts:66</a></li>
+									<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/core/src/identity.ts#L74">core/src/identity.ts:74</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -190,7 +192,7 @@
 							<aside class="tsd-sources">
 								<p>Implementation of <a href="../interfaces/_textile_threads_core.identity.html">Identity</a>.<a href="../interfaces/_textile_threads_core.identity.html#sign">sign</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/core/src/identity.ts#L59">core/src/identity.ts:59</a></li>
+									<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/core/src/identity.ts#L67">core/src/identity.ts:67</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -211,6 +213,28 @@
 						</li>
 					</ul>
 				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="tostring" class="tsd-anchor"></a>
+					<h3>to<wbr>String</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">to<wbr>String<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/core/src/identity.ts#L87">core/src/identity.ts:87</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Returns base32 encoded private key representation.</p>
+								</div>
+							</div>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span></h4>
+						</li>
+					</ul>
+				</section>
 				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-static">
 					<a name="fromrandom" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagStatic">Static</span> from<wbr>Random</h3>
@@ -221,7 +245,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/core/src/identity.ts#L72">core/src/identity.ts:72</a></li>
+									<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/core/src/identity.ts#L80">core/src/identity.ts:80</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -229,6 +253,36 @@
 									<p>Create a random Ed25519 Identity.</p>
 								</div>
 							</div>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="_textile_threads_core.libp2pcryptoidentity.html" class="tsd-signature-type">Libp2pCryptoIdentity</a><span class="tsd-signature-symbol">&gt;</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-static">
+					<a name="fromstring" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagStatic">Static</span> from<wbr>String</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-static">
+						<li class="tsd-signature tsd-kind-icon">from<wbr>String<span class="tsd-signature-symbol">(</span>str<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="_textile_threads_core.libp2pcryptoidentity.html" class="tsd-signature-type">Libp2pCryptoIdentity</a><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/core/src/identity.ts#L95">core/src/identity.ts:95</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Creates key key from base32 encoded string representation</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>str: <span class="tsd-signature-type">string</span></h5>
+									<div class="tsd-comment tsd-typography">
+									</div>
+								</li>
+							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="_textile_threads_core.libp2pcryptoidentity.html" class="tsd-signature-type">Libp2pCryptoIdentity</a><span class="tsd-signature-symbol">&gt;</span></h4>
 						</li>
 					</ul>
@@ -292,8 +346,14 @@
 							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="_textile_threads_core.libp2pcryptoidentity.html#sign" class="tsd-kind-icon">sign</a>
 							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="_textile_threads_core.libp2pcryptoidentity.html#tostring" class="tsd-kind-icon">to<wbr>String</a>
+							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-static">
 								<a href="_textile_threads_core.libp2pcryptoidentity.html#fromrandom" class="tsd-kind-icon">from<wbr>Random</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-static">
+								<a href="_textile_threads_core.libp2pcryptoidentity.html#fromstring" class="tsd-kind-icon">from<wbr>String</a>
 							</li>
 						</ul>
 					</li>
@@ -382,6 +442,12 @@
 					</li>
 					<li class=" tsd-kind-function tsd-parent-kind-module">
 						<a href="../modules/_textile_threads_core.html#marshalkey" class="tsd-kind-icon">marshal<wbr>Key</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-module">
+						<a href="../modules/_textile_threads_core.html#privatekeyfromstring" class="tsd-kind-icon">private<wbr>Key<wbr>From<wbr>String</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-module">
+						<a href="../modules/_textile_threads_core.html#privatekeytostring" class="tsd-kind-icon">private<wbr>Key<wbr>ToString</a>
 					</li>
 					<li class=" tsd-kind-function tsd-parent-kind-module">
 						<a href="../modules/_textile_threads_core.html#publickeytostring" class="tsd-kind-icon">public<wbr>Key<wbr>ToString</a>
