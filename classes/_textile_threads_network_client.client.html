@@ -102,7 +102,9 @@
 						<section class="tsd-index-section ">
 							<h3>Properties</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_textile_threads_network_client.client.html#config" class="tsd-kind-icon">config</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_textile_threads_network_client.client.html#context" class="tsd-kind-icon">context</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_textile_threads_network_client.client.html#rpcoptions" class="tsd-kind-icon">rpc<wbr>Options</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_textile_threads_network_client.client.html#servicehost" class="tsd-kind-icon">service<wbr>Host</a></li>
 							</ul>
 						</section>
 						<section class="tsd-index-section ">
@@ -131,13 +133,13 @@
 					<a name="constructor" class="tsd-anchor"></a>
 					<h3>constructor</h3>
 					<ul class="tsd-signatures tsd-kind-constructor tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">new <wbr>Client<span class="tsd-signature-symbol">(</span>config<span class="tsd-signature-symbol">?: </span><a href="_textile_threads_network_client.config.html" class="tsd-signature-type">Config</a><span class="tsd-signature-symbol"> | </span><a href="../interfaces/_textile_threads_network_client.baseconfig.html" class="tsd-signature-type">BaseConfig</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="_textile_threads_network_client.client.html" class="tsd-signature-type">Client</a></li>
+						<li class="tsd-signature tsd-kind-icon">new <wbr>Client<span class="tsd-signature-symbol">(</span>context<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">Context</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">ContextKeys</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="_textile_threads_network_client.client.html" class="tsd-signature-type">Client</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/network-client/src/index.ts#L95">network-client/src/index.ts:95</a></li>
+									<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/network-client/src/index.ts#L87">network-client/src/index.ts:87</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -148,10 +150,10 @@
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5><span class="tsd-flag ts-flagDefault value">Default value</span> config: <a href="_textile_threads_network_client.config.html" class="tsd-signature-type">Config</a><span class="tsd-signature-symbol"> | </span><a href="../interfaces/_textile_threads_network_client.baseconfig.html" class="tsd-signature-type">BaseConfig</a><span class="tsd-signature-symbol"> =&nbsp;{}</span></h5>
+									<h5><span class="tsd-flag ts-flagDefault value">Default value</span> context: <span class="tsd-signature-type">Context</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">ContextKeys</span><span class="tsd-signature-symbol"> =&nbsp;new Context(&#x27;http://127.0.0.1:6007&#x27;)</span></h5>
 									<div class="tsd-comment tsd-typography">
 										<div class="lead">
-											<p>The remote API configuration object or a set of parameters.</p>
+											<p>The context to use for interacting with the APIs. Can be modified later.</p>
 										</div>
 									</div>
 								</li>
@@ -164,12 +166,37 @@
 			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Properties</h2>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
-					<a name="config" class="tsd-anchor"></a>
-					<h3>config</h3>
-					<div class="tsd-signature tsd-kind-icon">config<span class="tsd-signature-symbol">:</span> <a href="_textile_threads_network_client.config.html" class="tsd-signature-type">Config</a></div>
+					<a name="context" class="tsd-anchor"></a>
+					<h3>context</h3>
+					<div class="tsd-signature tsd-kind-icon">context<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Context</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">ContextKeys</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/network-client/src/index.ts#L95">network-client/src/index.ts:95</a></li>
+							<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/network-client/src/index.ts#L93">network-client/src/index.ts:93</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>The context to use for interacting with the APIs. Can be modified later.</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
+					<a name="rpcoptions" class="tsd-anchor"></a>
+					<h3>rpc<wbr>Options</h3>
+					<div class="tsd-signature tsd-kind-icon">rpc<wbr>Options<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">RpcOptions</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/network-client/src/index.ts#L87">network-client/src/index.ts:87</a></li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
+					<a name="servicehost" class="tsd-anchor"></a>
+					<h3>service<wbr>Host</h3>
+					<div class="tsd-signature tsd-kind-icon">service<wbr>Host<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/network-client/src/index.ts#L86">network-client/src/index.ts:86</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -185,13 +212,13 @@
 					<a name="addrecord" class="tsd-anchor"></a>
 					<h3>add<wbr>Record</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">add<wbr>Record<span class="tsd-signature-symbol">(</span>id<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">ThreadID</span>, logID<span class="tsd-signature-symbol">: </span><a href="../modules/_textile_threads_core.html#logid" class="tsd-signature-type">LogID</a>, rec<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">LogRecord</span>, opts<span class="tsd-signature-symbol">?: </span><a href="../interfaces/_textile_threads_core.threadoptions.html" class="tsd-signature-type">ThreadOptions</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></li>
+						<li class="tsd-signature tsd-kind-icon">add<wbr>Record<span class="tsd-signature-symbol">(</span>id<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">ThreadID</span>, logID<span class="tsd-signature-symbol">: </span><a href="../modules/_textile_threads_core.html#logid" class="tsd-signature-type">LogID</a>, rec<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">LogRecord</span>, ctx<span class="tsd-signature-symbol">?: </span><a href="_textile_context.context.html" class="tsd-signature-type">Context</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/network-client/src/index.ts#L278">network-client/src/index.ts:278</a></li>
+									<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/network-client/src/index.ts#L286">network-client/src/index.ts:286</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -220,9 +247,9 @@
 									</div>
 								</li>
 								<li>
-									<h5><span class="tsd-flag ts-flagOptional">Optional</span> opts: <a href="../interfaces/_textile_threads_core.threadoptions.html" class="tsd-signature-type">ThreadOptions</a></h5>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> ctx: <a href="_textile_context.context.html" class="tsd-signature-type">Context</a></h5>
 									<div class="tsd-comment tsd-typography">
-										<p>Thread options.</p>
+										<p>Context object containing web-gRPC headers and settings.</p>
 									</div>
 								</li>
 							</ul>
@@ -234,13 +261,13 @@
 					<a name="addreplicator" class="tsd-anchor"></a>
 					<h3>add<wbr>Replicator</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">add<wbr>Replicator<span class="tsd-signature-symbol">(</span>id<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">ThreadID</span>, addr<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Multiaddr</span>, opts<span class="tsd-signature-symbol">?: </span><a href="../interfaces/_textile_threads_core.threadoptions.html" class="tsd-signature-type">ThreadOptions</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">PeerId</span><span class="tsd-signature-symbol">&gt;</span></li>
+						<li class="tsd-signature tsd-kind-icon">add<wbr>Replicator<span class="tsd-signature-symbol">(</span>id<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">ThreadID</span>, addr<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Multiaddr</span>, ctx<span class="tsd-signature-symbol">?: </span><a href="_textile_context.context.html" class="tsd-signature-type">Context</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">PeerId</span><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/network-client/src/index.ts#L240">network-client/src/index.ts:240</a></li>
+									<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/network-client/src/index.ts#L251">network-client/src/index.ts:251</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -263,9 +290,9 @@
 									</div>
 								</li>
 								<li>
-									<h5><span class="tsd-flag ts-flagOptional">Optional</span> opts: <a href="../interfaces/_textile_threads_core.threadoptions.html" class="tsd-signature-type">ThreadOptions</a></h5>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> ctx: <a href="_textile_context.context.html" class="tsd-signature-type">Context</a></h5>
 									<div class="tsd-comment tsd-typography">
-										<p>Thread options.</p>
+										<p>Context object containing web-gRPC headers and settings.</p>
 									</div>
 								</li>
 							</ul>
@@ -277,13 +304,13 @@
 					<a name="addthread" class="tsd-anchor"></a>
 					<h3>add<wbr>Thread</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">add<wbr>Thread<span class="tsd-signature-symbol">(</span>addr<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Multiaddr</span>, opts<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">NewThreadOptions</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">ThreadInfo</span><span class="tsd-signature-symbol">&gt;</span></li>
+						<li class="tsd-signature tsd-kind-icon">add<wbr>Thread<span class="tsd-signature-symbol">(</span>addr<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Multiaddr</span>, opts<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">NewThreadOptions</span>, ctx<span class="tsd-signature-symbol">?: </span><a href="_textile_context.context.html" class="tsd-signature-type">Context</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">ThreadInfo</span><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/network-client/src/index.ts#L185">network-client/src/index.ts:185</a></li>
+									<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/network-client/src/index.ts#L196">network-client/src/index.ts:196</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -305,6 +332,12 @@
 										<p>The set of keys to use when adding the Thread.</p>
 									</div>
 								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> ctx: <a href="_textile_context.context.html" class="tsd-signature-type">Context</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>Context object containing web-gRPC headers and settings.</p>
+									</div>
+								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">ThreadInfo</span><span class="tsd-signature-symbol">&gt;</span></h4>
 						</li>
@@ -314,13 +347,13 @@
 					<a name="createrecord" class="tsd-anchor"></a>
 					<h3>create<wbr>Record</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">create<wbr>Record<span class="tsd-signature-symbol">(</span>id<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">ThreadID</span>, body<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span>, opts<span class="tsd-signature-symbol">?: </span><a href="../interfaces/_textile_threads_core.threadoptions.html" class="tsd-signature-type">ThreadOptions</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">ThreadRecord</span><span class="tsd-signature-symbol">&gt;</span></li>
+						<li class="tsd-signature tsd-kind-icon">create<wbr>Record<span class="tsd-signature-symbol">(</span>id<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">ThreadID</span>, body<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span>, ctx<span class="tsd-signature-symbol">?: </span><a href="_textile_context.context.html" class="tsd-signature-type">Context</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">ThreadRecord</span><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/network-client/src/index.ts#L260">network-client/src/index.ts:260</a></li>
+									<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/network-client/src/index.ts#L268">network-client/src/index.ts:268</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -343,9 +376,9 @@
 									</div>
 								</li>
 								<li>
-									<h5><span class="tsd-flag ts-flagOptional">Optional</span> opts: <a href="../interfaces/_textile_threads_core.threadoptions.html" class="tsd-signature-type">ThreadOptions</a></h5>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> ctx: <a href="_textile_context.context.html" class="tsd-signature-type">Context</a></h5>
 									<div class="tsd-comment tsd-typography">
-										<p>Thread options.</p>
+										<p>Context object containing web-gRPC headers and settings.</p>
 									</div>
 								</li>
 							</ul>
@@ -357,13 +390,13 @@
 					<a name="createthread" class="tsd-anchor"></a>
 					<h3>create<wbr>Thread</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">create<wbr>Thread<span class="tsd-signature-symbol">(</span>id<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">ThreadID</span>, opts<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">NewThreadOptions</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">ThreadInfo</span><span class="tsd-signature-symbol">&gt;</span></li>
+						<li class="tsd-signature tsd-kind-icon">create<wbr>Thread<span class="tsd-signature-symbol">(</span>id<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">ThreadID</span>, opts<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">NewThreadOptions</span>, ctx<span class="tsd-signature-symbol">?: </span><a href="_textile_context.context.html" class="tsd-signature-type">Context</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">ThreadInfo</span><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/network-client/src/index.ts#L170">network-client/src/index.ts:170</a></li>
+									<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/network-client/src/index.ts#L180">network-client/src/index.ts:180</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -388,6 +421,12 @@
 										network will be unable to write records (but it can return records).</p>
 									</div>
 								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> ctx: <a href="_textile_context.context.html" class="tsd-signature-type">Context</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>Context object containing web-gRPC headers and settings.</p>
+									</div>
+								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">ThreadInfo</span><span class="tsd-signature-symbol">&gt;</span></h4>
 						</li>
@@ -397,13 +436,13 @@
 					<a name="deletethread" class="tsd-anchor"></a>
 					<h3>delete<wbr>Thread</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">delete<wbr>Thread<span class="tsd-signature-symbol">(</span>id<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">ThreadID</span>, opts<span class="tsd-signature-symbol">?: </span><a href="../interfaces/_textile_threads_core.threadoptions.html" class="tsd-signature-type">ThreadOptions</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></li>
+						<li class="tsd-signature tsd-kind-icon">delete<wbr>Thread<span class="tsd-signature-symbol">(</span>id<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">ThreadID</span>, ctx<span class="tsd-signature-symbol">?: </span><a href="_textile_context.context.html" class="tsd-signature-type">Context</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/network-client/src/index.ts#L226">network-client/src/index.ts:226</a></li>
+									<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/network-client/src/index.ts#L237">network-client/src/index.ts:237</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -420,9 +459,9 @@
 									</div>
 								</li>
 								<li>
-									<h5><span class="tsd-flag ts-flagOptional">Optional</span> opts: <a href="../interfaces/_textile_threads_core.threadoptions.html" class="tsd-signature-type">ThreadOptions</a></h5>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> ctx: <a href="_textile_context.context.html" class="tsd-signature-type">Context</a></h5>
 									<div class="tsd-comment tsd-typography">
-										<p>Thread options.</p>
+										<p>Context object containing web-gRPC headers and settings.</p>
 									</div>
 								</li>
 							</ul>
@@ -434,13 +473,13 @@
 					<a name="gethostid" class="tsd-anchor"></a>
 					<h3>get<wbr>HostID</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">get<wbr>HostID<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">PeerId</span><span class="tsd-signature-symbol">&gt;</span></li>
+						<li class="tsd-signature tsd-kind-icon">get<wbr>HostID<span class="tsd-signature-symbol">(</span>ctx<span class="tsd-signature-symbol">?: </span><a href="_textile_context.context.html" class="tsd-signature-type">Context</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">PeerId</span><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/network-client/src/index.ts#L155">network-client/src/index.ts:155</a></li>
+									<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/network-client/src/index.ts#L163">network-client/src/index.ts:163</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -448,6 +487,15 @@
 									<p>getHostID returns the network&#39;s (remote) host peer ID.</p>
 								</div>
 							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> ctx: <a href="_textile_context.context.html" class="tsd-signature-type">Context</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>Context object containing web-gRPC headers and settings.</p>
+									</div>
+								</li>
+							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">PeerId</span><span class="tsd-signature-symbol">&gt;</span></h4>
 						</li>
 					</ul>
@@ -456,13 +504,13 @@
 					<a name="getrecord" class="tsd-anchor"></a>
 					<h3>get<wbr>Record</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">get<wbr>Record<span class="tsd-signature-symbol">(</span>id<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">ThreadID</span>, rec<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">CID</span>, opts<span class="tsd-signature-symbol">?: </span><a href="../interfaces/_textile_threads_core.threadoptions.html" class="tsd-signature-type">ThreadOptions</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">LogRecord</span><span class="tsd-signature-symbol">&gt;</span></li>
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Record<span class="tsd-signature-symbol">(</span>id<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">ThreadID</span>, rec<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">CID</span>, ctx<span class="tsd-signature-symbol">?: </span><a href="_textile_context.context.html" class="tsd-signature-type">Context</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">LogRecord</span><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/network-client/src/index.ts#L300">network-client/src/index.ts:300</a></li>
+									<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/network-client/src/index.ts#L308">network-client/src/index.ts:308</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -485,9 +533,9 @@
 									</div>
 								</li>
 								<li>
-									<h5><span class="tsd-flag ts-flagOptional">Optional</span> opts: <a href="../interfaces/_textile_threads_core.threadoptions.html" class="tsd-signature-type">ThreadOptions</a></h5>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> ctx: <a href="_textile_context.context.html" class="tsd-signature-type">Context</a></h5>
 									<div class="tsd-comment tsd-typography">
-										<p>Thread options.</p>
+										<p>Context object containing web-gRPC headers and settings.</p>
 									</div>
 								</li>
 							</ul>
@@ -499,13 +547,13 @@
 					<a name="getthread" class="tsd-anchor"></a>
 					<h3>get<wbr>Thread</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">get<wbr>Thread<span class="tsd-signature-symbol">(</span>id<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">ThreadID</span>, opts<span class="tsd-signature-symbol">?: </span><a href="../interfaces/_textile_threads_core.threadoptions.html" class="tsd-signature-type">ThreadOptions</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">ThreadInfo</span><span class="tsd-signature-symbol">&gt;</span></li>
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Thread<span class="tsd-signature-symbol">(</span>id<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">ThreadID</span>, ctx<span class="tsd-signature-symbol">?: </span><a href="_textile_context.context.html" class="tsd-signature-type">Context</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">ThreadInfo</span><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/network-client/src/index.ts#L200">network-client/src/index.ts:200</a></li>
+									<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/network-client/src/index.ts#L211">network-client/src/index.ts:211</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -522,9 +570,9 @@
 									</div>
 								</li>
 								<li>
-									<h5><span class="tsd-flag ts-flagOptional">Optional</span> opts: <a href="../interfaces/_textile_threads_core.threadoptions.html" class="tsd-signature-type">ThreadOptions</a></h5>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> ctx: <a href="_textile_context.context.html" class="tsd-signature-type">Context</a></h5>
 									<div class="tsd-comment tsd-typography">
-										<p>Thread options.</p>
+										<p>Context object containing web-gRPC headers and settings.</p>
 									</div>
 								</li>
 							</ul>
@@ -536,7 +584,7 @@
 					<a name="gettoken" class="tsd-anchor"></a>
 					<h3>get<wbr>Token</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">get<wbr>Token<span class="tsd-signature-symbol">(</span>identity<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Identity</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></li>
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Token<span class="tsd-signature-symbol">(</span>identity<span class="tsd-signature-symbol">?: </span><a href="../interfaces/_textile_threads_core.identity.html" class="tsd-signature-type">Identity</a>, ctx<span class="tsd-signature-symbol">?: </span><a href="_textile_context.context.html" class="tsd-signature-type">Context</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
@@ -549,13 +597,26 @@
 								<div class="lead">
 									<p>Obtain a token for interacting with the remote network API.</p>
 								</div>
+								<dl class="tsd-comment-tags">
+									<dt>note</dt>
+									<dd><p>If an identity is not provided, a random PKI identity is used. This might not be what you want!
+											It is not easy/possible to migrate identities after the fact. Please supply an identity argument if
+										you wish to persist/retrieve user data later.</p>
+									</dd>
+								</dl>
 							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>identity: <span class="tsd-signature-type">Identity</span></h5>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> identity: <a href="../interfaces/_textile_threads_core.identity.html" class="tsd-signature-type">Identity</a></h5>
 									<div class="tsd-comment tsd-typography">
 										<p>The generic identity to use for signing and validation.</p>
+									</div>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> ctx: <a href="_textile_context.context.html" class="tsd-signature-type">Context</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>Context object containing web-gRPC headers and settings.</p>
 									</div>
 								</li>
 							</ul>
@@ -567,13 +628,13 @@
 					<a name="pullthread" class="tsd-anchor"></a>
 					<h3>pull<wbr>Thread</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">pull<wbr>Thread<span class="tsd-signature-symbol">(</span>id<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">ThreadID</span>, opts<span class="tsd-signature-symbol">?: </span><a href="../interfaces/_textile_threads_core.threadoptions.html" class="tsd-signature-type">ThreadOptions</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></li>
+						<li class="tsd-signature tsd-kind-icon">pull<wbr>Thread<span class="tsd-signature-symbol">(</span>id<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">ThreadID</span>, ctx<span class="tsd-signature-symbol">?: </span><a href="_textile_context.context.html" class="tsd-signature-type">Context</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/network-client/src/index.ts#L213">network-client/src/index.ts:213</a></li>
+									<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/network-client/src/index.ts#L224">network-client/src/index.ts:224</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -590,9 +651,9 @@
 									</div>
 								</li>
 								<li>
-									<h5><span class="tsd-flag ts-flagOptional">Optional</span> opts: <a href="../interfaces/_textile_threads_core.threadoptions.html" class="tsd-signature-type">ThreadOptions</a></h5>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> ctx: <a href="_textile_context.context.html" class="tsd-signature-type">Context</a></h5>
 									<div class="tsd-comment tsd-typography">
-										<p>Thread options.</p>
+										<p>Context object containing web-gRPC headers and settings.</p>
 									</div>
 								</li>
 							</ul>
@@ -604,13 +665,13 @@
 					<a name="subscribe" class="tsd-anchor"></a>
 					<h3>subscribe</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">subscribe<span class="tsd-signature-symbol">(</span>cb<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">function</span>, threads<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">ThreadID</span><span class="tsd-signature-symbol">[]</span>, opts<span class="tsd-signature-symbol">?: </span><a href="../interfaces/_textile_threads_core.threadoptions.html" class="tsd-signature-type">ThreadOptions</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Request</span></li>
+						<li class="tsd-signature tsd-kind-icon">subscribe<span class="tsd-signature-symbol">(</span>cb<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">function</span>, threads<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">ThreadID</span><span class="tsd-signature-symbol">[]</span>, ctx<span class="tsd-signature-symbol">?: </span><a href="_textile_context.context.html" class="tsd-signature-type">Context</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Request</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/network-client/src/index.ts#L318">network-client/src/index.ts:318</a></li>
+									<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/network-client/src/index.ts#L327">network-client/src/index.ts:327</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -654,9 +715,9 @@
 									</div>
 								</li>
 								<li>
-									<h5><span class="tsd-flag ts-flagOptional">Optional</span> opts: <a href="../interfaces/_textile_threads_core.threadoptions.html" class="tsd-signature-type">ThreadOptions</a></h5>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> ctx: <a href="_textile_context.context.html" class="tsd-signature-type">Context</a></h5>
 									<div class="tsd-comment tsd-typography">
-										<p>Thread options.</p>
+										<p>Context object containing web-gRPC headers and settings.</p>
 									</div>
 								</li>
 							</ul>
@@ -715,7 +776,13 @@
 								<a href="_textile_threads_network_client.client.html#constructor" class="tsd-kind-icon">constructor</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class">
-								<a href="_textile_threads_network_client.client.html#config" class="tsd-kind-icon">config</a>
+								<a href="_textile_threads_network_client.client.html#context" class="tsd-kind-icon">context</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class">
+								<a href="_textile_threads_network_client.client.html#rpcoptions" class="tsd-kind-icon">rpc<wbr>Options</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class">
+								<a href="_textile_threads_network_client.client.html#servicehost" class="tsd-kind-icon">service<wbr>Host</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="_textile_threads_network_client.client.html#addrecord" class="tsd-kind-icon">add<wbr>Record</a>
