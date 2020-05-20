@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>InitOptions | Threads</title>
+	<title>DatabaseSettings | Threads</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -57,22 +57,36 @@
 					<a href="../modules/_textile_threads_database.html">@textile/threads-database</a>
 				</li>
 				<li>
-					<a href="_textile_threads_database.initoptions.html">InitOptions</a>
+					<a href="_textile_threads_database.databasesettings.html">DatabaseSettings</a>
 				</li>
 			</ul>
-			<h1>Interface InitOptions</h1>
+			<h1>Interface DatabaseSettings</h1>
 		</div>
 	</div>
 </header>
 <div class="container container-main">
 	<div class="row">
 		<div class="col-8 col-content">
+			<section class="tsd-panel tsd-comment">
+				<div class="tsd-comment tsd-typography">
+					<div class="lead">
+						<p>DatabaseSettings specifies a set of settings to constrol the operation of the Database.
+						Implementations should provide reasonable defaults.</p>
+					</div>
+				</div>
+			</section>
 			<section class="tsd-panel tsd-hierarchy">
 				<h3>Hierarchy</h3>
 				<ul class="tsd-hierarchy">
 					<li>
-						<span class="target">InitOptions</span>
+						<span class="target">DatabaseSettings</span>
 					</li>
+				</ul>
+			</section>
+			<section class="tsd-panel">
+				<h3>Implemented by</h3>
+				<ul class="tsd-hierarchy">
+					<li><a href="../classes/_textile_threads_database.database.html" class="tsd-signature-type">Database</a></li>
 				</ul>
 			</section>
 			<section class="tsd-panel-group tsd-index-group">
@@ -82,10 +96,10 @@
 						<section class="tsd-index-section ">
 							<h3>Properties</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_textile_threads_database.initoptions.html#dispatcher" class="tsd-kind-icon">dispatcher</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_textile_threads_database.initoptions.html#eventbus" class="tsd-kind-icon">event<wbr>Bus</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_textile_threads_database.initoptions.html#identity" class="tsd-kind-icon">identity</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_textile_threads_database.initoptions.html#network" class="tsd-kind-icon">network</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_textile_threads_database.databasesettings.html#child" class="tsd-kind-icon">child</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_textile_threads_database.databasesettings.html#dispatcher" class="tsd-kind-icon">dispatcher</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_textile_threads_database.databasesettings.html#eventbus" class="tsd-kind-icon">event<wbr>Bus</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_textile_threads_database.databasesettings.html#network" class="tsd-kind-icon">network</a></li>
 							</ul>
 						</section>
 					</div>
@@ -94,44 +108,67 @@
 			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Properties</h2>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-					<a name="dispatcher" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagOptional">Optional</span> dispatcher</h3>
-					<div class="tsd-signature tsd-kind-icon">dispatcher<span class="tsd-signature-symbol">:</span> <a href="../classes/_textile_threads_store.dispatcher.html" class="tsd-signature-type">Dispatcher</a></div>
+					<a name="child" class="tsd-anchor"></a>
+					<h3>child</h3>
+					<div class="tsd-signature tsd-kind-icon">child<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Datastore</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/database/src/db.ts#L27">database/src/db.ts:27</a></li>
+							<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/database/src/db.ts#L56">database/src/db.ts:56</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>The primary datastore. It is used to partition out &quot;sub-domains&quot; for collections.
+							By default, this will be a LevelDatastore.</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="dispatcher" class="tsd-anchor"></a>
+					<h3>dispatcher</h3>
+					<div class="tsd-signature tsd-kind-icon">dispatcher<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Dispatcher</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/database/src/db.ts#L42">database/src/db.ts:42</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Dispatcher is used to dispatch local events from producers to reducers (collections).
+							This option should generally be left undefined to use defaults.</p>
+						</div>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
 					<a name="eventbus" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagOptional">Optional</span> event<wbr>Bus</h3>
+					<h3>event<wbr>Bus</h3>
 					<div class="tsd-signature tsd-kind-icon">event<wbr>Bus<span class="tsd-signature-symbol">:</span> <a href="../classes/_textile_threads_database.eventbus.html" class="tsd-signature-type">EventBus</a></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/database/src/db.ts#L28">database/src/db.ts:28</a></li>
+							<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/database/src/db.ts#L47">database/src/db.ts:47</a></li>
 						</ul>
 					</aside>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-					<a name="identity" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagOptional">Optional</span> identity</h3>
-					<div class="tsd-signature tsd-kind-icon">identity<span class="tsd-signature-symbol">:</span> <a href="_textile_threads_core.identity.html" class="tsd-signature-type">Identity</a></div>
-					<aside class="tsd-sources">
-						<ul>
-							<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/database/src/db.ts#L31">database/src/db.ts:31</a></li>
-						</ul>
-					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>EventBus is used to marshal events to and from a Threads network.
+							This option should generally be left undefined to use defaults.</p>
+						</div>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
 					<a name="network" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagOptional">Optional</span> network</h3>
-					<div class="tsd-signature tsd-kind-icon">network<span class="tsd-signature-symbol">:</span> <a href="_textile_threads_core.network.html" class="tsd-signature-type">Network</a></div>
+					<h3>network</h3>
+					<div class="tsd-signature tsd-kind-icon">network<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Network</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/database/src/db.ts#L29">database/src/db.ts:29</a></li>
+							<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/database/src/db.ts#L51">database/src/db.ts:51</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Network is the networking layer. Can be used to provide a custom networking configuration.</p>
+						</div>
+					</div>
 				</section>
 			</section>
 		</div>
@@ -205,19 +242,19 @@
 				</ul>
 				<ul class="current">
 					<li class="current tsd-kind-interface tsd-parent-kind-module">
-						<a href="_textile_threads_database.initoptions.html" class="tsd-kind-icon">Init<wbr>Options</a>
+						<a href="_textile_threads_database.databasesettings.html" class="tsd-kind-icon">Database<wbr>Settings</a>
 						<ul>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="_textile_threads_database.initoptions.html#dispatcher" class="tsd-kind-icon">dispatcher</a>
+								<a href="_textile_threads_database.databasesettings.html#child" class="tsd-kind-icon">child</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="_textile_threads_database.initoptions.html#eventbus" class="tsd-kind-icon">event<wbr>Bus</a>
+								<a href="_textile_threads_database.databasesettings.html#dispatcher" class="tsd-kind-icon">dispatcher</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="_textile_threads_database.initoptions.html#identity" class="tsd-kind-icon">identity</a>
+								<a href="_textile_threads_database.databasesettings.html#eventbus" class="tsd-kind-icon">event<wbr>Bus</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="_textile_threads_database.initoptions.html#network" class="tsd-kind-icon">network</a>
+								<a href="_textile_threads_database.databasesettings.html#network" class="tsd-kind-icon">network</a>
 							</li>
 						</ul>
 					</li>
@@ -267,6 +304,12 @@
 					</li>
 					<li class=" tsd-kind-variable tsd-parent-kind-module">
 						<a href="../modules/_textile_threads_database.html#existingkeyerror" class="tsd-kind-icon">existing<wbr>Key<wbr>Error</a>
+					</li>
+					<li class=" tsd-kind-variable tsd-parent-kind-module">
+						<a href="../modules/_textile_threads_database.html#mismatcherror" class="tsd-kind-icon">mismatch<wbr>Error</a>
+					</li>
+					<li class=" tsd-kind-variable tsd-parent-kind-module">
+						<a href="../modules/_textile_threads_database.html#missingidentity" class="tsd-kind-icon">missing<wbr>Identity</a>
 					</li>
 					<li class=" tsd-kind-function tsd-parent-kind-module">
 						<a href="../modules/_textile_threads_database.html#cache" class="tsd-kind-icon">Cache</a>
