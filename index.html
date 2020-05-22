@@ -164,14 +164,14 @@ npm run <span class="hljs-built_in">test</span>:browser</code></pre>
 				</a>
 				<p>This project utilises lerna&#39;s &#39;independent&#39; release mode. So each time you run <code>lerna publish</code>, it will check for local updates and determine which packages have changed and need publishing. To do this locally, follow these steps:</p>
 				<ol>
-					<li>Ensure you are on a clean master branch (we only want to release from master). If you have to, run <code>lerna clean &amp;&amp; lerna bootstrap</code> to get to a clean state.</li>
+					<li>Ensure you are on a clean master branch (we only want to release from master). If you have to, run <code>lerna clean &amp;&amp; lerna bootstrap</code> to get to a clean state. If this produces new changes, then make sure you commit these (or reject them) before proceeding.</li>
 					<li>Ensure that webpack and webpack-cli are available. Ideally, install these globally. It is also a good idea to have typescript available globally. <code>npm i -g webpack webpack-cli typescript</code></li>
 					<li>Ensure your git config does not specify signed tags. The <code>lerna</code> cli tool does not seem to be able to handle these at this time.</li>
 					<li>Ensure you are logged in to an npmjs.org account that has permission to publish to the @textile org/scope.</li>
 					<li>Run <code>lerna publish</code>, and sit back and wait. Ideally, this will go off without a hitch.</li>
 				</ol>
 				<p>If it fails after creating tags and/or pushing the version updates to git, but before the actual npm publish completes, you should be able to &#39;recover&#39; by running <code>lerna publish from-package</code>, which will attempt to publish new releases based on the versions available on npmjs.org. If it failed before or during tag creation, you might have to use something like <code>git reset --hard HEAD~1</code> to reset the last commit, followed by <code>git push --force --follow-tags</code> (if it was pushed to remote already), <strong>but check that the right commit was reverted first</strong>.</p>
-				<p>See the <a href="https://github.com/lerna/lerna#what-can-lerna-do">lerna docs</a> for other things you can do to make working across multiple packages easier. </p>
+				<p>See the <a href="https://github.com/lerna/lerna#what-can-lerna-do">lerna docs</a> for other things you can do to make working across multiple packages easier. <strong>Note</strong>: If you are using <code>lerna</code> commands directly (as opposed to the ones wrapped in the package.json scripts), you&#39;ll want to install <code>lerna</code> globally to make your life easier: <code>npm i -g lerna</code>.</p>
 				<a href="#api" id="api" style="color: inherit; text-decoration: none;">
 					<h2>API</h2>
 				</a>
