@@ -111,6 +111,7 @@
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter"><a href="_textile_threads_client.client.html#findbyid" class="tsd-kind-icon">find<wbr>ByID</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_textile_threads_client.client.html#getdbinfo" class="tsd-kind-icon">getDBInfo</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_textile_threads_client.client.html#gettoken" class="tsd-kind-icon">get<wbr>Token</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_textile_threads_client.client.html#gettokenchallenge" class="tsd-kind-icon">get<wbr>Token<wbr>Challenge</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_textile_threads_client.client.html#has" class="tsd-kind-icon">has</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter"><a href="_textile_threads_client.client.html#listen" class="tsd-kind-icon">listen</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_textile_threads_client.client.html#newcollection" class="tsd-kind-icon">new<wbr>Collection</a></li>
@@ -119,6 +120,7 @@
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_textile_threads_client.client.html#readtransaction" class="tsd-kind-icon">read<wbr>Transaction</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_textile_threads_client.client.html#save" class="tsd-kind-icon">save</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_textile_threads_client.client.html#writetransaction" class="tsd-kind-icon">write<wbr>Transaction</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-static"><a href="_textile_threads_client.client.html#randomidentity" class="tsd-kind-icon">random<wbr>Identity</a></li>
 							</ul>
 						</section>
 					</div>
@@ -210,7 +212,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/client/src/index.ts#L191">client/src/index.ts:191</a></li>
+									<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/client/src/index.ts#L218">client/src/index.ts:218</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -253,7 +255,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/client/src/index.ts#L232">client/src/index.ts:232</a></li>
+									<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/client/src/index.ts#L259">client/src/index.ts:259</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -296,7 +298,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/client/src/index.ts#L262">client/src/index.ts:262</a></li>
+									<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/client/src/index.ts#L289">client/src/index.ts:289</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -345,7 +347,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/client/src/index.ts#L283">client/src/index.ts:283</a></li>
+									<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/client/src/index.ts#L310">client/src/index.ts:310</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -394,7 +396,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/client/src/index.ts#L168">client/src/index.ts:168</a></li>
+									<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/client/src/index.ts#L195">client/src/index.ts:195</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -419,34 +421,104 @@
 					<a name="gettoken" class="tsd-anchor"></a>
 					<h3>get<wbr>Token</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">get<wbr>Token<span class="tsd-signature-symbol">(</span>identity<span class="tsd-signature-symbol">?: </span><a href="../interfaces/_textile_threads_core.identity.html" class="tsd-signature-type">Identity</a>, ctx<span class="tsd-signature-symbol">?: </span><a href="_textile_context.context.html" class="tsd-signature-type">Context</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></li>
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Token<span class="tsd-signature-symbol">(</span>identity<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Identity</span>, ctx<span class="tsd-signature-symbol">?: </span><a href="_textile_context.context.html" class="tsd-signature-type">Context</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/client/src/index.ts#L58">client/src/index.ts:58</a></li>
+									<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/client/src/index.ts#L65">client/src/index.ts:65</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
 								<div class="lead">
-									<p>Obtain a token for interacting with the remote network API.</p>
+									<p>Obtain a token for interacting with the remote API.</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>identity: <span class="tsd-signature-type">Identity</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>A user identity to use for creating records in the database. A random identity
+											can be created with `Client.randomIdentity(), however, it is not easy/possible to migrate
+											identities after the fact. Please store or otherwise persist any identity information if
+										you wish to retrieve user data later, or use an external identity provider.</p>
+									</div>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> ctx: <a href="_textile_context.context.html" class="tsd-signature-type">Context</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>Context object containing web-gRPC headers and settings.</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="gettokenchallenge" class="tsd-anchor"></a>
+					<h3>get<wbr>Token<wbr>Challenge</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Token<wbr>Challenge<span class="tsd-signature-symbol">(</span>publicKey<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, callback<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">function</span>, ctx<span class="tsd-signature-symbol">?: </span><a href="_textile_context.context.html" class="tsd-signature-type">Context</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/client/src/index.ts#L87">client/src/index.ts:87</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Obtain a token for interacting with the remote API.</p>
 								</div>
 								<dl class="tsd-comment-tags">
 									<dt>note</dt>
-									<dd><p>If an identity is not provided, a random PKI identity is used. This might not be what you want!
-											It is not easy/possible to migrate identities after the fact. Please supply an identity argument if
-										you wish to persist/retrieve user data later.</p>
+									<dd><p><code>publicKey</code> must be the corresponding public key of the private key used in <code>callback</code>.</p>
 									</dd>
 								</dl>
 							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5><span class="tsd-flag ts-flagOptional">Optional</span> identity: <a href="../interfaces/_textile_threads_core.identity.html" class="tsd-signature-type">Identity</a></h5>
+									<h5>publicKey: <span class="tsd-signature-type">string</span></h5>
 									<div class="tsd-comment tsd-typography">
-										<p>The generic identity to use for signing and validation.</p>
+										<p>The public key of a user identity to use for creating records in the database.
+											A random identity can be created with `Client.randomIdentity(), however, it is not
+											easy/possible to migrate identities after the fact. Please store or otherwise persist any
+											identity information if you wish to retrieve user data later, or use an external identity
+										provider.</p>
 									</div>
+								</li>
+								<li>
+									<h5>callback: <span class="tsd-signature-type">function</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>A callback function that takes a <code>challenge</code> argument and returns a signed
+										message using the input challenge and the private key associated with <code>publicKey</code>.</p>
+									</div>
+									<ul class="tsd-parameters">
+										<li class="tsd-parameter-siganture">
+											<ul class="tsd-signatures tsd-kind-type-literal">
+												<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>challenge<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Buffer</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Buffer</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">Buffer</span><span class="tsd-signature-symbol">&gt;</span></li>
+											</ul>
+											<ul class="tsd-descriptions">
+												<li class="tsd-description">
+													<h4 class="tsd-parameters-title">Parameters</h4>
+													<ul class="tsd-parameters">
+														<li>
+															<h5>challenge: <span class="tsd-signature-type">Buffer</span></h5>
+														</li>
+													</ul>
+													<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Buffer</span>
+														<span class="tsd-signature-symbol"> | </span>
+														<span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">Buffer</span><span class="tsd-signature-symbol">&gt;</span>
+													</h4>
+												</li>
+											</ul>
+										</li>
+									</ul>
 								</li>
 								<li>
 									<h5><span class="tsd-flag ts-flagOptional">Optional</span> ctx: <a href="_textile_context.context.html" class="tsd-signature-type">Context</a></h5>
@@ -469,7 +541,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/client/src/index.ts#L247">client/src/index.ts:247</a></li>
+									<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/client/src/index.ts#L274">client/src/index.ts:274</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -512,7 +584,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/client/src/index.ts#L330">client/src/index.ts:330</a></li>
+									<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/client/src/index.ts#L357">client/src/index.ts:357</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -595,7 +667,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/client/src/index.ts#L122">client/src/index.ts:122</a></li>
+									<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/client/src/index.ts#L149">client/src/index.ts:149</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -639,7 +711,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/client/src/index.ts#L106">client/src/index.ts:106</a></li>
+									<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/client/src/index.ts#L133">client/src/index.ts:133</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -676,7 +748,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/client/src/index.ts#L144">client/src/index.ts:144</a></li>
+									<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/client/src/index.ts#L171">client/src/index.ts:171</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -724,7 +796,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/client/src/index.ts#L300">client/src/index.ts:300</a></li>
+									<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/client/src/index.ts#L327">client/src/index.ts:327</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -761,7 +833,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/client/src/index.ts#L210">client/src/index.ts:210</a></li>
+									<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/client/src/index.ts#L237">client/src/index.ts:237</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -804,7 +876,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/client/src/index.ts#L314">client/src/index.ts:314</a></li>
+									<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/client/src/index.ts#L341">client/src/index.ts:341</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -828,6 +900,28 @@
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <a href="_textile_threads_client.writetransaction.html" class="tsd-signature-type">WriteTransaction</a></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-static">
+					<a name="randomidentity" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagStatic">Static</span> random<wbr>Identity</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-static">
+						<li class="tsd-signature tsd-kind-icon">random<wbr>Identity<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">Libp2pCryptoIdentity</span><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/client/src/index.ts#L53">client/src/index.ts:53</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Create a random user identity.</p>
+								</div>
+							</div>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">Libp2pCryptoIdentity</span><span class="tsd-signature-symbol">&gt;</span></h4>
 						</li>
 					</ul>
 				</section>
@@ -912,6 +1006,9 @@
 								<a href="_textile_threads_client.client.html#gettoken" class="tsd-kind-icon">get<wbr>Token</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="_textile_threads_client.client.html#gettokenchallenge" class="tsd-kind-icon">get<wbr>Token<wbr>Challenge</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="_textile_threads_client.client.html#has" class="tsd-kind-icon">has</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter">
@@ -934,6 +1031,9 @@
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="_textile_threads_client.client.html#writetransaction" class="tsd-kind-icon">write<wbr>Transaction</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-static">
+								<a href="_textile_threads_client.client.html#randomidentity" class="tsd-kind-icon">random<wbr>Identity</a>
 							</li>
 						</ul>
 					</li>
