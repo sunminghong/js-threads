@@ -94,6 +94,14 @@
 							</ul>
 						</section>
 						<section class="tsd-index-section ">
+							<h3>Type aliases</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-type-alias tsd-parent-kind-module"><a href="_textile_context.html#hoststring" class="tsd-kind-icon">Host<wbr>String</a></li>
+								<li class="tsd-kind-type-alias tsd-parent-kind-module"><a href="_textile_context.html#keyinfo" class="tsd-kind-icon">Key<wbr>Info</a></li>
+								<li class="tsd-kind-type-alias tsd-parent-kind-module"><a href="_textile_context.html#userauth" class="tsd-kind-icon">User<wbr>Auth</a></li>
+							</ul>
+						</section>
+						<section class="tsd-index-section ">
 							<h3>Variables</h3>
 							<ul class="tsd-index-list">
 								<li class="tsd-kind-variable tsd-parent-kind-module"><a href="_textile_context.html#defaulthost" class="tsd-kind-icon">default<wbr>Host</a></li>
@@ -110,11 +118,69 @@
 				</section>
 			</section>
 			<section class="tsd-panel-group tsd-member-group ">
+				<h2>Type aliases</h2>
+				<section class="tsd-panel tsd-member tsd-kind-type-alias tsd-parent-kind-module">
+					<a name="hoststring" class="tsd-anchor"></a>
+					<h3>Host<wbr>String</h3>
+					<div class="tsd-signature tsd-kind-icon">Host<wbr>String<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">"https://api.textile.io:3447"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"https://api.staging.textile.io:3447"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"http://127.0.0.1:3007"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/context/src/index.ts#L8">context/src/index.ts:8</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>The set of host strings used by any gPRC clients.</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-type-alias tsd-parent-kind-module">
+					<a name="keyinfo" class="tsd-anchor"></a>
+					<h3>Key<wbr>Info</h3>
+					<div class="tsd-signature tsd-kind-icon">Key<wbr>Info<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">object</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/context/src/index.ts#L18">context/src/index.ts:18</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Type describing the required shape of input user group/account keys.</p>
+						</div>
+					</div>
+					<div class="tsd-type-declaration">
+						<h4>Type declaration</h4>
+						<ul class="tsd-parameters">
+						</ul>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-type-alias tsd-parent-kind-module">
+					<a name="userauth" class="tsd-anchor"></a>
+					<h3>User<wbr>Auth</h3>
+					<div class="tsd-signature tsd-kind-icon">User<wbr>Auth<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">object</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/context/src/index.ts#L36">context/src/index.ts:36</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Type describing the minimal requirements for a user group auth session.</p>
+						</div>
+					</div>
+					<div class="tsd-type-declaration">
+						<h4>Type declaration</h4>
+						<ul class="tsd-parameters">
+						</ul>
+					</div>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Variables</h2>
 				<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-module">
 					<a name="defaulthost" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagConst">Const</span> default<wbr>Host</h3>
-					<div class="tsd-signature tsd-kind-icon">default<wbr>Host<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">HostString</span><span class="tsd-signature-symbol"> =&nbsp;&quot;https://api.textile.io:3447&quot;</span></div>
+					<div class="tsd-signature tsd-kind-icon">default<wbr>Host<span class="tsd-signature-symbol">:</span> <a href="_textile_context.html#hoststring" class="tsd-signature-type">HostString</a><span class="tsd-signature-symbol"> =&nbsp;&quot;https://api.textile.io:3447&quot;</span></div>
 					<aside class="tsd-sources">
 						<ul>
 							<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/context/src/index.ts#L13">context/src/index.ts:13</a></li>
@@ -127,7 +193,7 @@
 					<div class="tsd-signature tsd-kind-icon">expiration<wbr>Error<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Error</span><span class="tsd-signature-symbol"> =&nbsp;new Error(&#x27;Context expired. Consider calling withUserKey or withAPISig to refresh.&#x27;,)</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/context/src/index.ts#L33">context/src/index.ts:33</a></li>
+							<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/context/src/index.ts#L55">context/src/index.ts:55</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -144,7 +210,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/context/src/index.ts#L47">context/src/index.ts:47</a></li>
+									<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/context/src/index.ts#L69">context/src/index.ts:69</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -228,6 +294,15 @@
 					</li>
 					<li class=" tsd-kind-interface tsd-parent-kind-module">
 						<a href="../interfaces/_textile_context.contextkeys.html" class="tsd-kind-icon">Context<wbr>Keys</a>
+					</li>
+					<li class=" tsd-kind-type-alias tsd-parent-kind-module">
+						<a href="_textile_context.html#hoststring" class="tsd-kind-icon">Host<wbr>String</a>
+					</li>
+					<li class=" tsd-kind-type-alias tsd-parent-kind-module">
+						<a href="_textile_context.html#keyinfo" class="tsd-kind-icon">Key<wbr>Info</a>
+					</li>
+					<li class=" tsd-kind-type-alias tsd-parent-kind-module">
+						<a href="_textile_context.html#userauth" class="tsd-kind-icon">User<wbr>Auth</a>
 					</li>
 					<li class=" tsd-kind-variable tsd-parent-kind-module">
 						<a href="_textile_context.html#defaulthost" class="tsd-kind-icon">default<wbr>Host</a>
