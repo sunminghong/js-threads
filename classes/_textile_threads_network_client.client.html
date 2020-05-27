@@ -135,7 +135,7 @@
 					<a name="constructor" class="tsd-anchor"></a>
 					<h3>constructor</h3>
 					<ul class="tsd-signatures tsd-kind-constructor tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">new <wbr>Client<span class="tsd-signature-symbol">(</span>context<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">Context</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="_textile_threads_network_client.client.html" class="tsd-signature-type">Client</a></li>
+						<li class="tsd-signature tsd-kind-icon">new <wbr>Client<span class="tsd-signature-symbol">(</span>context<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">ContextInterface</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="_textile_threads_network_client.client.html" class="tsd-signature-type">Client</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
@@ -152,7 +152,7 @@
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5><span class="tsd-flag ts-flagDefault value">Default value</span> context: <span class="tsd-signature-type">Context</span><span class="tsd-signature-symbol"> =&nbsp;new Provider(&#x27;http://127.0.0.1:6007&#x27;)</span></h5>
+									<h5><span class="tsd-flag ts-flagDefault value">Default value</span> context: <span class="tsd-signature-type">ContextInterface</span><span class="tsd-signature-symbol"> =&nbsp;new Context(&#x27;http://127.0.0.1:6007&#x27;)</span></h5>
 									<div class="tsd-comment tsd-typography">
 										<div class="lead">
 											<p>The context to use for interacting with the APIs. Can be modified later.</p>
@@ -170,7 +170,7 @@
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="context" class="tsd-anchor"></a>
 					<h3>context</h3>
-					<div class="tsd-signature tsd-kind-icon">context<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Context</span></div>
+					<div class="tsd-signature tsd-kind-icon">context<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">ContextInterface</span></div>
 					<aside class="tsd-sources">
 						<ul>
 							<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/network-client/src/index.ts#L92">network-client/src/index.ts:92</a></li>
@@ -214,7 +214,7 @@
 					<a name="addrecord" class="tsd-anchor"></a>
 					<h3>add<wbr>Record</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">add<wbr>Record<span class="tsd-signature-symbol">(</span>id<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">ThreadID</span>, logID<span class="tsd-signature-symbol">: </span><a href="../modules/_textile_threads_core.html#logid" class="tsd-signature-type">LogID</a>, rec<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">LogRecord</span>, ctx<span class="tsd-signature-symbol">?: </span><a href="../interfaces/_textile_context.context.html" class="tsd-signature-type">Context</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></li>
+						<li class="tsd-signature tsd-kind-icon">add<wbr>Record<span class="tsd-signature-symbol">(</span>id<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">ThreadID</span>, logID<span class="tsd-signature-symbol">: </span><a href="../modules/_textile_threads_core.html#logid" class="tsd-signature-type">LogID</a>, rec<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">LogRecord</span>, ctx<span class="tsd-signature-symbol">?: </span><a href="../interfaces/_textile_context.contextinterface.html" class="tsd-signature-type">ContextInterface</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
@@ -249,7 +249,7 @@
 									</div>
 								</li>
 								<li>
-									<h5><span class="tsd-flag ts-flagOptional">Optional</span> ctx: <a href="../interfaces/_textile_context.context.html" class="tsd-signature-type">Context</a></h5>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> ctx: <a href="../interfaces/_textile_context.contextinterface.html" class="tsd-signature-type">ContextInterface</a></h5>
 									<div class="tsd-comment tsd-typography">
 										<p>Context object containing web-gRPC headers and settings.</p>
 									</div>
@@ -263,7 +263,7 @@
 					<a name="addreplicator" class="tsd-anchor"></a>
 					<h3>add<wbr>Replicator</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">add<wbr>Replicator<span class="tsd-signature-symbol">(</span>id<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">ThreadID</span>, addr<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Multiaddr</span>, ctx<span class="tsd-signature-symbol">?: </span><a href="../interfaces/_textile_context.context.html" class="tsd-signature-type">Context</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">PeerId</span><span class="tsd-signature-symbol">&gt;</span></li>
+						<li class="tsd-signature tsd-kind-icon">add<wbr>Replicator<span class="tsd-signature-symbol">(</span>id<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">ThreadID</span>, addr<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Multiaddr</span>, ctx<span class="tsd-signature-symbol">?: </span><a href="../interfaces/_textile_context.contextinterface.html" class="tsd-signature-type">ContextInterface</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">PeerId</span><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
@@ -292,7 +292,7 @@
 									</div>
 								</li>
 								<li>
-									<h5><span class="tsd-flag ts-flagOptional">Optional</span> ctx: <a href="../interfaces/_textile_context.context.html" class="tsd-signature-type">Context</a></h5>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> ctx: <a href="../interfaces/_textile_context.contextinterface.html" class="tsd-signature-type">ContextInterface</a></h5>
 									<div class="tsd-comment tsd-typography">
 										<p>Context object containing web-gRPC headers and settings.</p>
 									</div>
@@ -306,7 +306,7 @@
 					<a name="addthread" class="tsd-anchor"></a>
 					<h3>add<wbr>Thread</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">add<wbr>Thread<span class="tsd-signature-symbol">(</span>addr<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Multiaddr</span>, opts<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">NewThreadOptions</span>, ctx<span class="tsd-signature-symbol">?: </span><a href="../interfaces/_textile_context.context.html" class="tsd-signature-type">Context</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">ThreadInfo</span><span class="tsd-signature-symbol">&gt;</span></li>
+						<li class="tsd-signature tsd-kind-icon">add<wbr>Thread<span class="tsd-signature-symbol">(</span>addr<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Multiaddr</span>, opts<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">NewThreadOptions</span>, ctx<span class="tsd-signature-symbol">?: </span><a href="../interfaces/_textile_context.contextinterface.html" class="tsd-signature-type">ContextInterface</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">ThreadInfo</span><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
@@ -335,7 +335,7 @@
 									</div>
 								</li>
 								<li>
-									<h5><span class="tsd-flag ts-flagOptional">Optional</span> ctx: <a href="../interfaces/_textile_context.context.html" class="tsd-signature-type">Context</a></h5>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> ctx: <a href="../interfaces/_textile_context.contextinterface.html" class="tsd-signature-type">ContextInterface</a></h5>
 									<div class="tsd-comment tsd-typography">
 										<p>Context object containing web-gRPC headers and settings.</p>
 									</div>
@@ -349,7 +349,7 @@
 					<a name="createrecord" class="tsd-anchor"></a>
 					<h3>create<wbr>Record</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">create<wbr>Record<span class="tsd-signature-symbol">(</span>id<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">ThreadID</span>, body<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span>, ctx<span class="tsd-signature-symbol">?: </span><a href="../interfaces/_textile_context.context.html" class="tsd-signature-type">Context</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">ThreadRecord</span><span class="tsd-signature-symbol">&gt;</span></li>
+						<li class="tsd-signature tsd-kind-icon">create<wbr>Record<span class="tsd-signature-symbol">(</span>id<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">ThreadID</span>, body<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span>, ctx<span class="tsd-signature-symbol">?: </span><a href="../interfaces/_textile_context.contextinterface.html" class="tsd-signature-type">ContextInterface</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">ThreadRecord</span><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
@@ -378,7 +378,7 @@
 									</div>
 								</li>
 								<li>
-									<h5><span class="tsd-flag ts-flagOptional">Optional</span> ctx: <a href="../interfaces/_textile_context.context.html" class="tsd-signature-type">Context</a></h5>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> ctx: <a href="../interfaces/_textile_context.contextinterface.html" class="tsd-signature-type">ContextInterface</a></h5>
 									<div class="tsd-comment tsd-typography">
 										<p>Context object containing web-gRPC headers and settings.</p>
 									</div>
@@ -392,7 +392,7 @@
 					<a name="createthread" class="tsd-anchor"></a>
 					<h3>create<wbr>Thread</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">create<wbr>Thread<span class="tsd-signature-symbol">(</span>id<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">ThreadID</span>, opts<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">NewThreadOptions</span>, ctx<span class="tsd-signature-symbol">?: </span><a href="../interfaces/_textile_context.context.html" class="tsd-signature-type">Context</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">ThreadInfo</span><span class="tsd-signature-symbol">&gt;</span></li>
+						<li class="tsd-signature tsd-kind-icon">create<wbr>Thread<span class="tsd-signature-symbol">(</span>id<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">ThreadID</span>, opts<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">NewThreadOptions</span>, ctx<span class="tsd-signature-symbol">?: </span><a href="../interfaces/_textile_context.contextinterface.html" class="tsd-signature-type">ContextInterface</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">ThreadInfo</span><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
@@ -424,7 +424,7 @@
 									</div>
 								</li>
 								<li>
-									<h5><span class="tsd-flag ts-flagOptional">Optional</span> ctx: <a href="../interfaces/_textile_context.context.html" class="tsd-signature-type">Context</a></h5>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> ctx: <a href="../interfaces/_textile_context.contextinterface.html" class="tsd-signature-type">ContextInterface</a></h5>
 									<div class="tsd-comment tsd-typography">
 										<p>Context object containing web-gRPC headers and settings.</p>
 									</div>
@@ -438,7 +438,7 @@
 					<a name="deletethread" class="tsd-anchor"></a>
 					<h3>delete<wbr>Thread</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">delete<wbr>Thread<span class="tsd-signature-symbol">(</span>id<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">ThreadID</span>, ctx<span class="tsd-signature-symbol">?: </span><a href="../interfaces/_textile_context.context.html" class="tsd-signature-type">Context</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></li>
+						<li class="tsd-signature tsd-kind-icon">delete<wbr>Thread<span class="tsd-signature-symbol">(</span>id<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">ThreadID</span>, ctx<span class="tsd-signature-symbol">?: </span><a href="../interfaces/_textile_context.contextinterface.html" class="tsd-signature-type">ContextInterface</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
@@ -461,7 +461,7 @@
 									</div>
 								</li>
 								<li>
-									<h5><span class="tsd-flag ts-flagOptional">Optional</span> ctx: <a href="../interfaces/_textile_context.context.html" class="tsd-signature-type">Context</a></h5>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> ctx: <a href="../interfaces/_textile_context.contextinterface.html" class="tsd-signature-type">ContextInterface</a></h5>
 									<div class="tsd-comment tsd-typography">
 										<p>Context object containing web-gRPC headers and settings.</p>
 									</div>
@@ -475,7 +475,7 @@
 					<a name="gethostid" class="tsd-anchor"></a>
 					<h3>get<wbr>HostID</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">get<wbr>HostID<span class="tsd-signature-symbol">(</span>ctx<span class="tsd-signature-symbol">?: </span><a href="../interfaces/_textile_context.context.html" class="tsd-signature-type">Context</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">PeerId</span><span class="tsd-signature-symbol">&gt;</span></li>
+						<li class="tsd-signature tsd-kind-icon">get<wbr>HostID<span class="tsd-signature-symbol">(</span>ctx<span class="tsd-signature-symbol">?: </span><a href="../interfaces/_textile_context.contextinterface.html" class="tsd-signature-type">ContextInterface</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">PeerId</span><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
@@ -492,7 +492,7 @@
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5><span class="tsd-flag ts-flagOptional">Optional</span> ctx: <a href="../interfaces/_textile_context.context.html" class="tsd-signature-type">Context</a></h5>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> ctx: <a href="../interfaces/_textile_context.contextinterface.html" class="tsd-signature-type">ContextInterface</a></h5>
 									<div class="tsd-comment tsd-typography">
 										<p>Context object containing web-gRPC headers and settings.</p>
 									</div>
@@ -506,7 +506,7 @@
 					<a name="getrecord" class="tsd-anchor"></a>
 					<h3>get<wbr>Record</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">get<wbr>Record<span class="tsd-signature-symbol">(</span>id<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">ThreadID</span>, rec<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">CID</span>, ctx<span class="tsd-signature-symbol">?: </span><a href="../interfaces/_textile_context.context.html" class="tsd-signature-type">Context</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">LogRecord</span><span class="tsd-signature-symbol">&gt;</span></li>
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Record<span class="tsd-signature-symbol">(</span>id<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">ThreadID</span>, rec<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">CID</span>, ctx<span class="tsd-signature-symbol">?: </span><a href="../interfaces/_textile_context.contextinterface.html" class="tsd-signature-type">ContextInterface</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">LogRecord</span><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
@@ -535,7 +535,7 @@
 									</div>
 								</li>
 								<li>
-									<h5><span class="tsd-flag ts-flagOptional">Optional</span> ctx: <a href="../interfaces/_textile_context.context.html" class="tsd-signature-type">Context</a></h5>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> ctx: <a href="../interfaces/_textile_context.contextinterface.html" class="tsd-signature-type">ContextInterface</a></h5>
 									<div class="tsd-comment tsd-typography">
 										<p>Context object containing web-gRPC headers and settings.</p>
 									</div>
@@ -549,7 +549,7 @@
 					<a name="getthread" class="tsd-anchor"></a>
 					<h3>get<wbr>Thread</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">get<wbr>Thread<span class="tsd-signature-symbol">(</span>id<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">ThreadID</span>, ctx<span class="tsd-signature-symbol">?: </span><a href="../interfaces/_textile_context.context.html" class="tsd-signature-type">Context</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">ThreadInfo</span><span class="tsd-signature-symbol">&gt;</span></li>
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Thread<span class="tsd-signature-symbol">(</span>id<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">ThreadID</span>, ctx<span class="tsd-signature-symbol">?: </span><a href="../interfaces/_textile_context.contextinterface.html" class="tsd-signature-type">ContextInterface</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">ThreadInfo</span><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
@@ -572,7 +572,7 @@
 									</div>
 								</li>
 								<li>
-									<h5><span class="tsd-flag ts-flagOptional">Optional</span> ctx: <a href="../interfaces/_textile_context.context.html" class="tsd-signature-type">Context</a></h5>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> ctx: <a href="../interfaces/_textile_context.contextinterface.html" class="tsd-signature-type">ContextInterface</a></h5>
 									<div class="tsd-comment tsd-typography">
 										<p>Context object containing web-gRPC headers and settings.</p>
 									</div>
@@ -586,7 +586,7 @@
 					<a name="gettoken" class="tsd-anchor"></a>
 					<h3>get<wbr>Token</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">get<wbr>Token<span class="tsd-signature-symbol">(</span>identity<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Identity</span>, ctx<span class="tsd-signature-symbol">?: </span><a href="../interfaces/_textile_context.context.html" class="tsd-signature-type">Context</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></li>
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Token<span class="tsd-signature-symbol">(</span>identity<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Identity</span>, ctx<span class="tsd-signature-symbol">?: </span><a href="../interfaces/_textile_context.contextinterface.html" class="tsd-signature-type">ContextInterface</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
@@ -612,7 +612,7 @@
 									</div>
 								</li>
 								<li>
-									<h5><span class="tsd-flag ts-flagOptional">Optional</span> ctx: <a href="../interfaces/_textile_context.context.html" class="tsd-signature-type">Context</a></h5>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> ctx: <a href="../interfaces/_textile_context.contextinterface.html" class="tsd-signature-type">ContextInterface</a></h5>
 									<div class="tsd-comment tsd-typography">
 										<p>Context object containing web-gRPC headers and settings.</p>
 									</div>
@@ -626,7 +626,7 @@
 					<a name="gettokenchallenge" class="tsd-anchor"></a>
 					<h3>get<wbr>Token<wbr>Challenge</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">get<wbr>Token<wbr>Challenge<span class="tsd-signature-symbol">(</span>publicKey<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, callback<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">function</span>, ctx<span class="tsd-signature-symbol">?: </span><a href="../interfaces/_textile_context.context.html" class="tsd-signature-type">Context</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></li>
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Token<wbr>Challenge<span class="tsd-signature-symbol">(</span>publicKey<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, callback<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">function</span>, ctx<span class="tsd-signature-symbol">?: </span><a href="../interfaces/_textile_context.contextinterface.html" class="tsd-signature-type">ContextInterface</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
@@ -686,7 +686,7 @@
 									</ul>
 								</li>
 								<li>
-									<h5><span class="tsd-flag ts-flagOptional">Optional</span> ctx: <a href="../interfaces/_textile_context.context.html" class="tsd-signature-type">Context</a></h5>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> ctx: <a href="../interfaces/_textile_context.contextinterface.html" class="tsd-signature-type">ContextInterface</a></h5>
 									<div class="tsd-comment tsd-typography">
 										<p>Context object containing web-gRPC headers and settings.</p>
 									</div>
@@ -700,7 +700,7 @@
 					<a name="pullthread" class="tsd-anchor"></a>
 					<h3>pull<wbr>Thread</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">pull<wbr>Thread<span class="tsd-signature-symbol">(</span>id<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">ThreadID</span>, ctx<span class="tsd-signature-symbol">?: </span><a href="../interfaces/_textile_context.context.html" class="tsd-signature-type">Context</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></li>
+						<li class="tsd-signature tsd-kind-icon">pull<wbr>Thread<span class="tsd-signature-symbol">(</span>id<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">ThreadID</span>, ctx<span class="tsd-signature-symbol">?: </span><a href="../interfaces/_textile_context.contextinterface.html" class="tsd-signature-type">ContextInterface</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
@@ -723,7 +723,7 @@
 									</div>
 								</li>
 								<li>
-									<h5><span class="tsd-flag ts-flagOptional">Optional</span> ctx: <a href="../interfaces/_textile_context.context.html" class="tsd-signature-type">Context</a></h5>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> ctx: <a href="../interfaces/_textile_context.contextinterface.html" class="tsd-signature-type">ContextInterface</a></h5>
 									<div class="tsd-comment tsd-typography">
 										<p>Context object containing web-gRPC headers and settings.</p>
 									</div>
@@ -737,7 +737,7 @@
 					<a name="subscribe" class="tsd-anchor"></a>
 					<h3>subscribe</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">subscribe<span class="tsd-signature-symbol">(</span>cb<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">function</span>, threads<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">ThreadID</span><span class="tsd-signature-symbol">[]</span>, ctx<span class="tsd-signature-symbol">?: </span><a href="../interfaces/_textile_context.context.html" class="tsd-signature-type">Context</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Request</span></li>
+						<li class="tsd-signature tsd-kind-icon">subscribe<span class="tsd-signature-symbol">(</span>cb<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">function</span>, threads<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">ThreadID</span><span class="tsd-signature-symbol">[]</span>, ctx<span class="tsd-signature-symbol">?: </span><a href="../interfaces/_textile_context.contextinterface.html" class="tsd-signature-type">ContextInterface</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Request</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
@@ -787,7 +787,7 @@
 									</div>
 								</li>
 								<li>
-									<h5><span class="tsd-flag ts-flagOptional">Optional</span> ctx: <a href="../interfaces/_textile_context.context.html" class="tsd-signature-type">Context</a></h5>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> ctx: <a href="../interfaces/_textile_context.contextinterface.html" class="tsd-signature-type">ContextInterface</a></h5>
 									<div class="tsd-comment tsd-typography">
 										<p>Context object containing web-gRPC headers and settings.</p>
 									</div>
