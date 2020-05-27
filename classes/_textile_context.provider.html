@@ -70,7 +70,8 @@
 			<section class="tsd-panel tsd-comment">
 				<div class="tsd-comment tsd-typography">
 					<div class="lead">
-						<p>Provider provides context management for gRPC credentials and config settings.</p>
+						<p>Provider provides context management for gRPC credentials and config settings.
+						It is the default implementation for the Context interface.</p>
 					</div>
 				</div>
 			</section>
@@ -140,19 +141,39 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/context/src/index.ts#L118">context/src/index.ts:118</a></li>
+									<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/context/src/index.ts#L205">context/src/index.ts:205</a></li>
 								</ul>
 							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Construct a new Provider object.</p>
+								</div>
+							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
 									<h5><span class="tsd-flag ts-flagDefault value">Default value</span> host: <span class="tsd-signature-type">HostString</span><span class="tsd-signature-symbol"> =&nbsp;defaultHost</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<div class="lead">
+											<p>The remote gRPC host. This input exists to comply with the Config interface.</p>
+										</div>
+									</div>
 								</li>
 								<li>
 									<h5><span class="tsd-flag ts-flagDefault value">Default value</span> debug: <span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> =&nbsp;false</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<div class="lead">
+											<p>For testing and debugging purposes.</p>
+										</div>
+									</div>
 								</li>
 								<li>
 									<h5><span class="tsd-flag ts-flagDefault value">Default value</span> transport: <span class="tsd-signature-type">TransportFactory</span><span class="tsd-signature-symbol"> =&nbsp;grpc.WebsocketTransport()</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<div class="lead">
+											<p>To comply with Config interface. Should be left as websocket transport.</p>
+										</div>
+									</div>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <a href="_textile_context.provider.html" class="tsd-signature-type">Provider</a></h4>
@@ -172,7 +193,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/context/src/index.ts#L141">context/src/index.ts:141</a></li>
+									<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/context/src/index.ts#L231">context/src/index.ts:231</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">any</span></h4>
@@ -189,7 +210,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/context/src/index.ts#L133">context/src/index.ts:133</a></li>
+									<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/context/src/index.ts#L223">context/src/index.ts:223</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">any</span></h4>
@@ -206,7 +227,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/context/src/index.ts#L137">context/src/index.ts:137</a></li>
+									<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/context/src/index.ts#L227">context/src/index.ts:227</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">any</span></h4>
@@ -227,7 +248,7 @@
 							<aside class="tsd-sources">
 								<p>Implementation of <a href="../interfaces/_textile_context.context.html">Context</a>.<a href="../interfaces/_textile_context.context.html#get">get</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/context/src/index.ts#L150">context/src/index.ts:150</a></li>
+									<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/context/src/index.ts#L240">context/src/index.ts:240</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -251,7 +272,7 @@
 							<aside class="tsd-sources">
 								<p>Implementation of <a href="../interfaces/_textile_context.context.html">Context</a>.<a href="../interfaces/_textile_context.context.html#set">set</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/context/src/index.ts#L145">context/src/index.ts:145</a></li>
+									<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/context/src/index.ts#L235">context/src/index.ts:235</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -278,7 +299,7 @@
 							<aside class="tsd-sources">
 								<p>Implementation of <a href="../interfaces/_textile_context.context.html">Context</a>.<a href="../interfaces/_textile_context.context.html#tojson">toJSON</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/context/src/index.ts#L205">context/src/index.ts:205</a></li>
+									<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/context/src/index.ts#L301">context/src/index.ts:301</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">context</span></h4>
@@ -296,7 +317,7 @@
 							<aside class="tsd-sources">
 								<p>Implementation of <a href="../interfaces/_textile_context.context.html">Context</a>.<a href="../interfaces/_textile_context.context.html#tometadata">toMetadata</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/context/src/index.ts#L215">context/src/index.ts:215</a></li>
+									<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/context/src/index.ts#L311">context/src/index.ts:311</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">BrowserHeaders</span></h4>
@@ -314,7 +335,7 @@
 							<aside class="tsd-sources">
 								<p>Implementation of <a href="../interfaces/_textile_context.context.html">Context</a>.<a href="../interfaces/_textile_context.context.html#withapikey">withAPIKey</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/context/src/index.ts#L184">context/src/index.ts:184</a></li>
+									<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/context/src/index.ts#L274">context/src/index.ts:274</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -337,7 +358,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/context/src/index.ts#L190">context/src/index.ts:190</a></li>
+									<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/context/src/index.ts#L280">context/src/index.ts:280</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -361,7 +382,7 @@
 							<aside class="tsd-sources">
 								<p>Implementation of <a href="../interfaces/_textile_context.context.html">Context</a>.<a href="../interfaces/_textile_context.context.html#withcontext">withContext</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/context/src/index.ts#L198">context/src/index.ts:198</a></li>
+									<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/context/src/index.ts#L294">context/src/index.ts:294</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -385,7 +406,7 @@
 							<aside class="tsd-sources">
 								<p>Implementation of <a href="../interfaces/_textile_context.context.html">Context</a>.<a href="../interfaces/_textile_context.context.html#withorg">withOrg</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/context/src/index.ts#L172">context/src/index.ts:172</a></li>
+									<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/context/src/index.ts#L262">context/src/index.ts:262</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -409,7 +430,7 @@
 							<aside class="tsd-sources">
 								<p>Implementation of <a href="../interfaces/_textile_context.context.html">Context</a>.<a href="../interfaces/_textile_context.context.html#withsession">withSession</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/context/src/index.ts#L154">context/src/index.ts:154</a></li>
+									<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/context/src/index.ts#L244">context/src/index.ts:244</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -433,7 +454,7 @@
 							<aside class="tsd-sources">
 								<p>Implementation of <a href="../interfaces/_textile_context.context.html">Context</a>.<a href="../interfaces/_textile_context.context.html#withthread">withThread</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/context/src/index.ts#L160">context/src/index.ts:160</a></li>
+									<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/context/src/index.ts#L250">context/src/index.ts:250</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -457,7 +478,7 @@
 							<aside class="tsd-sources">
 								<p>Implementation of <a href="../interfaces/_textile_context.context.html">Context</a>.<a href="../interfaces/_textile_context.context.html#withthreadname">withThreadName</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/context/src/index.ts#L166">context/src/index.ts:166</a></li>
+									<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/context/src/index.ts#L256">context/src/index.ts:256</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -481,7 +502,7 @@
 							<aside class="tsd-sources">
 								<p>Implementation of <a href="../interfaces/_textile_context.context.html">Context</a>.<a href="../interfaces/_textile_context.context.html#withtoken">withToken</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/context/src/index.ts#L178">context/src/index.ts:178</a></li>
+									<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/context/src/index.ts#L268">context/src/index.ts:268</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -505,7 +526,7 @@
 							<aside class="tsd-sources">
 								<p>Implementation of <a href="../interfaces/_textile_context.context.html">Context</a>.<a href="../interfaces/_textile_context.context.html#withuserkey">withUserKey</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/context/src/index.ts#L234">context/src/index.ts:234</a></li>
+									<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/context/src/index.ts#L288">context/src/index.ts:288</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -531,22 +552,39 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/context/src/index.ts#L219">context/src/index.ts:219</a></li>
+									<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/context/src/index.ts#L322">context/src/index.ts:322</a></li>
 								</ul>
 							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Import various Context API properties from JSON.</p>
+								</div>
+							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
 									<h5>json: <a href="../interfaces/_textile_context.contextkeys.html" class="tsd-signature-type">ContextKeys</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The JSON object.</p>
+									</div>
 								</li>
 								<li>
 									<h5><span class="tsd-flag ts-flagDefault value">Default value</span> host: <span class="tsd-signature-type">HostString</span><span class="tsd-signature-symbol"> =&nbsp;defaultHost</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>Optional host string.</p>
+									</div>
 								</li>
 								<li>
 									<h5><span class="tsd-flag ts-flagDefault value">Default value</span> debug: <span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> =&nbsp;false</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>Optional debug setting.</p>
+									</div>
 								</li>
 								<li>
 									<h5><span class="tsd-flag ts-flagDefault value">Default value</span> transport: <span class="tsd-signature-type">TransportFactory</span><span class="tsd-signature-symbol"> =&nbsp;grpc.WebsocketTransport()</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>Optional transport option.</p>
+									</div>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <a href="_textile_context.provider.html" class="tsd-signature-type">Provider</a></h4>

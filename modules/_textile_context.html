@@ -117,7 +117,7 @@
 					<div class="tsd-signature tsd-kind-icon">default<wbr>Host<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">HostString</span><span class="tsd-signature-symbol"> =&nbsp;&quot;https://api.textile.io:3447&quot;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/context/src/index.ts#L10">context/src/index.ts:10</a></li>
+							<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/context/src/index.ts#L13">context/src/index.ts:13</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -127,7 +127,7 @@
 					<div class="tsd-signature tsd-kind-icon">expiration<wbr>Error<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Error</span><span class="tsd-signature-symbol"> =&nbsp;new Error(&#x27;Context expired. Consider calling withUserKey or withAPISig to refresh.&#x27;,)</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/context/src/index.ts#L19">context/src/index.ts:19</a></li>
+							<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/context/src/index.ts#L33">context/src/index.ts:33</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -144,16 +144,34 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/context/src/index.ts#L23">context/src/index.ts:23</a></li>
+									<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/context/src/index.ts#L47">context/src/index.ts:47</a></li>
 								</ul>
 							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Generate an authorization signature and message.
+										By default, this will use a Date one minute from <code>Date.now</code> as the message. Subsequent calls to
+									the gRPC APIs will throw (or return an authorization error) if the message date has passed.</p>
+								</div>
+							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
 									<h5>secret: <span class="tsd-signature-type">string</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<div class="lead">
+											<p>The key secret to generate the signature. See KeyInfo for details.</p>
+										</div>
+									</div>
 								</li>
 								<li>
 									<h5><span class="tsd-flag ts-flagDefault value">Default value</span> date: <span class="tsd-signature-type">Date</span><span class="tsd-signature-symbol"> =&nbsp;new Date(Date.now() + 1000 * 60)</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<div class="lead">
+											<p>An optinal future Date to use as signature message. Once <code>date</code> has passed, this
+											authorization signature and message will expire. Defaults to one minute from <code>Date.now</code>.</p>
+										</div>
+									</div>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">&gt;</span></h4>

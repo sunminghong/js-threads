@@ -67,6 +67,13 @@
 <div class="container container-main">
 	<div class="row">
 		<div class="col-8 col-content">
+			<section class="tsd-panel tsd-comment">
+				<div class="tsd-comment tsd-typography">
+					<div class="lead">
+						<p>Interface describing the set of default context keys.</p>
+					</div>
+				</div>
+			</section>
 			<section class="tsd-panel tsd-hierarchy">
 				<h3>Hierarchy</h3>
 				<ul class="tsd-hierarchy">
@@ -80,7 +87,7 @@
 				<div class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">[</span>key: <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">]: </span><span class="tsd-signature-type">any</span></div>
 				<div class="tsd-comment tsd-typography">
 					<div class="lead">
-						<p>Extras</p>
+						<p>ContextKeys may also contain any number of additional custom keys.</p>
 					</div>
 				</div>
 			</section>
@@ -115,7 +122,7 @@
 					<div class="tsd-signature tsd-kind-icon">authorization<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/context/src/index.ts#L62">context/src/index.ts:62</a></li>
+							<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/context/src/index.ts#L89">context/src/index.ts:89</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -130,7 +137,7 @@
 					<div class="tsd-signature tsd-kind-icon">debug<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">false</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">true</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/context/src/index.ts#L86">context/src/index.ts:86</a></li>
+							<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/context/src/index.ts#L114">context/src/index.ts:114</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -145,12 +152,12 @@
 					<div class="tsd-signature tsd-kind-icon">host<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">HostString</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/context/src/index.ts#L77">context/src/index.ts:77</a></li>
+							<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/context/src/index.ts#L104">context/src/index.ts:104</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
-							<p>The service host address/url. Defaults to <a href="https://hub.textile.io">https://hub.textile.io</a>.</p>
+							<p>The service host address/url. Defaults to <a href="https://api.textile.io">https://api.textile.io</a>.</p>
 						</div>
 					</div>
 				</section>
@@ -160,7 +167,7 @@
 					<div class="tsd-signature tsd-kind-icon">transport<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">grpc.TransportFactory</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/context/src/index.ts#L81">context/src/index.ts:81</a></li>
+							<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/context/src/index.ts#L109">context/src/index.ts:109</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -175,12 +182,12 @@
 					<div class="tsd-signature tsd-kind-icon">x-<wbr>textile-<wbr>api-<wbr>key<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/context/src/index.ts#L57">context/src/index.ts:57</a></li>
+							<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/context/src/index.ts#L84">context/src/index.ts:84</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
-							<p>API key. Used for user authentication.</p>
+							<p>API key. Used for user group/account authentication.</p>
 						</div>
 					</div>
 				</section>
@@ -190,7 +197,7 @@
 					<div class="tsd-signature tsd-kind-icon">x-<wbr>textile-<wbr>api-<wbr>sig<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/context/src/index.ts#L67">context/src/index.ts:67</a></li>
+							<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/context/src/index.ts#L94">context/src/index.ts:94</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -205,7 +212,7 @@
 					<div class="tsd-signature tsd-kind-icon">x-<wbr>textile-<wbr>api-<wbr>sig-<wbr>msg<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/context/src/index.ts#L72">context/src/index.ts:72</a></li>
+							<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/context/src/index.ts#L99">context/src/index.ts:99</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -220,7 +227,7 @@
 					<div class="tsd-signature tsd-kind-icon">x-<wbr>textile-<wbr>org<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/context/src/index.ts#L52">context/src/index.ts:52</a></li>
+							<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/context/src/index.ts#L79">context/src/index.ts:79</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -235,7 +242,7 @@
 					<div class="tsd-signature tsd-kind-icon">x-<wbr>textile-<wbr>session<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/context/src/index.ts#L47">context/src/index.ts:47</a></li>
+							<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/context/src/index.ts#L74">context/src/index.ts:74</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -250,12 +257,12 @@
 					<div class="tsd-signature tsd-kind-icon">x-<wbr>textile-<wbr>thread<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/context/src/index.ts#L43">context/src/index.ts:43</a></li>
+							<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/context/src/index.ts#L70">context/src/index.ts:70</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
-							<p>Thread ID as a string. Should be generated with <code>ThreadID.toString()</code> method.</p>
+							<p>ThreadID as a string. Should be generated with <code>ThreadID.toString()</code> method.</p>
 						</div>
 					</div>
 				</section>
@@ -265,12 +272,12 @@
 					<div class="tsd-signature tsd-kind-icon">x-<wbr>textile-<wbr>thread-<wbr>name<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/context/src/index.ts#L39">context/src/index.ts:39</a></li>
+							<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/context/src/index.ts#L66">context/src/index.ts:66</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
-							<p>Thread name. Specifies a mapping between human-readable name and a Thread ID.</p>
+							<p>Thread name. Specifies a mapping between human-readable name and a ThreadID.</p>
 						</div>
 					</div>
 				</section>
