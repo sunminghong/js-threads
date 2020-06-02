@@ -72,7 +72,8 @@
 					<div class="lead">
 						<p>Client is a web-gRPC wrapper client for communicating with a webgRPC-enabled Textile server.
 							This client library can be used to interact with a local or remote Textile gRPC-service
-						It is a wrapper around Textile&#39;s &#39;DB&#39; API, which is defined here: <a href="https://github.com/textileio/go-threads/blob/master/api/pb/api.proto">https://github.com/textileio/go-threads/blob/master/api/pb/api.proto</a>.</p>
+							It is a wrapper around Textile&#39;s &#39;DB&#39; API, which is defined here:
+						<a href="https://github.com/textileio/go-threads/blob/master/api/pb/api.proto">https://github.com/textileio/go-threads/blob/master/api/pb/api.proto</a>.</p>
 					</div>
 				</div>
 			</section>
@@ -107,18 +108,24 @@
 							<ul class="tsd-index-list">
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_textile_threads_client.client.html#create" class="tsd-kind-icon">create</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_textile_threads_client.client.html#delete" class="tsd-kind-icon">delete</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_textile_threads_client.client.html#deletecollection" class="tsd-kind-icon">delete<wbr>Collection</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_textile_threads_client.client.html#deletedb" class="tsd-kind-icon">deleteDB</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter"><a href="_textile_threads_client.client.html#find" class="tsd-kind-icon">find</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter"><a href="_textile_threads_client.client.html#findbyid" class="tsd-kind-icon">find<wbr>ByID</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_textile_threads_client.client.html#getcollectionindexes" class="tsd-kind-icon">get<wbr>Collection<wbr>Indexes</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_textile_threads_client.client.html#getdbinfo" class="tsd-kind-icon">getDBInfo</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_textile_threads_client.client.html#gettoken" class="tsd-kind-icon">get<wbr>Token</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_textile_threads_client.client.html#gettokenchallenge" class="tsd-kind-icon">get<wbr>Token<wbr>Challenge</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_textile_threads_client.client.html#has" class="tsd-kind-icon">has</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_textile_threads_client.client.html#listdbs" class="tsd-kind-icon">listDBs</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter"><a href="_textile_threads_client.client.html#listen" class="tsd-kind-icon">listen</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_textile_threads_client.client.html#newcollection" class="tsd-kind-icon">new<wbr>Collection</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_textile_threads_client.client.html#newcollectionfromobject" class="tsd-kind-icon">new<wbr>Collection<wbr>From<wbr>Object</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_textile_threads_client.client.html#newdb" class="tsd-kind-icon">newDB</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_textile_threads_client.client.html#newdbfromaddr" class="tsd-kind-icon">newDBFrom<wbr>Addr</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_textile_threads_client.client.html#readtransaction" class="tsd-kind-icon">read<wbr>Transaction</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_textile_threads_client.client.html#save" class="tsd-kind-icon">save</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_textile_threads_client.client.html#updatecollection" class="tsd-kind-icon">update<wbr>Collection</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_textile_threads_client.client.html#writetransaction" class="tsd-kind-icon">write<wbr>Transaction</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-static"><a href="_textile_threads_client.client.html#randomidentity" class="tsd-kind-icon">random<wbr>Identity</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-static"><a href="_textile_threads_client.client.html#withuserauth" class="tsd-kind-icon">with<wbr>User<wbr>Auth</a></li>
@@ -139,7 +146,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/client/src/index.ts#L35">client/src/index.ts:35</a></li>
+									<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/client/src/index.ts#L42">client/src/index.ts:42</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -171,7 +178,7 @@
 					<div class="tsd-signature tsd-kind-icon">context<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">ContextInterface</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/client/src/index.ts#L40">client/src/index.ts:40</a></li>
+							<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/client/src/index.ts#L47">client/src/index.ts:47</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -186,7 +193,7 @@
 					<div class="tsd-signature tsd-kind-icon">rpc<wbr>Options<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">RpcOptions</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/client/src/index.ts#L35">client/src/index.ts:35</a></li>
+							<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/client/src/index.ts#L42">client/src/index.ts:42</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -196,7 +203,7 @@
 					<div class="tsd-signature tsd-kind-icon">service<wbr>Host<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/client/src/index.ts#L34">client/src/index.ts:34</a></li>
+							<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/client/src/index.ts#L41">client/src/index.ts:41</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -213,7 +220,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/client/src/index.ts#L228">client/src/index.ts:228</a></li>
+									<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/client/src/index.ts#L355">client/src/index.ts:355</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -256,7 +263,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/client/src/index.ts#L269">client/src/index.ts:269</a></li>
+									<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/client/src/index.ts#L396">client/src/index.ts:396</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -289,6 +296,74 @@
 						</li>
 					</ul>
 				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="deletecollection" class="tsd-anchor"></a>
+					<h3>delete<wbr>Collection</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">delete<wbr>Collection<span class="tsd-signature-symbol">(</span>dbID<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">ThreadID</span>, name<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/client/src/index.ts#L273">client/src/index.ts:273</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>deleteCollection deletes an existing collection.</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>dbID: <span class="tsd-signature-type">ThreadID</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>the ID of the database.</p>
+									</div>
+								</li>
+								<li>
+									<h5>name: <span class="tsd-signature-type">string</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The human-readable name for the collection.</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="deletedb" class="tsd-anchor"></a>
+					<h3>deleteDB</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">deleteDB<span class="tsd-signature-symbol">(</span>dbID<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">ThreadID</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/client/src/index.ts#L164">client/src/index.ts:164</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Deletes an entire DB.</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>dbID: <span class="tsd-signature-type">ThreadID</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>the ID of the database.</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></h4>
+						</li>
+					</ul>
+				</section>
 				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter">
 					<a name="find" class="tsd-anchor"></a>
 					<h3>find</h3>
@@ -299,7 +374,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/client/src/index.ts#L299">client/src/index.ts:299</a></li>
+									<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/client/src/index.ts#L426">client/src/index.ts:426</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -348,7 +423,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/client/src/index.ts#L320">client/src/index.ts:320</a></li>
+									<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/client/src/index.ts#L447">client/src/index.ts:447</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -388,6 +463,43 @@
 					</ul>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="getcollectionindexes" class="tsd-anchor"></a>
+					<h3>get<wbr>Collection<wbr>Indexes</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Collection<wbr>Indexes<span class="tsd-signature-symbol">(</span>dbID<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">ThreadID</span>, name<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/client/src/index.ts#L286">client/src/index.ts:286</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>getCollectionIndexes returns an existing collection&#39;s indexes.</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>dbID: <span class="tsd-signature-type">ThreadID</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>the ID of the database.</p>
+									</div>
+								</li>
+								<li>
+									<h5>name: <span class="tsd-signature-type">string</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The human-readable name for the collection.</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
 					<a name="getdbinfo" class="tsd-anchor"></a>
 					<h3>getDBInfo</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
@@ -397,7 +509,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/client/src/index.ts#L205">client/src/index.ts:205</a></li>
+									<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/client/src/index.ts#L332">client/src/index.ts:332</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -428,7 +540,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/client/src/index.ts#L75">client/src/index.ts:75</a></li>
+									<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/client/src/index.ts#L82">client/src/index.ts:82</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -468,7 +580,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/client/src/index.ts#L97">client/src/index.ts:97</a></li>
+									<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/client/src/index.ts#L104">client/src/index.ts:104</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -542,7 +654,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/client/src/index.ts#L284">client/src/index.ts:284</a></li>
+									<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/client/src/index.ts#L411">client/src/index.ts:411</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -575,6 +687,28 @@
 						</li>
 					</ul>
 				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="listdbs" class="tsd-anchor"></a>
+					<h3>listDBs</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">listDBs<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/client/src/index.ts#L174">client/src/index.ts:174</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Lists all known DBs.</p>
+								</div>
+							</div>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">&gt;</span></h4>
+						</li>
+					</ul>
+				</section>
 				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter">
 					<a name="listen" class="tsd-anchor"></a>
 					<h3>listen</h3>
@@ -585,7 +719,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/client/src/index.ts#L367">client/src/index.ts:367</a></li>
+									<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/client/src/index.ts#L494">client/src/index.ts:494</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -662,19 +796,19 @@
 					<a name="newcollection" class="tsd-anchor"></a>
 					<h3>new<wbr>Collection</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">new<wbr>Collection<span class="tsd-signature-symbol">(</span>dbID<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">ThreadID</span>, name<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, schema<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></li>
+						<li class="tsd-signature tsd-kind-icon">new<wbr>Collection<span class="tsd-signature-symbol">(</span>dbID<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">ThreadID</span>, name<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, schema<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span>, indexes<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">pb.Index.AsObject</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/client/src/index.ts#L159">client/src/index.ts:159</a></li>
+									<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/client/src/index.ts#L193">client/src/index.ts:193</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
 								<div class="lead">
-									<p>newCollection registers a new model schema under the given name on the remote node.
-									The schema must be a valid json-schema.org schema, and can be a JSON string or Javascript object.</p>
+									<p>newCollection registers a new collection schema under the given name.
+									The schema must be a valid json-schema.org schema, and can be a JSON string or object.</p>
 								</div>
 							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -688,13 +822,69 @@
 								<li>
 									<h5>name: <span class="tsd-signature-type">string</span></h5>
 									<div class="tsd-comment tsd-typography">
-										<p>The human-readable name for the model.</p>
+										<p>The human-readable name for the collection.</p>
 									</div>
 								</li>
 								<li>
 									<h5>schema: <span class="tsd-signature-type">any</span></h5>
 									<div class="tsd-comment tsd-typography">
 										<p>The actual json-schema.org compatible schema object.</p>
+									</div>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> indexes: <span class="tsd-signature-type">pb.Index.AsObject</span><span class="tsd-signature-symbol">[]</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>A set of index definitions for indexing instance fields.</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="newcollectionfromobject" class="tsd-anchor"></a>
+					<h3>new<wbr>Collection<wbr>From<wbr>Object</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">new<wbr>Collection<wbr>From<wbr>Object<span class="tsd-signature-symbol">(</span>dbID<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">ThreadID</span>, name<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, obj<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span>, indexes<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">pb.Index.AsObject</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/client/src/index.ts#L225">client/src/index.ts:225</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>newCollectionFromObject creates and registers a new collection under the given name.
+									The input object must be serializable to JSON, and contain only json-schema.org types.</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>dbID: <span class="tsd-signature-type">ThreadID</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>the ID of the database</p>
+									</div>
+								</li>
+								<li>
+									<h5>name: <span class="tsd-signature-type">string</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The human-readable name for the collection.</p>
+									</div>
+								</li>
+								<li>
+									<h5>obj: <span class="tsd-signature-type">any</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The actual object to attempt to extract a schema from.</p>
+									</div>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> indexes: <span class="tsd-signature-type">pb.Index.AsObject</span><span class="tsd-signature-symbol">[]</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>A set of index definitions for indexing instance fields.</p>
 									</div>
 								</li>
 							</ul>
@@ -706,13 +896,13 @@
 					<a name="newdb" class="tsd-anchor"></a>
 					<h3>newDB</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">newDB<span class="tsd-signature-symbol">(</span>dbID<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">ThreadID</span>, ctx<span class="tsd-signature-symbol">?: </span><a href="../interfaces/_textile_context.contextinterface.html" class="tsd-signature-type">ContextInterface</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">ThreadID</span><span class="tsd-signature-symbol">&gt;</span></li>
+						<li class="tsd-signature tsd-kind-icon">newDB<span class="tsd-signature-symbol">(</span>dbID<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">ThreadID</span>, name<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">ThreadID</span><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/client/src/index.ts#L143">client/src/index.ts:143</a></li>
+									<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/client/src/index.ts#L150">client/src/index.ts:150</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -729,10 +919,7 @@
 									</div>
 								</li>
 								<li>
-									<h5><span class="tsd-flag ts-flagOptional">Optional</span> ctx: <a href="../interfaces/_textile_context.contextinterface.html" class="tsd-signature-type">ContextInterface</a></h5>
-									<div class="tsd-comment tsd-typography">
-										<p>Context object containing web-gRPC headers and settings.</p>
-									</div>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> name: <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span></h5>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">ThreadID</span><span class="tsd-signature-symbol">&gt;</span></h4>
@@ -749,7 +936,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/client/src/index.ts#L181">client/src/index.ts:181</a></li>
+									<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/client/src/index.ts#L308">client/src/index.ts:308</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -797,7 +984,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/client/src/index.ts#L337">client/src/index.ts:337</a></li>
+									<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/client/src/index.ts#L464">client/src/index.ts:464</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -834,7 +1021,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/client/src/index.ts#L247">client/src/index.ts:247</a></li>
+									<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/client/src/index.ts#L374">client/src/index.ts:374</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -868,6 +1055,55 @@
 					</ul>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="updatecollection" class="tsd-anchor"></a>
+					<h3>update<wbr>Collection</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">update<wbr>Collection<span class="tsd-signature-symbol">(</span>dbID<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">ThreadID</span>, name<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, schema<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span>, indexes<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">pb.Index.AsObject</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/client/src/index.ts#L243">client/src/index.ts:243</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>updateCollection updates an existing collection.
+									Currenrly, updates can include name and schema.</p>
+								</div>
+								<dl class="tsd-comment-tags">
+									<dt>todo</dt>
+									<dd><p>Allow update of indexing information.</p>
+									</dd>
+								</dl>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>dbID: <span class="tsd-signature-type">ThreadID</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>the ID of the database</p>
+									</div>
+								</li>
+								<li>
+									<h5>name: <span class="tsd-signature-type">string</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The human-readable name for the collection.</p>
+									</div>
+								</li>
+								<li>
+									<h5>schema: <span class="tsd-signature-type">any</span></h5>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> indexes: <span class="tsd-signature-type">pb.Index.AsObject</span><span class="tsd-signature-symbol">[]</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
 					<a name="writetransaction" class="tsd-anchor"></a>
 					<h3>write<wbr>Transaction</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
@@ -877,7 +1113,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/client/src/index.ts#L351">client/src/index.ts:351</a></li>
+									<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/client/src/index.ts#L478">client/src/index.ts:478</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -914,7 +1150,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/client/src/index.ts#L63">client/src/index.ts:63</a></li>
+									<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/client/src/index.ts#L70">client/src/index.ts:70</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -936,7 +1172,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/client/src/index.ts#L55">client/src/index.ts:55</a></li>
+									<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/client/src/index.ts#L62">client/src/index.ts:62</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -1032,11 +1268,20 @@
 							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="_textile_threads_client.client.html#delete" class="tsd-kind-icon">delete</a>
 							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="_textile_threads_client.client.html#deletecollection" class="tsd-kind-icon">delete<wbr>Collection</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="_textile_threads_client.client.html#deletedb" class="tsd-kind-icon">deleteDB</a>
+							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter">
 								<a href="_textile_threads_client.client.html#find" class="tsd-kind-icon">find</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter">
 								<a href="_textile_threads_client.client.html#findbyid" class="tsd-kind-icon">find<wbr>ByID</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="_textile_threads_client.client.html#getcollectionindexes" class="tsd-kind-icon">get<wbr>Collection<wbr>Indexes</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="_textile_threads_client.client.html#getdbinfo" class="tsd-kind-icon">getDBInfo</a>
@@ -1050,11 +1295,17 @@
 							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="_textile_threads_client.client.html#has" class="tsd-kind-icon">has</a>
 							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="_textile_threads_client.client.html#listdbs" class="tsd-kind-icon">listDBs</a>
+							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter">
 								<a href="_textile_threads_client.client.html#listen" class="tsd-kind-icon">listen</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="_textile_threads_client.client.html#newcollection" class="tsd-kind-icon">new<wbr>Collection</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="_textile_threads_client.client.html#newcollectionfromobject" class="tsd-kind-icon">new<wbr>Collection<wbr>From<wbr>Object</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="_textile_threads_client.client.html#newdb" class="tsd-kind-icon">newDB</a>
@@ -1067,6 +1318,9 @@
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="_textile_threads_client.client.html#save" class="tsd-kind-icon">save</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="_textile_threads_client.client.html#updatecollection" class="tsd-kind-icon">update<wbr>Collection</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="_textile_threads_client.client.html#writetransaction" class="tsd-kind-icon">write<wbr>Transaction</a>
@@ -1092,6 +1346,9 @@
 					</li>
 					<li class=" tsd-kind-class tsd-parent-kind-module">
 						<a href="_textile_threads_client.writetransaction.html" class="tsd-kind-icon">Write<wbr>Transaction</a>
+					</li>
+					<li class=" tsd-kind-interface tsd-parent-kind-module">
+						<a href="../interfaces/_textile_threads_client.collectionconfig.html" class="tsd-kind-icon">Collection<wbr>Config</a>
 					</li>
 					<li class=" tsd-kind-interface tsd-parent-kind-module">
 						<a href="../interfaces/_textile_threads_client.criterionjson.html" class="tsd-kind-icon">CriterionJSON</a>
