@@ -396,7 +396,7 @@
 					<a name="createthread" class="tsd-anchor"></a>
 					<h3>create<wbr>Thread</h3>
 					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module">
-						<li class="tsd-signature tsd-kind-icon">create<wbr>Thread<span class="tsd-signature-symbol">(</span>network<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Network</span>, id<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">ThreadID</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">ThreadInfo</span><span class="tsd-signature-symbol">&gt;</span></li>
+						<li class="tsd-signature tsd-kind-icon">create<wbr>Thread<span class="tsd-signature-symbol">(</span>network<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Network</span>, id<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">ThreadID</span>, key<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">PrivateKey</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">PublicKey</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">ThreadInfo</span><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
@@ -412,6 +412,9 @@
 								</li>
 								<li>
 									<h5><span class="tsd-flag ts-flagDefault value">Default value</span> id: <span class="tsd-signature-type">ThreadID</span><span class="tsd-signature-symbol"> =&nbsp;ThreadID.fromRandom(ThreadID.Variant.Raw, 32)</span></h5>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> key: <span class="tsd-signature-type">PrivateKey</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">PublicKey</span></h5>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">ThreadInfo</span><span class="tsd-signature-symbol">&gt;</span></h4>
