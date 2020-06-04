@@ -215,7 +215,7 @@
 					<a name="create" class="tsd-anchor"></a>
 					<h3>create</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">create<span class="tsd-signature-symbol">(</span>dbID<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">ThreadID</span>, collectionName<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, values<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></li>
+						<li class="tsd-signature tsd-kind-icon">create<span class="tsd-signature-symbol">(</span>threadID<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">ThreadID</span>, collectionName<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, values<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
@@ -232,7 +232,7 @@
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>dbID: <span class="tsd-signature-type">ThreadID</span></h5>
+									<h5>threadID: <span class="tsd-signature-type">ThreadID</span></h5>
 									<div class="tsd-comment tsd-typography">
 										<p>the ID of the database</p>
 									</div>
@@ -258,7 +258,7 @@
 					<a name="delete" class="tsd-anchor"></a>
 					<h3>delete</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">delete<span class="tsd-signature-symbol">(</span>dbID<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">ThreadID</span>, collectionName<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, IDs<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></li>
+						<li class="tsd-signature tsd-kind-icon">delete<span class="tsd-signature-symbol">(</span>threadID<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">ThreadID</span>, collectionName<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, IDs<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
@@ -275,7 +275,7 @@
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>dbID: <span class="tsd-signature-type">ThreadID</span></h5>
+									<h5>threadID: <span class="tsd-signature-type">ThreadID</span></h5>
 									<div class="tsd-comment tsd-typography">
 										<p>the ID of the database</p>
 									</div>
@@ -301,7 +301,7 @@
 					<a name="deletecollection" class="tsd-anchor"></a>
 					<h3>delete<wbr>Collection</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">delete<wbr>Collection<span class="tsd-signature-symbol">(</span>dbID<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">ThreadID</span>, name<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></li>
+						<li class="tsd-signature tsd-kind-icon">delete<wbr>Collection<span class="tsd-signature-symbol">(</span>threadID<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">ThreadID</span>, name<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
@@ -318,7 +318,7 @@
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>dbID: <span class="tsd-signature-type">ThreadID</span></h5>
+									<h5>threadID: <span class="tsd-signature-type">ThreadID</span></h5>
 									<div class="tsd-comment tsd-typography">
 										<p>the ID of the database.</p>
 									</div>
@@ -338,7 +338,7 @@
 					<a name="deletedb" class="tsd-anchor"></a>
 					<h3>deleteDB</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">deleteDB<span class="tsd-signature-symbol">(</span>dbID<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">ThreadID</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></li>
+						<li class="tsd-signature tsd-kind-icon">deleteDB<span class="tsd-signature-symbol">(</span>threadID<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">ThreadID</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
@@ -355,7 +355,7 @@
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>dbID: <span class="tsd-signature-type">ThreadID</span></h5>
+									<h5>threadID: <span class="tsd-signature-type">ThreadID</span></h5>
 									<div class="tsd-comment tsd-typography">
 										<p>the ID of the database.</p>
 									</div>
@@ -369,7 +369,7 @@
 					<a name="find" class="tsd-anchor"></a>
 					<h3>find</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter">
-						<li class="tsd-signature tsd-kind-icon">find&lt;T&gt;<span class="tsd-signature-symbol">(</span>dbID<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">ThreadID</span>, collectionName<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, query<span class="tsd-signature-symbol">: </span><a href="../interfaces/_textile_threads_client.queryjson.html" class="tsd-signature-type">QueryJSON</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/_textile_threads_client.instancelist.html" class="tsd-signature-type">InstanceList</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span></li>
+						<li class="tsd-signature tsd-kind-icon">find&lt;T&gt;<span class="tsd-signature-symbol">(</span>threadID<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">ThreadID</span>, collectionName<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, query<span class="tsd-signature-symbol">: </span><a href="../interfaces/_textile_threads_client.queryjson.html" class="tsd-signature-type">QueryJSON</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/_textile_threads_client.instancelist.html" class="tsd-signature-type">InstanceList</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
@@ -392,7 +392,7 @@
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>dbID: <span class="tsd-signature-type">ThreadID</span></h5>
+									<h5>threadID: <span class="tsd-signature-type">ThreadID</span></h5>
 									<div class="tsd-comment tsd-typography">
 										<p>the ID of the database</p>
 									</div>
@@ -418,7 +418,7 @@
 					<a name="findbyid" class="tsd-anchor"></a>
 					<h3>find<wbr>ByID</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter">
-						<li class="tsd-signature tsd-kind-icon">find<wbr>ByID&lt;T&gt;<span class="tsd-signature-symbol">(</span>dbID<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">ThreadID</span>, collectionName<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, ID<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/_textile_threads_client.instance.html" class="tsd-signature-type">Instance</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span></li>
+						<li class="tsd-signature tsd-kind-icon">find<wbr>ByID&lt;T&gt;<span class="tsd-signature-symbol">(</span>threadID<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">ThreadID</span>, collectionName<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, ID<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/_textile_threads_client.instance.html" class="tsd-signature-type">Instance</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
@@ -441,7 +441,7 @@
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>dbID: <span class="tsd-signature-type">ThreadID</span></h5>
+									<h5>threadID: <span class="tsd-signature-type">ThreadID</span></h5>
 									<div class="tsd-comment tsd-typography">
 										<p>the ID of the database</p>
 									</div>
@@ -467,7 +467,7 @@
 					<a name="getcollectionindexes" class="tsd-anchor"></a>
 					<h3>get<wbr>Collection<wbr>Indexes</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">get<wbr>Collection<wbr>Indexes<span class="tsd-signature-symbol">(</span>dbID<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">ThreadID</span>, name<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></li>
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Collection<wbr>Indexes<span class="tsd-signature-symbol">(</span>threadID<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">ThreadID</span>, name<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
@@ -484,7 +484,7 @@
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>dbID: <span class="tsd-signature-type">ThreadID</span></h5>
+									<h5>threadID: <span class="tsd-signature-type">ThreadID</span></h5>
 									<div class="tsd-comment tsd-typography">
 										<p>the ID of the database.</p>
 									</div>
@@ -504,7 +504,7 @@
 					<a name="getdbinfo" class="tsd-anchor"></a>
 					<h3>getDBInfo</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">getDBInfo<span class="tsd-signature-symbol">(</span>dbID<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">ThreadID</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></li>
+						<li class="tsd-signature tsd-kind-icon">getDBInfo<span class="tsd-signature-symbol">(</span>threadID<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">ThreadID</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
@@ -521,7 +521,7 @@
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>dbID: <span class="tsd-signature-type">ThreadID</span></h5>
+									<h5>threadID: <span class="tsd-signature-type">ThreadID</span></h5>
 									<div class="tsd-comment tsd-typography">
 										<p>the ID of the database</p>
 									</div>
@@ -649,7 +649,7 @@
 					<a name="has" class="tsd-anchor"></a>
 					<h3>has</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">has<span class="tsd-signature-symbol">(</span>dbID<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">ThreadID</span>, collectionName<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, IDs<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">&gt;</span></li>
+						<li class="tsd-signature tsd-kind-icon">has<span class="tsd-signature-symbol">(</span>threadID<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">ThreadID</span>, collectionName<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, IDs<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
@@ -666,7 +666,7 @@
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>dbID: <span class="tsd-signature-type">ThreadID</span></h5>
+									<h5>threadID: <span class="tsd-signature-type">ThreadID</span></h5>
 									<div class="tsd-comment tsd-typography">
 										<p>the ID of the database</p>
 									</div>
@@ -714,7 +714,7 @@
 					<a name="listen" class="tsd-anchor"></a>
 					<h3>listen</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter">
-						<li class="tsd-signature tsd-kind-icon">listen&lt;T&gt;<span class="tsd-signature-symbol">(</span>dbID<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">ThreadID</span>, filters<span class="tsd-signature-symbol">: </span><a href="../interfaces/_textile_threads_client.filter.html" class="tsd-signature-type">Filter</a><span class="tsd-signature-symbol">[]</span>, callback<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">function</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">function</span></li>
+						<li class="tsd-signature tsd-kind-icon">listen&lt;T&gt;<span class="tsd-signature-symbol">(</span>threadID<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">ThreadID</span>, filters<span class="tsd-signature-symbol">: </span><a href="../interfaces/_textile_threads_client.filter.html" class="tsd-signature-type">Filter</a><span class="tsd-signature-symbol">[]</span>, callback<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">function</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">function</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
@@ -738,7 +738,7 @@
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>dbID: <span class="tsd-signature-type">ThreadID</span></h5>
+									<h5>threadID: <span class="tsd-signature-type">ThreadID</span></h5>
 									<div class="tsd-comment tsd-typography">
 										<p>the ID of the database</p>
 									</div>
@@ -797,7 +797,7 @@
 					<a name="newcollection" class="tsd-anchor"></a>
 					<h3>new<wbr>Collection</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">new<wbr>Collection<span class="tsd-signature-symbol">(</span>dbID<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">ThreadID</span>, name<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, schema<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span>, indexes<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">pb.Index.AsObject</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></li>
+						<li class="tsd-signature tsd-kind-icon">new<wbr>Collection<span class="tsd-signature-symbol">(</span>threadID<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">ThreadID</span>, name<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, schema<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span>, indexes<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">pb.Index.AsObject</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
@@ -815,7 +815,7 @@
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>dbID: <span class="tsd-signature-type">ThreadID</span></h5>
+									<h5>threadID: <span class="tsd-signature-type">ThreadID</span></h5>
 									<div class="tsd-comment tsd-typography">
 										<p>the ID of the database</p>
 									</div>
@@ -847,7 +847,7 @@
 					<a name="newcollectionfromobject" class="tsd-anchor"></a>
 					<h3>new<wbr>Collection<wbr>From<wbr>Object</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">new<wbr>Collection<wbr>From<wbr>Object<span class="tsd-signature-symbol">(</span>dbID<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">ThreadID</span>, name<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, obj<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span>, indexes<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">pb.Index.AsObject</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></li>
+						<li class="tsd-signature tsd-kind-icon">new<wbr>Collection<wbr>From<wbr>Object<span class="tsd-signature-symbol">(</span>threadID<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">ThreadID</span>, name<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, obj<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span>, indexes<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">pb.Index.AsObject</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
@@ -865,7 +865,7 @@
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>dbID: <span class="tsd-signature-type">ThreadID</span></h5>
+									<h5>threadID: <span class="tsd-signature-type">ThreadID</span></h5>
 									<div class="tsd-comment tsd-typography">
 										<p>the ID of the database</p>
 									</div>
@@ -897,7 +897,7 @@
 					<a name="newdb" class="tsd-anchor"></a>
 					<h3>newDB</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">newDB<span class="tsd-signature-symbol">(</span>dbID<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">ThreadID</span>, name<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">ThreadID</span><span class="tsd-signature-symbol">&gt;</span></li>
+						<li class="tsd-signature tsd-kind-icon">newDB<span class="tsd-signature-symbol">(</span>threadID<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">ThreadID</span>, name<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">ThreadID</span><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
@@ -914,13 +914,16 @@
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5><span class="tsd-flag ts-flagOptional">Optional</span> dbID: <span class="tsd-signature-type">ThreadID</span></h5>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> threadID: <span class="tsd-signature-type">ThreadID</span></h5>
 									<div class="tsd-comment tsd-typography">
 										<p>the ID of the database</p>
 									</div>
 								</li>
 								<li>
 									<h5><span class="tsd-flag ts-flagOptional">Optional</span> name: <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The human-readable name for the database</p>
+									</div>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">ThreadID</span><span class="tsd-signature-symbol">&gt;</span></h4>
@@ -979,7 +982,7 @@
 					<a name="readtransaction" class="tsd-anchor"></a>
 					<h3>read<wbr>Transaction</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">read<wbr>Transaction<span class="tsd-signature-symbol">(</span>dbID<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">ThreadID</span>, collectionName<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="_textile_threads_client.readtransaction.html" class="tsd-signature-type">ReadTransaction</a></li>
+						<li class="tsd-signature tsd-kind-icon">read<wbr>Transaction<span class="tsd-signature-symbol">(</span>threadID<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">ThreadID</span>, collectionName<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="_textile_threads_client.readtransaction.html" class="tsd-signature-type">ReadTransaction</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
@@ -996,7 +999,7 @@
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>dbID: <span class="tsd-signature-type">ThreadID</span></h5>
+									<h5>threadID: <span class="tsd-signature-type">ThreadID</span></h5>
 									<div class="tsd-comment tsd-typography">
 										<p>the ID of the database</p>
 									</div>
@@ -1016,7 +1019,7 @@
 					<a name="save" class="tsd-anchor"></a>
 					<h3>save</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">save<span class="tsd-signature-symbol">(</span>dbID<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">ThreadID</span>, collectionName<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, values<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></li>
+						<li class="tsd-signature tsd-kind-icon">save<span class="tsd-signature-symbol">(</span>threadID<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">ThreadID</span>, collectionName<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, values<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
@@ -1033,7 +1036,7 @@
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>dbID: <span class="tsd-signature-type">ThreadID</span></h5>
+									<h5>threadID: <span class="tsd-signature-type">ThreadID</span></h5>
 									<div class="tsd-comment tsd-typography">
 										<p>the ID of the database</p>
 									</div>
@@ -1059,7 +1062,7 @@
 					<a name="updatecollection" class="tsd-anchor"></a>
 					<h3>update<wbr>Collection</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">update<wbr>Collection<span class="tsd-signature-symbol">(</span>dbID<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">ThreadID</span>, name<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, schema<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span>, indexes<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">pb.Index.AsObject</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></li>
+						<li class="tsd-signature tsd-kind-icon">update<wbr>Collection<span class="tsd-signature-symbol">(</span>threadID<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">ThreadID</span>, name<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, schema<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span>, indexes<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">pb.Index.AsObject</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
@@ -1082,7 +1085,7 @@
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>dbID: <span class="tsd-signature-type">ThreadID</span></h5>
+									<h5>threadID: <span class="tsd-signature-type">ThreadID</span></h5>
 									<div class="tsd-comment tsd-typography">
 										<p>the ID of the database</p>
 									</div>
@@ -1108,7 +1111,7 @@
 					<a name="writetransaction" class="tsd-anchor"></a>
 					<h3>write<wbr>Transaction</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">write<wbr>Transaction<span class="tsd-signature-symbol">(</span>dbID<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">ThreadID</span>, collectionName<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="_textile_threads_client.writetransaction.html" class="tsd-signature-type">WriteTransaction</a></li>
+						<li class="tsd-signature tsd-kind-icon">write<wbr>Transaction<span class="tsd-signature-symbol">(</span>threadID<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">ThreadID</span>, collectionName<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="_textile_threads_client.writetransaction.html" class="tsd-signature-type">WriteTransaction</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
@@ -1125,7 +1128,7 @@
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>dbID: <span class="tsd-signature-type">ThreadID</span></h5>
+									<h5>threadID: <span class="tsd-signature-type">ThreadID</span></h5>
 									<div class="tsd-comment tsd-typography">
 										<p>the ID of the database</p>
 									</div>
