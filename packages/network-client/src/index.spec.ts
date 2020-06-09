@@ -37,12 +37,11 @@ function threadAddr(hostAddr: Multiaddr, hostID: PeerId, info: ThreadInfo) {
 
 describe('Network Client...', () => {
   let client: Client
-  let token: string
   let identity: Identity
   before(async () => {
     client = new Client(new Context(proxyAddr1))
     identity = await Libp2pCryptoIdentity.fromRandom()
-    token = await client.getToken(identity)
+    await client.getToken(identity)
   })
   describe('Basic...', () => {
     it('should return a remote host peer id', async () => {
@@ -67,7 +66,7 @@ describe('Network Client...', () => {
       const client2 = new Client(new Context(proxyAddr2))
       // Create temporary identity
       const identity = await Libp2pCryptoIdentity.fromRandom()
-      const token2 = await client2.getToken(identity)
+      await client2.getToken(identity)
       try {
         const info2 = await client2.addThread(addr, { threadKey: info1.key })
         expect(info2.id.toString()).to.equal(info1.id.toString())
@@ -172,7 +171,6 @@ describe('Network Client...', () => {
     describe('subscribe', () => {
       let client2: Client
       let info: ThreadInfo
-      let token2: string
 
       before(async function () {
         this.timeout(5000)
@@ -184,7 +182,7 @@ describe('Network Client...', () => {
         await client.addReplicator(info.id, peerAddr)
         // Create temporary identity
         const identity = await Libp2pCryptoIdentity.fromRandom()
-        token2 = await client2.getToken(identity)
+        await client2.getToken(identity)
       })
 
       it('should handle updates and close cleanly', (done) => {

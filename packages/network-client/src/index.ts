@@ -19,7 +19,7 @@ import {
   Identity,
   Libp2pCryptoIdentity,
 } from '@textile/threads-core'
-import { ContextInterface, ContextKeys, Context } from '@textile/context'
+import { ContextInterface, Context } from '@textile/context'
 import * as pb from '@textile/threads-net-grpc/threadsnet_pb'
 import { API, APIGetToken } from '@textile/threads-net-grpc/threadsnet_pb_service'
 import { recordFromProto, recordToProto } from '@textile/threads-encoding'
@@ -269,11 +269,12 @@ export class Client implements Network {
    * @param addr The multiaddress of the replicator peer.
    * @param ctx Context object containing web-gRPC headers and settings.
    */
-  async addReplicator(id: ThreadID, addr: Multiaddr, ctx?: ContextInterface) {
+  async addReplicator(id: ThreadID, addr: Multiaddr, logID?: LogID, ctx?: ContextInterface) {
     logger.debug('making add replicator request')
     const req = new pb.AddReplicatorRequest()
     req.setThreadid(id.toBytes())
     req.setAddr(addr.buffer)
+    if (logID !== undefined) req.setLogid(logID.toBytes())
     const res: pb.AddReplicatorReply = await this.unary(API.AddReplicator, req, ctx)
     const peerID = res.getPeerid() as string
     const rawId = Buffer.from(peerID, 'base64')

@@ -131,7 +131,6 @@ export class Network implements Interface {
    */
   async pullThread(id: ThreadID) {
     logger.debug(`pulling thread ${id.toString()}`)
-    // @note: Not need to worry about safety here, the remote peer will handle that for us.
     return this.client.pullThread(id)
   }
 
@@ -149,8 +148,8 @@ export class Network implements Interface {
    * @param id The Thread ID.
    * @param addr The multiaddress of the replicator peer.
    */
-  async addReplicator(id: ThreadID, addr: Multiaddr): Promise<PeerId> {
-    return this.client.addReplicator(id, addr)
+  async addReplicator(id: ThreadID, addr: Multiaddr, logID?: LogID): Promise<PeerId> {
+    return this.client.addReplicator(id, addr, logID)
   }
 
   /**
@@ -195,7 +194,7 @@ export class Network implements Interface {
    * @param rec The log record to add.
    */
   async addRecord(id: ThreadID, logID: LogID, rec: LogRecord) {
-    await this.client.addRecord(id, logID, rec)
+    return this.client.addRecord(id, logID, rec)
   }
 
   /**
