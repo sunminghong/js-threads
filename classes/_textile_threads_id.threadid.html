@@ -70,9 +70,25 @@
 			<section class="tsd-panel tsd-comment">
 				<div class="tsd-comment tsd-typography">
 					<div class="lead">
-						<p>ThreadID represents a self-describing Thread identifier.
-						It is formed by a Version, a Variant, and a random number of a given length.</p>
+						<p>ThreadID represents a self-describing Thread identifier.</p>
 					</div>
+					<p>It is formed by a Version, a Variant, and a random number of a given length.</p>
+					<dl class="tsd-comment-tags">
+						<dt>example</dt>
+						<dd><p>Create a new random ThreadID</p>
+							<pre><code class="language-typescript">import { ThreadID } from &#39;@textile/hub`
+
+const id = ThreadID.fromRandom()</code></pre>
+						</dd>
+						<dt>example</dt>
+						<dd><p>Convert a ThreadID to/from a Base32 string</p>
+							<pre><code class="language-typescript">import { ThreadID } from &#39;@textile/hub`
+
+const id = ThreadID.fromRandom()
+const str = id.toString()
+const restored = ThreadID.fromString(str)</code></pre>
+						</dd>
+					</dl>
 				</div>
 			</section>
 			<section class="tsd-panel tsd-hierarchy">
@@ -131,7 +147,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/id/src/index.ts#L19">id/src/index.ts:19</a></li>
+									<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/id/src/thread-id.ts#L32">id/src/thread-id.ts:32</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -153,7 +169,7 @@
 					<div class="tsd-signature tsd-kind-icon">buf<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Buffer</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/id/src/index.ts#L19">id/src/index.ts:19</a></li>
+							<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/id/src/thread-id.ts#L32">id/src/thread-id.ts:32</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -163,7 +179,7 @@
 					<div class="tsd-signature tsd-kind-icon">V1<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> =&nbsp;1</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/id/src/index.ts#L27">id/src/index.ts:27</a></li>
+							<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/id/src/thread-id.ts#L40">id/src/thread-id.ts:40</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -178,7 +194,7 @@
 					<div class="tsd-signature tsd-kind-icon">Variant<span class="tsd-signature-symbol">:</span> <a href="../enums/_textile_threads_id.variant.html" class="tsd-signature-type">Variant</a><span class="tsd-signature-symbol"> =&nbsp;Variant</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/id/src/index.ts#L29">id/src/index.ts:29</a></li>
+							<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/id/src/thread-id.ts#L42">id/src/thread-id.ts:42</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -195,7 +211,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/id/src/index.ts#L125">id/src/index.ts:125</a></li>
+									<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/id/src/thread-id.ts#L138">id/src/thread-id.ts:138</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -226,7 +242,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/id/src/index.ts#L109">id/src/index.ts:109</a></li>
+									<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/id/src/thread-id.ts#L122">id/src/thread-id.ts:122</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -249,7 +265,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/id/src/index.ts#L117">id/src/index.ts:117</a></li>
+									<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/id/src/thread-id.ts#L130">id/src/thread-id.ts:130</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -272,7 +288,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/id/src/index.ts#L150">id/src/index.ts:150</a></li>
+									<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/id/src/thread-id.ts#L163">id/src/thread-id.ts:163</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -303,7 +319,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/id/src/index.ts#L139">id/src/index.ts:139</a></li>
+									<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/id/src/thread-id.ts#L152">id/src/thread-id.ts:152</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -325,7 +341,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/id/src/index.ts#L132">id/src/index.ts:132</a></li>
+									<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/id/src/thread-id.ts#L145">id/src/thread-id.ts:145</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -347,7 +363,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/id/src/index.ts#L70">id/src/index.ts:70</a></li>
+									<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/id/src/thread-id.ts#L83">id/src/thread-id.ts:83</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -382,7 +398,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/id/src/index.ts#L36">id/src/index.ts:36</a></li>
+									<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/id/src/thread-id.ts#L49">id/src/thread-id.ts:49</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -419,7 +435,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/id/src/index.ts#L54">id/src/index.ts:54</a></li>
+									<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/id/src/thread-id.ts#L67">id/src/thread-id.ts:67</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -454,7 +470,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/id/src/index.ts#L93">id/src/index.ts:93</a></li>
+									<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/id/src/thread-id.ts#L106">id/src/thread-id.ts:106</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">

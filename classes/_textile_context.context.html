@@ -123,12 +123,12 @@
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_textile_context.context.html#withapikey" class="tsd-kind-icon">withAPIKey</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_textile_context.context.html#withapisig" class="tsd-kind-icon">withAPISig</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_textile_context.context.html#withcontext" class="tsd-kind-icon">with<wbr>Context</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_textile_context.context.html#withkeyinfo" class="tsd-kind-icon">with<wbr>Key<wbr>Info</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_textile_context.context.html#withorg" class="tsd-kind-icon">with<wbr>Org</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_textile_context.context.html#withsession" class="tsd-kind-icon">with<wbr>Session</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_textile_context.context.html#withthread" class="tsd-kind-icon">with<wbr>Thread</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_textile_context.context.html#withthreadname" class="tsd-kind-icon">with<wbr>Thread<wbr>Name</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_textile_context.context.html#withtoken" class="tsd-kind-icon">with<wbr>Token</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_textile_context.context.html#withuserkey" class="tsd-kind-icon">with<wbr>User<wbr>Key</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-static"><a href="_textile_context.context.html#fromjson" class="tsd-kind-icon">fromJSON</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-static"><a href="_textile_context.context.html#fromuserauth" class="tsd-kind-icon">from<wbr>User<wbr>Auth</a></li>
 							</ul>
@@ -416,6 +416,33 @@
 					</ul>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="withkeyinfo" class="tsd-anchor"></a>
+					<h3>with<wbr>Key<wbr>Info</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">with<wbr>Key<wbr>Info<span class="tsd-signature-symbol">(</span>key<span class="tsd-signature-symbol">?: </span><a href="../modules/_textile_security.html#keyinfo" class="tsd-signature-type">KeyInfo</a>, date<span class="tsd-signature-symbol">?: </span><a href="../enums/_textile_threads_database.bsontype.html#date" class="tsd-signature-type">Date</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">this</span><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Implementation of <a href="../interfaces/_textile_context.contextinterface.html">ContextInterface</a>.<a href="../interfaces/_textile_context.contextinterface.html#withkeyinfo">withKeyInfo</a></p>
+								<ul>
+									<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/context/src/index.ts#L254">context/src/index.ts:254</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> key: <a href="../modules/_textile_security.html#keyinfo" class="tsd-signature-type">KeyInfo</a></h5>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> date: <a href="../enums/_textile_threads_database.bsontype.html#date" class="tsd-signature-type">Date</a></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">this</span><span class="tsd-signature-symbol">&gt;</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
 					<a name="withorg" class="tsd-anchor"></a>
 					<h3>with<wbr>Org</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
@@ -532,33 +559,6 @@
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">this</span></h4>
-						</li>
-					</ul>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
-					<a name="withuserkey" class="tsd-anchor"></a>
-					<h3>with<wbr>User<wbr>Key</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">with<wbr>User<wbr>Key<span class="tsd-signature-symbol">(</span>key<span class="tsd-signature-symbol">?: </span><a href="../modules/_textile_security.html#keyinfo" class="tsd-signature-type">KeyInfo</a>, date<span class="tsd-signature-symbol">?: </span><a href="../enums/_textile_threads_database.bsontype.html#date" class="tsd-signature-type">Date</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">this</span><span class="tsd-signature-symbol">&gt;</span></li>
-					</ul>
-					<ul class="tsd-descriptions">
-						<li class="tsd-description">
-							<aside class="tsd-sources">
-								<p>Implementation of <a href="../interfaces/_textile_context.contextinterface.html">ContextInterface</a>.<a href="../interfaces/_textile_context.contextinterface.html#withuserkey">withUserKey</a></p>
-								<ul>
-									<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/context/src/index.ts#L254">context/src/index.ts:254</a></li>
-								</ul>
-							</aside>
-							<h4 class="tsd-parameters-title">Parameters</h4>
-							<ul class="tsd-parameters">
-								<li>
-									<h5><span class="tsd-flag ts-flagOptional">Optional</span> key: <a href="../modules/_textile_security.html#keyinfo" class="tsd-signature-type">KeyInfo</a></h5>
-								</li>
-								<li>
-									<h5><span class="tsd-flag ts-flagOptional">Optional</span> date: <a href="../enums/_textile_threads_database.bsontype.html#date" class="tsd-signature-type">Date</a></h5>
-								</li>
-							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">this</span><span class="tsd-signature-symbol">&gt;</span></h4>
 						</li>
 					</ul>
 				</section>
@@ -730,6 +730,9 @@
 								<a href="_textile_context.context.html#withcontext" class="tsd-kind-icon">with<wbr>Context</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="_textile_context.context.html#withkeyinfo" class="tsd-kind-icon">with<wbr>Key<wbr>Info</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="_textile_context.context.html#withorg" class="tsd-kind-icon">with<wbr>Org</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
@@ -743,9 +746,6 @@
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="_textile_context.context.html#withtoken" class="tsd-kind-icon">with<wbr>Token</a>
-							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class">
-								<a href="_textile_context.context.html#withuserkey" class="tsd-kind-icon">with<wbr>User<wbr>Key</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-static">
 								<a href="_textile_context.context.html#fromjson" class="tsd-kind-icon">fromJSON</a>

@@ -128,8 +128,8 @@
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_textile_threads_client.client.html#updatecollection" class="tsd-kind-icon">update<wbr>Collection</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_textile_threads_client.client.html#writetransaction" class="tsd-kind-icon">write<wbr>Transaction</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-static"><a href="_textile_threads_client.client.html#randomidentity" class="tsd-kind-icon">random<wbr>Identity</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-static"><a href="_textile_threads_client.client.html#withkeyinfo" class="tsd-kind-icon">with<wbr>Key<wbr>Info</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-static"><a href="_textile_threads_client.client.html#withuserauth" class="tsd-kind-icon">with<wbr>User<wbr>Auth</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-static"><a href="_textile_threads_client.client.html#withuserkey" class="tsd-kind-icon">with<wbr>User<wbr>Key</a></li>
 							</ul>
 						</section>
 					</div>
@@ -1167,6 +1167,43 @@
 					</ul>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-static">
+					<a name="withkeyinfo" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagStatic">Static</span> with<wbr>Key<wbr>Info</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-static">
+						<li class="tsd-signature tsd-kind-icon">with<wbr>Key<wbr>Info<span class="tsd-signature-symbol">(</span>key<span class="tsd-signature-symbol">: </span><a href="../modules/_textile_security.html#keyinfo" class="tsd-signature-type">KeyInfo</a>, host<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span>, debug<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="_textile_threads_client.client.html" class="tsd-signature-type">Client</a><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/client/src/index.ts#L72">client/src/index.ts:72</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Create a new gRPC client instance from a supplied key and secret</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>key: <a href="../modules/_textile_security.html#keyinfo" class="tsd-signature-type">KeyInfo</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The KeyInfo object containing {key: string, secret: string, type: 0}. 0 === User Group Key, 1 === Account Key</p>
+									</div>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagDefault value">Default value</span> host: <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> =&nbsp;defaultHost</span></h5>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagDefault value">Default value</span> debug: <span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> =&nbsp;false</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="_textile_threads_client.client.html" class="tsd-signature-type">Client</a><span class="tsd-signature-symbol">&gt;</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-static">
 					<a name="withuserauth" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagStatic">Static</span> with<wbr>User<wbr>Auth</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-static">
@@ -1201,43 +1238,6 @@
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <a href="_textile_threads_client.client.html" class="tsd-signature-type">Client</a></h4>
-						</li>
-					</ul>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-static">
-					<a name="withuserkey" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagStatic">Static</span> with<wbr>User<wbr>Key</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-static">
-						<li class="tsd-signature tsd-kind-icon">with<wbr>User<wbr>Key<span class="tsd-signature-symbol">(</span>key<span class="tsd-signature-symbol">: </span><a href="../modules/_textile_security.html#keyinfo" class="tsd-signature-type">KeyInfo</a>, host<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span>, debug<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="_textile_threads_client.client.html" class="tsd-signature-type">Client</a><span class="tsd-signature-symbol">&gt;</span></li>
-					</ul>
-					<ul class="tsd-descriptions">
-						<li class="tsd-description">
-							<aside class="tsd-sources">
-								<ul>
-									<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/client/src/index.ts#L72">client/src/index.ts:72</a></li>
-								</ul>
-							</aside>
-							<div class="tsd-comment tsd-typography">
-								<div class="lead">
-									<p>Create a new gRPC client instance from a supplied key and secret</p>
-								</div>
-							</div>
-							<h4 class="tsd-parameters-title">Parameters</h4>
-							<ul class="tsd-parameters">
-								<li>
-									<h5>key: <a href="../modules/_textile_security.html#keyinfo" class="tsd-signature-type">KeyInfo</a></h5>
-									<div class="tsd-comment tsd-typography">
-										<p>The KeyInfo object containing {key: string, secret: string, type: 0}. 0 === User Group Key, 1 === Account Key</p>
-									</div>
-								</li>
-								<li>
-									<h5><span class="tsd-flag ts-flagDefault value">Default value</span> host: <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> =&nbsp;defaultHost</span></h5>
-								</li>
-								<li>
-									<h5><span class="tsd-flag ts-flagDefault value">Default value</span> debug: <span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> =&nbsp;false</span></h5>
-								</li>
-							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="_textile_threads_client.client.html" class="tsd-signature-type">Client</a><span class="tsd-signature-symbol">&gt;</span></h4>
 						</li>
 					</ul>
 				</section>
@@ -1373,10 +1373,10 @@
 								<a href="_textile_threads_client.client.html#randomidentity" class="tsd-kind-icon">random<wbr>Identity</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-static">
-								<a href="_textile_threads_client.client.html#withuserauth" class="tsd-kind-icon">with<wbr>User<wbr>Auth</a>
+								<a href="_textile_threads_client.client.html#withkeyinfo" class="tsd-kind-icon">with<wbr>Key<wbr>Info</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-static">
-								<a href="_textile_threads_client.client.html#withuserkey" class="tsd-kind-icon">with<wbr>User<wbr>Key</a>
+								<a href="_textile_threads_client.client.html#withuserauth" class="tsd-kind-icon">with<wbr>User<wbr>Auth</a>
 							</li>
 						</ul>
 					</li>
