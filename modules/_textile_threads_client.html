@@ -82,35 +82,56 @@
 						<h2>Usage</h2>
 					</a>
 					<p><strong>create a threads client</strong></p>
-					<pre><code class="language-js"><span class="hljs-keyword">import</span> {Client} <span class="hljs-keyword">from</span> <span class="hljs-string">'@textile/threads-client'</span>
+					<pre><code class="language-typescript"><span class="hljs-keyword">import</span> {Client} <span class="hljs-keyword">from</span> <span class="hljs-string">'@textile/threads'</span>
 
-client = <span class="hljs-keyword">new</span> Client()</code></pre>
-					<p><strong>create a threads client using Textile APIs</strong></p>
-					<pre><code class="language-js"><span class="hljs-keyword">import</span> {API} <span class="hljs-keyword">from</span> <span class="hljs-string">'@textile/textile'</span>
-<span class="hljs-keyword">import</span> {Client} <span class="hljs-keyword">from</span> <span class="hljs-string">'@textile/threads-client'</span>
-
-<span class="hljs-keyword">const</span> api = <span class="hljs-keyword">new</span> API({
-    <span class="hljs-attr">token</span>: <span class="hljs-string">'&lt;project token&gt;'</span>,
-    <span class="hljs-attr">deviceId</span>: <span class="hljs-string">'&lt;user id&gt;'</span>
-})
-<span class="hljs-keyword">await</span> api.start()
-
-<span class="hljs-keyword">const</span> client = <span class="hljs-keyword">new</span> Client(api.threadsConfig)</code></pre>
+<span class="hljs-keyword">const</span> client = <span class="hljs-keyword">new</span> Client()</code></pre>
+					<p><strong>create a threads client using Textile Hub APIs</strong></p>
+					<p><a href="https://textileio.github.io/js-hub/docs">Read the full Hub API documentation</a>.</p>
 					<p><strong>create a store</strong></p>
-					<pre><code class="language-js"><span class="hljs-keyword">const</span> store = <span class="hljs-keyword">await</span> client.newDB()
-<span class="hljs-keyword">await</span> client.newCollection(store.id, <span class="hljs-string">'Folder2P'</span>, schema)</code></pre>
+					<pre><code class="language-typescript"><span class="hljs-keyword">import</span> {Client, Identity, ThreadID, UserAuth} <span class="hljs-keyword">from</span> <span class="hljs-string">'@textile/threads'</span>
+
+<span class="hljs-keyword">async</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">newToken</span> (<span class="hljs-params">client: Client, user: Identity</span>) </span>{
+  <span class="hljs-keyword">const</span> token = <span class="hljs-keyword">await</span> client.getToken(user)
+  <span class="hljs-keyword">return</span> token
+}
+
+<span class="hljs-keyword">async</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">createDB</span> (<span class="hljs-params">client: Client</span>) </span>{
+  <span class="hljs-keyword">const</span> thread: ThreadID = <span class="hljs-keyword">await</span> client.newDB()
+  <span class="hljs-keyword">return</span> thread
+}
+
+<span class="hljs-keyword">async</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">collectionFromObject</span> (<span class="hljs-params">client: Client, thread: ThreadID, name: <span class="hljs-built_in">string</span>, obj: <span class="hljs-built_in">any</span></span>) </span>{
+  <span class="hljs-keyword">await</span> client.newCollectionFromObject(thread, name, obj)
+  <span class="hljs-keyword">return</span>
+}
+
+<span class="hljs-keyword">async</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">setup</span> (<span class="hljs-params">auth: UserAuth</span>) </span>{
+  <span class="hljs-keyword">const</span> user = <span class="hljs-keyword">await</span> Client.randomIdentity()
+
+  <span class="hljs-keyword">const</span> client = <span class="hljs-keyword">await</span> Client.withUserAuth(auth)
+
+  <span class="hljs-keyword">const</span> token = <span class="hljs-keyword">await</span> newToken(client, user)
+
+  <span class="hljs-keyword">const</span> thread = <span class="hljs-keyword">await</span> createDB(client)
+
+  <span class="hljs-keyword">const</span> astronaut = {name: <span class="hljs-string">'Buzz'</span>, missions: <span class="hljs-number">3</span>}
+  <span class="hljs-keyword">await</span> collectionFromObject(client, thread, <span class="hljs-string">'astronauts'</span>, astronaut)
+}</code></pre>
 					<p><strong>get all instances</strong></p>
-					<pre><code class="language-js"><span class="hljs-keyword">const</span> found = <span class="hljs-keyword">await</span> client.find(<span class="hljs-keyword">this</span>.finderID, <span class="hljs-string">'Folder2P'</span>, {})
-<span class="hljs-built_in">console</span>.debug(<span class="hljs-string">'found:'</span>, found.instancesList.length)
-<span class="hljs-keyword">this</span>.folders = found.instancesList.map(<span class="hljs-function">(<span class="hljs-params">instance</span>) =&gt;</span> instance).map(<span class="hljs-function">(<span class="hljs-params">obj</span>) =&gt;</span> {
-  <span class="hljs-keyword">return</span> <span class="hljs-keyword">new</span> YourModel(obj)
-})</code></pre>
+					<pre><code class="language-typescript"><span class="hljs-keyword">import</span> {Client, ThreadID} <span class="hljs-keyword">from</span> <span class="hljs-string">'@textile/threads'</span>
+<span class="hljs-keyword">async</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">findEntity</span> (<span class="hljs-params">client: Client, threadId: ThreadID, collection: <span class="hljs-built_in">string</span></span>) </span>{
+  <span class="hljs-keyword">const</span> found = <span class="hljs-keyword">await</span> client.find(threadId, collection, {})
+  <span class="hljs-built_in">console</span>.debug(<span class="hljs-string">'found:'</span>, found.instancesList.length)
+}</code></pre>
 					<p><strong>add an instance</strong></p>
-					<pre><code class="language-js"><span class="hljs-comment">// matches YourModel and schema</span>
-<span class="hljs-keyword">const</span> created = <span class="hljs-keyword">await</span> client.instanceCreate(<span class="hljs-keyword">this</span>.finderID, <span class="hljs-string">'Folder2'</span>, [{
-  <span class="hljs-attr">some</span>: <span class="hljs-string">'data'</span>,
-  <span class="hljs-attr">numbers</span>: [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>]
-}])</code></pre>
+					<pre><code class="language-typescript"><span class="hljs-keyword">import</span> {Client, ThreadID} <span class="hljs-keyword">from</span> <span class="hljs-string">'@textile/threads'</span>
+<span class="hljs-comment">// matches YourModel and schema</span>
+<span class="hljs-keyword">async</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">create</span> (<span class="hljs-params">client: Client, threadId: ThreadID, collection: <span class="hljs-built_in">string</span></span>) </span>{
+  <span class="hljs-keyword">const</span> created = <span class="hljs-keyword">await</span> client.create(threadId, collection, [{
+    some: <span class="hljs-string">'data'</span>,
+    numbers: [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>]
+  }])
+}</code></pre>
 					<a href="#react-native" id="react-native" style="color: inherit; text-decoration: none;">
 						<h2>React Native</h2>
 					</a>

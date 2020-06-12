@@ -89,14 +89,24 @@
 					<h2>Table of Contents</h2>
 				</a>
 				<ul>
-					<li><a href="#background">Background</a></li>
-					<li><a href="#install">Install</a></li>
-					<li><a href="#usage">Usage</a></li>
-					<li><a href="#developing">Developing</a></li>
-					<li><a href="#api">API</a></li>
-					<li><a href="#maintainers">Maintainers</a></li>
-					<li><a href="#contributing">Contributing</a></li>
-					<li><a href="#license">License</a></li>
+					<li><a href="#textiles-threads-protocol--database-js-threads">Textile&#39;s Threads protocol &amp; database <em>(js-threads)</em></a><ul>
+							<li><a href="#using-threads">Using Threads</a></li>
+							<li><a href="#getting-help">Getting help</a></li>
+							<li><a href="#background">Background</a><ul>
+									<li><a href="#overview">Overview</a></li>
+								</ul>
+							</li>
+							<li><a href="#install">Install</a></li>
+							<li><a href="#usage">Usage</a></li>
+							<li><a href="#authentication">Authentication</a></li>
+							<li><a href="#developing">Developing</a></li>
+							<li><a href="#releasing">Releasing</a></li>
+							<li><a href="#api">API</a></li>
+							<li><a href="#maintainers">Maintainers</a></li>
+							<li><a href="#contributing">Contributing</a></li>
+							<li><a href="#license">License</a></li>
+						</ul>
+					</li>
 				</ul>
 				<a href="#background" id="background" style="color: inherit; text-decoration: none;">
 					<h2>Background</h2>
@@ -125,7 +135,9 @@
 				<a href="#install" id="install" style="color: inherit; text-decoration: none;">
 					<h2>Install</h2>
 				</a>
-				<p><code>js-threads</code> is implemented as a series of sub-packages, all managed within the js-threads repo. Each package is separately published to npm, so that developers can pick and choose which components of <code>js-threads</code> they want to consume. For example, to install the low-level network APIs along with the encoding/encryption tooling:</p>
+				<p><code>js-threads</code> is implemented as a series of sub-packages, all managed within the js-threads repo. In general, you can get most of what you need by simply installing and using the <code>@textile/threads</code> library.</p>
+				<pre><code class="language-shell">npm install --save @textile/threads</code></pre>
+				<p>Each package is separately published to npm, so that developers can pick and choose which components of <code>js-threads</code> they want to consume. For example, to install the low-level network APIs along with the encoding/encryption tooling:</p>
 				<pre><code class="language-shell">npm install --save @textile/threads-network @textile/threads-encoding</code></pre>
 				<p>Similarly, one can install the local storage layer or full-fledged Database separately:</p>
 				<pre><code class="language-shell">npm i --save @textile/threads-store @textile/threads-database</code></pre>
@@ -142,7 +154,7 @@ global.WebSocket = <span class="hljs-built_in">require</span>(<span class="hljs-
 				<a href="#authentication" id="authentication" style="color: inherit; text-decoration: none;">
 					<h2>Authentication</h2>
 				</a>
-				<p>Textile also provides remote Threads APIs you can use when developing your app. See <a href="https://github.com/textileio/js-textile"><code>@textile/textile</code></a> (or <a href="https://docs.textile.io">docs.textile.io</a>) for details on authenticating with these APIs, and how to set up your own local development peer.</p>
+				<p>Textile also provides remote Threads APIs you can use when developing your app. See <a href="https://github.com/textileio/js-hub"><code>@textile/hub</code></a> (or <a href="https://docs.textile.io">docs.textile.io</a>) for details on authenticating with these APIs, and how to set up your own local development peer.</p>
 				<a href="#developing" id="developing" style="color: inherit; text-decoration: none;">
 					<h2>Developing</h2>
 				</a>
