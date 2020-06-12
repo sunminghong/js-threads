@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>@textile/threads-id | @textile/threads</title>
+	<title>StartOptions | @textile/threads</title>
 	<meta name="description" content="Documentation for @textile/threads">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -54,44 +54,73 @@
 					<a href="../globals.html">Globals</a>
 				</li>
 				<li>
-					<a href="_textile_threads_id.html">@textile/threads-id</a>
+					<a href="../modules/_textile_threads_database.html">@textile/threads-database</a>
+				</li>
+				<li>
+					<a href="_textile_threads_database.startoptions-1.html">StartOptions</a>
 				</li>
 			</ul>
-			<h1>Module @textile/threads-id</h1>
+			<h1>Interface StartOptions</h1>
 		</div>
 	</div>
 </header>
 <div class="container container-main">
 	<div class="row">
 		<div class="col-8 col-content">
-			<section class="tsd-panel tsd-comment">
-				<div class="tsd-comment tsd-typography">
-					<a href="#threads-id-threads-id" id="threads-id-threads-id" style="color: inherit; text-decoration: none;">
-						<h1>Threads ID <em>(threads-id)</em></h1>
-					</a>
-					<p>Thread/DB identifiers for Textile&#39;s Threads protocol &amp; database</p>
-					<p><a href="https://textile.io"><img src="https://img.shields.io/badge/made%20by-Textile-informational.svg" alt="Textile"></a>
-						<a href="../../LICENSE"><img src="https://img.shields.io/github/license/textileio/js-threads.svg" alt="License"></a>
-					<a href="https://www.npmjs.com/package/@textile/threads-id"><img src="https://img.shields.io/npm/v/@textile/threads-id.svg" alt="npm (scoped)"></a></p>
-					<p>This sub-package is part of <a href="https://github.com/textileio/js-threads"><code>js-threads</code></a>. See the <a href="https://textileio.github.io/js-threads">top-level documentation</a> for details.</p>
-				</div>
+			<section class="tsd-panel tsd-hierarchy">
+				<h3>Hierarchy</h3>
+				<ul class="tsd-hierarchy">
+					<li>
+						<span class="target">StartOptions</span>
+					</li>
+				</ul>
 			</section>
 			<section class="tsd-panel-group tsd-index-group">
 				<h2>Index</h2>
 				<section class="tsd-panel tsd-index-panel">
 					<div class="tsd-index-content">
 						<section class="tsd-index-section ">
-							<h3>Enumerations</h3>
+							<h3>Properties</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-enum tsd-parent-kind-module"><a href="../enums/_textile_threads_id.variant.html" class="tsd-kind-icon">Variant</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_textile_threads_database.startoptions-1.html#collections" class="tsd-kind-icon">collections</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_textile_threads_database.startoptions-1.html#threadid" class="tsd-kind-icon">threadID</a></li>
 							</ul>
 						</section>
-						<section class="tsd-index-section ">
-							<h3>Classes</h3>
-							<ul class="tsd-index-list">
-								<li class="tsd-kind-class tsd-parent-kind-module"><a href="../classes/_textile_threads_id.threadid.html" class="tsd-kind-icon">ThreadID</a></li>
-							</ul>
-						</section>
+					</div>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group ">
+				<h2>Properties</h2>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="collections" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> collections</h3>
+					<div class="tsd-signature tsd-kind-icon">collections<span class="tsd-signature-symbol">:</span> <a href="_textile_threads_database.config-1.html" class="tsd-signature-type">Config</a><span class="tsd-signature-symbol">[]</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/database/src/db.ts#L65">database/src/db.ts:65</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>An array of Collection Config objects to use when initializing the Database</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="threadid" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> threadID</h3>
+					<div class="tsd-signature tsd-kind-icon">threadID<span class="tsd-signature-symbol">:</span> <a href="" class="tsd-signature-type">ThreadID</a></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/database/src/db.ts#L71">database/src/db.ts:71</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>The ID of the Thread to use for this database. If specified for a new database,
+								a Thread with the given ID will be used to orchestrate the database. If accessing an existing
+							database by name, this should be left undefined.</p>
+						</div>
 					</div>
 				</section>
 			</section>
@@ -103,30 +132,39 @@
 						<a href="../globals.html"><em>Globals</em></a>
 					</li>
 					<li class=" tsd-kind-module">
-						<a href="_textile_security.html">@textile/security</a>
+						<a href="../modules/_textile_security.html">@textile/security</a>
 					</li>
 					<li class=" tsd-kind-module">
-						<a href="_textile_threads.html">@textile/threads</a>
+						<a href="../modules/_textile_threads.html">@textile/threads</a>
 					</li>
 					<li class=" tsd-kind-module">
-						<a href="_textile_threads_client.html">@textile/threads-<wbr>client</a>
-					</li>
-					<li class=" tsd-kind-module">
-						<a href="_textile_threads_database.html">@textile/threads-<wbr>database</a>
+						<a href="../modules/_textile_threads_client.html">@textile/threads-<wbr>client</a>
 					</li>
 					<li class="current tsd-kind-module">
-						<a href="_textile_threads_id.html">@textile/threads-<wbr>id</a>
+						<a href="../modules/_textile_threads_database.html">@textile/threads-<wbr>database</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/_textile_threads_id.html">@textile/threads-<wbr>id</a>
 					</li>
 				</ul>
 			</nav>
 			<nav class="tsd-navigation secondary menu-sticky">
 				<ul class="before-current">
-					<li class=" tsd-kind-enum tsd-parent-kind-module">
-						<a href="../enums/_textile_threads_id.variant.html" class="tsd-kind-icon">Variant</a>
+				</ul>
+				<ul class="current">
+					<li class="current tsd-kind-interface tsd-parent-kind-module">
+						<a href="_textile_threads_database.startoptions-1.html" class="tsd-kind-icon">Start<wbr>Options</a>
+						<ul>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="_textile_threads_database.startoptions-1.html#collections" class="tsd-kind-icon">collections</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="_textile_threads_database.startoptions-1.html#threadid" class="tsd-kind-icon">threadID</a>
+							</li>
+						</ul>
 					</li>
-					<li class=" tsd-kind-class tsd-parent-kind-module">
-						<a href="../classes/_textile_threads_id.threadid.html" class="tsd-kind-icon">ThreadID</a>
-					</li>
+				</ul>
+				<ul class="after-current">
 				</ul>
 			</nav>
 		</div>
@@ -146,6 +184,7 @@
 			<ul class="tsd-legend">
 				<li class="tsd-kind-interface"><span class="tsd-kind-icon">Interface</span></li>
 				<li class="tsd-kind-interface tsd-has-type-parameter"><span class="tsd-kind-icon">Interface with type parameter</span></li>
+				<li class="tsd-kind-property tsd-parent-kind-interface"><span class="tsd-kind-icon">Property</span></li>
 			</ul>
 			<ul class="tsd-legend">
 				<li class="tsd-kind-class"><span class="tsd-kind-icon">Class</span></li>

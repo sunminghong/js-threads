@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>CollectionConfig | @textile/threads</title>
+	<title>ValueJSON | @textile/threads</title>
 	<meta name="description" content="Documentation for @textile/threads">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -57,21 +57,28 @@
 					<a href="../modules/_textile_threads_client.html">@textile/threads-client</a>
 				</li>
 				<li>
-					<a href="_textile_threads_client.collectionconfig.html">CollectionConfig</a>
+					<a href="_textile_threads_client.valuejson-1.html">ValueJSON</a>
 				</li>
 			</ul>
-			<h1>Interface CollectionConfig</h1>
+			<h1>Interface ValueJSON</h1>
 		</div>
 	</div>
 </header>
 <div class="container container-main">
 	<div class="row">
 		<div class="col-8 col-content">
+			<section class="tsd-panel tsd-comment">
+				<div class="tsd-comment tsd-typography">
+					<div class="lead">
+						<p>JSONValue is used by the gRPC server to handle JSON data types.</p>
+					</div>
+				</div>
+			</section>
 			<section class="tsd-panel tsd-hierarchy">
 				<h3>Hierarchy</h3>
 				<ul class="tsd-hierarchy">
 					<li>
-						<span class="target">CollectionConfig</span>
+						<span class="target">ValueJSON</span>
 					</li>
 				</ul>
 			</section>
@@ -82,9 +89,9 @@
 						<section class="tsd-index-section ">
 							<h3>Properties</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_textile_threads_client.collectionconfig.html#indexes" class="tsd-kind-icon">indexes</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_textile_threads_client.collectionconfig.html#name" class="tsd-kind-icon">name</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_textile_threads_client.collectionconfig.html#schema" class="tsd-kind-icon">schema</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_textile_threads_client.valuejson-1.html#bool" class="tsd-kind-icon">bool</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_textile_threads_client.valuejson-1.html#float" class="tsd-kind-icon">float</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_textile_threads_client.valuejson-1.html#string" class="tsd-kind-icon">string</a></li>
 							</ul>
 						</section>
 					</div>
@@ -93,32 +100,32 @@
 			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Properties</h2>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-					<a name="indexes" class="tsd-anchor"></a>
-					<h3>indexes</h3>
-					<div class="tsd-signature tsd-kind-icon">indexes<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pb.Index.AsObject</span></div>
+					<a name="bool" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> bool</h3>
+					<div class="tsd-signature tsd-kind-icon">bool<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">false</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">true</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/client/src/index.ts#L32">client/src/index.ts:32</a></li>
+							<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/client/src/models/query.ts#L43">client/src/models/query.ts:43</a></li>
 						</ul>
 					</aside>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-					<a name="name" class="tsd-anchor"></a>
-					<h3>name</h3>
-					<div class="tsd-signature tsd-kind-icon">name<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
+					<a name="float" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> float</h3>
+					<div class="tsd-signature tsd-kind-icon">float<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/client/src/index.ts#L30">client/src/index.ts:30</a></li>
+							<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/client/src/models/query.ts#L44">client/src/models/query.ts:44</a></li>
 						</ul>
 					</aside>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-					<a name="schema" class="tsd-anchor"></a>
-					<h3>schema</h3>
-					<div class="tsd-signature tsd-kind-icon">schema<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">any</span></div>
+					<a name="string" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> string</h3>
+					<div class="tsd-signature tsd-kind-icon">string<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/client/src/index.ts#L31">client/src/index.ts:31</a></li>
+							<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/client/src/models/query.ts#L42">client/src/models/query.ts:42</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -209,24 +216,9 @@
 					<li class=" tsd-kind-class tsd-parent-kind-module">
 						<a href="../classes/_textile_threads_client.writetransaction-1.html" class="tsd-kind-icon">Write<wbr>Transaction</a>
 					</li>
-				</ul>
-				<ul class="current">
-					<li class="current tsd-kind-interface tsd-parent-kind-module">
+					<li class=" tsd-kind-interface tsd-parent-kind-module">
 						<a href="_textile_threads_client.collectionconfig.html" class="tsd-kind-icon">Collection<wbr>Config</a>
-						<ul>
-							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="_textile_threads_client.collectionconfig.html#indexes" class="tsd-kind-icon">indexes</a>
-							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="_textile_threads_client.collectionconfig.html#name" class="tsd-kind-icon">name</a>
-							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="_textile_threads_client.collectionconfig.html#schema" class="tsd-kind-icon">schema</a>
-							</li>
-						</ul>
 					</li>
-				</ul>
-				<ul class="after-current">
 					<li class=" tsd-kind-interface tsd-parent-kind-module">
 						<a href="_textile_threads_client.criterionjson-1.html" class="tsd-kind-icon">CriterionJSON</a>
 					</li>
@@ -245,9 +237,24 @@
 					<li class=" tsd-kind-interface tsd-parent-kind-module">
 						<a href="_textile_threads_client.sortjson-1.html" class="tsd-kind-icon">SortJSON</a>
 					</li>
-					<li class=" tsd-kind-interface tsd-parent-kind-module">
+				</ul>
+				<ul class="current">
+					<li class="current tsd-kind-interface tsd-parent-kind-module">
 						<a href="_textile_threads_client.valuejson-1.html" class="tsd-kind-icon">ValueJSON</a>
+						<ul>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="_textile_threads_client.valuejson-1.html#bool" class="tsd-kind-icon">bool</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="_textile_threads_client.valuejson-1.html#float" class="tsd-kind-icon">float</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="_textile_threads_client.valuejson-1.html#string" class="tsd-kind-icon">string</a>
+							</li>
+						</ul>
 					</li>
+				</ul>
+				<ul class="after-current">
 					<li class=" tsd-kind-type-alias tsd-parent-kind-module">
 						<a href="../modules/_textile_threads_client.html#value-1" class="tsd-kind-icon">Value</a>
 					</li>

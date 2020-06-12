@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>CollectionConfig | @textile/threads</title>
+	<title>CriterionJSON | @textile/threads</title>
 	<meta name="description" content="Documentation for @textile/threads">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -57,22 +57,35 @@
 					<a href="../modules/_textile_threads_client.html">@textile/threads-client</a>
 				</li>
 				<li>
-					<a href="_textile_threads_client.collectionconfig.html">CollectionConfig</a>
+					<a href="_textile_threads_client.criterionjson-1.html">CriterionJSON</a>
 				</li>
 			</ul>
-			<h1>Interface CollectionConfig</h1>
+			<h1>Interface CriterionJSON</h1>
 		</div>
 	</div>
 </header>
 <div class="container container-main">
 	<div class="row">
 		<div class="col-8 col-content">
+			<section class="tsd-panel tsd-comment">
+				<div class="tsd-comment tsd-typography">
+					<div class="lead">
+						<p>CriterionJSON represents a single Query criteria.</p>
+					</div>
+				</div>
+			</section>
 			<section class="tsd-panel tsd-hierarchy">
 				<h3>Hierarchy</h3>
 				<ul class="tsd-hierarchy">
 					<li>
-						<span class="target">CollectionConfig</span>
+						<span class="target">CriterionJSON</span>
 					</li>
+				</ul>
+			</section>
+			<section class="tsd-panel">
+				<h3>Implemented by</h3>
+				<ul class="tsd-hierarchy">
+					<li><a href="../classes/_textile_threads_client.criterion-1.html" class="tsd-signature-type">Criterion</a></li>
 				</ul>
 			</section>
 			<section class="tsd-panel-group tsd-index-group">
@@ -82,9 +95,10 @@
 						<section class="tsd-index-section ">
 							<h3>Properties</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_textile_threads_client.collectionconfig.html#indexes" class="tsd-kind-icon">indexes</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_textile_threads_client.collectionconfig.html#name" class="tsd-kind-icon">name</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_textile_threads_client.collectionconfig.html#schema" class="tsd-kind-icon">schema</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_textile_threads_client.criterionjson-1.html#fieldpath" class="tsd-kind-icon">field<wbr>Path</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_textile_threads_client.criterionjson-1.html#operation" class="tsd-kind-icon">operation</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_textile_threads_client.criterionjson-1.html#query" class="tsd-kind-icon">query</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_textile_threads_client.criterionjson-1.html#value" class="tsd-kind-icon">value</a></li>
 							</ul>
 						</section>
 					</div>
@@ -93,32 +107,42 @@
 			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Properties</h2>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-					<a name="indexes" class="tsd-anchor"></a>
-					<h3>indexes</h3>
-					<div class="tsd-signature tsd-kind-icon">indexes<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pb.Index.AsObject</span></div>
+					<a name="fieldpath" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> field<wbr>Path</h3>
+					<div class="tsd-signature tsd-kind-icon">field<wbr>Path<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/client/src/index.ts#L32">client/src/index.ts:32</a></li>
+							<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/client/src/models/query.ts#L63">client/src/models/query.ts:63</a></li>
 						</ul>
 					</aside>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-					<a name="name" class="tsd-anchor"></a>
-					<h3>name</h3>
-					<div class="tsd-signature tsd-kind-icon">name<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
+					<a name="operation" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> operation</h3>
+					<div class="tsd-signature tsd-kind-icon">operation<span class="tsd-signature-symbol">:</span> <a href="../enums/_textile_threads_client.comparisonjson-1.html" class="tsd-signature-type">ComparisonJSON</a></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/client/src/index.ts#L30">client/src/index.ts:30</a></li>
+							<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/client/src/models/query.ts#L64">client/src/models/query.ts:64</a></li>
 						</ul>
 					</aside>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-					<a name="schema" class="tsd-anchor"></a>
-					<h3>schema</h3>
-					<div class="tsd-signature tsd-kind-icon">schema<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">any</span></div>
+					<a name="query" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> query</h3>
+					<div class="tsd-signature tsd-kind-icon">query<span class="tsd-signature-symbol">:</span> <a href="_textile_threads_client.queryjson-1.html" class="tsd-signature-type">QueryJSON</a></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/client/src/index.ts#L31">client/src/index.ts:31</a></li>
+							<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/client/src/models/query.ts#L66">client/src/models/query.ts:66</a></li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="value" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> value</h3>
+					<div class="tsd-signature tsd-kind-icon">value<span class="tsd-signature-symbol">:</span> <a href="_textile_threads_client.valuejson-1.html" class="tsd-signature-type">ValueJSON</a></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/client/src/models/query.ts#L65">client/src/models/query.ts:65</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -209,27 +233,30 @@
 					<li class=" tsd-kind-class tsd-parent-kind-module">
 						<a href="../classes/_textile_threads_client.writetransaction-1.html" class="tsd-kind-icon">Write<wbr>Transaction</a>
 					</li>
+					<li class=" tsd-kind-interface tsd-parent-kind-module">
+						<a href="_textile_threads_client.collectionconfig.html" class="tsd-kind-icon">Collection<wbr>Config</a>
+					</li>
 				</ul>
 				<ul class="current">
 					<li class="current tsd-kind-interface tsd-parent-kind-module">
-						<a href="_textile_threads_client.collectionconfig.html" class="tsd-kind-icon">Collection<wbr>Config</a>
+						<a href="_textile_threads_client.criterionjson-1.html" class="tsd-kind-icon">CriterionJSON</a>
 						<ul>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="_textile_threads_client.collectionconfig.html#indexes" class="tsd-kind-icon">indexes</a>
+								<a href="_textile_threads_client.criterionjson-1.html#fieldpath" class="tsd-kind-icon">field<wbr>Path</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="_textile_threads_client.collectionconfig.html#name" class="tsd-kind-icon">name</a>
+								<a href="_textile_threads_client.criterionjson-1.html#operation" class="tsd-kind-icon">operation</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="_textile_threads_client.collectionconfig.html#schema" class="tsd-kind-icon">schema</a>
+								<a href="_textile_threads_client.criterionjson-1.html#query" class="tsd-kind-icon">query</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="_textile_threads_client.criterionjson-1.html#value" class="tsd-kind-icon">value</a>
 							</li>
 						</ul>
 					</li>
 				</ul>
 				<ul class="after-current">
-					<li class=" tsd-kind-interface tsd-parent-kind-module">
-						<a href="_textile_threads_client.criterionjson-1.html" class="tsd-kind-icon">CriterionJSON</a>
-					</li>
 					<li class=" tsd-kind-interface tsd-parent-kind-module">
 						<a href="_textile_threads_client.filter-1.html" class="tsd-kind-icon">Filter</a>
 					</li>
