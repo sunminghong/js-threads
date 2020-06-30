@@ -82,13 +82,13 @@
 						<h2>Usage</h2>
 					</a>
 					<p><strong>create a threads client</strong></p>
-					<pre><code class="language-typescript"><span class="hljs-keyword">import</span> {Client} <span class="hljs-keyword">from</span> <span class="hljs-string">'@textile/threads'</span>
+					<pre><code class="language-typescript"><span class="hljs-keyword">import</span> {Client} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@textile/threads&#x27;</span>
 
 <span class="hljs-keyword">const</span> client = <span class="hljs-keyword">new</span> Client()</code></pre>
 					<p><strong>create a threads client using Textile Hub APIs</strong></p>
 					<p><a href="https://textileio.github.io/js-hub/docs">Read the full Hub API documentation</a>.</p>
 					<p><strong>create a store</strong></p>
-					<pre><code class="language-typescript"><span class="hljs-keyword">import</span> {Client, Identity, ThreadID, UserAuth} <span class="hljs-keyword">from</span> <span class="hljs-string">'@textile/threads'</span>
+					<pre><code class="language-typescript"><span class="hljs-keyword">import</span> {Client, Identity, ThreadID, UserAuth} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@textile/threads&#x27;</span>
 
 <span class="hljs-keyword">async</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">newToken</span> (<span class="hljs-params">client: Client, user: Identity</span>) </span>{
   <span class="hljs-keyword">const</span> token = <span class="hljs-keyword">await</span> client.getToken(user)
@@ -114,21 +114,21 @@
 
   <span class="hljs-keyword">const</span> thread = <span class="hljs-keyword">await</span> createDB(client)
 
-  <span class="hljs-keyword">const</span> astronaut = {name: <span class="hljs-string">'Buzz'</span>, missions: <span class="hljs-number">3</span>}
-  <span class="hljs-keyword">await</span> collectionFromObject(client, thread, <span class="hljs-string">'astronauts'</span>, astronaut)
+  <span class="hljs-keyword">const</span> astronaut = {name: <span class="hljs-string">&#x27;Buzz&#x27;</span>, missions: <span class="hljs-number">3</span>}
+  <span class="hljs-keyword">await</span> collectionFromObject(client, thread, <span class="hljs-string">&#x27;astronauts&#x27;</span>, astronaut)
 }</code></pre>
 					<p><strong>get all instances</strong></p>
-					<pre><code class="language-typescript"><span class="hljs-keyword">import</span> {Client, ThreadID} <span class="hljs-keyword">from</span> <span class="hljs-string">'@textile/threads'</span>
+					<pre><code class="language-typescript"><span class="hljs-keyword">import</span> {Client, ThreadID} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@textile/threads&#x27;</span>
 <span class="hljs-keyword">async</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">findEntity</span> (<span class="hljs-params">client: Client, threadId: ThreadID, collection: <span class="hljs-built_in">string</span></span>) </span>{
   <span class="hljs-keyword">const</span> found = <span class="hljs-keyword">await</span> client.find(threadId, collection, {})
-  <span class="hljs-built_in">console</span>.debug(<span class="hljs-string">'found:'</span>, found.instancesList.length)
+  <span class="hljs-built_in">console</span>.debug(<span class="hljs-string">&#x27;found:&#x27;</span>, found.instancesList.length)
 }</code></pre>
 					<p><strong>add an instance</strong></p>
-					<pre><code class="language-typescript"><span class="hljs-keyword">import</span> {Client, ThreadID} <span class="hljs-keyword">from</span> <span class="hljs-string">'@textile/threads'</span>
+					<pre><code class="language-typescript"><span class="hljs-keyword">import</span> {Client, ThreadID} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@textile/threads&#x27;</span>
 <span class="hljs-comment">// matches YourModel and schema</span>
 <span class="hljs-keyword">async</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">create</span> (<span class="hljs-params">client: Client, threadId: ThreadID, collection: <span class="hljs-built_in">string</span></span>) </span>{
   <span class="hljs-keyword">const</span> created = <span class="hljs-keyword">await</span> client.create(threadId, collection, [{
-    some: <span class="hljs-string">'data'</span>,
+    some: <span class="hljs-string">&#x27;data&#x27;</span>,
     numbers: [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>]
   }])
 }</code></pre>
@@ -150,10 +150,10 @@ go run threadsd/main.go</code></pre>
 					<p>Altenatively, you can ensure this is run whenever you run your app by modifying your <code>package.json</code> as follows.</p>
 					<pre><code class="language-json">{
   ...
-  "scripts": {
+  &quot;scripts&quot;: {
     ...
-    "bind": "adb reverse tcp:6007 tcp:6007",
-    "android": "npm run bind &amp;&amp; npx react-native run-android",
+    &quot;bind&quot;: &quot;adb reverse tcp:6007 tcp:6007&quot;,
+    &quot;android&quot;: &quot;npm run bind &amp;&amp; npx react-native run-android&quot;,
     ...
   },
   ...
@@ -171,7 +171,7 @@ go run threadsd/main.go</code></pre>
 					<pre><code class="language-js">rn-nodeify --install buffer --hack</code></pre>
 					<p>This will create a <code>shim.js</code> in the root of your project. You need to import this at the top of your apps entry file (e.g. <code>indes.js</code>). </p>
 					<p>The top of <code>index.js</code> would look like, </p>
-					<pre><code class="language-js"><span class="hljs-built_in">require</span>(<span class="hljs-string">'./shim'</span>)
+					<pre><code class="language-js"><span class="hljs-built_in">require</span>(<span class="hljs-string">&#x27;./shim&#x27;</span>)
 ...</code></pre>
 					<p><strong>add nodeify to your postinstall</strong></p>
 					<p>Ensure that the shim is still configured after any module updates. Inside <code>package.json</code> add the following line to your <code>scripts</code> tag,</p>
@@ -551,6 +551,5 @@ go run threadsd/main.go</code></pre>
 </footer>
 <div class="overlay"></div>
 <script src="../assets/js/main.js"></script>
-<script>if (location.protocol == 'file:') document.write('<script src="../assets/js/search.js"><' + '/script>');</script>
 </body>
 </html>
