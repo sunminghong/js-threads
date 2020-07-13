@@ -112,21 +112,6 @@
 					<h2>Background</h2>
 				</a>
 				<p>Textile&#39;s Threads Protocol and Database provides an alternative architecture for data on the web. Threads aims to help power a new generation of web technologies by combining a novel use of event sourcing, Interplanetary Linked Data (IPLD), and access control to provide a distributed, scalable, and flexible database solution for decentralized applications. Threads is backed by a great deal of research and experience, and provides protocols for securely storing and sharing content-addressable data (on IPFS), with tooling to help standardize data creation and dissemination.</p>
-				<p>The primary public API to Threads is the <a href="./packages/database">Threads Database</a>. The Database aims to provide:</p>
-				<ul>
-					<li><input checked="" disabled="" type="checkbox"> Document &amp; <a href="https://github.com/ipfs/js-datastore-level">datastore compliant</a> key-value store</li>
-					<li><input checked="" disabled="" type="checkbox"> Familiar APIs (think <a href="https://mongoosejs.com">mongodb/mongoose</a>!)</li>
-					<li><input checked="" disabled="" type="checkbox"> <a href="http://offlinefirst.org">Offline</a> and/or <a href="https://www.inkandswitch.com/local-first.html">local-first</a> storage and remote/peer sync</li>
-					<li><input checked="" disabled="" type="checkbox"> User/developer authentication &amp; cloud support</li>
-					<li><input disabled="" type="checkbox"> Multiple transport options (pubsub, direct p2p, IPNS, etc)</li>
-					<li><input disabled="" type="checkbox"> Cryptographically-driven access control</li>
-					<li><input checked="" disabled="" type="checkbox"> Encryption and IPLD encoding</li>
-					<li><input checked="" disabled="" type="checkbox"> Configurable codecs (i.e., handling conflicts via <a href="https://en.wikipedia.org/wiki/Conflict-free_replicated_data_type">CRDTs</a> etc)</li>
-					<li><input disabled="" type="checkbox"> Fast indexes and queries</li>
-					<li><input checked="" disabled="" type="checkbox"> Multiple API entry points and levels (low- and high-level APIs)</li>
-					<li><input disabled="" type="checkbox"> Direct integration with common frameworks (e.g., React, Vue, Electron, etc)</li>
-				</ul>
-				<p>Plus more features on the way!</p>
 				<p>Want something specific? Take a look at our <a href="#contributing">contributor guide</a> for details on how to ask for features, or better yet, submit a PR yourself :wink:!</p>
 				<a href="#overview" id="overview" style="color: inherit; text-decoration: none;">
 					<h3>Overview</h3>
@@ -161,8 +146,52 @@ npm run bootstrap</code></pre>
 <span class="hljs-comment"># Or run the node- or browser-specific tests separately</span>
 npm run <span class="hljs-built_in">test</span>:node
 npm run <span class="hljs-built_in">test</span>:browser</code></pre>
-				<p>Similarly, you can compile the Typescript-based sub-packages to Javascript all at once. This will also build the browser bundles via webpack:</p>
+				<p>Similarly, you can compile the Typescript-based sub-packages to Javascript all at once.</p>
 				<pre><code class="language-bash">npm run build</code></pre>
+				<a href="#browsers" id="browsers" style="color: inherit; text-decoration: none;">
+					<h3>Browsers</h3>
+				</a>
+				<p>If you&#39;d like to build browser bundles (say, using webpack), you may want to use something like the following in your <code>webpack.config.js</code>. Note however, that if you are working with a framework such as React or Angular, you might be better off letting that bundler handle the tree-shaking etc for you!</p>
+				<pre><code class="language-javascript"><span class="hljs-keyword">const</span> path = <span class="hljs-built_in">require</span>(<span class="hljs-string">&#x27;path&#x27;</span>)
+
+<span class="hljs-built_in">module</span>.exports = {
+  <span class="hljs-attr">entry</span>: <span class="hljs-string">&#x27;./src/index.ts&#x27;</span>,
+  <span class="hljs-attr">devtool</span>: <span class="hljs-string">&#x27;inline-source-map&#x27;</span>,
+  <span class="hljs-attr">module</span>: {
+    <span class="hljs-attr">rules</span>: [
+      {
+        <span class="hljs-attr">test</span>: <span class="hljs-regexp">/\.tsx?$/</span>,
+        use: <span class="hljs-string">&#x27;ts-loader&#x27;</span>,
+        <span class="hljs-attr">exclude</span>: <span class="hljs-regexp">/node_modules/</span>,
+      },
+    ],
+  },
+  <span class="hljs-attr">resolveLoader</span>: {
+    <span class="hljs-attr">modules</span>: [<span class="hljs-string">&#x27;../../node_modules&#x27;</span>],
+  },
+  <span class="hljs-attr">resolve</span>: {
+    <span class="hljs-attr">modules</span>: [<span class="hljs-string">&#x27;./node_modules&#x27;</span>],
+    [<span class="hljs-string">&#x27;.tsx&#x27;</span>, <span class="hljs-string">&#x27;.ts&#x27;</span>, <span class="hljs-string">&#x27;.js&#x27;</span>, <span class="hljs-string">&#x27;json&#x27;</span>],
+    <span class="hljs-attr">symlinks</span>: <span class="hljs-literal">false</span>,
+  <span class="hljs-attr">output</span>: {
+    <span class="hljs-attr">filename</span>: <span class="hljs-string">&#x27;./[name].js&#x27;</span>,
+    <span class="hljs-attr">path</span>: path.resolve(process.cwd(), <span class="hljs-string">&#x27;dist&#x27;</span>),
+    <span class="hljs-attr">library</span>: <span class="hljs-string">&#x27;threads&#x27;</span>,
+    <span class="hljs-attr">libraryTarget</span>: <span class="hljs-string">&#x27;var&#x27;</span>,
+  },
+  <span class="hljs-attr">optimization</span>: {
+    <span class="hljs-attr">splitChunks</span>: {
+      <span class="hljs-attr">chunks</span>: <span class="hljs-string">&#x27;all&#x27;</span>,
+    },
+    <span class="hljs-attr">minimize</span>: <span class="hljs-literal">true</span>,
+  },
+}</code></pre>
+				<p>The the bundle(s) can be built with:</p>
+				<pre><code class="language-bash"><span class="hljs-built_in">cd</span> packages/threads
+webpack --mode production --config webpack.config.js</code></pre>
+				<a href="#typescript" id="typescript" style="color: inherit; text-decoration: none;">
+					<h3>Typescript</h3>
+				</a>
 				<p>This project also uses incremental Typescript builds, so to take advantage of that (rather than building from scratch each time) use <code>compile</code>. You should notice significant speed-ups in your build process:</p>
 				<pre><code class="language-shell">npm run compile</code></pre>
 				<a href="#releasing" id="releasing" style="color: inherit; text-decoration: none;">
@@ -181,7 +210,7 @@ npm run <span class="hljs-built_in">test</span>:browser</code></pre>
 				<a href="#api" id="api" style="color: inherit; text-decoration: none;">
 					<h2>API</h2>
 				</a>
-				<p>See <a href="https://textileio.github.io/js-threads">https://textileio.github.io/js-threads</a>, which includes the technical API docs for all subpackages. </p>
+				<p>See <a href="https://textileio.github.io/js-threads">https://textileio.github.io/js-threads</a>, which includes the technical API docs for all subpackages.</p>
 				<a href="#maintainers" id="maintainers" style="color: inherit; text-decoration: none;">
 					<h2>Maintainers</h2>
 				</a>
