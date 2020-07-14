@@ -121,13 +121,12 @@
 				</a>
 				<p><code>js-threads</code> is implemented as a series of sub-packages. For general use, you can get most of what you need by simply installing and using the <code>@textile/threads</code> library.</p>
 				<pre><code class="language-shell">npm install --save @textile/threads</code></pre>
-				<p>If you are running <code>js-threads</code> in an environment that does not support <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebSockets_API">WebSockets</a> by default (such as Node), be sure to include it explicitly using something like the following at the top of your script or module:</p>
-				<pre><code class="language-javascript"><span class="hljs-comment">// Add WebSocket to the global namespace on Node</span>
-<span class="hljs-built_in">global</span>.WebSocket = <span class="hljs-built_in">require</span>(<span class="hljs-string">&#x27;isomorphic-ws&#x27;</span>)</code></pre>
+				<p>If you are running <code>js-threads</code> in an environment that does not support <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebSockets_API">WebSockets</a> by default (such as Node), be sure to include it explicitly by installing the <code>ws</code> module:</p>
+				<pre><code class="language-bash">npm i ws</code></pre>
 				<a href="#usage" id="usage" style="color: inherit; text-decoration: none;">
 					<h2>Usage</h2>
 				</a>
-				<p>For an introduction to use the <code>Database</code> classe, read the <a href="https://docs.textile.io/threads/">Threads Introduction here</a>. Additionally, there are a growing list of <a href="https://github.com/textileio/js-examples">examples</a> available.</p>
+				<p>For an introduction to use the <code>Database</code> class, read the <a href="https://docs.textile.io/threads/">Threads Introduction here</a>. Additionally, there are a growing list of <a href="https://github.com/textileio/js-examples">examples</a> available.</p>
 				<a href="#authentication" id="authentication" style="color: inherit; text-decoration: none;">
 					<h2>Authentication</h2>
 				</a>
@@ -231,6 +230,9 @@ webpack --mode production --config webpack.config.js</code></pre>
 				<ul>
 					<li class="globals  ">
 						<a href="globals.html"><em>Globals</em></a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/_textile_grpc_transport.html">@textile/grpc-<wbr>transport</a>
 					</li>
 					<li class=" tsd-kind-module">
 						<a href="modules/_textile_security.html">@textile/security</a>
