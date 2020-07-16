@@ -67,25 +67,12 @@
 <div class="container container-main">
 	<div class="row">
 		<div class="col-8 col-content">
-			<section class="tsd-panel tsd-comment">
-				<div class="tsd-comment tsd-typography">
-					<div class="lead">
-						<p>Generic private key interface.</p>
-					</div>
-				</div>
-			</section>
 			<section class="tsd-panel tsd-hierarchy">
 				<h3>Hierarchy</h3>
 				<ul class="tsd-hierarchy">
 					<li>
 						<span class="target">PrivateKey</span>
 					</li>
-				</ul>
-			</section>
-			<section class="tsd-panel">
-				<h3>Implemented by</h3>
-				<ul class="tsd-hierarchy">
-					<li><a href="../classes/_textile_threads_crypto.ed25519privatekey.html" class="tsd-signature-type">Ed25519PrivateKey</a></li>
 				</ul>
 			</section>
 			<section class="tsd-panel-group tsd-index-group">
@@ -95,18 +82,8 @@
 						<section class="tsd-index-section ">
 							<h3>Properties</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_textile_threads_crypto.privatekey-2.html#bytes" class="tsd-kind-icon">bytes</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_textile_threads_crypto.privatekey-2.html#public" class="tsd-kind-icon">public</a></li>
-							</ul>
-						</section>
-						<section class="tsd-index-section ">
-							<h3>Methods</h3>
-							<ul class="tsd-index-list">
-								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="_textile_threads_crypto.privatekey-2.html#equals" class="tsd-kind-icon">equals</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="_textile_threads_crypto.privatekey-2.html#hash" class="tsd-kind-icon">hash</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="_textile_threads_crypto.privatekey-2.html#id" class="tsd-kind-icon">id</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="_textile_threads_crypto.privatekey-2.html#marshal" class="tsd-kind-icon">marshal</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="_textile_threads_crypto.privatekey-2.html#sign" class="tsd-kind-icon">sign</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_textile_threads_crypto.privatekey-2.html#data" class="tsd-kind-icon">Data</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_textile_threads_crypto.privatekey-2.html#type" class="tsd-kind-icon">Type</a></li>
 							</ul>
 						</section>
 					</div>
@@ -115,168 +92,24 @@
 			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Properties</h2>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-					<a name="bytes" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagReadonly">Readonly</span> bytes</h3>
-					<div class="tsd-signature tsd-kind-icon">bytes<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Uint8Array</span></div>
+					<a name="data" class="tsd-anchor"></a>
+					<h3>Data</h3>
+					<div class="tsd-signature tsd-kind-icon">Data<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Uint8Array</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/crypto/src/interfaces.ts#L57">crypto/src/interfaces.ts:57</a></li>
+							<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/crypto/src/proto.keys.ts#L88">crypto/src/proto.keys.ts:88</a></li>
 						</ul>
 					</aside>
-					<div class="tsd-comment tsd-typography">
-						<div class="lead">
-							<p>A protobuf serialized representation of this key.</p>
-						</div>
-					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-					<a name="public" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagReadonly">Readonly</span> public</h3>
-					<div class="tsd-signature tsd-kind-icon">public<span class="tsd-signature-symbol">:</span> <a href="_textile_threads_crypto.publickey-2.html" class="tsd-signature-type">PublicKey</a></div>
+					<a name="type" class="tsd-anchor"></a>
+					<h3>Type</h3>
+					<div class="tsd-signature tsd-kind-icon">Type<span class="tsd-signature-symbol">:</span> <a href="../enums/_textile_threads_crypto.keytype.html" class="tsd-signature-type">KeyType</a></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/crypto/src/interfaces.ts#L53">crypto/src/interfaces.ts:53</a></li>
+							<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/crypto/src/proto.keys.ts#L87">crypto/src/proto.keys.ts:87</a></li>
 						</ul>
 					</aside>
-					<div class="tsd-comment tsd-typography">
-						<div class="lead">
-							<p>The public key associated with this private key.</p>
-						</div>
-					</div>
-				</section>
-			</section>
-			<section class="tsd-panel-group tsd-member-group ">
-				<h2>Methods</h2>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface">
-					<a name="equals" class="tsd-anchor"></a>
-					<h3>equals</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
-						<li class="tsd-signature tsd-kind-icon">equals<span class="tsd-signature-symbol">(</span>key<span class="tsd-signature-symbol">: </span><a href="_textile_threads_crypto.privatekey-2.html" class="tsd-signature-type">PrivateKey</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
-					</ul>
-					<ul class="tsd-descriptions">
-						<li class="tsd-description">
-							<aside class="tsd-sources">
-								<ul>
-									<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/crypto/src/interfaces.ts#L71">crypto/src/interfaces.ts:71</a></li>
-								</ul>
-							</aside>
-							<div class="tsd-comment tsd-typography">
-								<div class="lead">
-									<p>Test for equality with another key.</p>
-								</div>
-							</div>
-							<h4 class="tsd-parameters-title">Parameters</h4>
-							<ul class="tsd-parameters">
-								<li>
-									<h5>key: <a href="_textile_threads_crypto.privatekey-2.html" class="tsd-signature-type">PrivateKey</a></h5>
-									<div class="tsd-comment tsd-typography">
-										<p>Other key.</p>
-									</div>
-								</li>
-							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
-						</li>
-					</ul>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface">
-					<a name="hash" class="tsd-anchor"></a>
-					<h3>hash</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
-						<li class="tsd-signature tsd-kind-icon">hash<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">Uint8Array</span><span class="tsd-signature-symbol">&gt;</span></li>
-					</ul>
-					<ul class="tsd-descriptions">
-						<li class="tsd-description">
-							<aside class="tsd-sources">
-								<ul>
-									<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/crypto/src/interfaces.ts#L75">crypto/src/interfaces.ts:75</a></li>
-								</ul>
-							</aside>
-							<div class="tsd-comment tsd-typography">
-								<div class="lead">
-									<p>Compute the sha256 hash of the key&#39;s <code>bytes</code>.</p>
-								</div>
-							</div>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">Uint8Array</span><span class="tsd-signature-symbol">&gt;</span></h4>
-						</li>
-					</ul>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface">
-					<a name="id" class="tsd-anchor"></a>
-					<h3>id</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
-						<li class="tsd-signature tsd-kind-icon">id<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></li>
-					</ul>
-					<ul class="tsd-descriptions">
-						<li class="tsd-description">
-							<aside class="tsd-sources">
-								<ul>
-									<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/crypto/src/interfaces.ts#L83">crypto/src/interfaces.ts:83</a></li>
-								</ul>
-							</aside>
-							<div class="tsd-comment tsd-typography">
-								<div class="lead">
-									<p>Gets the ID of the key.</p>
-								</div>
-								<p>The key id is the base58 encoding of the SHA-256 multihash of its public key.
-									The public key is a protobuf encoding containing a type and the DER encoding
-								of the PKCS SubjectPublicKeyInfo.</p>
-							</div>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></h4>
-						</li>
-					</ul>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface">
-					<a name="marshal" class="tsd-anchor"></a>
-					<h3>marshal</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
-						<li class="tsd-signature tsd-kind-icon">marshal<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Uint8Array</span></li>
-					</ul>
-					<ul class="tsd-descriptions">
-						<li class="tsd-description">
-							<aside class="tsd-sources">
-								<ul>
-									<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/crypto/src/interfaces.ts#L66">crypto/src/interfaces.ts:66</a></li>
-								</ul>
-							</aside>
-							<div class="tsd-comment tsd-typography">
-								<div class="lead">
-									<p>Return the raw bytes of this key. Not to be conused with <code>bytes</code>.</p>
-								</div>
-							</div>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Uint8Array</span></h4>
-						</li>
-					</ul>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface">
-					<a name="sign" class="tsd-anchor"></a>
-					<h3>sign</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
-						<li class="tsd-signature tsd-kind-icon">sign<span class="tsd-signature-symbol">(</span>data<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Uint8Array</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">Uint8Array</span><span class="tsd-signature-symbol">&gt;</span></li>
-					</ul>
-					<ul class="tsd-descriptions">
-						<li class="tsd-description">
-							<aside class="tsd-sources">
-								<ul>
-									<li>Defined in <a href="https://github.com/textileio/js-threads/blob/master/packages/crypto/src/interfaces.ts#L62">crypto/src/interfaces.ts:62</a></li>
-								</ul>
-							</aside>
-							<div class="tsd-comment tsd-typography">
-								<div class="lead">
-									<p>Generates a digital signature on the given data.</p>
-								</div>
-							</div>
-							<h4 class="tsd-parameters-title">Parameters</h4>
-							<ul class="tsd-parameters">
-								<li>
-									<h5>data: <span class="tsd-signature-type">Uint8Array</span></h5>
-									<div class="tsd-comment tsd-typography">
-										<p>The data to sign.</p>
-									</div>
-								</li>
-							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">Uint8Array</span><span class="tsd-signature-symbol">&gt;</span></h4>
-						</li>
-					</ul>
 				</section>
 			</section>
 		</div>
@@ -317,25 +150,10 @@
 						<a href="_textile_threads_crypto.privatekey-2.html" class="tsd-kind-icon">Private<wbr>Key</a>
 						<ul>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="_textile_threads_crypto.privatekey-2.html#bytes" class="tsd-kind-icon">bytes</a>
+								<a href="_textile_threads_crypto.privatekey-2.html#data" class="tsd-kind-icon">Data</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="_textile_threads_crypto.privatekey-2.html#public" class="tsd-kind-icon">public</a>
-							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-interface">
-								<a href="_textile_threads_crypto.privatekey-2.html#equals" class="tsd-kind-icon">equals</a>
-							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-interface">
-								<a href="_textile_threads_crypto.privatekey-2.html#hash" class="tsd-kind-icon">hash</a>
-							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-interface">
-								<a href="_textile_threads_crypto.privatekey-2.html#id" class="tsd-kind-icon">id</a>
-							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-interface">
-								<a href="_textile_threads_crypto.privatekey-2.html#marshal" class="tsd-kind-icon">marshal</a>
-							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-interface">
-								<a href="_textile_threads_crypto.privatekey-2.html#sign" class="tsd-kind-icon">sign</a>
+								<a href="_textile_threads_crypto.privatekey-2.html#type" class="tsd-kind-icon">Type</a>
 							</li>
 						</ul>
 					</li>
@@ -362,7 +180,6 @@
 				<li class="tsd-kind-interface"><span class="tsd-kind-icon">Interface</span></li>
 				<li class="tsd-kind-interface tsd-has-type-parameter"><span class="tsd-kind-icon">Interface with type parameter</span></li>
 				<li class="tsd-kind-property tsd-parent-kind-interface"><span class="tsd-kind-icon">Property</span></li>
-				<li class="tsd-kind-method tsd-parent-kind-interface"><span class="tsd-kind-icon">Method</span></li>
 			</ul>
 			<ul class="tsd-legend">
 				<li class="tsd-kind-class"><span class="tsd-kind-icon">Class</span></li>
